@@ -38,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-home-title" userLabel="Title">
                                 <rect key="frame" x="160.5" y="426.5" width="93.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -46,12 +46,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="centerX" secondItem="main-home-title" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstAttribute="centerY" secondItem="main-home-title" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" id="main-home"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-Zi-9vb" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-notifications-title" userLabel="Title">
                                 <rect key="frame" x="109.5" y="426.5" width="195" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -74,12 +74,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GWd-Zi-9vb" firstAttribute="centerY" secondItem="BbT-0y-yYk" secondAttribute="centerY" id="Rrf-LR-zUF"/>
-                            <constraint firstItem="GWd-Zi-9vb" firstAttribute="centerX" secondItem="BbT-0y-yYk" secondAttribute="centerX" id="hwf-Zd-xeA"/>
+                            <constraint firstItem="main-notifications-title" firstAttribute="centerY" secondItem="BbT-0y-yYk" secondAttribute="centerY" id="Rrf-LR-zUF"/>
+                            <constraint firstItem="main-notifications-title" firstAttribute="centerX" secondItem="BbT-0y-yYk" secondAttribute="centerX" id="hwf-Zd-xeA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ek9-jH-yw8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="Oox-uH-68j"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="main-notifications"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UP-sj-LaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-archive-title" userLabel="Title">
                                 <rect key="frame" x="149" y="426.5" width="116" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -101,12 +101,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerX" secondItem="main-archive-title" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="main-archive-title" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="main-archive"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-3Z-KM6" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-drafts-title" userLabel="Title">
                                 <rect key="frame" x="159.5" y="426.5" width="95" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -129,12 +129,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rMr-3Z-KM6" firstAttribute="centerY" secondItem="h20-Tp-4bQ" secondAttribute="centerY" id="Qdg-xD-7zr"/>
-                            <constraint firstItem="rMr-3Z-KM6" firstAttribute="centerX" secondItem="h20-Tp-4bQ" secondAttribute="centerX" id="RJa-WG-ov9"/>
+                            <constraint firstItem="main-drafts-title" firstAttribute="centerY" secondItem="h20-Tp-4bQ" secondAttribute="centerY" id="Qdg-xD-7zr"/>
+                            <constraint firstItem="main-drafts-title" firstAttribute="centerX" secondItem="h20-Tp-4bQ" secondAttribute="centerX" id="RJa-WG-ov9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AUU-db-2u1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="kpj-02-V8a" userLabel="Drafts"/>
+                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="main-drafts" userLabel="Drafts"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugd-3W-t6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-q6-vOe" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-title" userLabel="Title">
                                 <rect key="frame" x="143" y="426.5" width="128" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -157,12 +157,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ubY-q6-vOe" firstAttribute="centerY" secondItem="mGz-Ei-WnN" secondAttribute="centerY" id="oAv-3i-tY0"/>
-                            <constraint firstItem="ubY-q6-vOe" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="qoL-Kc-C9b"/>
+                            <constraint firstItem="main-settings-title" firstAttribute="centerY" secondItem="mGz-Ei-WnN" secondAttribute="centerY" id="oAv-3i-tY0"/>
+                            <constraint firstItem="main-settings-title" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="qoL-Kc-C9b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="smW-9c-JZJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="main-settings"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vn0-gN-el0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

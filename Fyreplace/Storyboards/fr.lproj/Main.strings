@@ -1,24 +1,30 @@
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "GWd-Zi-9vb"; */
-"GWd-Zi-9vb.text" = "Notifications";
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "main-home"; */
+"main-home.title" = "Accueil";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "KQZ-1w-vlD"; */
-"KQZ-1w-vlD.text" = "Accueil";
+/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "main-notifications"; */
+"main-notifications.title" = "Notifications";
 
-/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "Oox-uH-68j"; */
-"Oox-uH-68j.title" = "Notifications";
+/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "main-archive"; */
+"main-archive.title" = "Archive";
 
-/* Class = "UITabBarItem"; title = "Home"; ObjectID = "acW-dT-cKf"; */
-"acW-dT-cKf.title" = "Accueil";
+/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "main-drafts"; */
+"main-drafts.title" = "Brouillons";
 
-/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "cPa-gy-q4n"; */
-"cPa-gy-q4n.title" = "Archive";
+/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "main-drafts"; */
+"main-settings.title" = "Réglages";
 
-/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "kpj-02-V8a"; */
-"kpj-02-V8a.title" = "Brouillons";
+/* Class = "UILabel"; text = "Home"; ObjectID = "main-home-title"; */
+"main-home-title.text" = "Accueil";
 
-/* Class = "UILabel"; text = "Drafts"; ObjectID = "rMr-3Z-KM6"; */
-"rMr-3Z-KM6.text" = "Brouillons";
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "main-notifications-title"; */
+"main-notifications-title.text" = "Notifications";
 
-/* Class = "UILabel"; text = "Archive"; ObjectID = "zEq-FU-wV5"; */
-"zEq-FU-wV5.text" = "Archive";
+/* Class = "UILabel"; text = "Archive"; ObjectID = "main-archive-title"; */
+"main-archive-title.text" = "Archive";
+
+/* Class = "UILabel"; text = "Drafts"; ObjectID = "main-drafts-title"; */
+"main-drafts-title.text" = "Brouillons";
+
+/* Class = "UILabel"; text = "Drafts"; ObjectID = "main-drafts-title"; */
+"main-settings-title.text" = "Réglages";
