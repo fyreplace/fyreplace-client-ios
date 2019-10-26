@@ -23,6 +23,7 @@
                         <segue destination="Vpf-9w-elj" kind="relationship" relationship="viewControllers" id="ZWm-29-HfD"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="fbb-Dh-akC" kind="relationship" relationship="viewControllers" id="sm1-zT-F8M"/>
+                        <segue destination="xQo-Qp-pzp" kind="relationship" relationship="viewControllers" id="boo-q9-TVD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -82,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UP-sj-LaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="750"/>
+            <point key="canvasLocation" x="-750" y="750"/>
         </scene>
         <!--Archive-->
         <scene sceneID="wg7-f3-ORb">
@@ -109,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="750"/>
+            <point key="canvasLocation" x="0.0" y="750"/>
         </scene>
         <!--Drafts-->
         <scene sceneID="fdJ-gl-e9d">
@@ -119,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-3Z-KM6" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-3Z-KM6" userLabel="Title">
                                 <rect key="frame" x="159.5" y="426.5" width="95" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -137,12 +138,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugd-3W-t6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="750" y="750"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="WMQ-KG-r83">
+            <objects>
+                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGz-Ei-WnN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-q6-vOe" userLabel="Title">
+                                <rect key="frame" x="143" y="426.5" width="128" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ubY-q6-vOe" firstAttribute="centerY" secondItem="mGz-Ei-WnN" secondAttribute="centerY" id="oAv-3i-tY0"/>
+                            <constraint firstItem="ubY-q6-vOe" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="qoL-Kc-C9b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="smW-9c-JZJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vn0-gN-el0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1500" y="750"/>
         </scene>
     </scenes>
     <resources>
         <image name="bell.fill" width="25" height="26"/>
         <image name="folder.fill" width="30" height="26"/>
+        <image name="gear" width="28" height="26"/>
         <image name="house.fill" width="30" height="26"/>
         <image name="square.and.pencil" width="26" height="26"/>
     </resources>
