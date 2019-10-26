@@ -54,11 +54,30 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		4D71425E236497850041438B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */,
+				4DAA04012353B66A00CB27B6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D7BABFF23649DF4006BD55F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
+				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
+				4D7142592364570A0041438B /* ViewControllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		4DAA03ED2353B66A00CB27B6 = {
 			isa = PBXGroup;
 			children = (
-				4DAA03F82353B66A00CB27B6 /* Fyreplace */,
 				4DAA03F72353B66A00CB27B6 /* Products */,
+				4DAA03F82353B66A00CB27B6 /* Fyreplace */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,13 +92,10 @@
 		4DAA03F82353B66A00CB27B6 /* Fyreplace */ = {
 			isa = PBXGroup;
 			children = (
-				4D7142592364570A0041438B /* ViewControllers */,
-				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
-				4DAA04012353B66A00CB27B6 /* Main.storyboard */,
-				4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */,
-				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
-				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
+				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
+				4D71425E236497850041438B /* Storyboards */,
+				4D7BABFF23649DF4006BD55F /* Source */,
 			);
 			path = Fyreplace;
 			sourceTree = "<group>";
@@ -155,12 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
+				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
+				4DAA03FE2353B66A00CB27B6 /* HomeViewController.swift in Sources */,
 				4DA34F062363966C003D8746 /* NotificationsViewController.swift in Sources */,
 				4DAA04002353B66A00CB27B6 /* ArchiveViewController.swift in Sources */,
 				4D71425B236457550041438B /* DraftsViewController.swift in Sources */,
-				4DAA03FE2353B66A00CB27B6 /* HomeViewController.swift in Sources */,
-				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
-				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
