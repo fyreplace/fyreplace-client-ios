@@ -134,7 +134,6 @@
                         <viewLayoutGuide key="safeArea" id="AUU-db-2u1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="kpj-02-V8a" userLabel="Drafts"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugd-3W-t6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
