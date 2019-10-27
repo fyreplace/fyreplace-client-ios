@@ -10,4 +10,7 @@
    <FileRef
       location = "group:Notifications">
    </FileRef>
+   <FileRef
+      location = "group:Archive">
+   </FileRef>
 </Workspace>

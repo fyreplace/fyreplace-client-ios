@@ -11,12 +11,12 @@
 		4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9903972364B066002CC12D /* SettingsViewController.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
-		4DAA04002353B66A00CB27B6 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
 		4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0A2365CC9B00C5B974 /* Home */; };
 		4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0C2365CE4500C5B974 /* Notifications */; };
+		4DC72E0F2365CED700C5B974 /* Archive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0E2365CED700C5B974 /* Archive */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,6 @@
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		4DAA04022353B66A00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DAA04042353B66B00CB27B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DAA04072353B66B00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC72E0F2365CED700C5B974 /* Archive in Frameworks */,
 				4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */,
 				4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */,
 			);
@@ -50,7 +50,6 @@
 		4D7142592364570A0041438B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */,
 				4D71425A236457550041438B /* DraftsViewController.swift */,
 				4D9903972364B066002CC12D /* SettingsViewController.swift */,
 			);
@@ -130,6 +129,7 @@
 			packageProductDependencies = (
 				4DC72E0A2365CC9B00C5B974 /* Home */,
 				4DC72E0C2365CE4500C5B974 /* Notifications */,
+				4DC72E0E2365CED700C5B974 /* Archive */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -189,7 +189,6 @@
 			files = (
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
-				4DAA04002353B66A00CB27B6 /* ArchiveViewController.swift in Sources */,
 				4D71425B236457550041438B /* DraftsViewController.swift in Sources */,
 				4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */,
 			);
@@ -408,6 +407,10 @@
 		4DC72E0C2365CE4500C5B974 /* Notifications */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Notifications;
+		};
+		4DC72E0E2365CED700C5B974 /* Archive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Archive;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
