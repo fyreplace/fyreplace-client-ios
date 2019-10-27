@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,11 +12,11 @@
 		4DA34F062363966C003D8746 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34F052363966C003D8746 /* NotificationsViewController.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
-		4DAA03FE2353B66A00CB27B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FD2353B66A00CB27B6 /* HomeViewController.swift */; };
 		4DAA04002353B66A00CB27B6 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
+		4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0A2365CC9B00C5B974 /* Home */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DAA03FD2353B66A00CB27B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		4DAA04022353B66A00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DAA04042353B66B00CB27B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,6 @@
 		4D7142592364570A0041438B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DAA03FD2353B66A00CB27B6 /* HomeViewController.swift */,
 				4DA34F052363966C003D8746 /* NotificationsViewController.swift */,
 				4DAA03FF2353B66A00CB27B6 /* ArchiveViewController.swift */,
 				4D71425A236457550041438B /* DraftsViewController.swift */,
@@ -82,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAA03F72353B66A00CB27B6 /* Products */,
+				4DC72E092365CC9B00C5B974 /* Frameworks */,
 				4DAA03F82353B66A00CB27B6 /* Fyreplace */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +105,13 @@
 			path = Fyreplace;
 			sourceTree = "<group>";
 		};
+		4DC72E092365CC9B00C5B974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +128,9 @@
 			dependencies = (
 			);
 			name = Fyreplace;
+			packageProductDependencies = (
+				4DC72E0A2365CC9B00C5B974 /* Home */,
+			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
 			productType = "com.apple.product-type.application";
@@ -164,8 +174,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
 				4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */,
+				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
 				4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +189,6 @@
 			files = (
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
-				4DAA03FE2353B66A00CB27B6 /* HomeViewController.swift in Sources */,
 				4DA34F062363966C003D8746 /* NotificationsViewController.swift in Sources */,
 				4DAA04002353B66A00CB27B6 /* ArchiveViewController.swift in Sources */,
 				4D71425B236457550041438B /* DraftsViewController.swift in Sources */,
@@ -391,6 +400,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DC72E0A2365CC9B00C5B974 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DAA03EE2353B66A00CB27B6 /* Project object */;
 }

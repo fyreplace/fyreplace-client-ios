@@ -4,4 +4,7 @@
    <FileRef
       location = "container:Fyreplace.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Home">
+   </FileRef>
 </Workspace>
