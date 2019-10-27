@@ -1,3 +1,3 @@
-# Archive
+# AppArchive
 
 The archive page.

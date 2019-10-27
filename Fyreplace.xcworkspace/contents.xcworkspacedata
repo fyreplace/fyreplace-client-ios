@@ -5,18 +5,18 @@
       location = "container:Fyreplace.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Home">
+      location = "group:AppHome">
    </FileRef>
    <FileRef
-      location = "group:Notifications">
+      location = "group:AppNotifications">
    </FileRef>
    <FileRef
-      location = "group:Archive">
+      location = "group:AppArchive">
    </FileRef>
    <FileRef
-      location = "group:Drafts">
+      location = "group:AppDrafts">
    </FileRef>
    <FileRef
-      location = "group:Settings">
+      location = "group:AppSettings">
    </FileRef>
 </Workspace>

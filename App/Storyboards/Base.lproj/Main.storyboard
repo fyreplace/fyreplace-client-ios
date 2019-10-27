@@ -33,7 +33,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Home" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="AppHome" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
         <!--Notifications-->
         <scene sceneID="oeS-oX-eT6">
             <objects>
-                <viewController id="Vpf-9w-elj" userLabel="Notifications" customClass="NotificationsViewController" customModule="Notifications" sceneMemberID="viewController">
+                <viewController id="Vpf-9w-elj" userLabel="Notifications" customClass="NotificationsViewController" customModule="AppNotifications" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BbT-0y-yYk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
         <!--Archive-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="ArchiveViewController" customModule="Archive" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ArchiveViewController" customModule="AppArchive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <!--Drafts-->
         <scene sceneID="fdJ-gl-e9d">
             <objects>
-                <viewController id="fbb-Dh-akC" userLabel="Drafts" customClass="DraftsViewController" customModule="Drafts" sceneMemberID="viewController">
+                <viewController id="fbb-Dh-akC" userLabel="Drafts" customClass="DraftsViewController" customModule="AppDrafts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h20-Tp-4bQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--Settings-->
         <scene sceneID="WMQ-KG-r83">
             <objects>
-                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="Settings" sceneMemberID="viewController">
+                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="AppSettings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mGz-Ei-WnN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

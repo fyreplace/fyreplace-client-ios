@@ -1,3 +1,3 @@
-# Home
+# AppHome
 
 The home page.

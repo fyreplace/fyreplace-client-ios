@@ -3,17 +3,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "Drafts",
+    name: "AppSettings",
     products: [
         .library(
-            name: "Drafts",
-            targets: ["Drafts"]),
+            name: "AppSettings",
+            targets: ["AppSettings"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "Drafts",
+            name: "AppSettings",
             dependencies: []),
     ]
 )

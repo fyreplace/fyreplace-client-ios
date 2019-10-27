@@ -1,3 +1,3 @@
-# Settings
+# AppSettings
 
 The settings page.

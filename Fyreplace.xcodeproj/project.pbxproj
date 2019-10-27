@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D73CA062365D149006F461D /* Drafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4D73CA052365D149006F461D /* Drafts */; };
-		4D73CA082365D2B9006F461D /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 4D73CA072365D2B9006F461D /* Settings */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
-		4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0A2365CC9B00C5B974 /* Home */; };
-		4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0C2365CE4500C5B974 /* Notifications */; };
-		4DC72E0F2365CED700C5B974 /* Archive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC72E0E2365CED700C5B974 /* Archive */; };
+		4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* AppHome */; };
+		4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* AppNotifications */; };
+		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
+		4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C42365DE3700BD4E60 /* AppDrafts */; };
+		4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C62365DE3B00BD4E60 /* AppSettings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +36,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC72E0F2365CED700C5B974 /* Archive in Frameworks */,
-				4D73CA082365D2B9006F461D /* Settings in Frameworks */,
-				4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */,
-				4D73CA062365D149006F461D /* Drafts in Frameworks */,
-				4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */,
+				4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */,
+				4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */,
+				4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */,
+				4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */,
+				4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			children = (
 				4DAA03F72353B66A00CB27B6 /* Products */,
 				4DC72E092365CC9B00C5B974 /* Frameworks */,
-				4DAA03F82353B66A00CB27B6 /* Fyreplace */,
+				4DAA03F82353B66A00CB27B6 /* App */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +82,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DAA03F82353B66A00CB27B6 /* Fyreplace */ = {
+		4DAA03F82353B66A00CB27B6 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
@@ -90,7 +90,7 @@
 				4D71425E236497850041438B /* Storyboards */,
 				4D7BABFF23649DF4006BD55F /* Sources */,
 			);
-			path = Fyreplace;
+			path = App;
 			sourceTree = "<group>";
 		};
 		4DC72E092365CC9B00C5B974 /* Frameworks */ = {
@@ -117,11 +117,11 @@
 			);
 			name = Fyreplace;
 			packageProductDependencies = (
-				4DC72E0A2365CC9B00C5B974 /* Home */,
-				4DC72E0C2365CE4500C5B974 /* Notifications */,
-				4DC72E0E2365CED700C5B974 /* Archive */,
-				4D73CA052365D149006F461D /* Drafts */,
-				4D73CA072365D2B9006F461D /* Settings */,
+				4DDE87BE2365DE2900BD4E60 /* AppHome */,
+				4DDE87C02365DE2E00BD4E60 /* AppNotifications */,
+				4DDE87C22365DE3200BD4E60 /* AppArchive */,
+				4DDE87C42365DE3700BD4E60 /* AppDrafts */,
+				4DDE87C62365DE3B00BD4E60 /* AppSettings */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -331,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_TEAM = 6V7A4GTVDC;
-				INFOPLIST_FILE = Fyreplace/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_TEAM = 6V7A4GTVDC;
-				INFOPLIST_FILE = Fyreplace/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,25 +390,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4D73CA052365D149006F461D /* Drafts */ = {
+		4DDE87BE2365DE2900BD4E60 /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Drafts;
+			productName = AppHome;
 		};
-		4D73CA072365D2B9006F461D /* Settings */ = {
+		4DDE87C02365DE2E00BD4E60 /* AppNotifications */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Settings;
+			productName = AppNotifications;
 		};
-		4DC72E0A2365CC9B00C5B974 /* Home */ = {
+		4DDE87C22365DE3200BD4E60 /* AppArchive */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Home;
+			productName = AppArchive;
 		};
-		4DC72E0C2365CE4500C5B974 /* Notifications */ = {
+		4DDE87C42365DE3700BD4E60 /* AppDrafts */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Notifications;
+			productName = AppDrafts;
 		};
-		4DC72E0E2365CED700C5B974 /* Archive */ = {
+		4DDE87C62365DE3B00BD4E60 /* AppSettings */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Archive;
+			productName = AppSettings;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,3 +1,3 @@
-# Notifications
+# AppNotifications
 
 The notifications page.

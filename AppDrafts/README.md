@@ -1,3 +1,3 @@
-# Drafts
+# AppDrafts
 
 The drafts page.
