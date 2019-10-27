@@ -143,7 +143,7 @@
         <!--Settings-->
         <scene sceneID="WMQ-KG-r83">
             <objects>
-                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="Settings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mGz-Ei-WnN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

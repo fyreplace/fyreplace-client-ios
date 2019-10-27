@@ -16,4 +16,7 @@
    <FileRef
       location = "group:Drafts">
    </FileRef>
+   <FileRef
+      location = "group:Settings">
+   </FileRef>
 </Workspace>

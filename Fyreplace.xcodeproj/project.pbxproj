@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D73CA062365D149006F461D /* Drafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4D73CA052365D149006F461D /* Drafts */; };
-		4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9903972364B066002CC12D /* SettingsViewController.swift */; };
+		4D73CA082365D2B9006F461D /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 4D73CA072365D2B9006F461D /* Settings */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
@@ -22,7 +22,6 @@
 /* Begin PBXFileReference section */
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4D71425D2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4D9903972364B066002CC12D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC72E0F2365CED700C5B974 /* Archive in Frameworks */,
+				4D73CA082365D2B9006F461D /* Settings in Frameworks */,
 				4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */,
 				4D73CA062365D149006F461D /* Drafts in Frameworks */,
 				4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */,
@@ -47,14 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D7142592364570A0041438B /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4D9903972364B066002CC12D /* SettingsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		4D71425E236497850041438B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +61,6 @@
 			children = (
 				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
 				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
-				4D7142592364570A0041438B /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -130,6 +121,7 @@
 				4DC72E0C2365CE4500C5B974 /* Notifications */,
 				4DC72E0E2365CED700C5B974 /* Archive */,
 				4D73CA052365D149006F461D /* Drafts */,
+				4D73CA072365D2B9006F461D /* Settings */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -189,7 +181,6 @@
 			files = (
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
-				4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +390,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D73CA052365D149006F461D /* Drafts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Drafts;
+		};
+		4D73CA072365D2B9006F461D /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
 		4DC72E0A2365CC9B00C5B974 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Home;
@@ -410,10 +409,6 @@
 		4DC72E0E2365CED700C5B974 /* Archive */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Archive;
-		};
-		4D73CA052365D149006F461D /* Drafts */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Drafts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
