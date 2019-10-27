@@ -21,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		4D71425D2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
