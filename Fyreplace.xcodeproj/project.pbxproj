@@ -68,14 +68,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		4D7BABFF23649DF4006BD55F /* Source */ = {
+		4D7BABFF23649DF4006BD55F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
 				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
 				4D7142592364570A0041438B /* ViewControllers */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4DAA03ED2353B66A00CB27B6 = {
@@ -100,7 +100,7 @@
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
 				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
 				4D71425E236497850041438B /* Storyboards */,
-				4D7BABFF23649DF4006BD55F /* Source */,
+				4D7BABFF23649DF4006BD55F /* Sources */,
 			);
 			path = Fyreplace;
 			sourceTree = "<group>";
