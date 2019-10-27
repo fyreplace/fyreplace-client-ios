@@ -115,7 +115,7 @@
         <!--Drafts-->
         <scene sceneID="fdJ-gl-e9d">
             <objects>
-                <viewController id="fbb-Dh-akC" userLabel="Drafts" customClass="DraftsViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fbb-Dh-akC" userLabel="Drafts" customClass="DraftsViewController" customModule="Drafts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h20-Tp-4bQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

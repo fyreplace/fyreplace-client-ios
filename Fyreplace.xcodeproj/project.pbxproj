@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D71425B236457550041438B /* DraftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71425A236457550041438B /* DraftsViewController.swift */; };
+		4D73CA062365D149006F461D /* Drafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4D73CA052365D149006F461D /* Drafts */; };
 		4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9903972364B066002CC12D /* SettingsViewController.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
@@ -20,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D71425A236457550041438B /* DraftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsViewController.swift; sourceTree = "<group>"; };
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4D71425D2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4D9903972364B066002CC12D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 			files = (
 				4DC72E0F2365CED700C5B974 /* Archive in Frameworks */,
 				4DC72E0B2365CC9B00C5B974 /* Home in Frameworks */,
+				4D73CA062365D149006F461D /* Drafts in Frameworks */,
 				4DC72E0D2365CE4500C5B974 /* Notifications in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,6 @@
 		4D7142592364570A0041438B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D71425A236457550041438B /* DraftsViewController.swift */,
 				4D9903972364B066002CC12D /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -130,6 +129,7 @@
 				4DC72E0A2365CC9B00C5B974 /* Home */,
 				4DC72E0C2365CE4500C5B974 /* Notifications */,
 				4DC72E0E2365CED700C5B974 /* Archive */,
+				4D73CA052365D149006F461D /* Drafts */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -189,7 +189,6 @@
 			files = (
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
-				4D71425B236457550041438B /* DraftsViewController.swift in Sources */,
 				4D9903982364B066002CC12D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +410,10 @@
 		4DC72E0E2365CED700C5B974 /* Archive */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Archive;
+		};
+		4D73CA052365D149006F461D /* Drafts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Drafts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
