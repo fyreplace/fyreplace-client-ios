@@ -7,13 +7,14 @@ let package = Package(
     products: [
         .library(
             name: "AppArchive",
-            targets: ["AppArchive"]),
+            targets: ["AppArchive"]
+        ),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "AppArchive",
-            dependencies: []),
+            dependencies: []
+        ),
     ]
 )

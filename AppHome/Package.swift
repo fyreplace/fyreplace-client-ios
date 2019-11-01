@@ -7,13 +7,14 @@ let package = Package(
     products: [
         .library(
             name: "AppHome",
-            targets: ["AppHome"]),
+            targets: ["AppHome"]
+        ),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "AppHome",
-            dependencies: []),
+            dependencies: []
+        ),
     ]
 )
