@@ -19,4 +19,13 @@
    <FileRef
       location = "group:AppSettings">
    </FileRef>
+   <FileRef
+      location = "group:Lib">
+   </FileRef>
+   <FileRef
+      location = "group:LibCommon">
+   </FileRef>
+   <FileRef
+      location = "group:LibWildFyre">
+   </FileRef>
 </Workspace>

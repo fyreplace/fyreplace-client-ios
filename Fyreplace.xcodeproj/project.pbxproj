@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D30805E237A0C4E004C708D /* Data.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D30805C237A0C4E004C708D /* Data.strings */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D30805D237A0C4E004C708D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Data.strings; sourceTree = "<group>"; };
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D308056237A0933004C708D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D30805C237A0C4E004C708D /* Data.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4D71425E236497850041438B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 			children = (
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
 				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
+				4D308056237A0933004C708D /* Resources */,
 				4D71425E236497850041438B /* Storyboards */,
 				4D7BABFF23649DF4006BD55F /* Sources */,
 			);
@@ -168,6 +179,7 @@
 			files = (
 				4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */,
 				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
+				4D30805E237A0C4E004C708D /* Data.strings in Resources */,
 				4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +219,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4D30805C237A0C4E004C708D /* Data.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D30805D237A0C4E004C708D /* en */,
+			);
+			name = Data.strings;
+			sourceTree = "<group>";
+		};
 		4DAA04012353B66A00CB27B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
