@@ -53,6 +53,7 @@
 		4D308056237A0933004C708D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
 				4D30805C237A0C4E004C708D /* Data.strings */,
 			);
 			path = Resources;
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
-				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
 				4D308056237A0933004C708D /* Resources */,
 				4D71425E236497850041438B /* Storyboards */,
 				4D7BABFF23649DF4006BD55F /* Sources */,
