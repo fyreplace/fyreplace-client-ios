@@ -42,17 +42,8 @@
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxSwiftExt.git",
         "state": {
           "branch": null,
-          "revision": "608136ecaf29b2c43345dab95518464e57567449",
-          "version": "5.1.1"
-        }
-      },
-      {
-        "package": "Swinject",
-        "repositoryURL": "https://github.com/Swinject/Swinject.git",
-        "state": {
-          "branch": null,
-          "revision": "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
-          "version": "2.7.1"
+          "revision": "9620cd55a58c1cf3370375140c45379c40049f55",
+          "version": "5.2.0"
         }
       }
     ]
