@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D01D6342393DA3F007FC625 /* Lib in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6332393DA3F007FC625 /* Lib */; };
+		4D01D6362393DA45007FC625 /* LibCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6352393DA45007FC625 /* LibCommon */; };
+		4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6372393DA49007FC625 /* LibWildFyre */; };
 		4D30805E237A0C4E004C708D /* Data.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D30805C237A0C4E004C708D /* Data.strings */; };
 		4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3186D32392F42D0028BC2B /* MainViewController.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
@@ -39,11 +42,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D01D6342393DA3F007FC625 /* Lib in Frameworks */,
+				4D01D6362393DA45007FC625 /* LibCommon in Frameworks */,
+				4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */,
 				4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */,
-				4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */,
-				4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */,
-				4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */,
 				4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */,
+				4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */,
+				4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */,
+				4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +142,9 @@
 				4DDE87C22365DE3200BD4E60 /* AppArchive */,
 				4DDE87C42365DE3700BD4E60 /* AppDrafts */,
 				4DDE87C62365DE3B00BD4E60 /* AppSettings */,
+				4D01D6332393DA3F007FC625 /* Lib */,
+				4D01D6352393DA45007FC625 /* LibCommon */,
+				4D01D6372393DA49007FC625 /* LibWildFyre */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -433,6 +442,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D01D6332393DA3F007FC625 /* Lib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lib;
+		};
+		4D01D6352393DA45007FC625 /* LibCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibCommon;
+		};
+		4D01D6372393DA49007FC625 /* LibWildFyre */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibWildFyre;
+		};
 		4DDE87BE2365DE2900BD4E60 /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppHome;
