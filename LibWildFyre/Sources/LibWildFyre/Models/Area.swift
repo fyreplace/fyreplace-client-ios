@@ -1,6 +1,6 @@
 import Moya
 
-public struct Area: Codable {
+public struct Area: Decodable {
     public let name: String
     public let displayname: String
 }
@@ -10,7 +10,7 @@ public enum AreaTarget {
     case reputation(areaName: String)
 }
 
-extension AreaTarget: TargetType {
+extension AreaTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .all:

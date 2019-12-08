@@ -1,13 +1,22 @@
 import Moya
 
-public struct Draft: Codable {
+public struct Draft: Encodable {
     public let text: String
     public let anonym: Bool
+
+    public init(text: String, anonym: Bool) {
+        self.text = text
+        self.anonym = anonym
+    }
 }
 
-public struct DraftText: Codable {
+public struct DraftText: Encodable {
     public let text: String
     public let image: ImageData? = nil
+
+    public init(text: String) {
+        self.text = text
+    }
 }
 
 public enum DraftTarget {
@@ -23,7 +32,7 @@ public enum DraftTarget {
     case removeImage(areaName: String, postId: UInt64, slotId: UInt)
 }
 
-extension DraftTarget: TargetType {
+extension DraftTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case let .all(areaName, _, _),

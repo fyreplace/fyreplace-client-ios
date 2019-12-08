@@ -10,7 +10,7 @@
 		4D01D6342393DA3F007FC625 /* Lib in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6332393DA3F007FC625 /* Lib */; };
 		4D01D6362393DA45007FC625 /* LibCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6352393DA45007FC625 /* LibCommon */; };
 		4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6372393DA49007FC625 /* LibWildFyre */; };
-		4D30805E237A0C4E004C708D /* Data.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D30805C237A0C4E004C708D /* Data.strings */; };
+		4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D135F35239A91FE00B20BFA /* Localizable.strings */; };
 		4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3186D32392F42D0028BC2B /* MainViewController.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D30805D237A0C4E004C708D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Data.strings; sourceTree = "<group>"; };
+		4D135F36239A91FE00B20BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D3186D32392F42D0028BC2B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAA04042353B66B00CB27B6 /* Assets.xcassets */,
-				4D30805C237A0C4E004C708D /* Data.strings */,
+				4D135F35239A91FE00B20BFA /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */,
+				4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */,
 				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
-				4D30805E237A0C4E004C708D /* Data.strings in Resources */,
 				4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,12 +232,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D30805C237A0C4E004C708D /* Data.strings */ = {
+		4D135F35239A91FE00B20BFA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4D30805D237A0C4E004C708D /* en */,
+				4D135F36239A91FE00B20BFA /* Base */,
 			);
-			name = Data.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		4DAA04012353B66A00CB27B6 /* Main.storyboard */ = {

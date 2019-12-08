@@ -1,27 +1,45 @@
 import Moya
 
-public struct PasswordRecoveryStep1: Codable {
+public struct PasswordRecoveryStep1: Encodable {
     public let username: String
     public let email: String
     public let captcha: String
+
+    public init(username: String, email: String, captcha: String) {
+        self.username = username
+        self.email = email
+        self.captcha = captcha
+    }
 }
 
-public struct PasswordRecoveryStep2: Codable {
+public struct PasswordRecoveryStep2: Encodable {
     public let newPassword: String
     public let token: String
     public let transaction: String
     public let captcha: String
+
+    public init(newPassword: String, token: String, transaction: String, captcha: String) {
+        self.newPassword = newPassword
+        self.token = token
+        self.transaction = transaction
+        self.captcha = captcha
+    }
 }
 
-public struct RecoverTransaction: Codable {
+public struct RecoverTransaction: Decodable {
     public let transaction: String
 }
 
-public struct Reset: Codable {}
+public struct Reset: Decodable {}
 
-public struct UsernameRecovery: Codable {
+public struct UsernameRecovery: Encodable {
     public let email: String
     public let captcha: String
+
+    public init(email: String, captcha: String) {
+        self.email = email
+        self.captcha = captcha
+    }
 }
 
 public enum RecoveryTarget {
@@ -30,7 +48,7 @@ public enum RecoveryTarget {
     case username(recovery: UsernameRecovery)
 }
 
-extension RecoveryTarget: TargetType {
+extension RecoveryTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .passwordStep1:

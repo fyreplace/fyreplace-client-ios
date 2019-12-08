@@ -1,13 +1,13 @@
 import Foundation
 import Moya
 
-public struct Image: Codable {
+public struct Image: Decodable {
     public let num: UInt
     public let image: String
     public let comment: String?
 }
 
-public struct ImageData: Codable {
+public struct ImageData: Encodable {
     public var name: String
     public var mime: String
     public var data: Data

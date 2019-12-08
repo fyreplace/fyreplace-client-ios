@@ -19,6 +19,10 @@ extension TargetType {
     }
 }
 
+extension AccessTokenAuthorizable {
+    public var authorizationType: AuthorizationType { .custom("Token") }
+}
+
 extension String {
     internal func formData(named name: String) -> MultipartFormData {
         MultipartFormData(provider: .data(data(using: .utf8)!), name: name)

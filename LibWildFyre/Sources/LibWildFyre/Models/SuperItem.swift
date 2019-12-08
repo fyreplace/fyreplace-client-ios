@@ -1,4 +1,4 @@
-public struct SuperItem<I: Codable>: Codable {
+public struct SuperItem<I: Decodable>: Decodable {
     public let count: UInt
     public let next: String?
     public let previous: String?

@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Post: Codable {
+public struct Post: Decodable {
     public let id: UInt64
     public let author: Author
     public let text: String
@@ -14,12 +14,20 @@ public struct Post: Codable {
     public let comments: [Comment]
 }
 
-public struct Spread: Codable {
+public struct Spread: Encodable {
     public let spread: Bool
+
+    public init(spread: Bool) {
+        self.spread = spread
+    }
 }
 
 public struct Subscription: Codable {
     public let subscribed: Bool
+
+    public init(subscribed: Bool) {
+        self.subscribed = subscribed
+    }
 }
 
 public enum PostTarget {
@@ -27,13 +35,13 @@ public enum PostTarget {
     case archive(areaName: String, offset: UInt, limit: UInt)
     case own(areaName: String, offset: UInt, limit: UInt)
     case get(areaName: String, postId: UInt64)
-    case create(areaName: String, post: Post)
+    case create(areaName: String, draft: Draft)
     case delete(areaName: String, postId: UInt64)
     case spread(areaName: String, postId: UInt64, spread: Spread)
     case subscribe(areaName: String, postId: UInt64, subscription: Subscription)
 }
 
-extension PostTarget: TargetType {
+extension PostTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case let .stack(areaName, _),
@@ -91,8 +99,8 @@ extension PostTarget: TargetType {
              .delete:
             return .requestPlain
 
-        case let .create(_, post):
-            return .requestJSONEncodable(post)
+        case let .create(_, draft):
+            return .requestJSONEncodable(draft)
 
         case let .spread(_, _, spread):
             return .requestJSONEncodable(spread)

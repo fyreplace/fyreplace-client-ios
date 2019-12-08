@@ -1,14 +1,18 @@
 import Moya
 
-public struct Author: Codable {
+public struct Author: Decodable {
     public let user: UInt64
     public let name: String
     public let avatar: String?
     public let bio: String?
     public let banned: Bool
 
-    public struct Patch: Codable {
+    public struct Patch: Encodable {
         public let bio: String
+
+        public init(bio: String) {
+            self.bio = bio
+        }
     }
 }
 
@@ -19,7 +23,7 @@ public enum AuthorTarget {
     case updateAvatar(image: ImageData)
 }
 
-extension AuthorTarget: TargetType {
+extension AuthorTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .me,

@@ -1,11 +1,16 @@
 import Moya
 
-public struct Flag: Codable {
+public struct Flag: Encodable {
     public let reason: String
     public let comment: String?
+
+    public init(reason: String, comment: String?) {
+        self.reason = reason
+        self.comment = comment
+    }
 }
 
-public struct Choice: Codable {
+public struct Choice: Decodable {
     public let key: UInt64
     public let value: String
 }
@@ -15,7 +20,7 @@ public enum FlagTarget {
     case report(areaName: String, postId: UInt64, commentId: UInt64? = nil, flag: Flag)
 }
 
-extension FlagTarget: TargetType {
+extension FlagTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .reasons:

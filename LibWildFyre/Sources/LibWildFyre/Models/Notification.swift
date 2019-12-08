@@ -1,12 +1,12 @@
 import Moya
 
-public struct Notification: Codable {
+public struct Notification: Decodable {
     public let area: String
     public let post: NotificationPost
     public let comments: [UInt64]
 }
 
-public struct NotificationPost: Codable {
+public struct NotificationPost: Decodable {
     public let id: UInt64
     public let author: Author?
     public let text: String
@@ -17,7 +17,7 @@ public enum NotificationTarget {
     case clear
 }
 
-extension NotificationTarget: TargetType {
+extension NotificationTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .all,

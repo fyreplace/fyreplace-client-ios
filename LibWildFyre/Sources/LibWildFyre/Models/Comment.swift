@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Comment: Codable {
+public struct Comment: Decodable {
     public let id: UInt64
     public let author: Author?
     public let created: Date
@@ -9,8 +9,12 @@ public struct Comment: Codable {
     public let image: String?
 }
 
-public struct CommentText: Codable {
+public struct CommentText: Encodable {
     public let text: String
+
+    public init(text: String) {
+        self.text = text
+    }
 }
 
 public enum CommentTarget {
@@ -18,7 +22,7 @@ public enum CommentTarget {
     case delete(areaName: String, postId: UInt64, commentId: UInt64)
 }
 
-extension CommentTarget: TargetType {
+extension CommentTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case let .send(areaName, postId, _, _):

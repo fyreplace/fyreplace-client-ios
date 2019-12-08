@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Ban: Codable {
+public struct Ban: Decodable {
     public let timestamp: Date
     public let reason: UInt64
     public let comment: String?
@@ -17,7 +17,7 @@ public enum BanTarget {
     case all
 }
 
-extension BanTarget: TargetType {
+extension BanTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .all:
