@@ -13,11 +13,15 @@ let package = Package(
             targets: ["AppSettings"]
         ),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "../LibCommon"),
+    ],
     targets: [
         .target(
             name: "AppSettings",
-            dependencies: []
+            dependencies: [
+                "LibCommon",
+            ]
         ),
     ]
 )

@@ -17,6 +17,7 @@
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
+		4DC14E76239EAD0C0056C0A7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */; };
 		4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* AppHome */; };
 		4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* AppNotifications */; };
 		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
@@ -35,6 +36,7 @@
 		4DAA04042353B66B00CB27B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DAA04072353B66B00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAA04092353B66B00CB27B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
 				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
 				4D3186D32392F42D0028BC2B /* MainViewController.swift */,
+				4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */,
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
+				4DC14E76239EAD0C0056C0A7 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,10 @@ let package = Package(
     targets: [
         .target(
             name: "LibWildFyre",
-            dependencies: ["Moya"]
+            dependencies: [
+                "Moya",
+                "RxMoya",
+            ]
         ),
     ]
 )

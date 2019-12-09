@@ -19,6 +19,7 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <outlet property="viewModel" destination="QyB-Yv-6cx" id="uaq-Pm-w3z"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Vpf-9w-elj" kind="relationship" relationship="viewControllers" id="ZWm-29-HfD"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
@@ -27,6 +28,12 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <customObject id="QyB-Yv-6cx" userLabel="ViewModel" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target">
+                    <connections>
+                        <outlet property="authRepo" destination="hGn-uT-23Z" id="PR7-Vl-BfE"/>
+                    </connections>
+                </customObject>
+                <customObject id="hGn-uT-23Z" userLabel="AuthRepo" customClass="AuthRepository" customModule="LibCommon"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
@@ -163,8 +170,17 @@
                         <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" id="main-settings"/>
+                    <connections>
+                        <outlet property="viewModel" destination="0XE-iT-Atg" id="694-eO-l11"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vn0-gN-el0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="0XE-iT-Atg" userLabel="ViewModel" customClass="SettingsViewModel" customModule="AppSettings">
+                    <connections>
+                        <outlet property="authRepo" destination="84q-cm-Hur" id="J6U-O8-ZT2"/>
+                    </connections>
+                </customObject>
+                <customObject id="84q-cm-Hur" userLabel="AuthRepo" customClass="AuthRepository" customModule="LibCommon"/>
             </objects>
             <point key="canvasLocation" x="1500" y="750"/>
         </scene>
