@@ -141,7 +141,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DAA040C2353B66B00CB27B6 /* Build configuration list for PBXNativeTarget "Fyreplace" */;
 			buildPhases = (
-				4D25916B23721B8200353AE9 /* ShellScript */,
 				4DAA03F22353B66A00CB27B6 /* Sources */,
 				4DAA03F32353B66A00CB27B6 /* Frameworks */,
 				4DAA03F42353B66A00CB27B6 /* Resources */,
@@ -212,26 +211,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4D25916B23721B8200353AE9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect\nv=$(swift --version | grep -ioE 'version\\s+[0-9.]+')\nswiftformat --swiftversion $(echo $v | grep -oE '[0-9.]+') .\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DAA03F22353B66A00CB27B6 /* Sources */ = {

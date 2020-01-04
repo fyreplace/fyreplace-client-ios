@@ -13,10 +13,11 @@ class MainViewController: UITabBarController {
             .disposed(by: disposeBag)
     }
 
-    override func overrideTraitCollection(forChild _: UIViewController) -> UITraitCollection? {
+    override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
+        let isPhone = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
         let traits = [
-            UITraitCollection(horizontalSizeClass: UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? .compact : .regular),
-            UITraitCollection(verticalSizeClass: view.bounds.width < view.bounds.height ? .regular : .compact),
+            UITraitCollection(horizontalSizeClass: isPhone ? .compact : .regular),
+            UITraitCollection(verticalSizeClass: view.bounds.width < view.bounds.height ? .regular : .compact)
         ]
 
         return UITraitCollection(traitsFrom: traits)
