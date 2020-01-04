@@ -9,11 +9,20 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.isLogged
-            .subscribe(onNext: { [unowned self] in self.loginStateChanged($0) })
+            .subscribe(onNext: { [unowned self] in self.loginStateChanged(logged: $0) })
             .disposed(by: disposeBag)
     }
 
-    private func loginStateChanged(_ logged: Bool) {
+    override func overrideTraitCollection(forChild _: UIViewController) -> UITraitCollection? {
+        let traits = [
+            UITraitCollection(horizontalSizeClass: UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? .compact : .regular),
+            UITraitCollection(verticalSizeClass: view.bounds.width < view.bounds.height ? .regular : .compact),
+        ]
+
+        return UITraitCollection(traitsFrom: traits)
+    }
+
+    private func loginStateChanged(logged: Bool) {
         if !logged {
             selectedIndex = tabBar.items!.count - 1
         }
