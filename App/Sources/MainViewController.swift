@@ -23,12 +23,14 @@ class MainViewController: UITabBarController {
     }
 
     private func loginStateChanged(logged: Bool) {
+        guard let items = tabBar.items else { return }
+
         if !logged {
-            selectedIndex = tabBar.items!.count - 1
+            selectedIndex = items.count - 1
         }
 
-        for item in tabBar.items! {
-            item.isEnabled = logged || item == tabBar.items!.last
+        for item in items {
+            item.isEnabled = logged || item == items.last
         }
     }
 }
