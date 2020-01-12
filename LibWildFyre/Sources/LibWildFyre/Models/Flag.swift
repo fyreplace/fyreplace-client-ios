@@ -27,13 +27,13 @@ extension FlagTarget: TargetType, AccessTokenAuthorizable {
             return "/choices/flag/reasons/"
 
         case let .report(areaName, postId, commentId, _):
-            var p = "/areas/\(areaName)/\(postId)"
+            var reportPath = "/areas/\(areaName)/\(postId)"
 
-            if let c = commentId {
-                p += "/\(c)"
+            if let comment = commentId {
+                reportPath += "/\(comment)"
             }
 
-            return p + "/flag/"
+            return reportPath + "/flag/"
         }
     }
 
