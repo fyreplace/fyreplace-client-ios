@@ -1,37 +1,34 @@
+import LibCommon
 import RxSwift
 import UIKit
 
 class MainViewController: UITabBarController {
     @IBOutlet private var viewModel: MainViewModel!
 
-    private let disposeBag = DisposeBag()
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidLogout(_:)), name: .didLogout, object: nil)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewModel.isLogged
-            .subscribe(onNext: { [unowned self] in self.loginStateChanged(logged: $0) })
-            .disposed(by: disposeBag)
+        if UserDefaults.standard.string(forKey: "auth:token")?.count ?? 0 == 0 {
+            NotificationCenter.default.post(name: .didLogout, object: self)
+        }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: .didLogout, object: nil)
     }
 
     override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
         let isPhone = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
+        let isPortrait = view.bounds.width < view.bounds.height
         let traits = [
             UITraitCollection(horizontalSizeClass: isPhone ? .compact : .regular),
-            UITraitCollection(verticalSizeClass: view.bounds.width < view.bounds.height ? .regular : .compact)
+            UITraitCollection(verticalSizeClass: isPortrait ? .regular : .compact)
         ]
 
         return UITraitCollection(traitsFrom: traits)
     }
 
-    private func loginStateChanged(logged: Bool) {
-        guard let items = tabBar.items else { return }
-
-        if !logged {
-            selectedIndex = items.count - 1
-        }
-
-        for item in items {
-            item.isEnabled = logged || item == items.last
-        }
+    @objc private func onDidLogout(_ notification: Notification) {
+        performSegue(withIdentifier: "login", sender: self)
     }
 }

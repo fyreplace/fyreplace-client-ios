@@ -1,30 +1,27 @@
-
-/* Class = "UITabBarItem"; title = "Home"; ObjectID = "main-home"; */
+// MainViewController
 "main-home.title" = "Accueil";
-
-/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "main-notifications"; */
 "main-notifications.title" = "Notifications";
-
-/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "main-archive"; */
 "main-archive.title" = "Archive";
-
-/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "main-drafts"; */
 "main-drafts.title" = "Brouillons";
-
-/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "main-drafts"; */
 "main-settings.title" = "Réglages";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "main-home-title"; */
+// LoginViewController
+"main-login-username.placeholder" = "Nom d'utilisateur";
+"main-login-password.placeholder" = "Mot de passe";
+"main-login-login.normalTitle" = "Connexion";
+
+// HomeViewController
 "main-home-title.text" = "Accueil";
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "main-notifications-title"; */
+// NotificationsViewController
 "main-notifications-title.text" = "Notifications";
 
-/* Class = "UILabel"; text = "Archive"; ObjectID = "main-archive-title"; */
+// ArchiveViewController
 "main-archive-title.text" = "Archive";
 
-/* Class = "UILabel"; text = "Drafts"; ObjectID = "main-drafts-title"; */
+// DraftsViewController
 "main-drafts-title.text" = "Brouillons";
 
-/* Class = "UILabel"; text = "Drafts"; ObjectID = "main-drafts-title"; */
-"main-settings-title.text" = "Réglages";
+// SettingsViewController
+"main-settings-username.text" = "Nom d'utilisateur";
+"main-settings-logout.normalTitle" = "Déconnexion";

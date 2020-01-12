@@ -7,4 +7,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func didClickLogout() {
+        viewModel.logout()
+    }
 }

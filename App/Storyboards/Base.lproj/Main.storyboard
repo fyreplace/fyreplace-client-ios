@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,8 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <outlet property="viewModel" destination="QyB-Yv-6cx" id="uaq-Pm-w3z"/>
+                        <outlet property="viewModel" destination="xzX-Jj-VuV" id="IfG-Oz-kxs"/>
+                        <segue destination="4Iu-pv-b5q" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="P9r-4N-F2a"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Vpf-9w-elj" kind="relationship" relationship="viewControllers" id="ZWm-29-HfD"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
@@ -28,14 +30,96 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-                <customObject id="QyB-Yv-6cx" userLabel="ViewModel" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target">
-                    <connections>
-                        <outlet property="authRepo" destination="hGn-uT-23Z" id="PR7-Vl-BfE"/>
-                    </connections>
-                </customObject>
-                <customObject id="hGn-uT-23Z" userLabel="AuthRepo" customClass="AuthRepository" customModule="LibCommon"/>
+                <customObject id="xzX-Jj-VuV" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="dKK-bh-32s">
+            <objects>
+                <viewController id="4Iu-pv-b5q" userLabel="Login" customClass="LoginViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oon-5x-yzI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-vK-Bvy">
+                                <rect key="frame" x="87" y="390" width="240" height="116"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-username">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                        <connections>
+                                            <action selector="didSetUsername" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="aeJ-id-tEP"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-password">
+                                        <rect key="frame" x="0.0" y="42" width="240" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="didClickLogin" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="0nF-up-Hzv"/>
+                                            <action selector="didSetPassword" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="Aig-S1-M5m"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-login">
+                                        <rect key="frame" x="100" y="84" width="40" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="didClickLogin" destination="4Iu-pv-b5q" eventType="touchUpInside" id="c1M-Nj-3hi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="main-login-password" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="12p-77-NRn"/>
+                                    <constraint firstItem="main-login-username" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="1wJ-Jv-g3s"/>
+                                    <constraint firstAttribute="width" constant="360" id="9Fh-hS-vli"/>
+                                    <constraint firstAttribute="width" constant="240" id="hzg-yk-z4B"/>
+                                    <constraint firstItem="main-login-password" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="pzJ-Ah-OLE"/>
+                                    <constraint firstItem="main-login-username" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="ug1-Da-JoH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Fh-hS-vli"/>
+                                        <exclude reference="hzg-yk-z4B"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="hzg-yk-z4B"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="9Fh-hS-vli"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hkg-vK-Bvy" firstAttribute="centerX" secondItem="Oon-5x-yzI" secondAttribute="centerX" id="hjd-2g-ddE"/>
+                            <constraint firstItem="hkg-vK-Bvy" firstAttribute="centerY" secondItem="Oon-5x-yzI" secondAttribute="centerY" id="kXC-In-ocY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="06M-wf-HkK"/>
+                    </view>
+                    <connections>
+                        <outlet property="login" destination="main-login-login" id="Etg-Za-u8f"/>
+                        <outlet property="password" destination="main-login-password" id="tCY-cq-USz"/>
+                        <outlet property="username" destination="main-login-username" id="BdB-PB-nW5"/>
+                        <outlet property="viewModel" destination="qq4-OS-5GK" id="CSD-gA-ejh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KA0-ZH-52o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="qq4-OS-5GK" customClass="LoginViewModel" customModule="Fyreplace" customModuleProvider="target">
+                    <connections>
+                        <outlet property="authRepo" destination="NSL-mC-zka" id="esV-eV-NbF"/>
+                    </connections>
+                </customObject>
+                <customObject id="NSL-mC-zka" customClass="AuthRepository" customModule="LibCommon"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="0.0"/>
         </scene>
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
@@ -155,37 +239,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-title" userLabel="Title">
-                                <rect key="frame" x="143" y="426.5" width="128" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0qn-DG-6CZ">
+                                <rect key="frame" x="20" y="330.5" width="374" height="196.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wsv-WT-47F" userLabel="Profile Picture">
+                                        <rect key="frame" x="123" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="192" id="HNp-zA-8Xm"/>
+                                            <constraint firstAttribute="width" constant="128" id="PsA-2Z-vkv"/>
+                                            <constraint firstAttribute="width" constant="192" id="h37-eu-kbp"/>
+                                            <constraint firstAttribute="height" constant="128" id="vkp-wE-I2O"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HNp-zA-8Xm"/>
+                                                <exclude reference="PsA-2Z-vkv"/>
+                                                <exclude reference="h37-eu-kbp"/>
+                                                <exclude reference="vkp-wE-I2O"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="PsA-2Z-vkv"/>
+                                                <include reference="vkp-wE-I2O"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="HNp-zA-8Xm"/>
+                                                <include reference="h37-eu-kbp"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-username">
+                                        <rect key="frame" x="148" y="136" width="78.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-logout">
+                                        <rect key="frame" x="161.5" y="164.5" width="51" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="didClickLogout" destination="xQo-Qp-pzp" eventType="touchUpInside" id="cWJ-92-P0H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="main-settings-title" firstAttribute="centerY" secondItem="mGz-Ei-WnN" secondAttribute="centerY" id="oAv-3i-tY0"/>
-                            <constraint firstItem="main-settings-title" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="qoL-Kc-C9b"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="0ni-Kx-J7U"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="trailing" secondItem="mGz-Ei-WnN" secondAttribute="trailingMargin" id="AUO-qH-c2v"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="leading" secondItem="mGz-Ei-WnN" secondAttribute="leadingMargin" id="yhl-8n-S1s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" id="main-settings"/>
                     <connections>
-                        <outlet property="viewModel" destination="0XE-iT-Atg" id="694-eO-l11"/>
+                        <outlet property="viewModel" destination="6V4-Jw-CtN" id="LUN-A7-afa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vn0-gN-el0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="0XE-iT-Atg" userLabel="ViewModel" customClass="SettingsViewModel" customModule="AppSettings">
+                <customObject id="6V4-Jw-CtN" customClass="SettingsViewModel" customModule="AppSettings">
                     <connections>
-                        <outlet property="authRepo" destination="84q-cm-Hur" id="J6U-O8-ZT2"/>
+                        <outlet property="authRepo" destination="1A9-5u-lVb" id="tBs-K7-5h0"/>
                     </connections>
                 </customObject>
-                <customObject id="84q-cm-Hur" userLabel="AuthRepo" customClass="AuthRepository" customModule="LibCommon"/>
+                <customObject id="1A9-5u-lVb" customClass="AuthRepository" customModule="LibCommon"/>
             </objects>
             <point key="canvasLocation" x="1500" y="750"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Avatar" width="256" height="256"/>
         <image name="bell.fill" width="25" height="26"/>
         <image name="folder.fill" width="30" height="26"/>
         <image name="gear" width="28" height="26"/>
