@@ -8,7 +8,7 @@ class MainViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogout(_:)), name: .didLogout, object: nil)
 
-        if UserDefaults.standard.string(forKey: "auth:token")?.count ?? 0 == 0 {
+        if !viewModel.isLogged {
             NotificationCenter.default.post(name: .didLogout, object: self)
         }
     }
