@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/Moya/Moya.git",
-            .upToNextMajor(from: "14.0.0-beta.5")
+            .upToNextMajor(from: "14.0.0-beta.6")
         ),
     ],
     targets: [

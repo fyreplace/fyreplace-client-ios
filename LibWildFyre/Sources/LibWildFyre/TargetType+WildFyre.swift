@@ -20,7 +20,7 @@ extension TargetType {
 }
 
 extension AccessTokenAuthorizable {
-    public var authorizationType: AuthorizationType { .custom("Token") }
+    public var authorizationType: AuthorizationType? { .custom("Token") }
 }
 
 extension String {

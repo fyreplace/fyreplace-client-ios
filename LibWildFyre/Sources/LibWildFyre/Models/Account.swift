@@ -51,5 +51,5 @@ extension AccountTarget: TargetType, AccessTokenAuthorizable {
         }
     }
 
-    public var authorizationType: AuthorizationType { .none }
+    public var authorizationType: AuthorizationType? { nil }
 }
