@@ -6,22 +6,22 @@
 "main-settings.title" = "Réglages";
 
 // LoginViewController
-"main-login-username.placeholder" = "Nom d'utilisateur";
-"main-login-password.placeholder" = "Mot de passe";
-"main-login-login.normalTitle" = "Connexion";
+"login-username.placeholder" = "Nom d'utilisateur";
+"login-password.placeholder" = "Mot de passe";
+"login-login.normalTitle" = "Connexion";
 
 // HomeViewController
-"main-home-title.text" = "Accueil";
+"home-title.text" = "Accueil";
 
 // NotificationsViewController
-"main-notifications-title.text" = "Notifications";
+"notifications-title.text" = "Notifications";
 
 // ArchiveViewController
-"main-archive-title.text" = "Archive";
+"archive-title.text" = "Archive";
 
 // DraftsViewController
-"main-drafts-title.text" = "Brouillons";
+"drafts-title.text" = "Brouillons";
 
 // SettingsViewController
-"main-settings-username.text" = "Nom d'utilisateur";
-"main-settings-logout.normalTitle" = "Déconnexion";
+"settings-username.text" = "Nom d'utilisateur";
+"settings-logout.normalTitle" = "Déconnexion";

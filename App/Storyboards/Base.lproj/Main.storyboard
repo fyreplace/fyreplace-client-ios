@@ -45,7 +45,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-vK-Bvy">
                                 <rect key="frame" x="87" y="390" width="240" height="116"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-username">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="login-username">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -53,7 +53,7 @@
                                             <action selector="didSetUsername" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="aeJ-id-tEP"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-password">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="login-password">
                                         <rect key="frame" x="0.0" y="42" width="240" height="34"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
@@ -62,7 +62,7 @@
                                             <action selector="didSetPassword" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="Aig-S1-M5m"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="main-login-login">
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="login-login">
                                         <rect key="frame" x="100" y="84" width="40" height="32"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <state key="normal" title="Login"/>
@@ -72,12 +72,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="main-login-password" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="12p-77-NRn"/>
-                                    <constraint firstItem="main-login-username" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="1wJ-Jv-g3s"/>
+                                    <constraint firstItem="login-password" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="12p-77-NRn"/>
+                                    <constraint firstItem="login-username" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="1wJ-Jv-g3s"/>
                                     <constraint firstAttribute="width" constant="360" id="9Fh-hS-vli"/>
                                     <constraint firstAttribute="width" constant="240" id="hzg-yk-z4B"/>
-                                    <constraint firstItem="main-login-password" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="pzJ-Ah-OLE"/>
-                                    <constraint firstItem="main-login-username" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="ug1-Da-JoH"/>
+                                    <constraint firstItem="login-password" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="pzJ-Ah-OLE"/>
+                                    <constraint firstItem="login-username" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="ug1-Da-JoH"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -105,9 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="06M-wf-HkK"/>
                     </view>
                     <connections>
-                        <outlet property="login" destination="main-login-login" id="Etg-Za-u8f"/>
-                        <outlet property="password" destination="main-login-password" id="tCY-cq-USz"/>
-                        <outlet property="username" destination="main-login-username" id="BdB-PB-nW5"/>
+                        <outlet property="login" destination="login-login" id="Etg-Za-u8f"/>
+                        <outlet property="password" destination="login-password" id="tCY-cq-USz"/>
+                        <outlet property="username" destination="login-username" id="BdB-PB-nW5"/>
                         <outlet property="viewModel" destination="qq4-OS-5GK" id="CSD-gA-ejh"/>
                     </connections>
                 </viewController>
@@ -129,7 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-home-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="home-title" userLabel="Title">
                                 <rect key="frame" x="160.5" y="426.5" width="93.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -137,8 +137,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="main-home-title" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="main-home-title" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="centerX" secondItem="home-title" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstAttribute="centerY" secondItem="home-title" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-notifications-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="notifications-title" userLabel="Title">
                                 <rect key="frame" x="109.5" y="426.5" width="195" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -165,8 +165,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="main-notifications-title" firstAttribute="centerY" secondItem="BbT-0y-yYk" secondAttribute="centerY" id="Rrf-LR-zUF"/>
-                            <constraint firstItem="main-notifications-title" firstAttribute="centerX" secondItem="BbT-0y-yYk" secondAttribute="centerX" id="hwf-Zd-xeA"/>
+                            <constraint firstItem="notifications-title" firstAttribute="centerY" secondItem="BbT-0y-yYk" secondAttribute="centerY" id="Rrf-LR-zUF"/>
+                            <constraint firstItem="notifications-title" firstAttribute="centerX" secondItem="BbT-0y-yYk" secondAttribute="centerX" id="hwf-Zd-xeA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ek9-jH-yw8"/>
                     </view>
@@ -184,7 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-archive-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="archive-title" userLabel="Title">
                                 <rect key="frame" x="149" y="426.5" width="116" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -192,8 +192,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="main-archive-title" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="main-archive-title" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerX" secondItem="archive-title" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="archive-title" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -211,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="main-drafts-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="drafts-title" userLabel="Title">
                                 <rect key="frame" x="159.5" y="426.5" width="95" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -220,8 +220,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="main-drafts-title" firstAttribute="centerY" secondItem="h20-Tp-4bQ" secondAttribute="centerY" id="Qdg-xD-7zr"/>
-                            <constraint firstItem="main-drafts-title" firstAttribute="centerX" secondItem="h20-Tp-4bQ" secondAttribute="centerX" id="RJa-WG-ov9"/>
+                            <constraint firstItem="drafts-title" firstAttribute="centerY" secondItem="h20-Tp-4bQ" secondAttribute="centerY" id="Qdg-xD-7zr"/>
+                            <constraint firstItem="drafts-title" firstAttribute="centerX" secondItem="h20-Tp-4bQ" secondAttribute="centerX" id="RJa-WG-ov9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AUU-db-2u1"/>
                     </view>
@@ -277,13 +277,13 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-username">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="settings-username">
                                         <rect key="frame" x="148" y="136" width="78.5" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="main-settings-logout">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="settings-logout">
                                         <rect key="frame" x="161.5" y="164.5" width="51" height="32"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <state key="normal" title="Logout"/>
