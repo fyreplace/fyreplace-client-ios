@@ -23,9 +23,6 @@
       location = "group:Lib">
    </FileRef>
    <FileRef
-      location = "group:LibCommon">
-   </FileRef>
-   <FileRef
       location = "group:LibWildFyre">
    </FileRef>
 </Workspace>

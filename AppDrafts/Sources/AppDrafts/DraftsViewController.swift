@@ -1,4 +1,4 @@
 import UIKit
 
-class DraftsViewController: UIViewController {
+public class DraftsViewController: UIViewController {
 }

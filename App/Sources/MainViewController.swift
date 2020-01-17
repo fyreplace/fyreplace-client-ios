@@ -1,5 +1,3 @@
-import LibCommon
-import RxSwift
 import UIKit
 
 class MainViewController: UITabBarController {

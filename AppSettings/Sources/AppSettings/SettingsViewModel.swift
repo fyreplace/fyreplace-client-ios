@@ -1,8 +1,5 @@
-import Alamofire
 import Foundation
-import LibCommon
-import LibWildFyre
-import RxSwift
+import Lib
 
 class SettingsViewModel: NSObject {
     @IBOutlet private var authRepo: AuthRepository!

@@ -1,11 +1,10 @@
-import RxSwift
 import UIKit
 
 public class LoginViewController: UIViewController {
+    @IBOutlet private var viewModel: LoginViewModel!
     @IBOutlet private var username: UITextField!
     @IBOutlet private var password: UITextField!
     @IBOutlet private var login: UIButton!
-    @IBOutlet private var viewModel: LoginViewModel!
 
     override public func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogin(_:)), name: .didLogin, object: nil)

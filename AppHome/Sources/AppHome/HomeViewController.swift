@@ -1,4 +1,4 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+public class HomeViewController: UIViewController {
 }

@@ -1,3 +1,0 @@
-# LibCommon
-
-General use library.

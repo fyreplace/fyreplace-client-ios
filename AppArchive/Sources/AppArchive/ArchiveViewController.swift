@@ -1,4 +1,4 @@
 import UIKit
 
-class ArchiveViewController: UIViewController {
+public class ArchiveViewController: UIViewController {
 }

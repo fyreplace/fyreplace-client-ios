@@ -1,7 +1,6 @@
 import Foundation
-import LibCommon
+import Lib
 import LibWildFyre
-import RxSwift
 
 public class LoginViewModel: NSObject {
     @IBOutlet private var authRepo: AuthRepository!
