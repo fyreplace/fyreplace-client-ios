@@ -26,6 +26,10 @@ let package = Package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
             .upToNextMajor(from: "5.5.0")
         ),
+        .package(
+            url: "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
+            .upToNextMajor(from: "0.5.0")
+        ),
         .package(path: "../LibWildFyre"),
     ],
     targets: [
@@ -36,6 +40,7 @@ let package = Package(
                 "RxCocoa",
                 "RxSwiftExt",
                 "SDWebImage",
+                "SDWebImageWebPCoder",
                 "LibWildFyre",
             ]
         ),
