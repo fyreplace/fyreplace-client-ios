@@ -17,8 +17,7 @@ public struct Author: Decodable {
 }
 
 public enum AuthorTarget {
-    case me
-    case user(id: UInt64)
+    case user(id: UInt64?)
     case updateBio(text: String)
     case updateAvatar(image: ImageData)
 }
@@ -26,20 +25,19 @@ public enum AuthorTarget {
 extension AuthorTarget: TargetType, AccessTokenAuthorizable {
     public var path: String {
         switch self {
-        case .me,
+        case .user(nil),
              .updateBio,
              .updateAvatar:
             return "/users/"
 
         case let .user(id):
-            return "/users/\(id)/"
+            return "/users/\(id ?? 0)/"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .me,
-             .user:
+        case .user:
             return .get
 
         case .updateAvatar:
@@ -52,8 +50,7 @@ extension AuthorTarget: TargetType, AccessTokenAuthorizable {
 
     public var task: Task {
         switch self {
-        case .me,
-             .user:
+        case .user:
             return .requestPlain
 
         case let .updateBio(text):

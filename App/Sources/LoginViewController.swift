@@ -11,7 +11,7 @@ public class LoginViewController: UIViewController {
     }
 
     public override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self, name: .didLogin, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
 
     @IBAction func didSetUsername() {

@@ -9,7 +9,14 @@ public class BaseProvider<T: TargetType>: MoyaProvider<T> {
         super.init(plugins: [tokenPlugin])
     }
 
-    public func req<R: Decodable>(_ token: T, as type: R.Type) -> Single<R> {
-        rx.request(token).map(type)
+    public func req<R: Decodable>(_ token: T, as type: R.Type) -> Observable<R> {
+        rawReq(token, as: type).asObservable()
+    }
+
+    public func rawReq<R: Decodable>(_ token: T, as type: R.Type) -> Single<R> {
+        rx.request(token)
+            .filterSuccessfulStatusCodes()
+            .map(type)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
     }
 }
