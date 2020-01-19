@@ -1,5 +1,6 @@
 import Lib
 import RxSwift
+import RxCocoa
 import SDWebImage
 import UIKit
 
@@ -15,10 +16,7 @@ public class SettingsViewController: UIViewController, CentralDataConsumer {
     }
 
     public override func viewDidAppear(_ animated: Bool) {
-        centralViewModel.username.purify(with: self)
-            .subscribe(onNext: { [unowned self] name in self.username.text = name })
-            .disposed(by: disposer)
-
+        centralViewModel.username.bind(to: username.rx.text).disposed(by: disposer)
         centralViewModel.avatar.purify(with: self)
             .subscribe(onNext: { [unowned self] avatar in
                 if let avatar = avatar {
