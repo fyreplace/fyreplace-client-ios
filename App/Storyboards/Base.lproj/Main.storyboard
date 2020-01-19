@@ -102,8 +102,8 @@
                                         <constraints>
                                             <constraint firstItem="login-password" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="12p-77-NRn"/>
                                             <constraint firstItem="login-username" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="1wJ-Jv-g3s"/>
-                                            <constraint firstAttribute="width" constant="240" id="hzg-yk-z4B">
-                                                <variation key="widthClass=regular" constant="360"/>
+                                            <constraint firstAttribute="width" constant="360" id="hzg-yk-z4B">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                             </constraint>
                                             <constraint firstItem="login-password" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="pzJ-Ah-OLE"/>
                                             <constraint firstItem="login-username" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="ug1-Da-JoH"/>
