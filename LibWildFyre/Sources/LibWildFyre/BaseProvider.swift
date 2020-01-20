@@ -4,6 +4,8 @@ import RxMoya
 import RxSwift
 
 public class BaseProvider<T: TargetType>: MoyaProvider<T> {
+    private let defaultScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+
     public init() {
         let tokenPlugin = AccessTokenPlugin { _ in UserDefaults.standard.string(forKey: "auth:token") ?? "" }
         super.init(plugins: [tokenPlugin])
@@ -15,8 +17,9 @@ public class BaseProvider<T: TargetType>: MoyaProvider<T> {
 
     public func rawReq<R: Decodable>(_ token: T, as type: R.Type) -> Single<R> {
         rx.request(token)
+            .observeOn(defaultScheduler)
+            .subscribeOn(MainScheduler.instance)
             .filterSuccessfulStatusCodes()
             .map(type)
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
     }
 }
