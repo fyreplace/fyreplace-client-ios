@@ -32,10 +32,12 @@ public class LoginViewController: UIViewController {
     @objc private func onDidLogin(_ notification: Notification) {
         guard let success = notification.userInfo?["success"] as? Bool else { return }
 
-        if success {
-            dismiss(animated: true)
-        } else {
-            login.isEnabled = true
+        DispatchQueue.main.async {
+            if success {
+                self.dismiss(animated: true)
+            } else {
+                self.login.isEnabled = true
+            }
         }
     }
 }
