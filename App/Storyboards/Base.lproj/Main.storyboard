@@ -255,10 +255,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0qn-DG-6CZ">
-                                <rect key="frame" x="20" y="325.5" width="374" height="206.5"/>
+                                <rect key="frame" x="80" y="84" width="254" height="206.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wsv-WT-47F" userLabel="Profile Picture">
-                                        <rect key="frame" x="123" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="63" y="0.0" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="PsA-2Z-vkv">
                                                 <variation key="widthClass=regular" constant="192"/>
@@ -273,7 +273,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="settings-username">
-                                        <rect key="frame" x="138" y="136" width="98" height="26.5"/>
+                                        <rect key="frame" x="78" y="136" width="98" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -282,7 +282,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="settings-logout">
-                                        <rect key="frame" x="156" y="170.5" width="62" height="36"/>
+                                        <rect key="frame" x="96" y="170.5" width="62" height="36"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <state key="normal" title="Logout"/>
                                         <variation key="widthClass=regular">
@@ -294,18 +294,81 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mIU-VK-qnv" userLabel="Bio">
+                                <rect key="frame" x="87" y="330.5" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="FPG-LJ-4lX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="240"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="mIU-VK-qnv" secondAttribute="height" multiplier="1:1" id="IhN-mK-ZCo"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IhN-mK-ZCo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="IhN-mK-ZCo"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="0ni-Kx-J7U"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="trailing" secondItem="mGz-Ei-WnN" secondAttribute="trailingMargin" id="AUO-qH-c2v"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="leading" secondItem="mGz-Ei-WnN" secondAttribute="leadingMargin" id="yhl-8n-S1s"/>
+                            <constraint firstItem="mIU-VK-qnv" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="3Sv-u2-a3R"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="top" secondItem="HSg-vl-HZU" secondAttribute="top" constant="40" id="5iH-UM-9Po"/>
+                            <constraint firstItem="mIU-VK-qnv" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="BLY-Pu-MPI"/>
+                            <constraint firstItem="mIU-VK-qnv" firstAttribute="height" secondItem="0qn-DG-6CZ" secondAttribute="height" id="Dq2-86-u78"/>
+                            <constraint firstItem="mIU-VK-qnv" firstAttribute="trailing" secondItem="HSg-vl-HZU" secondAttribute="trailing" constant="-80" id="LG5-vD-Nd7"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="leading" secondItem="HSg-vl-HZU" secondAttribute="leading" constant="80" id="Ln5-ts-unk"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="TH2-8T-DW7"/>
+                            <constraint firstItem="mIU-VK-qnv" firstAttribute="top" secondItem="0qn-DG-6CZ" secondAttribute="bottom" constant="40" id="UiP-gc-ib8"/>
+                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="gPy-sS-Ac5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5iH-UM-9Po"/>
+                                <exclude reference="TH2-8T-DW7"/>
+                                <exclude reference="gPy-sS-Ac5"/>
+                                <exclude reference="3Sv-u2-a3R"/>
+                                <exclude reference="BLY-Pu-MPI"/>
+                                <exclude reference="Dq2-86-u78"/>
+                                <exclude reference="LG5-vD-Nd7"/>
+                                <exclude reference="UiP-gc-ib8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="TH2-8T-DW7"/>
+                                <include reference="3Sv-u2-a3R"/>
+                                <include reference="Dq2-86-u78"/>
+                                <include reference="LG5-vD-Nd7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="5iH-UM-9Po"/>
+                                <include reference="gPy-sS-Ac5"/>
+                                <include reference="BLY-Pu-MPI"/>
+                                <include reference="UiP-gc-ib8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" id="main-settings"/>
                     <connections>
                         <outlet property="avatar" destination="wsv-WT-47F" id="vl1-Bc-PYW"/>
+                        <outlet property="bio" destination="mIU-VK-qnv" id="kaN-hX-wEk"/>
                         <outlet property="username" destination="settings-username" id="Xe6-D1-PvG"/>
                         <outlet property="viewModel" destination="6V4-Jw-CtN" id="LUN-A7-afa"/>
                     </connections>

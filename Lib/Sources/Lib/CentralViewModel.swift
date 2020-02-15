@@ -9,6 +9,7 @@ public class CentralViewModel: NSObject {
     public lazy var user = mUser.flatMap { [unowned self] _ in self.authorRepo.getUser() }.share()
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
+    public lazy var bio = user.map { $0.bio }
 
     public override init() {
         super.init()
