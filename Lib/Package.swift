@@ -24,7 +24,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
-            .upToNextMajor(from: "5.5.0")
+            .upToNextMajor(from: "5.5.2")
         ),
         .package(
             url: "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
