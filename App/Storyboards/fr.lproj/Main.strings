@@ -1,27 +1,27 @@
 // MainViewController
-"main-home.title" = "Accueil";
-"main-notifications.title" = "Notifications";
-"main-archive.title" = "Archive";
-"main-drafts.title" = "Brouillons";
-"main-settings.title" = "Réglages";
+"Home-Home-Home.title" = "Accueil";
+"Notifications-Notifications-Notifications.title" = "Notifications";
+"Archive-Archive-Archive.title" = "Archive";
+"Drafts-Drafts-Drafts.title" = "Brouillons";
+"Settings-Settings-Settings.title" = "Réglages";
 
 // LoginViewController
-"login-username.placeholder" = "Nom d'utilisateur";
-"login-password.placeholder" = "Mot de passe";
-"login-login.normalTitle" = "Connexion";
+"Login-Login-view-stackView-stackView-Username.placeholder" = "Nom d'utilisateur";
+"Login-Login-view-stackView-stackView-Password.placeholder" = "Mot de passe";
+"Login-Login-view-stackView-stackView-Login.normalTitle" = "Connexion";
 
 // HomeViewController
-"home-title.text" = "Accueil";
+"Home-Home-view-Title.text" = "Accueil";
 
 // NotificationsViewController
-"notifications-title.text" = "Notifications";
+"Notifications-Notifications-view-Title.text" = "Notifications";
 
 // ArchiveViewController
-"archive-title.text" = "Archive";
+"Archive-Archive-view-Title.text" = "Archive";
 
 // DraftsViewController
-"drafts-title.text" = "Brouillons";
+"Drafts-Drafts-view-Title.text" = "Brouillons";
 
 // SettingsViewController
-"settings-username.text" = "Nom d'utilisateur";
-"settings-logout.normalTitle" = "Déconnexion";
+"Settings-Settings-view-stackView-Username.text" = "Nom d'utilisateur";
+"Settings-Settings-view-stackView-Logout.normalTitle" = "Déconnexion";

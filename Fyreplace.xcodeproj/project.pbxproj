@@ -20,6 +20,7 @@
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
 		4DC14E76239EAD0C0056C0A7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */; };
+		4DC7C3F123F81137009D6CC5 /* identify.py in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7C3F023F81137009D6CC5 /* identify.py */; };
 		4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* AppHome */; };
 		4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* AppNotifications */; };
 		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
@@ -44,6 +45,7 @@
 		4DAA04072353B66B00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAA04092353B66B00CB27B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4DC7C3F023F81137009D6CC5 /* identify.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = identify.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */,
 				4DAA04012353B66A00CB27B6 /* Main.storyboard */,
+				4DC7C3F023F81137009D6CC5 /* identify.py */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DAA040C2353B66B00CB27B6 /* Build configuration list for PBXNativeTarget "Fyreplace" */;
 			buildPhases = (
+				4DF2F26523F96D2A002A432E /* ShellScript */,
 				4DAA03F22353B66A00CB27B6 /* Sources */,
 				4DAA03F32353B66A00CB27B6 /* Frameworks */,
 				4DAA03F42353B66A00CB27B6 /* Resources */,
@@ -209,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC7C3F123F81137009D6CC5 /* identify.py in Resources */,
 				4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */,
 				4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */,
 				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
@@ -217,6 +222,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DF2F26523F96D2A002A432E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python3 App/Storyboards/identify.py\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DAA03F22353B66A00CB27B6 /* Sources */ = {

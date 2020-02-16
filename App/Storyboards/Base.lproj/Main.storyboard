@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Main-Main">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,61 +10,61 @@
     </dependencies>
     <scenes>
         <!--Main-->
-        <scene sceneID="yl2-sM-qoP">
+        <scene sceneID="04">
             <objects>
-                <tabBarController id="49e-Tb-3d3" userLabel="Main" customClass="MainViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                <tabBarController id="Main-Main" userLabel="Main" customClass="MainViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Main-Main-tabBar">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <outlet property="centralViewModel" destination="qtf-GQ-Xgu" id="Hev-Ce-pbZ"/>
-                        <outlet property="viewModel" destination="xzX-Jj-VuV" id="IfG-Oz-kxs"/>
-                        <segue destination="4Iu-pv-b5q" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="P9r-4N-F2a"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="Vpf-9w-elj" kind="relationship" relationship="viewControllers" id="ZWm-29-HfD"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="fbb-Dh-akC" kind="relationship" relationship="viewControllers" id="sm1-zT-F8M"/>
-                        <segue destination="xQo-Qp-pzp" kind="relationship" relationship="viewControllers" id="boo-q9-TVD"/>
+                        <outlet property="centralViewModel" destination="Main-CentralViewModel" id="04-02-O-00"/>
+                        <outlet property="viewModel" destination="Main-MainViewModel" id="04-02-O-01"/>
+                        <segue destination="Login-Login" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="04-02-S-05"/>
+                        <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="04-02-S-04"/>
+                        <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="04-02-S-06"/>
+                        <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="04-02-S-02"/>
+                        <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="04-02-S-03"/>
+                        <segue destination="Settings-Settings" kind="relationship" relationship="viewControllers" id="04-02-S-07"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-                <customObject id="xzX-Jj-VuV" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target"/>
-                <customObject id="qtf-GQ-Xgu" customClass="CentralViewModel" customModule="Lib">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Main-placeholder" sceneMemberID="firstResponder"/>
+                <customObject id="Main-MainViewModel" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target"/>
+                <customObject id="Main-CentralViewModel" customClass="CentralViewModel" customModule="Lib">
                     <connections>
-                        <outlet property="authorRepo" destination="Fy1-h8-lb0" id="3GV-BU-jJ6"/>
+                        <outlet property="authorRepo" destination="Main-AuthorRepository" id="04-01-O-00"/>
                     </connections>
                 </customObject>
-                <customObject id="Fy1-h8-lb0" customClass="AuthorRepository" customModule="Lib"/>
+                <customObject id="Main-AuthorRepository" customClass="AuthorRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
         <!--Login-->
-        <scene sceneID="dKK-bh-32s">
+        <scene sceneID="03">
             <objects>
-                <viewController id="4Iu-pv-b5q" userLabel="Login" customClass="LoginViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oon-5x-yzI">
+                <viewController id="Login-Login" userLabel="Login" customClass="LoginViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Login-Login-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-L7-U5k">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView">
                                 <rect key="frame" x="87" y="338" width="240" height="220"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="tpC-Dg-aXR" userLabel="Logo">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-Logo" userLabel="Logo">
                                         <rect key="frame" x="80" y="0.0" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="tpC-Dg-aXR" secondAttribute="height" multiplier="1:1" id="BuD-Av-2OL"/>
-                                            <constraint firstAttribute="width" constant="80" id="MhY-ej-6SS">
+                                            <constraint firstAttribute="width" constant="80" id="03-02-01-01-00-C-00">
                                                 <variation key="widthClass=regular" constant="120"/>
                                             </constraint>
+                                            <constraint firstAttribute="width" secondItem="Login-Login-view-stackView-Logo" secondAttribute="height" multiplier="1:1" id="03-02-01-01-00-C-00-00-00"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-vK-Bvy">
+                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView">
                                         <rect key="frame" x="0.0" y="100" width="240" height="120"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="login-username">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView-Username">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -72,10 +72,10 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didSetUsername" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="aeJ-id-tEP"/>
+                                                    <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-03-A-00-00-00"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="login-password">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView-Password">
                                                 <rect key="frame" x="0.0" y="42" width="240" height="34"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
@@ -83,11 +83,11 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didClickLogin" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="0nF-up-Hzv"/>
-                                                    <action selector="didSetPassword" destination="4Iu-pv-b5q" eventType="editingDidEndOnExit" id="Aig-S1-M5m"/>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-02-A-00-00-00"/>
+                                                    <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-02-A-00-00-01"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="login-login">
+                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView-Login">
                                                 <rect key="frame" x="95.5" y="84" width="49" height="36"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <state key="normal" title="Login"/>
@@ -95,18 +95,18 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didClickLogin" destination="4Iu-pv-b5q" eventType="touchUpInside" id="c1M-Nj-3hi"/>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="03-02-01-01-01-01-A-00-00-00"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="login-password" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="12p-77-NRn"/>
-                                            <constraint firstItem="login-username" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="1wJ-Jv-g3s"/>
-                                            <constraint firstAttribute="width" constant="360" id="hzg-yk-z4B">
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-01-01-C-00-00-00-00"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-01-01-C-00-00-00-01"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-01-01-C-00-00-00-02"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-01-01-C-00-00-00-03"/>
+                                            <constraint firstAttribute="width" constant="360" id="03-02-01-01-01-C-01">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                             </constraint>
-                                            <constraint firstItem="login-password" firstAttribute="trailing" secondItem="hkg-vK-Bvy" secondAttribute="trailing" id="pzJ-Ah-OLE"/>
-                                            <constraint firstItem="login-username" firstAttribute="leading" secondItem="hkg-vK-Bvy" secondAttribute="leading" id="ug1-Da-JoH"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -114,37 +114,37 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fp3-L7-U5k" firstAttribute="centerY" secondItem="Oon-5x-yzI" secondAttribute="centerY" id="Va7-sZ-i8b"/>
-                            <constraint firstItem="fp3-L7-U5k" firstAttribute="centerX" secondItem="Oon-5x-yzI" secondAttribute="centerX" id="sAw-RO-Qym"/>
+                            <constraint firstItem="Login-Login-view-stackView" firstAttribute="centerX" secondItem="Login-Login-view" secondAttribute="centerX" id="03-02-01-C-00-00-00-00"/>
+                            <constraint firstItem="Login-Login-view-stackView" firstAttribute="centerY" secondItem="Login-Login-view" secondAttribute="centerY" id="03-02-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="06M-wf-HkK"/>
+                        <viewLayoutGuide key="safeArea" id="Login-Login-view-viewLayoutGuide"/>
                     </view>
                     <connections>
-                        <outlet property="login" destination="login-login" id="Etg-Za-u8f"/>
-                        <outlet property="password" destination="login-password" id="tCY-cq-USz"/>
-                        <outlet property="username" destination="login-username" id="BdB-PB-nW5"/>
-                        <outlet property="viewModel" destination="qq4-OS-5GK" id="CSD-gA-ejh"/>
+                        <outlet property="login" destination="Login-Login-view-stackView-stackView-Login" id="03-02-O-00"/>
+                        <outlet property="password" destination="Login-Login-view-stackView-stackView-Password" id="03-02-O-01"/>
+                        <outlet property="username" destination="Login-Login-view-stackView-stackView-Username" id="03-02-O-02"/>
+                        <outlet property="viewModel" destination="Login-LoginViewModel" id="03-02-O-03"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KA0-ZH-52o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="qq4-OS-5GK" customClass="LoginViewModel" customModule="Fyreplace" customModuleProvider="target">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Login-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Login-LoginViewModel" customClass="LoginViewModel" customModule="Fyreplace" customModuleProvider="target">
                     <connections>
-                        <outlet property="authRepo" destination="NSL-mC-zka" id="esV-eV-NbF"/>
+                        <outlet property="authRepo" destination="Login-AuthRepository" id="03-03-O-00"/>
                     </connections>
                 </customObject>
-                <customObject id="NSL-mC-zka" customClass="AuthRepository" customModule="Lib"/>
+                <customObject id="Login-AuthRepository" customClass="AuthRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="750" y="0.0"/>
         </scene>
         <!--Home-->
-        <scene sceneID="hNz-n2-bh7">
+        <scene sceneID="02">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="Home" customClass="HomeViewController" customModule="AppHome" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                <viewController id="Home-Home" userLabel="Home" customClass="HomeViewController" customModule="AppHome" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Home-Home-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="home-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Home-Home-view-Title" userLabel="Title">
                                 <rect key="frame" x="160.5" y="426.5" width="93.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -152,26 +152,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="home-title" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="home-title" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="centerX" secondItem="Home-Home-view-Title" secondAttribute="centerX" id="02-00-01-C-00-00-00"/>
+                            <constraint firstAttribute="centerY" secondItem="Home-Home-view-Title" secondAttribute="centerY" id="02-00-01-C-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <viewLayoutGuide key="safeArea" id="Home-Home-view-viewLayoutGuide"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" id="main-home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" id="Home-Home-Home"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1500" y="750"/>
         </scene>
         <!--Notifications-->
-        <scene sceneID="oeS-oX-eT6">
+        <scene sceneID="05">
             <objects>
-                <viewController id="Vpf-9w-elj" userLabel="Notifications" customClass="NotificationsViewController" customModule="AppNotifications" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BbT-0y-yYk">
+                <viewController id="Notifications-Notifications" userLabel="Notifications" customClass="NotificationsViewController" customModule="AppNotifications" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Notifications-Notifications-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="notifications-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Notifications-Notifications-view-Title" userLabel="Title">
                                 <rect key="frame" x="109.5" y="426.5" width="195" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -180,26 +180,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="notifications-title" firstAttribute="centerY" secondItem="BbT-0y-yYk" secondAttribute="centerY" id="Rrf-LR-zUF"/>
-                            <constraint firstItem="notifications-title" firstAttribute="centerX" secondItem="BbT-0y-yYk" secondAttribute="centerX" id="hwf-Zd-xeA"/>
+                            <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerX" secondItem="Notifications-Notifications-view" secondAttribute="centerX" id="05-01-01-C-00-00-00-00"/>
+                            <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerY" secondItem="Notifications-Notifications-view" secondAttribute="centerY" id="05-01-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ek9-jH-yw8"/>
+                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-viewLayoutGuide"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="main-notifications"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="Notifications-Notifications-Notifications"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1UP-sj-LaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-750" y="750"/>
         </scene>
         <!--Archive-->
-        <scene sceneID="wg7-f3-ORb">
+        <scene sceneID="00">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="Archive" customClass="ArchiveViewController" customModule="AppArchive" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <viewController id="Archive-Archive" userLabel="Archive" customClass="ArchiveViewController" customModule="AppArchive" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Archive-Archive-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="archive-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Title" userLabel="Title">
                                 <rect key="frame" x="149" y="426.5" width="116" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
@@ -207,26 +207,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="archive-title" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="archive-title" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerX" secondItem="Archive-Archive-view-Title" secondAttribute="centerX" id="00-00-01-C-00-00-00"/>
+                            <constraint firstAttribute="centerY" secondItem="Archive-Archive-view-Title" secondAttribute="centerY" id="00-00-01-C-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-viewLayoutGuide"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="main-archive"/>
+                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="Archive-Archive-Archive"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="750"/>
         </scene>
         <!--Drafts-->
-        <scene sceneID="fdJ-gl-e9d">
+        <scene sceneID="01">
             <objects>
-                <viewController id="fbb-Dh-akC" userLabel="Drafts" customClass="DraftsViewController" customModule="AppDrafts" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h20-Tp-4bQ">
+                <viewController id="Drafts-Drafts" userLabel="Drafts" customClass="DraftsViewController" customModule="AppDrafts" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Drafts-Drafts-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="drafts-title" userLabel="Title">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Drafts-Drafts-view-Title" userLabel="Title">
                                 <rect key="frame" x="159.5" y="426.5" width="95" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -235,35 +235,35 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="drafts-title" firstAttribute="centerY" secondItem="h20-Tp-4bQ" secondAttribute="centerY" id="Qdg-xD-7zr"/>
-                            <constraint firstItem="drafts-title" firstAttribute="centerX" secondItem="h20-Tp-4bQ" secondAttribute="centerX" id="RJa-WG-ov9"/>
+                            <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerX" secondItem="Drafts-Drafts-view" secondAttribute="centerX" id="01-00-01-C-00-00-00-00"/>
+                            <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerY" secondItem="Drafts-Drafts-view" secondAttribute="centerY" id="01-00-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="AUU-db-2u1"/>
+                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-viewLayoutGuide"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="main-drafts" userLabel="Drafts"/>
+                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugd-3W-t6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="750"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="WMQ-KG-r83">
+        <scene sceneID="06">
             <objects>
-                <viewController id="xQo-Qp-pzp" userLabel="Settings" customClass="SettingsViewController" customModule="AppSettings" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mGz-Ei-WnN">
+                <viewController id="Settings-Settings" userLabel="Settings" customClass="SettingsViewController" customModule="AppSettings" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Settings-Settings-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0qn-DG-6CZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView">
                                 <rect key="frame" x="143" y="84" width="128" height="206.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wsv-WT-47F" userLabel="Profile Picture">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Profile-Picture" userLabel="Profile Picture">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="PsA-2Z-vkv">
+                                            <constraint firstAttribute="width" constant="128" id="06-02-02-01-01-C-00">
                                                 <variation key="widthClass=regular" constant="192"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" secondItem="wsv-WT-47F" secondAttribute="height" multiplier="1:1" id="nym-Ny-h16"/>
+                                            <constraint firstAttribute="width" secondItem="Settings-Settings-view-stackView-Profile-Picture" secondAttribute="height" multiplier="1:1" id="06-02-02-01-01-C-00-00-00"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -272,7 +272,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="settings-username">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Username">
                                         <rect key="frame" x="15" y="136" width="98" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
@@ -281,7 +281,7 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="settings-logout">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Logout">
                                         <rect key="frame" x="33" y="170.5" width="62" height="36"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <state key="normal" title="Logout"/>
@@ -289,19 +289,19 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         </variation>
                                         <connections>
-                                            <action selector="didClickLogout" destination="xQo-Qp-pzp" eventType="touchUpInside" id="cWJ-92-P0H"/>
+                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="06-02-02-01-00-A-00-00-00"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mIU-VK-qnv" userLabel="Bio">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio" userLabel="Bio">
                                 <rect key="frame" x="87" y="330.5" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="360" id="FPG-LJ-4lX">
+                                    <constraint firstAttribute="width" constant="360" id="06-02-02-00-C-00">
                                         <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" secondItem="mIU-VK-qnv" secondAttribute="height" multiplier="1:1" id="IhN-mK-ZCo"/>
+                                    <constraint firstAttribute="width" secondItem="Settings-Settings-view-Bio" secondAttribute="height" multiplier="1:1" id="06-02-02-00-C-00-00-00"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -313,75 +313,75 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="IhN-mK-ZCo"/>
+                                        <exclude reference="06-02-02-00-C-00-00-00"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <include reference="IhN-mK-ZCo"/>
+                                        <include reference="06-02-02-00-C-00-00-00"/>
                                     </mask>
                                 </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mIU-VK-qnv" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="3Sv-u2-a3R"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="top" secondItem="HSg-vl-HZU" secondAttribute="top" constant="40" id="5iH-UM-9Po"/>
-                            <constraint firstItem="mIU-VK-qnv" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="BLY-Pu-MPI"/>
-                            <constraint firstItem="mIU-VK-qnv" firstAttribute="height" secondItem="0qn-DG-6CZ" secondAttribute="height" id="Dq2-86-u78"/>
-                            <constraint firstItem="mIU-VK-qnv" firstAttribute="trailing" secondItem="HSg-vl-HZU" secondAttribute="trailing" constant="-80" id="LG5-vD-Nd7"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="leading" secondItem="HSg-vl-HZU" secondAttribute="leading" constant="80" id="Ln5-ts-unk"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerY" secondItem="HSg-vl-HZU" secondAttribute="centerY" id="TH2-8T-DW7"/>
-                            <constraint firstItem="mIU-VK-qnv" firstAttribute="top" secondItem="0qn-DG-6CZ" secondAttribute="bottom" constant="40" id="UiP-gc-ib8"/>
-                            <constraint firstItem="0qn-DG-6CZ" firstAttribute="centerX" secondItem="mGz-Ei-WnN" secondAttribute="centerX" id="gPy-sS-Ac5"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="06-02-02-C-00-00-00-01"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="06-02-02-C-00-00-00-02"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="height" secondItem="Settings-Settings-view-stackView" secondAttribute="height" id="06-02-02-C-00-00-00-03"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-stackView" secondAttribute="bottom" constant="40" id="06-02-02-C-00-00-00-04"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="trailing" constant="-80" id="06-02-02-C-00-00-00-05"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="06-02-02-C-00-00-00-06"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="06-02-02-C-00-00-00-07"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="leading" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="leading" constant="80" id="06-02-02-C-00-00-00-08"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="top" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="top" constant="40" id="06-02-02-C-00-00-00-09"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="HSg-vl-HZU"/>
+                        <viewLayoutGuide key="safeArea" id="Settings-Settings-view-viewLayoutGuide"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5iH-UM-9Po"/>
-                                <exclude reference="Ln5-ts-unk"/>
-                                <exclude reference="TH2-8T-DW7"/>
-                                <exclude reference="gPy-sS-Ac5"/>
-                                <exclude reference="3Sv-u2-a3R"/>
-                                <exclude reference="BLY-Pu-MPI"/>
-                                <exclude reference="Dq2-86-u78"/>
-                                <exclude reference="LG5-vD-Nd7"/>
-                                <exclude reference="UiP-gc-ib8"/>
+                                <exclude reference="06-02-02-C-00-00-00-06"/>
+                                <exclude reference="06-02-02-C-00-00-00-07"/>
+                                <exclude reference="06-02-02-C-00-00-00-08"/>
+                                <exclude reference="06-02-02-C-00-00-00-09"/>
+                                <exclude reference="06-02-02-C-00-00-00-01"/>
+                                <exclude reference="06-02-02-C-00-00-00-02"/>
+                                <exclude reference="06-02-02-C-00-00-00-03"/>
+                                <exclude reference="06-02-02-C-00-00-00-04"/>
+                                <exclude reference="06-02-02-C-00-00-00-05"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="Ln5-ts-unk"/>
-                                <include reference="TH2-8T-DW7"/>
-                                <include reference="3Sv-u2-a3R"/>
-                                <include reference="Dq2-86-u78"/>
-                                <include reference="LG5-vD-Nd7"/>
+                                <include reference="06-02-02-C-00-00-00-07"/>
+                                <include reference="06-02-02-C-00-00-00-08"/>
+                                <include reference="06-02-02-C-00-00-00-02"/>
+                                <include reference="06-02-02-C-00-00-00-03"/>
+                                <include reference="06-02-02-C-00-00-00-05"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="5iH-UM-9Po"/>
-                                <include reference="gPy-sS-Ac5"/>
-                                <include reference="BLY-Pu-MPI"/>
-                                <include reference="UiP-gc-ib8"/>
+                                <include reference="06-02-02-C-00-00-00-06"/>
+                                <include reference="06-02-02-C-00-00-00-09"/>
+                                <include reference="06-02-02-C-00-00-00-01"/>
+                                <include reference="06-02-02-C-00-00-00-04"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="main-settings"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="Settings-Settings-Settings"/>
                     <connections>
-                        <outlet property="avatar" destination="wsv-WT-47F" id="vl1-Bc-PYW"/>
-                        <outlet property="bio" destination="mIU-VK-qnv" id="kaN-hX-wEk"/>
-                        <outlet property="username" destination="settings-username" id="Xe6-D1-PvG"/>
-                        <outlet property="viewModel" destination="6V4-Jw-CtN" id="LUN-A7-afa"/>
+                        <outlet property="avatar" destination="Settings-Settings-view-stackView-Profile-Picture" id="06-02-O-00"/>
+                        <outlet property="bio" destination="Settings-Settings-view-Bio" id="06-02-O-01"/>
+                        <outlet property="username" destination="Settings-Settings-view-stackView-Username" id="06-02-O-02"/>
+                        <outlet property="viewModel" destination="Settings-SettingsViewModel" id="06-02-O-03"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vn0-gN-el0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="6V4-Jw-CtN" customClass="SettingsViewModel" customModule="AppSettings">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Settings-SettingsViewModel" customClass="SettingsViewModel" customModule="AppSettings">
                     <connections>
-                        <outlet property="authRepo" destination="1A9-5u-lVb" id="tBs-K7-5h0"/>
+                        <outlet property="authRepo" destination="Settings-AuthRepository" id="06-03-O-00"/>
                     </connections>
                 </customObject>
-                <customObject id="1A9-5u-lVb" customClass="AuthRepository" customModule="Lib"/>
+                <customObject id="Settings-AuthRepository" customClass="AuthRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="1500" y="750"/>
         </scene>
