@@ -47,8 +47,10 @@ def process(storyboard: Text):
 
     for name in [storyboard] + glob.glob(f"**/{storyboard_name}.strings"):
         end = '"' if name == storyboard else "."
-        ids_changed = False
         old_to_new = mapping_items(mapping)
+
+        if len(old_to_new) == 0:
+            break
 
         with open(name, "r") as f:
             data = f.read()
@@ -56,15 +58,13 @@ def process(storyboard: Text):
         for old_id, new_id in old_to_new:
             if old_id != new_id:
                 data = data.replace('"' + old_id + end, '"=' + new_id + end)
-                ids_changed = True
 
-        if ids_changed:
-            for old_id, new_id in old_to_new:
-                if old_id != new_id:
-                    data = data.replace('"=' + new_id + end, '"' + new_id + end)
+        for old_id, new_id in old_to_new:
+            if old_id != new_id:
+                data = data.replace('"=' + new_id + end, '"' + new_id + end)
 
-            with open(name, "w") as f:
-                f.write(data)
+        with open(name, "w") as f:
+            f.write(data)
 
 
 def walk(node: etree.Element, mapping: Mapping, prefix: Id):
@@ -178,7 +178,9 @@ def mapping_items(mapping: Mapping) -> Dict[Text, Text]:
             counters[-1] += 1
 
         new_id_string = resolve_id(mapping, new_id) if keep else shrink_id(new_id, counters)
-        result[old_id] = new_id_string
+
+        if new_id_string != old_id:
+            result[old_id] = new_id_string
 
         if new_id_string == previous_id_string:
             sys.exit("Two objects have the same ID: " + new_id_string)
