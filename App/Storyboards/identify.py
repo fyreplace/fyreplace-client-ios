@@ -132,15 +132,16 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
         or node.attrib.get("placeholder")
         or node.attrib.get("image")
         or node.attrib.get("customClass")
-        or node.tag
     )
 
     if node.tag == "button":
         for child in node:
             if child.tag == "state" and child.attrib.get("key") == "normal":
                 label = child.attrib.get("title")
+    elif node.tag == "barButtonItem" and label is None:
+        label = node.attrib.get("systemItem")
 
-    return ([(IdPartType.STRING, label)], True)
+    return ([(IdPartType.STRING, label or node.tag)], True)
 
 
 def make_id(*parts: IdPart) -> Id:
