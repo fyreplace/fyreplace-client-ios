@@ -5,11 +5,16 @@ import SDWebImage
 import UIKit
 
 public class SettingsViewController: UIViewController, CentralDataProvider {
+    @IBOutlet
+    private var viewModel: SettingsViewModel!
+    @IBOutlet
+    private var avatar: UIImageView!
+    @IBOutlet
+    private var username: UILabel!
+    @IBOutlet
+    private var bio: UITextView!
+
     public var centralViewModel: CentralViewModel!
-    @IBOutlet private var viewModel: SettingsViewModel!
-    @IBOutlet private var avatar: UIImageView!
-    @IBOutlet private var username: UILabel!
-    @IBOutlet private var bio: UITextView!
     private var disposer = DisposeBag()
 
     public override func viewDidLoad() {
@@ -20,9 +25,11 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
         centralViewModel.username.purify(with: self)
             .bind(to: username.rx.text)
             .disposed(by: disposer)
+
         centralViewModel.bio.purify(with: self)
             .bind(to: bio.rx.text)
             .disposed(by: disposer)
+
         centralViewModel.avatar.purify(with: self)
             .subscribe(onNext: { [unowned self] avatar in
                 if let avatar = avatar {
@@ -40,7 +47,8 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
         setup(viewController: segue.destination)
     }
 
-    @IBAction func didClickLogout() {
+    @IBAction
+    func didClickLogout() {
         viewModel.logout()
     }
 }

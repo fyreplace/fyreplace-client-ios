@@ -13,13 +13,15 @@ public class KeyboardAvoidingConstraint: NSLayoutConstraint {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIWindow.keyboardWillHideNotification, object: nil)
     }
 
-    @objc private func keyboardDidShow(_ notification: Notification) {
+    @objc
+    private func keyboardDidShow(_ notification: Notification) {
         let frameValue = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)
         guard let keyboardSize = frameValue?.cgRectValue.size else { return }
         updateKeyboard(height: keyboardSize.height)
     }
 
-    @objc private func keyboardWillHide(_ notification: Notification) {
+    @objc
+    private func keyboardWillHide(_ notification: Notification) {
         updateKeyboard(height: 0)
     }
 

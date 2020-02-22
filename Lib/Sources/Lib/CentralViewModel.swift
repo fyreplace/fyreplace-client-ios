@@ -3,9 +3,10 @@ import LibWildFyre
 import RxSwift
 
 public class CentralViewModel: NSObject {
-    @IBOutlet private var authorRepo: AuthorRepository!
-    private let mUser = BehaviorSubject<Void>(value: Void())
+    @IBOutlet
+    private var authorRepo: AuthorRepository!
 
+    private let mUser = BehaviorSubject<Void>(value: Void())
     public lazy var user = mUser.flatMap { [unowned self] _ in self.authorRepo.getUser() }.share(replay: 1)
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
@@ -20,7 +21,8 @@ public class CentralViewModel: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
 
-    @objc private func onDidLogin(_ notification: Foundation.Notification) {
+    @objc
+    private func onDidLogin(_ notification: Foundation.Notification) {
         guard notification.userInfo?["success"] as? Bool ?? false else { return }
         mUser.onNext(Void())
     }

@@ -1,4 +1,3 @@
-import LibWildFyre
 import UIKit
 
 public protocol FailureHandler: AnyObject {

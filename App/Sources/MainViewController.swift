@@ -2,8 +2,10 @@ import Lib
 import UIKit
 
 class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
-    @IBOutlet private var viewModel: MainViewModel!
-    @IBOutlet public var centralViewModel: CentralViewModel!
+    @IBOutlet
+    public var centralViewModel: CentralViewModel!
+    @IBOutlet
+    private var viewModel: MainViewModel!
 
     override func viewDidLoad() {
         delegate = self
@@ -43,7 +45,8 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, Centra
         return true
     }
 
-    @objc private func onDidLogout(_ notification: Notification) {
+    @objc
+    private func onDidLogout(_ notification: Notification) {
         performSegue(withIdentifier: "login", sender: self)
     }
 }

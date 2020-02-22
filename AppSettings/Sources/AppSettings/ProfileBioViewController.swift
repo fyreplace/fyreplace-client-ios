@@ -4,8 +4,10 @@ import RxSwift
 import UIKit
 
 public class ProfileBioViewController: UIViewController, CentralDataConsumer {
+    @IBOutlet
+    private var textView: UITextView!
+
     public var centralViewModel: CentralViewModel!
-    @IBOutlet private var textView: UITextView!
     private var disposer = DisposeBag()
 
     public override func viewDidLoad() {
@@ -18,7 +20,8 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
         textView.becomeFirstResponder()
     }
 
-    @IBAction func navigationCancel(_ sender: UIBarButtonItem) {
+    @IBAction
+    func navigationCancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
 }
