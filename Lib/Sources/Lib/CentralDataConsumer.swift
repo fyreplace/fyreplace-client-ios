@@ -1,5 +1,5 @@
-import Foundation
+import UIKit
 
-public protocol CentralDataConsumer {
+public protocol CentralDataConsumer: UIViewController {
     var centralViewModel: CentralViewModel! { get set }
 }

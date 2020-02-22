@@ -6,7 +6,7 @@ public class LoginViewController: UIViewController {
     @IBOutlet private var password: UITextField!
     @IBOutlet private var login: UIButton!
 
-    override public func viewDidAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogin(_:)), name: .didLogin, object: nil)
     }
 

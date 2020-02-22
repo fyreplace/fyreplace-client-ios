@@ -27,7 +27,7 @@
                         <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="04-02-S-06"/>
                         <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="04-02-S-02"/>
                         <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="04-02-S-03"/>
-                        <segue destination="Settings-Settings" kind="relationship" relationship="viewControllers" id="04-02-S-07"/>
+                        <segue destination="Settings-Navigation-Settings-Navigation" kind="relationship" relationship="viewControllers" id="04-02-S-07"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Main-placeholder" sceneMemberID="firstResponder"/>
@@ -246,8 +246,27 @@
             </objects>
             <point key="canvasLocation" x="750" y="750"/>
         </scene>
+        <!--Settings Navigation-->
+        <scene sceneID="08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Settings-Navigation-Settings-Navigation" userLabel="Settings Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="Settings-Navigation-Settings-Navigation-Settings"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Navigation-Settings-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Settings-Settings" kind="relationship" relationship="rootViewController" id="08-01-S-00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="750"/>
+        </scene>
         <!--Settings-->
-        <scene sceneID="06">
+        <scene sceneID="07">
             <objects>
                 <viewController id="Settings-Settings" userLabel="Settings" customClass="SettingsViewController" customModule="AppSettings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Settings-Settings-view">
@@ -255,15 +274,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView">
-                                <rect key="frame" x="143" y="84" width="128" height="206.5"/>
+                                <rect key="frame" x="143" y="128" width="128" height="206.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Profile-Picture" userLabel="Profile Picture">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="06-02-02-01-01-C-00">
+                                            <constraint firstAttribute="width" constant="128" id="08-02-02-01-01-C-00">
                                                 <variation key="widthClass=regular" constant="192"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" secondItem="Settings-Settings-view-stackView-Profile-Picture" secondAttribute="height" multiplier="1:1" id="06-02-02-01-01-C-00-00-00"/>
+                                            <constraint firstAttribute="width" secondItem="Settings-Settings-view-stackView-Profile-Picture" secondAttribute="height" multiplier="1:1" id="08-02-02-01-01-C-00-00-00"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -289,101 +308,143 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         </variation>
                                         <connections>
-                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="06-02-02-01-00-A-00-00-00"/>
+                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="08-02-02-01-00-A-00-00-00"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio" userLabel="Bio">
-                                <rect key="frame" x="87" y="330.5" width="240" height="240"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio" userLabel="Bio">
+                                <rect key="frame" x="87" y="374.5" width="240" height="398.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="360" id="06-02-02-00-C-00">
+                                    <constraint firstAttribute="width" constant="360" id="08-02-02-00-C-00">
                                         <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" secondItem="Settings-Settings-view-Bio" secondAttribute="height" multiplier="1:1" id="06-02-02-00-C-00-00-00"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="06-02-02-00-C-00-00-00"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="06-02-02-00-C-00-00-00"/>
-                                    </mask>
-                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="06-02-02-C-00-00-00-01"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="06-02-02-C-00-00-00-02"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="height" secondItem="Settings-Settings-view-stackView" secondAttribute="height" id="06-02-02-C-00-00-00-03"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-stackView" secondAttribute="bottom" constant="40" id="06-02-02-C-00-00-00-04"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="trailing" constant="-80" id="06-02-02-C-00-00-00-05"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="06-02-02-C-00-00-00-06"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="06-02-02-C-00-00-00-07"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="leading" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="leading" constant="80" id="06-02-02-C-00-00-00-08"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="top" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="top" constant="40" id="06-02-02-C-00-00-00-09"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="bottom" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="bottom" constant="-40" id="08-02-02-C-00-00-00-00"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="08-02-02-C-00-00-00-01"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="08-02-02-C-00-00-00-02"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="height" secondItem="Settings-Settings-view-stackView" secondAttribute="height" id="08-02-02-C-00-00-00-03"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-stackView" secondAttribute="bottom" constant="40" id="08-02-02-C-00-00-00-04"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="trailing" constant="-80" id="08-02-02-C-00-00-00-05"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="08-02-02-C-00-00-00-06"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="08-02-02-C-00-00-00-07"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="leading" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="leading" constant="80" id="08-02-02-C-00-00-00-08"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="top" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="top" constant="40" id="08-02-02-C-00-00-00-09"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Settings-Settings-view-viewLayoutGuide"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="06-02-02-C-00-00-00-06"/>
-                                <exclude reference="06-02-02-C-00-00-00-07"/>
-                                <exclude reference="06-02-02-C-00-00-00-08"/>
-                                <exclude reference="06-02-02-C-00-00-00-09"/>
-                                <exclude reference="06-02-02-C-00-00-00-01"/>
-                                <exclude reference="06-02-02-C-00-00-00-02"/>
-                                <exclude reference="06-02-02-C-00-00-00-03"/>
-                                <exclude reference="06-02-02-C-00-00-00-04"/>
-                                <exclude reference="06-02-02-C-00-00-00-05"/>
+                                <exclude reference="08-02-02-C-00-00-00-06"/>
+                                <exclude reference="08-02-02-C-00-00-00-07"/>
+                                <exclude reference="08-02-02-C-00-00-00-08"/>
+                                <exclude reference="08-02-02-C-00-00-00-09"/>
+                                <exclude reference="08-02-02-C-00-00-00-00"/>
+                                <exclude reference="08-02-02-C-00-00-00-01"/>
+                                <exclude reference="08-02-02-C-00-00-00-02"/>
+                                <exclude reference="08-02-02-C-00-00-00-03"/>
+                                <exclude reference="08-02-02-C-00-00-00-04"/>
+                                <exclude reference="08-02-02-C-00-00-00-05"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="06-02-02-C-00-00-00-07"/>
-                                <include reference="06-02-02-C-00-00-00-08"/>
-                                <include reference="06-02-02-C-00-00-00-02"/>
-                                <include reference="06-02-02-C-00-00-00-03"/>
-                                <include reference="06-02-02-C-00-00-00-05"/>
+                                <include reference="08-02-02-C-00-00-00-07"/>
+                                <include reference="08-02-02-C-00-00-00-08"/>
+                                <include reference="08-02-02-C-00-00-00-02"/>
+                                <include reference="08-02-02-C-00-00-00-03"/>
+                                <include reference="08-02-02-C-00-00-00-05"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="06-02-02-C-00-00-00-06"/>
-                                <include reference="06-02-02-C-00-00-00-09"/>
-                                <include reference="06-02-02-C-00-00-00-01"/>
-                                <include reference="06-02-02-C-00-00-00-04"/>
+                                <include reference="08-02-02-C-00-00-00-06"/>
+                                <include reference="08-02-02-C-00-00-00-09"/>
+                                <include reference="08-02-02-C-00-00-00-00"/>
+                                <include reference="08-02-02-C-00-00-00-01"/>
+                                <include reference="08-02-02-C-00-00-00-04"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="Settings-Settings-Settings"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Settings-Settings-Settings">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Settings-Settings-Settings-edit">
+                            <connections>
+                                <segue destination="Profile-Bio-Profile-Bio" kind="presentation" id="08-02-01-00-S-00"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="avatar" destination="Settings-Settings-view-stackView-Profile-Picture" id="06-02-O-00"/>
-                        <outlet property="bio" destination="Settings-Settings-view-Bio" id="06-02-O-01"/>
-                        <outlet property="username" destination="Settings-Settings-view-stackView-Username" id="06-02-O-02"/>
-                        <outlet property="viewModel" destination="Settings-SettingsViewModel" id="06-02-O-03"/>
+                        <outlet property="avatar" destination="Settings-Settings-view-stackView-Profile-Picture" id="08-02-O-00"/>
+                        <outlet property="bio" destination="Settings-Settings-view-Bio" id="08-02-O-01"/>
+                        <outlet property="username" destination="Settings-Settings-view-stackView-Username" id="08-02-O-02"/>
+                        <outlet property="viewModel" destination="Settings-SettingsViewModel" id="08-02-O-03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="Settings-SettingsViewModel" customClass="SettingsViewModel" customModule="AppSettings">
                     <connections>
-                        <outlet property="authRepo" destination="Settings-AuthRepository" id="06-03-O-00"/>
+                        <outlet property="authRepo" destination="Settings-AuthRepository" id="08-03-O-00"/>
                     </connections>
                 </customObject>
                 <customObject id="Settings-AuthRepository" customClass="AuthRepository" customModule="Lib"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="750"/>
+            <point key="canvasLocation" x="1500" y="1500"/>
+        </scene>
+        <!--Profile Bio-->
+        <scene sceneID="06">
+            <objects>
+                <viewController title="Profile bio" id="Profile-Bio-Profile-Bio" userLabel="Profile Bio" customClass="ProfileBioViewController" customModule="AppSettings" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Profile-Bio-Profile-Bio-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Profile-Bio-Profile-Bio-view-navigationBar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Profile bio" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio-cancel">
+                                            <connections>
+                                                <action selector="navigationCancel:" destination="Profile-Bio-Profile-Bio" id="06-01-01-01-00-00-A-00-00"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio-done"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Profile-Bio-Profile-Bio-view-textView">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="leading" id="06-01-01-C-00-00-00-00"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="top" id="06-01-01-C-00-00-00-01"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="trailing" id="06-01-01-C-00-00-00-02"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="bottom" secondItem="Profile-Bio-Profile-Bio-view" secondAttribute="bottom" id="06-01-01-C-00-00-00-03" customClass="KeyboardAvoidingConstraint" customModule="Lib"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="leading" id="06-01-01-C-00-00-00-04"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-navigationBar" secondAttribute="bottom" id="06-01-01-C-00-00-00-05"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="trailing" id="06-01-01-C-00-00-00-06"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-viewLayoutGuide"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Profile-Bio-Profile-Bio-view-textView" id="06-01-O-00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Profile-Bio-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="2250"/>
         </scene>
     </scenes>
     <resources>

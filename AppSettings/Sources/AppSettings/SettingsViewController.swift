@@ -1,10 +1,10 @@
 import Lib
-import RxSwift
 import RxCocoa
+import RxSwift
 import SDWebImage
 import UIKit
 
-public class SettingsViewController: UIViewController, CentralDataConsumer {
+public class SettingsViewController: UIViewController, CentralDataProvider {
     public var centralViewModel: CentralViewModel!
     @IBOutlet private var viewModel: SettingsViewModel!
     @IBOutlet private var avatar: UIImageView!
@@ -16,7 +16,7 @@ public class SettingsViewController: UIViewController, CentralDataConsumer {
         avatar.sd_imageTransition = .fade
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         centralViewModel.username.purify(with: self)
             .bind(to: username.rx.text)
             .disposed(by: disposer)
@@ -34,6 +34,10 @@ public class SettingsViewController: UIViewController, CentralDataConsumer {
 
     public override func viewDidDisappear(_ animated: Bool) {
         disposer = DisposeBag()
+    }
+
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        setup(viewController: segue.destination)
     }
 
     @IBAction func didClickLogout() {

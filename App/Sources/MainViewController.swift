@@ -1,17 +1,19 @@
 import Lib
 import UIKit
 
-class MainViewController: UITabBarController, UITabBarControllerDelegate {
+class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
     @IBOutlet private var viewModel: MainViewModel!
-    @IBOutlet private var centralViewModel: CentralViewModel!
+    @IBOutlet public var centralViewModel: CentralViewModel!
 
     override func viewDidLoad() {
         delegate = self
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogout(_:)), name: .didLogout, object: nil)
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
         let notification: NSNotification.Name = viewModel.isLogged ? .didLogin : .didLogout
         let info = viewModel.isLogged ? ["success": true] : nil
         NotificationCenter.default.post(name: notification, object: self, userInfo: info)
@@ -36,17 +38,12 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         setup(viewController: segue.destination)
     }
 
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         setup(viewController: viewController)
+        return true
     }
 
     @objc private func onDidLogout(_ notification: Notification) {
         performSegue(withIdentifier: "login", sender: self)
-    }
-
-    private func setup(viewController: UIViewController) {
-        if var consumer = viewController as? CentralDataConsumer {
-            consumer.centralViewModel = centralViewModel
-        }
     }
 }

@@ -13,7 +13,6 @@
 		4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3186D32392F42D0028BC2B /* MainViewController.swift */; };
 		4D569E5923C25DEF0008261E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D569E5823C25DEF0008261E /* LoginViewController.swift */; };
 		4D6FD44023C6689100FE7FDA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */; };
-		4D878D5323EA15D000876532 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D878D5223EA15D000876532 /* UIView.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
@@ -21,6 +20,7 @@
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
 		4DC14E76239EAD0C0056C0A7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */; };
 		4DC7C3F123F81137009D6CC5 /* identify.py in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7C3F023F81137009D6CC5 /* identify.py */; };
+		4DD53F2523FC9D5900EEA2BB /* ProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */; };
 		4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* AppHome */; };
 		4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* AppNotifications */; };
 		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
@@ -36,7 +36,6 @@
 		4D5C070E23C09E8A0080F5C0 /* COPYING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = COPYING.md; sourceTree = "<group>"; };
 		4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		4D878D5223EA15D000876532 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		4DAA04092353B66B00CB27B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4DC7C3F023F81137009D6CC5 /* identify.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = identify.py; sourceTree = "<group>"; };
+		4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 				4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */,
 				4D569E5823C25DEF0008261E /* LoginViewController.swift */,
 				4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */,
-				4D878D5223EA15D000876532 /* UIView.swift */,
+				4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -249,11 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D878D5323EA15D000876532 /* UIView.swift in Sources */,
 				4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */,
 				4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */,
 				4D6FD44023C6689100FE7FDA /* LoginViewModel.swift in Sources */,
 				4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */,
+				4DD53F2523FC9D5900EEA2BB /* ProxyViewController.swift in Sources */,
 				4D569E5923C25DEF0008261E /* LoginViewController.swift in Sources */,
 				4DC14E76239EAD0C0056C0A7 /* MainViewModel.swift in Sources */,
 			);
