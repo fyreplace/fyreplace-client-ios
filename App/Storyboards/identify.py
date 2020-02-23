@@ -125,14 +125,20 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
             False,
         )
 
-    label = (
-        node.attrib.get("userLabel")
-        or node.attrib.get("title")
-        or node.attrib.get("text")
-        or node.attrib.get("placeholder")
-        or node.attrib.get("image")
-        or node.attrib.get("customClass")
-    )
+    def try_attributes(attrs: List[Text]):
+        for attr in attrs:
+            value = node.attrib.get(attr)
+
+            if value is not None:
+                return value
+
+    label = try_attributes([
+        "userLabel",
+        "title",
+        "text",
+        "placeholder",
+        "image",
+    ])
 
     if node.tag == "button":
         for child in node:
@@ -140,6 +146,11 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
                 label = child.attrib.get("title")
     elif node.tag == "barButtonItem" and label is None:
         label = node.attrib.get("systemItem")
+
+    label = label or try_attributes([
+        "customClass",
+        "key",
+    ])
 
     return ([(IdPartType.STRING, label or node.tag)], True)
 

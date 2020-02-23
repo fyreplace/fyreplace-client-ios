@@ -55,10 +55,10 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-Logo" userLabel="Logo">
                                         <rect key="frame" x="80" y="0.0" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="03-02-01-01-00-C-00">
+                                            <constraint firstAttribute="width" constant="80" id="03-02-01-02-00-C-00">
                                                 <variation key="widthClass=regular" constant="120"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" secondItem="Login-Login-view-stackView-Logo" secondAttribute="height" multiplier="1:1" id="03-02-01-01-00-C-00-00-00"/>
+                                            <constraint firstAttribute="width" secondItem="Login-Login-view-stackView-Logo" secondAttribute="height" multiplier="1:1" id="03-02-01-02-00-C-00-00-00"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView">
@@ -72,7 +72,7 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-03-A-00-00-00"/>
+                                                    <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-02-01-03-A-00-00-00"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView-Password">
@@ -83,8 +83,8 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-02-A-00-00-00"/>
-                                                    <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-01-01-02-A-00-00-01"/>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-02-01-02-A-00-00-00"/>
+                                                    <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="03-02-01-02-01-02-A-00-00-01"/>
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-stackView-stackView-Login">
@@ -95,16 +95,16 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="03-02-01-01-01-01-A-00-00-00"/>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="03-02-01-02-01-01-A-00-00-00"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-01-01-C-00-00-00-00"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-01-01-C-00-00-00-01"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-01-01-C-00-00-00-02"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-01-01-C-00-00-00-03"/>
-                                            <constraint firstAttribute="width" constant="360" id="03-02-01-01-01-C-01">
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-02-01-C-00-00-00-00"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-02-01-C-00-00-00-01"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="03-02-01-02-01-C-00-00-00-02"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="03-02-01-02-01-C-00-00-00-03"/>
+                                            <constraint firstAttribute="width" constant="360" id="03-02-01-02-01-C-01">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                             </constraint>
                                         </constraints>
@@ -117,7 +117,7 @@
                             <constraint firstItem="Login-Login-view-stackView" firstAttribute="centerX" secondItem="Login-Login-view" secondAttribute="centerX" id="03-02-01-C-00-00-00-00"/>
                             <constraint firstItem="Login-Login-view-stackView" firstAttribute="centerY" secondItem="Login-Login-view" secondAttribute="centerY" id="03-02-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Login-Login-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Login-Login-view-safeArea"/>
                     </view>
                     <connections>
                         <outlet property="login" destination="Login-Login-view-stackView-stackView-Login" id="03-02-O-00"/>
@@ -155,7 +155,7 @@
                             <constraint firstAttribute="centerX" secondItem="Home-Home-view-Title" secondAttribute="centerX" id="02-00-01-C-00-00-00"/>
                             <constraint firstAttribute="centerY" secondItem="Home-Home-view-Title" secondAttribute="centerY" id="02-00-01-C-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Home-Home-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" id="Home-Home-Home"/>
                 </viewController>
@@ -183,7 +183,7 @@
                             <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerX" secondItem="Notifications-Notifications-view" secondAttribute="centerX" id="05-01-01-C-00-00-00-00"/>
                             <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerY" secondItem="Notifications-Notifications-view" secondAttribute="centerY" id="05-01-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="Notifications-Notifications-Notifications"/>
                 </viewController>
@@ -210,7 +210,7 @@
                             <constraint firstAttribute="centerX" secondItem="Archive-Archive-view-Title" secondAttribute="centerX" id="00-00-01-C-00-00-00"/>
                             <constraint firstAttribute="centerY" secondItem="Archive-Archive-view-Title" secondAttribute="centerY" id="00-00-01-C-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="Archive-Archive-Archive"/>
                 </viewController>
@@ -238,7 +238,7 @@
                             <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerX" secondItem="Drafts-Drafts-view" secondAttribute="centerX" id="01-00-01-C-00-00-00-00"/>
                             <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerY" secondItem="Drafts-Drafts-view" secondAttribute="centerY" id="01-00-01-C-00-00-00-01"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
                 </viewController>
@@ -279,10 +279,10 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Profile-Picture" userLabel="Profile Picture">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="08-02-02-01-01-C-00">
+                                            <constraint firstAttribute="width" constant="128" id="08-02-02-02-01-C-00">
                                                 <variation key="widthClass=regular" constant="192"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" secondItem="Settings-Settings-view-stackView-Profile-Picture" secondAttribute="height" multiplier="1:1" id="08-02-02-01-01-C-00-00-00"/>
+                                            <constraint firstAttribute="width" secondItem="Settings-Settings-view-stackView-Profile-Picture" secondAttribute="height" multiplier="1:1" id="08-02-02-02-01-C-00-00-00"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -308,7 +308,7 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         </variation>
                                         <connections>
-                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="08-02-02-01-00-A-00-00-00"/>
+                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="08-02-02-02-00-A-00-00-00"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -328,18 +328,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="bottom" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="bottom" constant="-40" id="08-02-02-C-00-00-00-00"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="bottom" secondItem="Settings-Settings-view-safeArea" secondAttribute="bottom" constant="-40" id="08-02-02-C-00-00-00-00"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="08-02-02-C-00-00-00-01"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="08-02-02-C-00-00-00-02"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-safeArea" secondAttribute="centerY" id="08-02-02-C-00-00-00-02"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="height" secondItem="Settings-Settings-view-stackView" secondAttribute="height" id="08-02-02-C-00-00-00-03"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-stackView" secondAttribute="bottom" constant="40" id="08-02-02-C-00-00-00-04"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="trailing" constant="-80" id="08-02-02-C-00-00-00-05"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-safeArea" secondAttribute="trailing" constant="-80" id="08-02-02-C-00-00-00-05"/>
                             <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="08-02-02-C-00-00-00-06"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerY" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="centerY" id="08-02-02-C-00-00-00-07"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="leading" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="leading" constant="80" id="08-02-02-C-00-00-00-08"/>
-                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="top" secondItem="Settings-Settings-view-viewLayoutGuide" secondAttribute="top" constant="40" id="08-02-02-C-00-00-00-09"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="centerY" secondItem="Settings-Settings-view-safeArea" secondAttribute="centerY" id="08-02-02-C-00-00-00-07"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="leading" secondItem="Settings-Settings-view-safeArea" secondAttribute="leading" constant="80" id="08-02-02-C-00-00-00-08"/>
+                            <constraint firstItem="Settings-Settings-view-stackView" firstAttribute="top" secondItem="Settings-Settings-view-safeArea" secondAttribute="top" constant="40" id="08-02-02-C-00-00-00-09"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Settings-Settings-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Settings-Settings-view-safeArea"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="08-02-02-C-00-00-00-06"/>
@@ -428,15 +428,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="leading" id="06-01-01-C-00-00-00-00"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="top" id="06-01-01-C-00-00-00-01"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="trailing" id="06-01-01-C-00-00-00-02"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading" id="06-01-01-C-00-00-00-00"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="top" id="06-01-01-C-00-00-00-01"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing" id="06-01-01-C-00-00-00-02"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="bottom" secondItem="Profile-Bio-Profile-Bio-view" secondAttribute="bottom" id="06-01-01-C-00-00-00-03" customClass="KeyboardAvoidingConstraint" customModule="Lib"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="leading" id="06-01-01-C-00-00-00-04"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading" id="06-01-01-C-00-00-00-04"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-navigationBar" secondAttribute="bottom" id="06-01-01-C-00-00-00-05"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-viewLayoutGuide" secondAttribute="trailing" id="06-01-01-C-00-00-00-06"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing" id="06-01-01-C-00-00-00-06"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-safeArea"/>
                     </view>
                     <connections>
                         <outlet property="textView" destination="Profile-Bio-Profile-Bio-view-textView" id="06-01-O-00"/>

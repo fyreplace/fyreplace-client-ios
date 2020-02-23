@@ -38,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Home-Home-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" " image="square.stack.fill" id="Home-Home-Home" userLabel="Home"/>
                 </viewController>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" " image="bell.fill" id="Notifications-Notifications-Notifications" userLabel="Notifications"/>
                 </viewController>
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" " image="folder.fill" id="Archive-Archive-Archive" userLabel="Archive"/>
                 </viewController>
@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" " image="square.and.pencil" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
                 </viewController>
@@ -102,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Settings-Settings-view-viewLayoutGuide"/>
+                        <viewLayoutGuide key="safeArea" id="Settings-Settings-view-safeArea"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" " image="gear" id="Settings-Settings-Settings" userLabel="Settings"/>
                 </viewController>
