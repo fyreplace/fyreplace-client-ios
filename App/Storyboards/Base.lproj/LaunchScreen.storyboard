@@ -9,7 +9,7 @@
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
-        <scene sceneID="05">
+        <scene sceneID="Tab-Bar-Controller">
             <objects>
                 <tabBarController id="Tab-Bar-Controller-tabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tab-Bar-Controller-tabBarController-tabBar">
@@ -19,11 +19,11 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="05-01-S-02"/>
-                        <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="05-01-S-03"/>
-                        <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="05-01-S-00"/>
-                        <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="05-01-S-01"/>
-                        <segue destination="Settings-Settings" kind="relationship" relationship="viewControllers" id="05-01-S-04"/>
+                        <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="Tab-Bar-Controller-tabBarController--S-Home-Home"/>
+                        <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="Tab-Bar-Controller-tabBarController--S-Notifications-Notifications"/>
+                        <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="Tab-Bar-Controller-tabBarController--S-Archive-Archive"/>
+                        <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="Tab-Bar-Controller-tabBarController--S-Drafts-Drafts"/>
+                        <segue destination="Settings-Settings" kind="relationship" relationship="viewControllers" id="Tab-Bar-Controller-tabBarController--S-Settings-Settings"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-Bar-Controller-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -31,7 +31,7 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
         <!--Home-->
-        <scene sceneID="02">
+        <scene sceneID="Home">
             <objects>
                 <viewController id="Home-Home" userLabel="Home" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Home-Home-view">
@@ -47,7 +47,7 @@
             <point key="canvasLocation" x="-1500" y="750"/>
         </scene>
         <!--Notifications-->
-        <scene sceneID="03">
+        <scene sceneID="Notifications">
             <objects>
                 <viewController id="Notifications-Notifications" userLabel="Notifications" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Notifications-Notifications-view">
@@ -63,7 +63,7 @@
             <point key="canvasLocation" x="-750" y="750"/>
         </scene>
         <!--Archive-->
-        <scene sceneID="00">
+        <scene sceneID="Archive">
             <objects>
                 <viewController id="Archive-Archive" userLabel="Archive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Archive-Archive-view">
@@ -79,7 +79,7 @@
             <point key="canvasLocation" x="0.0" y="750"/>
         </scene>
         <!--Drafts-->
-        <scene sceneID="01">
+        <scene sceneID="Drafts">
             <objects>
                 <viewController id="Drafts-Drafts" userLabel="Drafts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Drafts-Drafts-view">
@@ -95,7 +95,7 @@
             <point key="canvasLocation" x="750" y="750"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="04">
+        <scene sceneID="Settings">
             <objects>
                 <viewController id="Settings-Settings" userLabel="Settings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Settings-Settings-view">

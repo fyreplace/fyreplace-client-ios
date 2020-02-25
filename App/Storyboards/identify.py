@@ -90,7 +90,7 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
     if node.tag == "constraint":
         return (
             make_id(
-                (IdPartType.NAME, "C"),
+                (IdPartType.NAME, "-C"),
                 (IdPartType.REFERENCE, node.attrib.get("firstItem")),
                 (IdPartType.STRING, node.attrib.get("firstAttribute")),
                 (IdPartType.REFERENCE, node.attrib.get("secondItem")),
@@ -101,7 +101,7 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
     elif node.tag == "action":
         return (
             make_id(
-                (IdPartType.NAME, "A"),
+                (IdPartType.NAME, "-A"),
                 (IdPartType.STRING, node.attrib.get("eventType")),
                 (IdPartType.REFERENCE, node.attrib.get("destination")),
                 (IdPartType.STRING, node.attrib.get("selector")),
@@ -111,7 +111,7 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
     elif node.tag == "outlet":
         return (
             make_id(
-                (IdPartType.NAME, "O"),
+                (IdPartType.NAME, "-O"),
                 (IdPartType.STRING, node.attrib.get("property")),
             ),
             False,
@@ -119,7 +119,7 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
     elif node.tag == "segue":
         return (
             make_id(
-                (IdPartType.NAME, "S"),
+                (IdPartType.NAME, "-S"),
                 (IdPartType.REFERENCE, node.attrib.get("destination")),
             ),
             False,
@@ -189,7 +189,7 @@ def mapping_items(mapping: Mapping) -> Dict[Text, Text]:
             counters = counters[0:len(new_id)]
             counters[-1] += 1
 
-        new_id_string = resolve_id(mapping, new_id) if keep else shrink_id(new_id, counters)
+        new_id_string = resolve_id(mapping, new_id) # if keep else shrink_id(new_id, counters)
 
         if new_id_string != old_id:
             result[old_id] = new_id_string
