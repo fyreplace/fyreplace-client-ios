@@ -22,7 +22,7 @@
                     <connections>
                         <outlet property="centralViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralViewModel"/>
                         <outlet property="viewModel" destination="Main-MainViewModel" id="Main-Main--O-viewModel"/>
-                        <segue destination="Login-Login" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Login"/>
+                        <segue destination="Login-Navigation-Login-Navigation" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Navigation-Login-Navigation"/>
                         <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Home"/>
                         <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Notifications"/>
                         <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="Main-Main--S-Archive-Archive"/>
@@ -40,6 +40,24 @@
                 <customObject id="Main-AuthorRepository" customClass="AuthorRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Login Navigation-->
+        <scene sceneID="Login-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Login-Navigation-Login-Navigation" userLabel="Login Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Login-Navigation-Login-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Login-Login" kind="relationship" relationship="rootViewController" id="Login-Navigation-Login-Navigation--S-Login-Login"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Login-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="0.0"/>
         </scene>
         <!--Login-->
         <scene sceneID="Login">
@@ -100,16 +118,25 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-leading-Login-Login-view-stackView-stackView-leading"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-trailing-Login-Login-view-stackView-stackView-trailing"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading" id="Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-leading-Login-Login-view-stackView-stackView-leading"/>
-                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing" id="Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-trailing-Login-Login-view-stackView-stackView-trailing"/>
-                                            <constraint firstAttribute="width" constant="360" id="Login-Login-view-stackView-stackView--C-width">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="240"/>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-stackView-stackView" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-stackView-stackView" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="240" id="Login-Login-view-stackView-stackView--C-width">
+                                                <variation key="widthClass=regular" constant="360"/>
                                             </constraint>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -119,6 +146,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Login-Login-view-safeArea"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Fyreplace" id="Login-Login-Fyreplace"/>
                     <connections>
                         <outlet property="login" destination="Login-Login-view-stackView-stackView-Login" id="Login-Login--O-login"/>
                         <outlet property="password" destination="Login-Login-view-stackView-stackView-Password" id="Login-Login--O-password"/>
@@ -134,7 +162,7 @@
                 </customObject>
                 <customObject id="Login-AuthRepository" customClass="AuthRepository" customModule="Lib"/>
             </objects>
-            <point key="canvasLocation" x="750" y="0.0"/>
+            <point key="canvasLocation" x="1500" y="0.0"/>
         </scene>
         <!--Home-->
         <scene sceneID="Home">
@@ -428,9 +456,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-leading-Profile-Bio-Profile-Bio-view-safeArea-leading"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading">
+                                <string key="id">Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-leading-Profile-Bio-Profile-Bio-view-safeArea-leading</string>
+                            </constraint>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="top" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-top-Profile-Bio-Profile-Bio-view-safeArea-top"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-trailing-Profile-Bio-Profile-Bio-view-safeArea-trailing"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing">
+                                <string key="id">Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-trailing-Profile-Bio-Profile-Bio-view-safeArea-trailing</string>
+                            </constraint>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="bottom" secondItem="Profile-Bio-Profile-Bio-view" secondAttribute="bottom" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-bottom-Profile-Bio-Profile-Bio-view-bottom" customClass="KeyboardAvoidingConstraint" customModule="Lib"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-leading-Profile-Bio-Profile-Bio-view-safeArea-leading"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-navigationBar" secondAttribute="bottom" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-top-Profile-Bio-Profile-Bio-view-navigationBar-bottom"/>

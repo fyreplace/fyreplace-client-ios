@@ -12,6 +12,10 @@ public class ProxyViewController: UINavigationController, UINavigationController
         }
     }
 
+    public override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
+        retrieveTraitCollection()
+    }
+
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         setup(viewController: segue.destination)
     }

@@ -26,14 +26,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, Centra
     }
 
     override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
-        let isPhone = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
-        let isPortrait = view.bounds.width < view.bounds.height
-        let traits = [
-            UITraitCollection(horizontalSizeClass: isPhone ? .compact : .regular),
-            UITraitCollection(verticalSizeClass: isPortrait ? .regular : .compact)
-        ]
-
-        return UITraitCollection(traitsFrom: traits)
+        retrieveTraitCollection()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
