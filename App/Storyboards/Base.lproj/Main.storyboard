@@ -416,7 +416,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="Settings-Settings-Settings">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Settings-Settings-Settings-edit">
                             <connections>
-                                <segue destination="Profile-Bio-Profile-Bio" kind="presentation" id="Settings-Settings-Settings-edit--S-Profile-Bio-Profile-Bio"/>
+                                <segue destination="Profile-Bio-Navigation-Profile-Bio-Navigation" kind="presentation" id="Settings-Settings-Settings-edit--S-Profile-Bio-Navigation-Profile-Bio-Navigation"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -437,6 +437,24 @@
             </objects>
             <point key="canvasLocation" x="1500" y="1500"/>
         </scene>
+        <!--Profile Bio Navigation-->
+        <scene sceneID="Profile-Bio-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Profile-Bio-Navigation-Profile-Bio-Navigation" userLabel="Profile Bio Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Profile-Bio-Navigation-Profile-Bio-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Profile-Bio-Profile-Bio" kind="relationship" relationship="rootViewController" id="Profile-Bio-Navigation-Profile-Bio-Navigation--S-Profile-Bio-Profile-Bio"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Profile-Bio-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2250" y="1500"/>
+        </scene>
         <!--Profile Bio-->
         <scene sceneID="Profile-Bio">
             <objects>
@@ -445,19 +463,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Profile-Bio-Profile-Bio-view-navigationBar">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <items>
-                                    <navigationItem title="Profile bio" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio-cancel">
-                                            <connections>
-                                                <action selector="navigationCancel:" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio-cancel--A-Profile-Bio-Profile-Bio-navigationCancel-"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-view-navigationBar-Profile-bio-done"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Profile-Bio-Profile-Bio-view-textView">
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -468,27 +473,28 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading">
-                                <string key="id">Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-leading-Profile-Bio-Profile-Bio-view-safeArea-leading</string>
-                            </constraint>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="top" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-top-Profile-Bio-Profile-Bio-view-safeArea-top"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-navigationBar" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing">
-                                <string key="id">Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-navigationBar-trailing-Profile-Bio-Profile-Bio-view-safeArea-trailing</string>
-                            </constraint>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="bottom" secondItem="Profile-Bio-Profile-Bio-view" secondAttribute="bottom" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-bottom-Profile-Bio-Profile-Bio-view-bottom" customClass="KeyboardAvoidingConstraint" customModule="Lib"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="leading" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="leading" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-leading-Profile-Bio-Profile-Bio-view-safeArea-leading"/>
-                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-navigationBar" secondAttribute="bottom" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-top-Profile-Bio-Profile-Bio-view-navigationBar-bottom"/>
+                            <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="top" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="top" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-top-Profile-Bio-Profile-Bio-view-safeArea-top"/>
                             <constraint firstItem="Profile-Bio-Profile-Bio-view-textView" firstAttribute="trailing" secondItem="Profile-Bio-Profile-Bio-view-safeArea" secondAttribute="trailing" id="Profile-Bio-Profile-Bio-view--C-Profile-Bio-Profile-Bio-view-textView-trailing-Profile-Bio-Profile-Bio-view-safeArea-trailing"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-safeArea"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile Bio" id="Profile-Bio-Profile-Bio-Profile-Bio">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel">
+                            <connections>
+                                <action selector="navigationCancel:" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel--A-Profile-Bio-Profile-Bio-navigationCancel-"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Profile-Bio-done"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="Profile-Bio-Profile-Bio-view-textView" id="Profile-Bio-Profile-Bio--O-textView"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Profile-Bio-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="2250"/>
+            <point key="canvasLocation" x="3000" y="1500"/>
         </scene>
     </scenes>
     <resources>
