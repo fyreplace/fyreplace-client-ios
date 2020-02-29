@@ -5,6 +5,7 @@ public class ProxyViewController: UINavigationController, UINavigationController
     public var centralViewModel: CentralViewModel!
 
     public override func viewDidLoad() {
+        super.viewDidLoad()
         delegate = self
 
         for vc in viewControllers {
@@ -17,6 +18,7 @@ public class ProxyViewController: UINavigationController, UINavigationController
     }
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         setup(viewController: segue.destination)
     }
 

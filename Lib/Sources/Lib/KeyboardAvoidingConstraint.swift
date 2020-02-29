@@ -9,6 +9,7 @@ public class KeyboardAvoidingConstraint: NSLayoutConstraint {
     }
 
     public override func awakeFromNib() {
+        super.awakeFromNib()
         NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillShow(_:)), name: UIWindow.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillHide(_:)), name: UIWindow.keyboardWillHideNotification, object: nil)
     }

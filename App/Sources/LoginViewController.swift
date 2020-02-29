@@ -10,26 +10,28 @@ public class LoginViewController: UIViewController {
     @IBOutlet
     private var login: UIButton!
 
-    override public func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogin(_:)), name: .didLogin, object: nil)
     }
 
     public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
 
     @IBAction
-    func didSetUsername() {
+    private func didSetUsername() {
         password.becomeFirstResponder()
     }
 
     @IBAction
-    func didSetPassword() {
+    private func didSetPassword() {
         view.endEditing(false)
     }
 
     @IBAction
-    func didClickLogin() {
+    private func didClickLogin() {
         if login.isEnabled {
             login.isEnabled = false
             viewModel.login(username: username.text ?? "", password: password.text ?? "")

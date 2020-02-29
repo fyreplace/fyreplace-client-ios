@@ -18,10 +18,13 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     private var disposer = DisposeBag()
 
     public override func viewDidLoad() {
+        super.viewDidLoad()
         avatar.sd_imageTransition = .fade
     }
 
     public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         centralViewModel.username.purify(with: self)
             .bind(to: username.rx.text)
             .disposed(by: disposer)
@@ -40,15 +43,17 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     }
 
     public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         disposer = DisposeBag()
     }
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         setup(viewController: segue.destination)
     }
 
     @IBAction
-    func didClickLogout() {
+    private func didClickLogout() {
         viewModel.logout()
     }
 }
