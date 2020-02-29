@@ -9,28 +9,44 @@ public class KeyboardAvoidingConstraint: NSLayoutConstraint {
     }
 
     public override func awakeFromNib() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIWindow.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIWindow.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillShow(_:)), name: UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillHide(_:)), name: UIWindow.keyboardWillHideNotification, object: nil)
     }
 
     @objc
-    private func keyboardDidShow(_ notification: Notification) {
-        let frameValue = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)
+    private func onKeyboardWillShow(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let frameValue = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)
         guard let keyboardSize = frameValue?.cgRectValue.size else { return }
-        updateKeyboard(height: keyboardSize.height)
-    }
 
-    @objc
-    private func keyboardWillHide(_ notification: Notification) {
-        updateKeyboard(height: 0)
-    }
-
-    private func updateKeyboard(height: CGFloat) {
         if originalConstant == nil {
             originalConstant = constant
         }
 
+        keyboardChanged(height: keyboardSize.height, info: userInfo)
+    }
+
+    @objc
+    private func onKeyboardWillHide(_ notification: Notification) {
+        keyboardChanged(height: 0, info: notification.userInfo)
+    }
+
+    private func keyboardChanged(height: CGFloat, info: [AnyHashable : Any]?) {
         keyboardHeight = height
         constant = originalConstant! - keyboardHeight
+
+        let duration = info?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber
+        let curve = info?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+
+        UIView.animate(
+            withDuration: TimeInterval(duration?.doubleValue ?? TimeInterval(0.25)),
+            delay: 0,
+            options: UIView.AnimationOptions(rawValue: curve?.uintValue ?? UInt(UIView.AnimationCurve.easeOut.rawValue)),
+            animations: {
+                for window in UIApplication.shared.windows {
+                    window.layoutIfNeeded()
+                }
+            }
+        )
     }
 }
