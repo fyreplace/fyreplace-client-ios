@@ -1,3 +1,4 @@
+import Lib
 import UIKit
 
 public class LoginViewController: UIViewController {
@@ -18,6 +19,11 @@ public class LoginViewController: UIViewController {
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
+    }
+
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        view.endEditing(false)
     }
 
     @IBAction
