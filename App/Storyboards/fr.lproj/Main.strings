@@ -25,4 +25,4 @@
 
 // SettingsViewController
 "Settings-Settings-view-stackView-Username.text" = "Nom d'utilisateur";
-"Settings-Settings-view-stackView-Logout.normalTitle" = "Déconnexion";
+"Settings-Settings-Settings-Logout.title" = "Déconnexion";

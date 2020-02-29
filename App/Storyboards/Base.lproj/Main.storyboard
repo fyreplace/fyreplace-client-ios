@@ -314,7 +314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView">
-                                <rect key="frame" x="143" y="128" width="128" height="206.5"/>
+                                <rect key="frame" x="143" y="128" width="128" height="162.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Profile-Picture" userLabel="Profile Picture">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -340,21 +340,10 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-stackView-Logout">
-                                        <rect key="frame" x="33" y="170.5" width="62" height="36"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <state key="normal" title="Logout"/>
-                                        <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="didClickLogout" destination="Settings-Settings" eventType="touchUpInside" id="Settings-Settings-view-stackView-Logout--A-touchUpInside-Settings-Settings-didClickLogout"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio" userLabel="Bio">
-                                <rect key="frame" x="87" y="374.5" width="240" height="398.5"/>
+                                <rect key="frame" x="87" y="330.5" width="240" height="442.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="Settings-Settings-view-Bio--C-width">
@@ -414,6 +403,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Settings-Settings-Settings">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Settings-Settings-Settings-Logout">
+                            <connections>
+                                <action selector="didClickLogout" destination="Settings-Settings" id="Settings-Settings-Settings-Logout--A-Settings-Settings-didClickLogout"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Settings-Settings-Settings-edit">
                             <connections>
                                 <segue destination="Profile-Bio-Navigation-Profile-Bio-Navigation" kind="presentation" id="Settings-Settings-Settings-edit--S-Profile-Bio-Navigation-Profile-Bio-Navigation"/>
