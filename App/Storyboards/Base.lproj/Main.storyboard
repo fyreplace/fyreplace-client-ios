@@ -197,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" id="Home-Home-Home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" catalog="system" id="Home-Home-Home"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +225,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" id="Notifications-Notifications-Notifications"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" catalog="system" id="Notifications-Notifications-Notifications"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,7 +252,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" id="Archive-Archive-Archive"/>
+                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" catalog="system" id="Archive-Archive-Archive"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,7 +280,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
+                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" catalog="system" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,7 +290,7 @@
         <scene sceneID="Settings-Navigation">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Settings-Navigation-Settings-Navigation" userLabel="Settings Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="Settings-Navigation-Settings-Navigation-Settings"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Settings-Navigation-Settings-Navigation-Settings"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Navigation-Settings-Navigation-navigationBar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -532,11 +532,11 @@
     <resources>
         <image name="Avatar" width="256" height="256"/>
         <image name="Fyreplace" width="256" height="256"/>
-        <image name="bell.fill" width="25" height="26"/>
-        <image name="folder.fill" width="30" height="26"/>
-        <image name="gear" width="28" height="26"/>
-        <image name="square.and.pencil" width="26" height="26"/>
-        <image name="square.stack.fill" width="24" height="26"/>
+        <image name="bell.fill" catalog="system" width="64" height="62"/>
+        <image name="folder.fill" catalog="system" width="64" height="46"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="square.stack.fill" catalog="system" width="56" height="64"/>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
