@@ -9,7 +9,7 @@
 // LoginViewController
 "Login-Login-view-view-stackView-stackView-Username.placeholder" = "Nom d'utilisateur";
 "Login-Login-view-view-stackView-stackView-Password.placeholder" = "Mot de passe";
-"Login-Login-view-view-stackView-stackView-Login.normalTitle" = "Connexion";
+"Login-Login-view-view-stackView-Login.normalTitle" = "Connexion";
 
 // HomeViewController
 "Home-Home-view-Title.text" = "Accueil";

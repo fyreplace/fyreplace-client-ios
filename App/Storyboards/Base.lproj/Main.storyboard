@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView">
-                                        <rect key="frame" x="87" y="277" width="240" height="220"/>
+                                        <rect key="frame" x="87" y="271" width="240" height="232"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-Logo" userLabel="Logo">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="80"/>
@@ -83,7 +83,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView">
-                                                <rect key="frame" x="0.0" y="100" width="240" height="120"/>
+                                                <rect key="frame" x="0.0" y="100" width="240" height="76"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView-Username">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
@@ -108,17 +108,6 @@
                                                             <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-stackView-stackView-Password--A-editingDidEndOnExit-Login-Login-didSetPassword"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView-Login">
-                                                        <rect key="frame" x="95.5" y="84" width="49" height="36"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                        <state key="normal" title="Login"/>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-stackView-stackView-Login--A-touchUpInside-Login-Login-didClickLogin"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Login-Login-view-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-view-stackView-stackView" secondAttribute="leading">
@@ -138,6 +127,17 @@
                                                     </constraint>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-Login">
+                                                <rect key="frame" x="95.5" y="196" width="49" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="Login"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-stackView-Login--A-touchUpInside-Login-Login-didClickLogin"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
@@ -160,7 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Fyreplace" id="Login-Login-Fyreplace"/>
                     <connections>
-                        <outlet property="login" destination="Login-Login-view-view-stackView-stackView-Login" id="Login-Login--O-login"/>
+                        <outlet property="login" destination="Login-Login-view-view-stackView-Login" id="Login-Login--O-login"/>
                         <outlet property="password" destination="Login-Login-view-view-stackView-stackView-Password" id="Login-Login--O-password"/>
                         <outlet property="username" destination="Login-Login-view-view-stackView-stackView-Username" id="Login-Login--O-username"/>
                         <outlet property="viewModel" destination="Login-LoginViewModel" id="Login-Login--O-viewModel"/>
