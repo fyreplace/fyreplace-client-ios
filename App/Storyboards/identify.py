@@ -93,10 +93,9 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
                 (IdPartType.NAME, "-C"),
                 (IdPartType.REFERENCE, node.attrib.get("firstItem")),
                 (IdPartType.STRING, node.attrib.get("firstAttribute")),
+                (IdPartType.STRING, node.attrib.get("relation")),
                 (IdPartType.REFERENCE, node.attrib.get("secondItem")),
                 (IdPartType.STRING, node.attrib.get("secondAttribute")),
-                (IdPartType.STRING, node.attrib.get("constant")),
-                (IdPartType.STRING, node.attrib.get("multiplier")),
             ),
             False,
         )
