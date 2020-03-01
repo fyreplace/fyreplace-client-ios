@@ -6,8 +6,8 @@ public class CentralViewModel: NSObject {
     @IBOutlet
     private var authorRepo: AuthorRepository!
 
-    private let mUser = BehaviorSubject<Void>(value: Void())
-    public lazy var user = mUser.flatMap { [unowned self] _ in self.authorRepo.getUser() }.share(replay: 1)
+    private lazy var futureUser = BehaviorSubject<Observable<Author>>(value: authorRepo.getUser())
+    public lazy var user = futureUser.flatMap { $0 }.share(replay: 1)
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
     public lazy var bio = user.map { $0.bio }
@@ -21,9 +21,13 @@ public class CentralViewModel: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
 
+    public func updateBio(text: String) {
+        futureUser.onNext(authorRepo.updateBio(text: text))
+    }
+
     @objc
     private func onDidLogin(_ notification: Foundation.Notification) {
         guard notification.userInfo?["success"] as? Bool ?? false else { return }
-        mUser.onNext(Void())
+        futureUser.onNext(authorRepo.getUser())
     }
 }

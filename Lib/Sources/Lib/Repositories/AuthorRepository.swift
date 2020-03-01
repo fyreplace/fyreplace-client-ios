@@ -8,4 +8,8 @@ public class AuthorRepository: NSObject {
     public func getUser() -> Observable<Author> {
         provider.req(.user(id: nil), as: Author.self)
     }
+
+    public func updateBio(text: String) -> Observable<Author> {
+        provider.req(.updateBio(text: text), as: Author.self)
+    }
 }
