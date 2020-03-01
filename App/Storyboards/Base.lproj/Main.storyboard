@@ -368,6 +368,7 @@
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="Settings-Settings-view--C-Settings-Settings-view-Bio-centerX-Settings-Settings-view-centerX"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-safeArea" secondAttribute="centerY" id="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="trailing" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-Username" secondAttribute="trailing" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-Username" secondAttribute="bottom" constant="40" id="Settings-Settings-view--C-Settings-Settings-view-Bio-top-Settings-Settings-view-Username-bottom"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-safeArea" secondAttribute="top" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-safeArea" secondAttribute="trailing" constant="-60" id="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing">
@@ -397,6 +398,7 @@
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerX-Settings-Settings-view-centerX"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                                <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-Settings-Settings-view-Username-bottom"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing"/>
@@ -409,6 +411,7 @@
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-bottom-lessThanOrEqual-Settings-Settings-view-safeArea-bottom"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing"/>
                             </mask>
