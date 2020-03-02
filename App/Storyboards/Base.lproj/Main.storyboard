@@ -511,12 +511,12 @@
                     <navigationItem key="navigationItem" title="Profile Bio" id="Profile-Bio-Profile-Bio-Profile-Bio">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel">
                             <connections>
-                                <action selector="didCancel:" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel--A-Profile-Bio-Profile-Bio-didCancel-"/>
+                                <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Profile-Bio-done">
                             <connections>
-                                <action selector="didDone:" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-done--A-Profile-Bio-Profile-Bio-didDone-"/>
+                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

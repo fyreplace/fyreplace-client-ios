@@ -23,12 +23,12 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
     }
 
     @IBAction
-    private func didCancel(_ sender: UIBarButtonItem) {
+    private func didClickCancel() {
         dismiss(animated: true)
     }
 
     @IBAction
-    private func didDone(_ sender: UIBarButtonItem) {
+    private func didClickDone() {
         centralViewModel.updateBio(text: textView.text)
         dismiss(animated: true)
     }
