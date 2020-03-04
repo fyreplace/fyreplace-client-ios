@@ -70,5 +70,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LibWildFyreBaseURL</key>
+	<string>$(LIB_WILDFYRE_BASE_URL)</string>
 </dict>
 </plist>
