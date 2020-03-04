@@ -1,4 +1,4 @@
-// MainViewController
+// Main
 "Home-Home-Home.title" = "Accueil";
 "Notifications-Notifications-Notifications.title" = "Notifications";
 "Archive-Archive-Archive.title" = "Archive";
@@ -6,23 +6,28 @@
 "Settings-Navigation-Settings-Navigation-Settings.title" = "Réglages";
 "Settings-Settings-Settings.title" = "Réglages";
 
-// LoginViewController
+// Login
+"Login-Login-Fyreplace.title" = "Fyreplace";
 "Login-Login-view-view-stackView-stackView-Username.placeholder" = "Nom d'utilisateur";
 "Login-Login-view-view-stackView-stackView-Password.placeholder" = "Mot de passe";
 "Login-Login-view-view-stackView-Login.normalTitle" = "Connexion";
 
-// HomeViewController
+// Home
 "Home-Home-view-Title.text" = "Accueil";
 
-// NotificationsViewController
+// Notifications
 "Notifications-Notifications-view-Title.text" = "Notifications";
 
-// ArchiveViewController
+// Archive
 "Archive-Archive-view-Title.text" = "Archive";
 
-// DraftsViewController
+// Drafts
 "Drafts-Drafts-view-Title.text" = "Brouillons";
 
-// SettingsViewController
+// Settings
 "Settings-Settings-view-Username.text" = "Nom d'utilisateur";
 "Settings-Settings-Settings-Logout.title" = "Déconnexion";
+
+// Profile Bio
+"Profile-Bio-Profile-Bio.title" = "Bio de profil";
+"Profile-Bio-Profile-Bio-Profile-bio.title" = "Bio de profil";
