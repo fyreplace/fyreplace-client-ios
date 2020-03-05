@@ -18,8 +18,21 @@ public class ProxyViewController: UINavigationController, UINavigationController
     }
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
         setup(viewController: segue.destination)
+        super.prepare(for: segue, sender: sender)
+    }
+
+    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        setup(viewController: viewController)
+        super.pushViewController(viewController, animated: animated)
+    }
+
+    public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
+        for vc in viewControllers {
+            setup(viewController: vc)
+        }
+
+        super.setViewControllers(viewControllers, animated: animated)
     }
 
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
