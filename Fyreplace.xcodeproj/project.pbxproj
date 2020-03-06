@@ -30,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		4D135F36239A91FE00B20BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D17E175241063DE008616DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D17E179241065E1008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4D17E17A24106BBB008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D3186D32392F42D0028BC2B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4D569E5823C25DEF0008261E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D5C070D23C09E8A0080F5C0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D135F36239A91FE00B20BFA /* Base */,
+				4D17E175241063DE008616DF /* fr */,
+				4D17E17A24106BBB008616DF /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			children = (
 				4DAA04022353B66A00CB27B6 /* Base */,
 				4D71425C2364943D0041438B /* fr */,
+				4D17E179241065E1008616DF /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -1,10 +1,11 @@
 import Lib
+import LibWildFyre
 import RxCocoa
 import RxSwift
 import SDWebImage
 import UIKit
 
-public class SettingsViewController: UIViewController, CentralDataProvider {
+public class SettingsViewController: UIViewController, ImageSelectorDelegate, CentralDataProvider {
     @IBOutlet
     private var viewModel: SettingsViewModel!
     @IBOutlet
@@ -16,11 +17,7 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
 
     public var centralViewModel: CentralViewModel!
     private var disposer = DisposeBag()
-
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        avatar.sd_imageTransition = .fade
-    }
+    private lazy var imageSelector = ImageSelector(with: self)
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,8 +49,17 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
         setup(viewController: segue.destination)
     }
 
+    public func image(selected imageData: ImageData) {
+        centralViewModel.updateAvatar(image: imageData)
+    }
+
     @IBAction
     private func didClickLogout() {
         viewModel.logout()
+    }
+
+    @IBAction
+    private func didClickPicture() {
+        imageSelector.selectImage()
     }
 }

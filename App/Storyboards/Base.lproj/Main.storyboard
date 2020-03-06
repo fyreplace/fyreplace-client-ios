@@ -313,8 +313,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Profile-Picture" userLabel="Profile Picture">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Profile-Picture" userLabel="Profile Picture">
                                 <rect key="frame" x="143" y="128" width="128" height="128"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="Settings-Settings-view-Profile-Picture--C-width">
                                         <variation key="widthClass=regular" constant="192"/>
@@ -327,6 +328,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Settings-Profile-Picture-Tap" appends="YES" id="Settings-Settings-view-Profile-Picture-outletCollection"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Username">
                                 <rect key="frame" x="158" y="276" width="98" height="26.5"/>
@@ -462,6 +466,11 @@
                     </connections>
                 </customObject>
                 <customObject id="Settings-AuthRepository" customClass="AuthRepository" customModule="Lib"/>
+                <tapGestureRecognizer id="Settings-Profile-Picture-Tap" userLabel="Profile Picture Tap">
+                    <connections>
+                        <action selector="didClickPicture" destination="Settings-Settings" id="Settings-Profile-Picture-Tap--A-Settings-Settings-didClickPicture"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1500" y="1500"/>
         </scene>
@@ -508,15 +517,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile Bio" id="Profile-Bio-Profile-Bio-Profile-Bio">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel">
+                    <navigationItem key="navigationItem" title="Profile bio" id="Profile-Bio-Profile-Bio-Profile-bio">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Profile-bio-cancel">
                             <connections>
-                                <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
+                                <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Profile-Bio-done">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Profile-bio-done">
                             <connections>
-                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-Bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
+                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

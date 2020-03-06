@@ -40,11 +40,11 @@ extension AuthorTarget: TargetType, AccessTokenAuthorizable {
         case .user:
             return .get
 
-        case .updateAvatar:
-            return .put
-
         case .updateBio:
             return .patch
+
+        case .updateAvatar:
+            return .put
         }
     }
 

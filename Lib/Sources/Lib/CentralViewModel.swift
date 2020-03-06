@@ -25,6 +25,10 @@ public class CentralViewModel: NSObject {
         futureUser.onNext(authorRepo.updateBio(text: text))
     }
 
+    public func updateAvatar(image: ImageData) {
+        futureUser.onNext(authorRepo.updateAvatar(avatar: image))
+    }
+
     @objc
     private func onDidLogin(_ notification: Foundation.Notification) {
         guard notification.userInfo?["success"] as? Bool ?? false else { return }

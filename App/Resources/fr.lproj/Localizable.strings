@@ -1,0 +1,6 @@
+"Lib.ImageSelector.chooseSource.action.library" = "Sélectionner une image";
+"Lib.ImageSelector.chooseSource.action.camera" = "Prendre une photo";
+"Lib.ImageSelector.chooseSource.action.cancel" = "Annuler";
+"Lib.ImageSelector.sizeError.title" = "Erreur";
+"Lib.ImageSelector.sizeError.message" = "Cette image est trop grande";
+"Lib.ImageSelector.sizeError.action.ok" = "OK";
