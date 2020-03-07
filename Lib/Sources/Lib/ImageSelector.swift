@@ -4,18 +4,14 @@ import UIKit
 public typealias ImageSelectorController = UIViewController & ImageSelectorDelegate
 
 public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    private weak var controller: ImageSelectorController?
-
-    public init(with viewController: ImageSelectorController) {
-        controller = viewController
-    }
+    public weak var delegate: ImageSelectorController?
 
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        controller?.dismiss(animated: true)
+        delegate?.dismiss(animated: true)
     }
 
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        defer { controller?.dismiss(animated: true) }
+        defer { delegate?.dismiss(animated: true) }
         guard let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage else { return }
         let url = info[.imageURL] as? NSURL
 
@@ -45,14 +41,14 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
             choice.addAction(action)
         }
 
-        controller?.present(choice, animated: true)
+        delegate?.present(choice, animated: true)
     }
 
     private func selectImage(from source: UIImagePickerController.SourceType) {
         let picker = UIImagePickerController()
         picker.sourceType = source
         picker.delegate = self
-        controller?.present(picker, animated: true)
+        delegate?.present(picker, animated: true)
     }
 
     private func extractImageData(image: UIImage, isPng: Bool) {
@@ -77,12 +73,12 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
             )
 
             alert.addAction(ok)
-            controller?.present(alert, animated: true)
+            delegate?.present(alert, animated: true)
             return
         }
 
         DispatchQueue.main.async {
-            self.controller?.image(selected: ImageData(name: "image.\(ext)", mime: mime, data: data))
+            self.delegate?.image(selected: ImageData(name: "image.\(ext)", mime: mime, data: data))
         }
     }
 }

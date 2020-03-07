@@ -7,6 +7,8 @@ import UIKit
 
 public class SettingsViewController: UIViewController, ImageSelectorDelegate, CentralDataProvider {
     @IBOutlet
+    private var imageSelector: ImageSelector!
+    @IBOutlet
     private var viewModel: SettingsViewModel!
     @IBOutlet
     private var avatar: UIImageView!
@@ -17,7 +19,11 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
 
     public var centralViewModel: CentralViewModel!
     private var disposer = DisposeBag()
-    private lazy var imageSelector = ImageSelector(with: self)
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        imageSelector.delegate = self
+    }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -455,11 +455,13 @@
                     <connections>
                         <outlet property="avatar" destination="Settings-Settings-view-Profile-Picture" id="Settings-Settings--O-avatar"/>
                         <outlet property="bio" destination="Settings-Settings-view-Bio" id="Settings-Settings--O-bio"/>
+                        <outlet property="imageSelector" destination="Settings-ImageSelector" id="Settings-Settings--O-imageSelector"/>
                         <outlet property="username" destination="Settings-Settings-view-Username" id="Settings-Settings--O-username"/>
                         <outlet property="viewModel" destination="Settings-SettingsViewModel" id="Settings-Settings--O-viewModel"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Settings-ImageSelector" customClass="ImageSelector" customModule="Lib"/>
                 <customObject id="Settings-SettingsViewModel" customClass="SettingsViewModel" customModule="AppSettings">
                     <connections>
                         <outlet property="authRepo" destination="Settings-AuthRepository" id="Settings-SettingsViewModel--O-authRepo"/>
