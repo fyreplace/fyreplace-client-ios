@@ -1,0 +1,33 @@
+// Main
+"Home-Home-Home.title" = "Home";
+"Notifications-Notifications-Notifications.title" = "Notifications";
+"Archive-Archive-Archive.title" = "Archive";
+"Drafts-Drafts-Drafts.title" = "Drafts";
+"Settings-Navigation-Settings-Navigation-Settings.title" = "Settings";
+"Settings-Settings-Settings.title" = "Settings";
+
+// Login
+"Login-Login-Fyreplace.title" = "Fyreplace";
+"Login-Login-view-view-stackView-stackView-Username.placeholder" = "Username";
+"Login-Login-view-view-stackView-stackView-Password.placeholder" = "Password";
+"Login-Login-view-view-stackView-Login.normalTitle" = "Login";
+
+// Home
+"Home-Home-view-Title.text" = "Home";
+
+// Notifications
+"Notifications-Notifications-view-Title.text" = "Notifications";
+
+// Archive
+"Archive-Archive-view-Title.text" = "Archive";
+
+// Drafts
+"Drafts-Drafts-view-Title.text" = "Drafts";
+
+// Settings
+"Settings-Settings-view-Username.text" = "Username";
+"Settings-Settings-Settings-Logout.title" = "Logout";
+
+// Profile Bio
+"Profile-Bio-Profile-Bio.title" = "Profile bio";
+"Profile-Bio-Profile-Bio-Profile-bio.title" = "Profile bio";
