@@ -7,10 +7,7 @@ public class ProxyViewController: UINavigationController, UINavigationController
     public override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-
-        for vc in viewControllers {
-            setup(viewController: vc)
-        }
+        injectData(into: viewControllers)
     }
 
     public override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
@@ -18,24 +15,21 @@ public class ProxyViewController: UINavigationController, UINavigationController
     }
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        setup(viewController: segue.destination)
+        injectData(into: segue.destination)
         super.prepare(for: segue, sender: sender)
     }
 
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        setup(viewController: viewController)
+        injectData(into: viewController)
         super.pushViewController(viewController, animated: animated)
     }
 
     public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-        for vc in viewControllers {
-            setup(viewController: vc)
-        }
-
+        injectData(into: viewControllers)
         super.setViewControllers(viewControllers, animated: animated)
     }
 
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        setup(viewController: viewController)
+        injectData(into: viewController)
     }
 }

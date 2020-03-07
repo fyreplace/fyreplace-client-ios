@@ -10,12 +10,7 @@ public class MainViewController: UITabBarController, UITabBarControllerDelegate,
     public override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-
-        if let viewControllers = viewControllers {
-            for vc in viewControllers {
-                setup(viewController: vc)
-            }
-        }
+        injectData(into: viewControllers)
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -41,11 +36,11 @@ public class MainViewController: UITabBarController, UITabBarControllerDelegate,
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        setup(viewController: segue.destination)
+        injectData(into: segue.destination)
     }
 
     public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        setup(viewController: viewController)
+        injectData(into: viewController)
         return true
     }
 

@@ -46,7 +46,7 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
 
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        setup(viewController: segue.destination)
+        injectData(into: segue.destination)
     }
 
     public func image(selected imageData: ImageData) {
