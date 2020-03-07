@@ -1,6 +1,1 @@
-"Lib.ImageSelector.chooseSource.action.library" = "Select an image";
-"Lib.ImageSelector.chooseSource.action.camera" = "Take a picture";
-"Lib.ImageSelector.chooseSource.action.cancel" = "Cancel";
-"Lib.ImageSelector.sizeError.title" = "Error";
-"Lib.ImageSelector.sizeError.message" = "This image is too large";
-"Lib.ImageSelector.sizeError.action.ok" = "OK";
+../en.lproj/Localizable.strings
