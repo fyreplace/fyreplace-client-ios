@@ -7,6 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window?.tintColor = .systemOrange
         SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
         return true
     }
