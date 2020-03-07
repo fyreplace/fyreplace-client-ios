@@ -22,18 +22,18 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 
     public func selectImage() {
         let choice = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let actionsData: [String: UIImagePickerController.SourceType?] = [
-            "library": .photoLibrary,
-            "camera": .camera,
-            "cancel": nil,
+        let actionsData: [(String, UIImagePickerController.SourceType?)] = [
+            ("library", .photoLibrary),
+            ("camera", .camera),
+            ("cancel", nil),
         ]
 
-        for data in actionsData {
+        for (name, source) in actionsData {
             let action = UIAlertAction(
-                title: NSLocalizedString("Lib.ImageSelector.chooseSource.action.\(data.key)", comment: ""),
-                style: data.value != nil ? .default : .cancel,
+                title: NSLocalizedString("Lib.ImageSelector.chooseSource.action.\(name)", comment: ""),
+                style: source != nil ? .default : .cancel,
                 handler: { action in
-                    guard let source = data.value else { return }
+                    guard let source = source else { return }
                     self.selectImage(from: source)
                 }
             )
