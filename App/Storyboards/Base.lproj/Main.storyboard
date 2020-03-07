@@ -484,15 +484,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Settings-Settings-Settings">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Settings-Settings-Settings-Logout">
+                    <navigationItem key="navigationItem" title="Profile" id="Settings-Settings-Profile">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Settings-Settings-Profile-Logout">
                             <connections>
-                                <action selector="didClickLogout" destination="Settings-Settings" id="Settings-Settings-Settings-Logout--A-Settings-Settings-didClickLogout"/>
+                                <action selector="didClickLogout" destination="Settings-Settings" id="Settings-Settings-Profile-Logout--A-Settings-Settings-didClickLogout"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Settings-Settings-Settings-edit">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Settings-Settings-Profile-edit">
                             <connections>
-                                <segue destination="Profile-Bio-Navigation-Profile-Bio-Navigation" kind="presentation" id="Settings-Settings-Settings-edit--S-Profile-Bio-Navigation-Profile-Bio-Navigation"/>
+                                <segue destination="Profile-Bio-Navigation-Profile-Bio-Navigation" kind="presentation" id="Settings-Settings-Profile-edit--S-Profile-Bio-Navigation-Profile-Bio-Navigation"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -541,7 +541,7 @@
         <!--Profile Bio-->
         <scene sceneID="Profile-Bio">
             <objects>
-                <viewController title="Profile bio" id="Profile-Bio-Profile-Bio" userLabel="Profile Bio" customClass="ProfileBioViewController" customModule="AppSettings" sceneMemberID="viewController">
+                <viewController id="Profile-Bio-Profile-Bio" userLabel="Profile Bio" customClass="ProfileBioViewController" customModule="AppSettings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Profile-Bio-Profile-Bio-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -563,15 +563,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Profile-Bio-Profile-Bio-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile bio" id="Profile-Bio-Profile-Bio-Profile-bio">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Profile-bio-cancel">
+                    <navigationItem key="navigationItem" title="Bio" id="Profile-Bio-Profile-Bio-Bio">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Profile-Bio-Profile-Bio-Bio-cancel">
                             <connections>
-                                <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
+                                <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Profile-bio-done">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Bio-done">
                             <connections>
-                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Profile-bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
+                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

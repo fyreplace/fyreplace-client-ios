@@ -4,7 +4,7 @@
 "Archive-Archive-Archive.title" = "Archive";
 "Drafts-Drafts-Drafts.title" = "Drafts";
 "Settings-Navigation-Settings-Navigation-Settings.title" = "Settings";
-"Settings-Settings-Settings.title" = "Settings";
+"Settings-Settings-Profile.title" = "Profile";
 
 // Login
 "Login-Login-Fyreplace.title" = "Fyreplace";
@@ -26,8 +26,7 @@
 
 // Settings
 "Settings-Settings-view-Username.text" = "Username";
-"Settings-Settings-Settings-Logout.title" = "Logout";
+"Settings-Settings-Profile-Logout.title" = "Logout";
 
 // Profile Bio
-"Profile-Bio-Profile-Bio.title" = "Profile bio";
-"Profile-Bio-Profile-Bio-Profile-bio.title" = "Profile bio";
+"Profile-Bio-Profile-Bio-Bio.title" = "Bio";
