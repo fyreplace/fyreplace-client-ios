@@ -197,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="square.stack.fill" catalog="system" id="Home-Home-Home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="doc.richtext" catalog="system" id="Home-Home-Home"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,7 +252,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archive" image="folder.fill" catalog="system" id="Archive-Archive-Archive"/>
+                    <tabBarItem key="tabBarItem" title="Archive" image="square.grid.2x2.fill" catalog="system" id="Archive-Archive-Archive"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,7 +280,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drafts" image="square.and.pencil" catalog="system" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
+                    <tabBarItem key="tabBarItem" title="Drafts" image="doc.plaintext" catalog="system" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -544,10 +544,10 @@
         <image name="Avatar" width="256" height="256"/>
         <image name="Fyreplace" width="256" height="256"/>
         <image name="bell.fill" catalog="system" width="64" height="62"/>
-        <image name="folder.fill" catalog="system" width="64" height="46"/>
+        <image name="doc.plaintext" catalog="system" width="56" height="64"/>
+        <image name="doc.richtext" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
-        <image name="square.stack.fill" catalog="system" width="56" height="64"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
