@@ -332,6 +332,43 @@
                                     <outletCollection property="gestureRecognizers" destination="Settings-Profile-Picture-Tap" appends="YES" id="Settings-Settings-view-Profile-Picture-outletCollection"/>
                                 </connections>
                             </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture" userLabel="Edit Profile Picture">
+                                <rect key="frame" x="220.5" y="205.5" width="42.5" height="42.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="42.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil">
+                                            <rect key="frame" x="7" y="10" width="28" height="23.5"/>
+                                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" secondAttribute="height" multiplier="1:1">
+                                                    <string key="id">Settings-Settings-view-Edit-Profile-Picture-contentView-pencil--C-width-Settings-Settings-view-Edit-Profile-Picture-contentView-pencil-height</string>
+                                                </constraint>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" firstAttribute="centerX" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView" secondAttribute="centerX">
+                                            <string key="id">Settings-Settings-view-Edit-Profile-Picture-contentView--C-Settings-Settings-view-Edit-Profile-Picture-contentView-pencil-centerX-Settings-Settings-view-Edit-Profile-Picture-contentView-centerX</string>
+                                        </constraint>
+                                        <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" firstAttribute="centerY" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView" secondAttribute="centerY">
+                                            <string key="id">Settings-Settings-view-Edit-Profile-Picture-contentView--C-Settings-Settings-view-Edit-Profile-Picture-contentView-pencil-centerY-Settings-Settings-view-Edit-Profile-Picture-contentView-centerY</string>
+                                        </constraint>
+                                        <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" firstAttribute="width" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView" secondAttribute="width" multiplier="2:3">
+                                            <string key="id">Settings-Settings-view-Edit-Profile-Picture-contentView--C-Settings-Settings-view-Edit-Profile-Picture-contentView-pencil-width-Settings-Settings-view-Edit-Profile-Picture-contentView-width</string>
+                                        </constraint>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Settings-Settings-view-Edit-Profile-Picture" secondAttribute="height" multiplier="1:1" id="Settings-Settings-view-Edit-Profile-Picture--C-width-Settings-Settings-view-Edit-Profile-Picture-height"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Username">
                                 <rect key="frame" x="158" y="276" width="98" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -378,6 +415,13 @@
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-safeArea" secondAttribute="trailing" constant="-60" id="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing">
                                 <variation key="widthClass=regular" constant="-80"/>
                             </constraint>
+                            <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="bottom" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="bottomMargin">
+                                <string key="id">Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-bottom-Settings-Settings-view-Profile-Picture-bottomMargin</string>
+                            </constraint>
+                            <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="trailing" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="trailingMargin">
+                                <string key="id">Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-trailing-Settings-Settings-view-Profile-Picture-trailingMargin</string>
+                            </constraint>
+                            <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="width" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="width" multiplier="1:3" id="Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-width-Settings-Settings-view-Profile-Picture-width"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-centerX-Settings-Settings-view-centerX"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="centerY" secondItem="Settings-Settings-view" secondAttribute="centerY" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-centerY-Settings-Settings-view-centerY"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="leading" secondItem="Settings-Settings-view-safeArea" secondAttribute="leading" constant="60" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-leading-Settings-Settings-view-safeArea-leading">
@@ -547,6 +591,7 @@
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="doc.richtext" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
