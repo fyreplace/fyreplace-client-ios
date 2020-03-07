@@ -10,6 +10,12 @@ public class MainViewController: UITabBarController, UITabBarControllerDelegate,
     public override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+
+        if let viewControllers = viewControllers {
+            for vc in viewControllers {
+                setup(viewController: vc)
+            }
+        }
     }
 
     public override func viewWillAppear(_ animated: Bool) {
