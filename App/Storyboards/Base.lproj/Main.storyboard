@@ -70,83 +70,133 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView">
-                                        <rect key="frame" x="87" y="271" width="240" height="232"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Logo" userLabel="Logo">
+                                        <rect key="frame" x="167" y="249" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Login-Login-view-view-Logo--C-width">
+                                                <variation key="widthClass=regular" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="Login-Login-view-view-Logo" secondAttribute="height" multiplier="1:1" id="Login-Login-view-view-Logo--C-width-Login-Login-view-view-Logo-height"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields" userLabel="Fields">
+                                        <rect key="frame" x="87" y="349" width="240" height="76"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-Logo" userLabel="Logo">
-                                                <rect key="frame" x="80" y="0.0" width="80" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="Login-Login-view-view-stackView-Logo--C-width">
-                                                        <variation key="widthClass=regular" constant="120"/>
-                                                    </constraint>
-                                                    <constraint firstAttribute="width" secondItem="Login-Login-view-view-stackView-Logo" secondAttribute="height" multiplier="1:1" id="Login-Login-view-view-stackView-Logo--C-width-Login-Login-view-view-stackView-Logo-height"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView">
-                                                <rect key="frame" x="0.0" y="100" width="240" height="76"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView-Username">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-stackView-stackView-Username--A-editingDidEndOnExit-Login-Login-didSetUsername"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-stackView-Password">
-                                                        <rect key="frame" x="0.0" y="42" width="240" height="34"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-stackView-stackView-Password--A-editingDidEndOnExit-Login-Login-didClickLogin"/>
-                                                            <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-stackView-stackView-Password--A-editingDidEndOnExit-Login-Login-didSetPassword"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="Login-Login-view-view-stackView-stackView-Password" firstAttribute="leading" secondItem="Login-Login-view-view-stackView-stackView" secondAttribute="leading">
-                                                        <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-leading-Login-Login-view-stackView-stackView-leading</string>
-                                                    </constraint>
-                                                    <constraint firstItem="Login-Login-view-view-stackView-stackView-Password" firstAttribute="trailing" secondItem="Login-Login-view-view-stackView-stackView" secondAttribute="trailing">
-                                                        <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-trailing-Login-Login-view-stackView-stackView-trailing</string>
-                                                    </constraint>
-                                                    <constraint firstItem="Login-Login-view-view-stackView-stackView-Username" firstAttribute="leading" secondItem="Login-Login-view-view-stackView-stackView" secondAttribute="leading">
-                                                        <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-leading-Login-Login-view-stackView-stackView-leading</string>
-                                                    </constraint>
-                                                    <constraint firstItem="Login-Login-view-view-stackView-stackView-Username" firstAttribute="trailing" secondItem="Login-Login-view-view-stackView-stackView" secondAttribute="trailing">
-                                                        <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-trailing-Login-Login-view-stackView-stackView-trailing</string>
-                                                    </constraint>
-                                                    <constraint firstAttribute="width" constant="240" id="Login-Login-view-view-stackView-stackView--C-width">
-                                                        <variation key="widthClass=regular" constant="360"/>
-                                                    </constraint>
-                                                </constraints>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-stackView-Login">
-                                                <rect key="frame" x="95.5" y="196" width="49" height="36"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields-Username">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Username--A-editingDidEndOnExit-Login-Login-didSetUsername"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields-Password">
+                                                <rect key="frame" x="0.0" y="42" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Password--A-editingDidEndOnExit-Login-Login-didClickLogin"/>
+                                                    <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Password--A-editingDidEndOnExit-Login-Login-didSetPassword"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Password" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Password" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Username" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Username" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="240" id="Login-Login-view-view-Fields--C-width">
+                                                <variation key="widthClass=regular" constant="360"/>
+                                            </constraint>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons" userLabel="Buttons">
+                                        <rect key="frame" x="87" y="445" width="240" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Register" userLabel="Register">
+                                                <rect key="frame" x="0.0" y="0.0" width="143" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="Register"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickRegister" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-Buttons-Register--A-touchUpInside-Login-Login-didClickRegister"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Login">
+                                                <rect key="frame" x="143" y="0.0" width="97" height="36"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <state key="normal" title="Login"/>
                                                 <variation key="widthClass=regular">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-stackView-Login--A-touchUpInside-Login-Login-didClickLogin"/>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-Buttons-Login--A-touchUpInside-Login-Login-didClickLogin"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                        <variation key="heightClass=compact" alignment="top" axis="vertical" spacingType="standard"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="Login-Login-view-view-stackView" firstAttribute="centerX" secondItem="Login-Login-view-view" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-stackView-centerX-Login-Login-view-view-centerX"/>
-                                    <constraint firstItem="Login-Login-view-view-stackView" firstAttribute="centerY" secondItem="Login-Login-view-view" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-stackView-centerY-Login-Login-view-view-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="top" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerX" secondItem="Login-Login-view-view" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerX-Login-Login-view-view-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerY" secondItem="Login-Login-view-view" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerY-Login-Login-view-view-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" constant="-20" id="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="bottom" secondItem="Login-Login-view-view-Fields" secondAttribute="top" constant="-20" id="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="centerX" secondItem="Login-Login-view-view-Fields" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -160,9 +210,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Fyreplace" id="Login-Login-Fyreplace"/>
                     <connections>
-                        <outlet property="login" destination="Login-Login-view-view-stackView-Login" id="Login-Login--O-login"/>
-                        <outlet property="password" destination="Login-Login-view-view-stackView-stackView-Password" id="Login-Login--O-password"/>
-                        <outlet property="username" destination="Login-Login-view-view-stackView-stackView-Username" id="Login-Login--O-username"/>
+                        <outlet property="login" destination="Login-Login-view-view-Buttons-Login" id="Login-Login--O-login"/>
+                        <outlet property="password" destination="Login-Login-view-view-Fields-Password" id="Login-Login--O-password"/>
+                        <outlet property="username" destination="Login-Login-view-view-Fields-Username" id="Login-Login--O-username"/>
                         <outlet property="viewModel" destination="Login-LoginViewModel" id="Login-Login--O-viewModel"/>
                     </connections>
                 </viewController>
@@ -335,11 +385,11 @@
                             <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture" userLabel="Edit Profile Picture">
                                 <rect key="frame" x="220.5" y="205.5" width="42.5" height="42.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="42.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="43"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil">
-                                            <rect key="frame" x="7" y="10" width="28" height="23.5"/>
+                                            <rect key="frame" x="7" y="9.5" width="28.5" height="24"/>
                                             <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" secondAttribute="height" multiplier="1:1">

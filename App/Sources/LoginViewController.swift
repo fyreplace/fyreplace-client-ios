@@ -37,6 +37,12 @@ public class LoginViewController: UIViewController {
     }
 
     @IBAction
+    private func didClickRegister() {
+        let url = Bundle.main.infoDictionary!["WildFyreRegisterUrl"] as! String
+        UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+    }
+
+    @IBAction
     private func didClickLogin() {
         if login.isEnabled {
             login.isEnabled = false

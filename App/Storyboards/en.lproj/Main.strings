@@ -8,9 +8,10 @@
 
 // Login
 "Login-Login-Fyreplace.title" = "Fyreplace";
-"Login-Login-view-view-stackView-stackView-Username.placeholder" = "Username";
-"Login-Login-view-view-stackView-stackView-Password.placeholder" = "Password";
-"Login-Login-view-view-stackView-Login.normalTitle" = "Login";
+"Login-Login-view-view-Fields-Username.placeholder" = "Username";
+"Login-Login-view-view-Fields-Password.placeholder" = "Password";
+"Login-Login-view-view-Buttons-Register.normalTitle" = "Register";
+"Login-Login-view-view-Buttons-Login.normalTitle" = "Login";
 
 // Home
 "Home-Home-view-Title.text" = "Home";
