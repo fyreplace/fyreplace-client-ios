@@ -2,6 +2,7 @@ import UIKit
 
 public class KeyboardAvoidingConstraint: NSLayoutConstraint {
     private var originalConstant: CGFloat? = nil
+    private var lastOrientation: UIDeviceOrientation? = nil
     private var keyboardHeight: CGFloat = 0
 
     deinit {
@@ -17,6 +18,10 @@ public class KeyboardAvoidingConstraint: NSLayoutConstraint {
 
     @objc
     private func onOrientationDidChange(_ notification: Notification) {
+        let currentOrientation = UIDevice.current.orientation
+        guard currentOrientation != lastOrientation else { return }
+        lastOrientation = currentOrientation
+
         if let original = originalConstant {
             constant = original
         }
