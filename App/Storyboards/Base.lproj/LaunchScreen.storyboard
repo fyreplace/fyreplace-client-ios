@@ -19,7 +19,7 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Home"/>
+                        <segue destination="Home-Navigation-Home-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Navigation-Home-Navigation"/>
                         <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Notifications"/>
                         <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="Main-Main--S-Archive-Archive"/>
                         <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="Main-Main--S-Drafts-Drafts"/>
@@ -29,6 +29,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Main-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Home Navigation-->
+        <scene sceneID="Home-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Home-Navigation-Home-Navigation" userLabel="Home Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title=" " image="doc.richtext" catalog="system" id="Home-Navigation-Home-Navigation-Home" userLabel="Home"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Home-Navigation-Home-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Home-Home" kind="relationship" relationship="rootViewController" id="Home-Navigation-Home-Navigation--S-Home-Home"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1500" y="750"/>
         </scene>
         <!--Home-->
         <scene sceneID="Home">
@@ -40,11 +59,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title=" " image="doc.richtext" catalog="system" id="Home-Home-Home" userLabel="Home"/>
+                    <navigationItem key="navigationItem" id="Home-Home-navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1500" y="750"/>
+            <point key="canvasLocation" x="-1500" y="1500"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Notifications">

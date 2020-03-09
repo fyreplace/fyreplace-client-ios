@@ -1,8 +1,8 @@
 // Main
-"Home-Home-Home.title" = "Home";
-"Notifications-Notifications-Notifications.title" = "Notifications";
-"Archive-Archive-Archive.title" = "Archive";
-"Drafts-Drafts-Drafts.title" = "Drafts";
+"Home-Navigation-Home-Navigation-Home.title" = "Home";
+"Notifications-Navigation-Notifications-Navigation-Notifications.title" = "Notifications";
+"Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
+"Drafts-Navigation-Drafts-Navigation-Drafts.title" = "Drafts";
 "Settings-Navigation-Settings-Navigation-Settings.title" = "Settings";
 "Settings-Settings-Profile.title" = "Profile";
 

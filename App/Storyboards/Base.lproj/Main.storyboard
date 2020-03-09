@@ -23,10 +23,10 @@
                         <outlet property="centralViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralViewModel"/>
                         <outlet property="viewModel" destination="Main-MainViewModel" id="Main-Main--O-viewModel"/>
                         <segue destination="Login-Navigation-Login-Navigation" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Navigation-Login-Navigation"/>
-                        <segue destination="Home-Home" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Home"/>
-                        <segue destination="Notifications-Notifications" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Notifications"/>
-                        <segue destination="Archive-Archive" kind="relationship" relationship="viewControllers" id="Main-Main--S-Archive-Archive"/>
-                        <segue destination="Drafts-Drafts" kind="relationship" relationship="viewControllers" id="Main-Main--S-Drafts-Drafts"/>
+                        <segue destination="Home-Navigation-Home-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Navigation-Home-Navigation"/>
+                        <segue destination="Notifications-Navigation-Notifications-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Navigation-Notifications-Navigation"/>
+                        <segue destination="Archive-Navigation-Archive-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Archive-Navigation-Archive-Navigation"/>
+                        <segue destination="Drafts-Navigation-Drafts-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Drafts-Navigation-Drafts-Navigation"/>
                         <segue destination="Settings-Navigation-Settings-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Settings-Navigation-Settings-Navigation"/>
                     </connections>
                 </tabBarController>
@@ -226,6 +226,25 @@
             </objects>
             <point key="canvasLocation" x="1500" y="0.0"/>
         </scene>
+        <!--Home Navigation-->
+        <scene sceneID="Home-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Home-Navigation-Home-Navigation" userLabel="Home Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="doc.richtext" catalog="system" id="Home-Navigation-Home-Navigation-Home"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Home-Navigation-Home-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Home-Home" kind="relationship" relationship="rootViewController" id="Home-Navigation-Home-Navigation--S-Home-Home"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1500" y="750"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Home">
             <objects>
@@ -247,11 +266,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="doc.richtext" catalog="system" id="Home-Home-Home"/>
+                    <navigationItem key="navigationItem" id="Home-Home-navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1500" y="750"/>
+            <point key="canvasLocation" x="-1500" y="1500"/>
+        </scene>
+        <!--Notifications Navigation-->
+        <scene sceneID="Notifications-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Notifications-Navigation-Notifications-Navigation" userLabel="Notifications Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" catalog="system" id="Notifications-Navigation-Notifications-Navigation-Notifications"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Notifications-Navigation-Notifications-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Notifications-Notifications" kind="relationship" relationship="rootViewController" id="Notifications-Navigation-Notifications-Navigation--S-Notifications-Notifications"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="750"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Notifications">
@@ -275,11 +313,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" catalog="system" id="Notifications-Notifications-Notifications"/>
+                    <navigationItem key="navigationItem" id="Notifications-Notifications-navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="750"/>
+            <point key="canvasLocation" x="-750" y="1500"/>
+        </scene>
+        <!--Archive Navigation-->
+        <scene sceneID="Archive-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Archive-Navigation-Archive-Navigation" userLabel="Archive Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Archive" image="square.grid.2x2.fill" catalog="system" id="Archive-Navigation-Archive-Navigation-Archive"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Archive-Navigation-Archive-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Archive-Archive" kind="relationship" relationship="rootViewController" id="Archive-Navigation-Archive-Navigation--S-Archive-Archive"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="750"/>
         </scene>
         <!--Archive-->
         <scene sceneID="Archive">
@@ -302,11 +359,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archive" image="square.grid.2x2.fill" catalog="system" id="Archive-Archive-Archive"/>
+                    <navigationItem key="navigationItem" id="Archive-Archive-navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="750"/>
+            <point key="canvasLocation" x="0.0" y="1500"/>
+        </scene>
+        <!--Drafts Navigation-->
+        <scene sceneID="Drafts-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Drafts-Navigation-Drafts-Navigation" userLabel="Drafts Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Drafts" image="doc.plaintext" catalog="system" id="Drafts-Navigation-Drafts-Navigation-Drafts" userLabel="Drafts"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Drafts-Navigation-Drafts-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Drafts-Drafts" kind="relationship" relationship="rootViewController" id="Drafts-Navigation-Drafts-Navigation--S-Drafts-Drafts"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="750"/>
         </scene>
         <!--Drafts-->
         <scene sceneID="Drafts">
@@ -330,11 +406,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drafts" image="doc.plaintext" catalog="system" id="Drafts-Drafts-Drafts" userLabel="Drafts"/>
+                    <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="750"/>
+            <point key="canvasLocation" x="750" y="1500"/>
         </scene>
         <!--Settings Navigation-->
         <scene sceneID="Settings-Navigation">
