@@ -5,6 +5,11 @@ public struct Area: Decodable {
     public let displayname: String
 }
 
+public struct Reputation: Decodable {
+    public let reputation: UInt
+    public let spread: UInt
+}
+
 public enum AreaTarget {
     case all
     case reputation(areaName: String)
