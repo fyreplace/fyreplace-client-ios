@@ -6,7 +6,7 @@ public class CentralViewModel: NSObject {
     @IBOutlet
     private var authorRepo: AuthorRepository!
 
-    private lazy var futureUser = BehaviorSubject<Observable<Author>>(value: authorRepo.getUser())
+    private lazy var futureUser = ReplaySubject<Observable<Author>>.create(bufferSize: 1)
     public lazy var user = futureUser.flatMap { $0 }.share(replay: 1)
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
