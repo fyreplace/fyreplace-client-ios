@@ -8,7 +8,7 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
     private var textView: UITextView!
 
     public var centralViewModel: CentralViewModel!
-    private var disposer = DisposeBag()
+    private let disposer = DisposeBag()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
