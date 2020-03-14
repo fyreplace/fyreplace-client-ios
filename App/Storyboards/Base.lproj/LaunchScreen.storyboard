@@ -91,7 +91,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title=" " image="square.grid.2x2.fill" catalog="system" id="Archive-Archive-Archive" userLabel="Archive"/>
+                    <tabBarItem key="tabBarItem" title=" " image="archivebox.fill" catalog="system" id="Archive-Archive-Archive" userLabel="Archive"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +123,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Settings-Settings-view-safeArea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title=" " image="gear" catalog="system" id="Settings-Settings-Settings" userLabel="Settings"/>
+                    <tabBarItem key="tabBarItem" title=" " image="person.fill" catalog="system" id="Settings-Settings-Settings" userLabel="Settings"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,11 +131,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="archivebox.fill" catalog="system" width="64" height="52"/>
         <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="doc.richtext" catalog="system" width="56" height="64"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

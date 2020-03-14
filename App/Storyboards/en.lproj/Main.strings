@@ -1,9 +1,9 @@
 // Main
-"Home-Navigation-Home-Navigation-Home.title" = "Home";
+"Home-Navigation-Home-Navigation-Feed.title" = "Feed";
 "Notifications-Navigation-Notifications-Navigation-Notifications.title" = "Notifications";
 "Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
 "Drafts-Navigation-Drafts-Navigation-Drafts.title" = "Drafts";
-"Settings-Navigation-Settings-Navigation-Settings.title" = "Settings";
+"Settings-Navigation-Settings-Navigation-Profile.title" = "Profile";
 "Settings-Settings-Profile.title" = "Profile";
 
 // Login

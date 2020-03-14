@@ -229,7 +229,7 @@
         <scene sceneID="Home-Navigation">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Home-Navigation-Home-Navigation" userLabel="Home Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="doc.richtext" catalog="system" id="Home-Navigation-Home-Navigation-Home"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="doc.richtext" catalog="system" id="Home-Navigation-Home-Navigation-Feed"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Home-Navigation-Home-Navigation-navigationBar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -322,7 +322,7 @@
         <scene sceneID="Archive-Navigation">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Archive-Navigation-Archive-Navigation" userLabel="Archive Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Archive" image="square.grid.2x2.fill" catalog="system" id="Archive-Navigation-Archive-Navigation-Archive"/>
+                    <tabBarItem key="tabBarItem" title="Archive" image="archivebox.fill" catalog="system" id="Archive-Navigation-Archive-Navigation-Archive"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Archive-Navigation-Archive-Navigation-navigationBar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -415,7 +415,7 @@
         <scene sceneID="Settings-Navigation">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Settings-Navigation-Settings-Navigation" userLabel="Settings Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Settings-Navigation-Settings-Navigation-Settings"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Settings-Navigation-Settings-Navigation-Profile"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Navigation-Settings-Navigation-navigationBar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -694,9 +694,9 @@
                                 <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Bio-done">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Profile-Bio-Profile-Bio-Bio-save">
                             <connections>
-                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
+                                <action selector="didClickSave" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-save--A-Profile-Bio-Profile-Bio-didClickSave"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -712,12 +712,12 @@
     <resources>
         <image name="Avatar" width="256" height="256"/>
         <image name="Fyreplace" width="256" height="256"/>
+        <image name="archivebox.fill" catalog="system" width="64" height="52"/>
         <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="doc.richtext" catalog="system" width="56" height="64"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
-        <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
