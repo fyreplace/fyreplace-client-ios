@@ -55,13 +55,14 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
         guard var data = isPng ? image.pngData() : image.jpegData(compressionQuality: 1.0) else { return }
         let ext = isPng ? "png" : "jpg"
         let mime = "image/" + (isPng ? "png" : "jpeg")
+        let maxBytes = delegate?.maxImageBytes ?? 0
 
-        if data.count >= MAX_IMAGE_SIZE {
+        if data.count >= maxBytes {
             guard let newData = image.downscaled()?.jpegData(compressionQuality: 0.5) else { return }
             data = newData
         }
 
-        guard data.count < MAX_IMAGE_SIZE else {
+        guard data.count < maxBytes else {
             let alert = UIAlertController(
                 title: NSLocalizedString("Lib.ImageSelector.sizeError.title", comment: ""),
                 message: NSLocalizedString("Lib.ImageSelector.sizeError.message", comment: ""),
@@ -84,7 +85,13 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 }
 
 public protocol ImageSelectorDelegate {
+    var maxImageSize: Float { get }
+
     func image(selected imageData: ImageData)
+}
+
+private extension ImageSelectorDelegate {
+    var maxImageBytes: Int { Int(maxImageSize * 1024 * 1024) }
 }
 
 private extension UIImage {
@@ -105,5 +112,4 @@ private extension UIImage {
     }
 }
 
-private let MAX_IMAGE_SIZE = 1024 * 1024
 private let MAX_IMAGE_AREA = 1920 * 1080

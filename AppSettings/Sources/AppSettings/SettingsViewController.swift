@@ -18,6 +18,7 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
     private var bio: UITextView!
 
     public var centralViewModel: CentralViewModel!
+    public let maxImageSize: Float = 0.5
     private var disposer = DisposeBag()
 
     public override func viewDidLoad() {
