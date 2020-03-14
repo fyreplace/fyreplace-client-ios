@@ -458,13 +458,13 @@
                                 </connections>
                             </imageView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture" userLabel="Edit Profile Picture">
-                                <rect key="frame" x="220.5" y="205.5" width="42.5" height="42.5"/>
+                                <rect key="frame" x="231" y="216" width="32" height="32"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="42.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil">
-                                            <rect key="frame" x="7" y="10" width="28" height="23.5"/>
+                                            <rect key="frame" x="5.5" y="8" width="21" height="16.5"/>
                                             <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil" secondAttribute="height" multiplier="1:1">
@@ -546,7 +546,7 @@
                             <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="trailing" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="trailingMargin">
                                 <string key="id">Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-trailing-Settings-Settings-view-Profile-Picture-trailingMargin</string>
                             </constraint>
-                            <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="width" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="width" multiplier="1:3" id="Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-width-Settings-Settings-view-Profile-Picture-width"/>
+                            <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="width" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="width" multiplier="1:4" id="Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-width-Settings-Settings-view-Profile-Picture-width"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-centerX-Settings-Settings-view-centerX"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="centerY" secondItem="Settings-Settings-view" secondAttribute="centerY" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-centerY-Settings-Settings-view-centerY"/>
                             <constraint firstItem="Settings-Settings-view-Profile-Picture" firstAttribute="leading" secondItem="Settings-Settings-view-safeArea" secondAttribute="leading" constant="60" id="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-leading-Settings-Settings-view-safeArea-leading">
