@@ -46,8 +46,8 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
             .disposed(by: disposer)
     }
 
-    public override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         disposer = DisposeBag()
     }
 

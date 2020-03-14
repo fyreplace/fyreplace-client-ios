@@ -25,8 +25,8 @@ public class MainViewController: UITabBarController, UITabBarControllerDelegate,
         NotificationCenter.default.post(name: notification, object: self, userInfo: info)
     }
 
-    public override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
 
