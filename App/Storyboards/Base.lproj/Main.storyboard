@@ -44,7 +44,7 @@
         <!--Login Navigation-->
         <scene sceneID="Login-Navigation">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="Login-Navigation-Login-Navigation" userLabel="Login Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenKeyboardAppears="YES" id="Login-Navigation-Login-Navigation" userLabel="Login Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Login-Navigation-Login-Navigation-navigationBar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -102,7 +102,6 @@
                                                 </variation>
                                                 <connections>
                                                     <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Password--A-editingDidEndOnExit-Login-Login-didClickLogin"/>
-                                                    <action selector="didSetPassword" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Password--A-editingDidEndOnExit-Login-Login-didSetPassword"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -461,7 +460,7 @@
                             <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture" userLabel="Edit Profile Picture">
                                 <rect key="frame" x="220.5" y="205.5" width="42.5" height="42.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="42" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="42.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Edit-Profile-Picture-contentView-pencil">

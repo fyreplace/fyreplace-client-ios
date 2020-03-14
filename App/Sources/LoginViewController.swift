@@ -32,11 +32,6 @@ public class LoginViewController: UIViewController {
     }
 
     @IBAction
-    private func didSetPassword() {
-        view.endEditing(false)
-    }
-
-    @IBAction
     private func didClickRegister() {
         let url = Bundle.main.infoDictionary!["WildFyreRegisterUrl"] as! String
         UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
@@ -46,6 +41,7 @@ public class LoginViewController: UIViewController {
     private func didClickLogin() {
         if login.isEnabled {
             login.isEnabled = false
+            view.endEditing(false)
             viewModel.login(username: username.text ?? "", password: password.text ?? "")
         }
     }
