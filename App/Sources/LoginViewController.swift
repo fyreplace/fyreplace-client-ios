@@ -55,6 +55,17 @@ public class LoginViewController: UIViewController {
                 self.dismiss(animated: true)
             } else {
                 self.login.isEnabled = true
+                let alert = UIAlertController(
+                    title: NSLocalizedString("App.LoginViewController.loginError.title", comment: ""),
+                    message: NSLocalizedString("App.LoginViewController.loginError.message", comment: ""),
+                    preferredStyle: .alert
+                )
+                let ok = UIAlertAction(
+                    title: NSLocalizedString("App.LoginViewController.loginError.ok", comment: ""),
+                    style: .default
+                )
+                alert.addAction(ok)
+                self.present(alert, animated: true)
             }
         }
     }

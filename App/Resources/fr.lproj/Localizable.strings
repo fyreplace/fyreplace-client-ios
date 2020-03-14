@@ -1,3 +1,6 @@
+"App.LoginViewController.loginError.title" = "Erreur de connexion";
+"App.LoginViewController.loginError.message" = "Les identifiants renseignés ne permettent pas de se connecter";
+"App.LoginViewController.loginError.ok" = "OK";
 "Lib.ImageSelector.chooseSource.action.library" = "Sélectionner une image";
 "Lib.ImageSelector.chooseSource.action.camera" = "Prendre une photo";
 "Lib.ImageSelector.chooseSource.action.cancel" = "Annuler";

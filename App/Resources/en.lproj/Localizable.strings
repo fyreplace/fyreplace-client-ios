@@ -1,3 +1,6 @@
+"App.LoginViewController.loginError.title" = "Login failed";
+"App.LoginViewController.loginError.message" = "Could not login using the provided credentials";
+"App.LoginViewController.loginError.ok" = "OK";
 "Lib.ImageSelector.chooseSource.action.library" = "Select an image";
 "Lib.ImageSelector.chooseSource.action.camera" = "Take a picture";
 "Lib.ImageSelector.chooseSource.action.cancel" = "Cancel";
