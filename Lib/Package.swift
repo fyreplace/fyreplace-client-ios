@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/ReactiveX/RxSwift.git",
-            .upToNextMajor(from: "5.1.0")
+            .upToNextMajor(from: "5.1.1")
         ),
         .package(
             url: "https://github.com/RxSwiftCommunity/RxSwiftExt.git",
@@ -24,7 +24,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
-            .upToNextMajor(from: "5.6.0")
+            .upToNextMajor(from: "5.6.1")
         ),
         .package(
             url: "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
