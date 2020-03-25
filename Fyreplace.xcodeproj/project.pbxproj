@@ -102,11 +102,8 @@
 			children = (
 				4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */,
 				4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */,
-				4D3186D32392F42D0028BC2B /* MainViewController.swift */,
-				4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */,
-				4D569E5823C25DEF0008261E /* LoginViewController.swift */,
-				4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */,
-				4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */,
+				4DFD4BEC242C08F6006A9DE0 /* ViewControllers */,
+				4DFD4BED242C0933006A9DE0 /* ViewModels */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -145,6 +142,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DFD4BEC242C08F6006A9DE0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D3186D32392F42D0028BC2B /* MainViewController.swift */,
+				4D569E5823C25DEF0008261E /* LoginViewController.swift */,
+				4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4DFD4BED242C0933006A9DE0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4DC14E75239EAD0C0056C0A7 /* MainViewModel.swift */,
+				4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
