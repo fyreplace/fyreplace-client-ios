@@ -26,6 +26,7 @@
 		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
 		4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C42365DE3700BD4E60 /* AppDrafts */; };
 		4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C62365DE3B00BD4E60 /* AppSettings */; };
+		4DFD4BEF242C1123006A9DE0 /* LibUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFD4BEE242C1123006A9DE0 /* LibUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFD4BEF242C1123006A9DE0 /* LibUtils in Frameworks */,
 				4D01D6342393DA3F007FC625 /* Lib in Frameworks */,
 				4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */,
 				4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */,
@@ -188,6 +190,7 @@
 				4DDE87C62365DE3B00BD4E60 /* AppSettings */,
 				4D01D6332393DA3F007FC625 /* Lib */,
 				4D01D6372393DA49007FC625 /* LibWildFyre */,
+				4DFD4BEE242C1123006A9DE0 /* LibUtils */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -525,6 +528,10 @@
 		4DDE87C62365DE3B00BD4E60 /* AppSettings */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppSettings;
+		};
+		4DFD4BEE242C1123006A9DE0 /* LibUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

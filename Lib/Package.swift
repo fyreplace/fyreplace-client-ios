@@ -15,14 +15,6 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/ReactiveX/RxSwift.git",
-            .upToNextMajor(from: "5.1.1")
-        ),
-        .package(
-            url: "https://github.com/RxSwiftCommunity/RxSwiftExt.git",
-            .upToNextMajor(from: "5.2.0")
-        ),
-        .package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
             .upToNextMajor(from: "5.6.1")
         ),
@@ -30,18 +22,15 @@ let package = Package(
             url: "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
             .upToNextMajor(from: "0.5.0")
         ),
-        .package(path: "../LibWildFyre"),
+        .package(path: "../LibUtils"),
     ],
     targets: [
         .target(
             name: "Lib",
             dependencies: [
-                "RxSwift",
-                "RxCocoa",
-                "RxSwiftExt",
-                "SDWebImage",
-                "SDWebImageWebPCoder",
-                "LibWildFyre",
+                .byName(name: "SDWebImage"),
+                .byName(name: "SDWebImageWebPCoder"),
+                .byName(name: "LibUtils"),
             ]
         ),
     ]
