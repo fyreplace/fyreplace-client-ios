@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -13,11 +13,15 @@ let package = Package(
             targets: ["AppArchive"]
         ),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "../Lib"),
+    ],
     targets: [
         .target(
             name: "AppArchive",
-            dependencies: []
+            dependencies: [
+                .byName(name: "Lib"),
+            ]
         ),
     ]
 )

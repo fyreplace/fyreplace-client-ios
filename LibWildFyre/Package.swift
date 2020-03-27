@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -23,8 +23,8 @@ let package = Package(
         .target(
             name: "LibWildFyre",
             dependencies: [
-                "Moya",
-                "RxMoya",
+                .byName(name: "Moya"),
+                .product(name: "RxMoya", package: "Moya")
             ]
         ),
     ]
