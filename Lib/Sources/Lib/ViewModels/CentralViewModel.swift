@@ -6,8 +6,8 @@ public class CentralViewModel: NSObject {
     @IBOutlet
     private var authorRepo: AuthorRepository!
 
-    private lazy var futureUser = ReplaySubject<Observable<Author>>.create(bufferSize: 1)
-    public lazy var user = futureUser.flatMap { $0 }.share(replay: 1)
+    private var mFutureUser = ReplaySubject<Observable<Author>>.create(bufferSize: 1)
+    public lazy var user = mFutureUser.merge().share(replay: 1)
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
     public lazy var bio = user.map { $0.bio }
@@ -22,16 +22,16 @@ public class CentralViewModel: NSObject {
     }
 
     public func updateBio(text: String) {
-        futureUser.onNext(authorRepo.updateBio(text: text))
+        mFutureUser.onNext(authorRepo.updateBio(text: text))
     }
 
     public func updateAvatar(image: ImageData) {
-        futureUser.onNext(authorRepo.updateAvatar(avatar: image))
+        mFutureUser.onNext(authorRepo.updateAvatar(avatar: image))
     }
 
     @objc
     private func onDidLogin(_ notification: Foundation.Notification) {
         guard notification.userInfo?[String.didLoginSuccessUserInfoKey] as? Bool ?? false else { return }
-        futureUser.onNext(authorRepo.getUser())
+        mFutureUser.onNext(authorRepo.getUser())
     }
 }

@@ -18,7 +18,6 @@ public class BaseProvider<T: TargetType>: MoyaProvider<T> {
     public func rawReq<R: Decodable>(_ token: T, as type: R.Type) -> Single<R> {
         rx.request(token)
             .observeOn(defaultScheduler)
-            .subscribeOn(MainScheduler.instance)
             .filterSuccessfulStatusCodes()
             .map(type)
     }

@@ -287,9 +287,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Home-Home-navigationItem"/>
+                    <navigationItem key="navigationItem" id="Home-Home-navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Home-Home-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Home-Home" id="Home-Home-navigationItem-Area--A-Home-Home-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Home-AreaSelector" id="Home-Home--O-areaSelector"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
+                <customObject id="Home-AreaSelector" customClass="AreaSelector" customModule="Lib">
+                    <connections>
+                        <outlet property="viewModel" destination="Home-AreaSelectorViewModel" id="Home-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Home-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="Lib">
+                    <connections>
+                        <outlet property="areaRepo" destination="Home-AreaRepository" id="Home-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Home-AreaRepository" customClass="AreaRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="-1500" y="1500"/>
         </scene>
@@ -380,9 +400,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Archive-Archive-navigationItem"/>
+                    <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Archive-Archive-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Archive-Archive" id="Archive-Archive-navigationItem-Area--A-Archive-Archive-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Archive-AreaSelector" id="Archive-Archive--O-areaSelector"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
+                <customObject id="Archive-AreaSelector" customClass="AreaSelector" customModule="Lib">
+                    <connections>
+                        <outlet property="viewModel" destination="Archive-AreaSelectorViewModel" id="Archive-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="Lib">
+                    <connections>
+                        <outlet property="areaRepo" destination="Archive-AreaRepository" id="Archive-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-AreaRepository" customClass="AreaRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="1500"/>
         </scene>
@@ -427,9 +467,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem"/>
+                    <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Drafts-Drafts-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Drafts-Drafts" id="Drafts-Drafts-navigationItem-Area--A-Drafts-Drafts-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Drafts-AreaSelector" id="Drafts-Drafts--O-areaSelector"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Drafts-AreaSelector" customClass="AreaSelector" customModule="Lib">
+                    <connections>
+                        <outlet property="viewModel" destination="Drafts-AreaSelectorViewModel" id="Drafts-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Drafts-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="Lib">
+                    <connections>
+                        <outlet property="areaRepo" destination="Drafts-AreaRepository" id="Drafts-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Drafts-AreaRepository" customClass="AreaRepository" customModule="Lib"/>
             </objects>
             <point key="canvasLocation" x="750" y="1500"/>
         </scene>

@@ -13,11 +13,15 @@ let package = Package(
             targets: ["AppDrafts"]
         ),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "../Lib"),
+    ],
     targets: [
         .target(
             name: "AppDrafts",
-            dependencies: []
+            dependencies: [
+                .byName(name: "Lib"),
+            ]
         ),
     ]
 )
