@@ -18,10 +18,6 @@ let package = Package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
             .upToNextMajor(from: "5.6.1")
         ),
-        .package(
-            url: "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
-            .upToNextMajor(from: "0.5.0")
-        ),
         .package(path: "../LibUtils"),
     ],
     targets: [
@@ -29,7 +25,6 @@ let package = Package(
             name: "Lib",
             dependencies: [
                 .byName(name: "SDWebImage"),
-                .byName(name: "SDWebImageWebPCoder"),
                 .byName(name: "LibUtils"),
             ]
         ),
