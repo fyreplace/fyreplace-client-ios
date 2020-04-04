@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="width" secondItem="Login-Login-view-view-Logo" secondAttribute="height" multiplier="1:1" id="Login-Login-view-view-Logo--C-width-Login-Login-view-view-Logo-height"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields" userLabel="Fields">
+                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields" userLabel="Fields">
                                         <rect key="frame" x="87" y="349" width="240" height="76"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields-Username">
@@ -123,11 +123,11 @@
                                             </constraint>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons" userLabel="Buttons">
-                                        <rect key="frame" x="87" y="445" width="240" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons" userLabel="Buttons">
+                                        <rect key="frame" x="95" y="445" width="224" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Register" userLabel="Register">
-                                                <rect key="frame" x="0.0" y="0.0" width="143" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="36"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <state key="normal" title="Register"/>
                                                 <variation key="widthClass=regular">
@@ -138,7 +138,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Login">
-                                                <rect key="frame" x="143" y="0.0" width="97" height="36"/>
+                                                <rect key="frame" x="175" y="0.0" width="49" height="36"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <state key="normal" title="Login"/>
                                                 <variation key="widthClass=regular">
@@ -151,14 +151,23 @@
                                         </subviews>
                                         <variation key="heightClass=compact" alignment="top" axis="vertical"/>
                                     </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Activity-Indicator" userLabel="Activity Indicator">
+                                        <rect key="frame" x="188.5" y="445" width="37" height="37"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="centerX" secondItem="Login-Login-view-view-Buttons" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerY-Login-Login-view-view-Fields-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="top" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-top-Login-Login-view-view-Fields-bottom"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
                                     <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
-                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" constant="8" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
                                     <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
                                     <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="top" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
-                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="top" relation="lessThanOrEqual" secondItem="Login-Login-view-view-Fields" secondAttribute="top" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="-8" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
                                     <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerX" secondItem="Login-Login-view-view" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerX-Login-Login-view-view-centerX"/>
                                     <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerY" secondItem="Login-Login-view-view" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerY-Login-Login-view-view-centerY"/>
                                     <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="bottom" secondItem="Login-Login-view-view-Fields" secondAttribute="top" constant="-20" id="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
@@ -172,19 +181,29 @@
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
                                         <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Fields-trailing"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-top-Login-Login-view-view-Fields-bottom"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Fields-trailing"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -194,6 +213,8 @@
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
                                         <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-top-Login-Login-view-view-Fields-bottom"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -209,7 +230,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Fyreplace" id="Login-Login-Fyreplace"/>
                     <connections>
-                        <outlet property="login" destination="Login-Login-view-view-Buttons-Login" id="Login-Login--O-login"/>
+                        <outlet property="buttons" destination="Login-Login-view-view-Buttons" id="Login-Login--O-buttons"/>
+                        <outlet property="loader" destination="Login-Login-view-view-Activity-Indicator" id="Login-Login--O-loader"/>
                         <outlet property="password" destination="Login-Login-view-view-Fields-Password" id="Login-Login--O-password"/>
                         <outlet property="username" destination="Login-Login-view-view-Fields-Username" id="Login-Login--O-username"/>
                         <outlet property="viewModel" destination="Login-LoginViewModel" id="Login-Login--O-viewModel"/>

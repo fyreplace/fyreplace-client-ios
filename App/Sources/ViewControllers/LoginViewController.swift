@@ -9,7 +9,17 @@ public class LoginViewController: UIViewController {
     @IBOutlet
     private var password: UITextField!
     @IBOutlet
-    private var login: UIButton!
+    private var buttons: UIStackView!
+    @IBOutlet
+    private var loader: UIActivityIndicatorView!
+
+    public override func viewDidLoad() {
+        if #available(iOS 13.0, *) {
+            loader.style = .large
+        } else {
+            loader.style = .gray
+        }
+    }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,11 +49,10 @@ public class LoginViewController: UIViewController {
 
     @IBAction
     private func didClickLogin() {
-        if login.isEnabled {
-            login.isEnabled = false
-            view.endEditing(false)
-            viewModel.login(username: username.text ?? "", password: password.text ?? "")
-        }
+        buttons.isHidden = true
+        loader.startAnimating()
+        view.endEditing(false)
+        viewModel.login(username: username.text ?? "", password: password.text ?? "")
     }
 
     @objc
@@ -51,10 +60,12 @@ public class LoginViewController: UIViewController {
         guard let success = notification.userInfo?["success"] as? Bool else { return }
 
         DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.buttons.isHidden = false
+
             if success {
                 self.dismiss(animated: true)
             } else {
-                self.login.isEnabled = true
                 let alert = UIAlertController(
                     title: NSLocalizedString("App.LoginViewController.loginError.title", comment: ""),
                     message: NSLocalizedString("App.LoginViewController.loginError.message", comment: ""),
