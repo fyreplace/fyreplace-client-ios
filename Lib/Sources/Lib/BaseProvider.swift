@@ -7,7 +7,7 @@ public class BaseProvider<T: TargetType>: MoyaProvider<T> {
     private let defaultScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
 
     public init() {
-        let tokenPlugin = AccessTokenPlugin { _ in UserDefaults.standard.string(forKey: "auth:token") ?? "" }
+        let tokenPlugin = AccessTokenPlugin { _ in UserDefaults.standard.string(forKey: .authTokenDefaultsKey) ?? "" }
         super.init(plugins: [tokenPlugin])
     }
 

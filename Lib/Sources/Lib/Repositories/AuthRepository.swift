@@ -16,21 +16,27 @@ public class AuthRepository: NSObject {
                 switch (event) {
                 case let .success(authToken):
                     success = true
-                    UserDefaults.standard.set(authToken.token, forKey: "auth:token")
+                    UserDefaults.standard.set(authToken.token, forKey: .authTokenDefaultsKey)
                 case .error:
                     success = false
                 }
 
-                NotificationCenter.default.post(name: .didLogin, object: self, userInfo: ["success": success])
+                let info: [String: Any] = [.didLoginSuccessUserInfoKey: success]
+                NotificationCenter.default.post(name: .didLogin, object: self, userInfo: info)
                 disposer.dispose()
             }
             .disposed(by: disposer)
     }
 
     public func logout() {
-        UserDefaults.standard.set("", forKey: "auth:token")
+        UserDefaults.standard.set("", forKey: .authTokenDefaultsKey)
         NotificationCenter.default.post(name: .didLogout, object: self)
     }
+}
+
+public extension String {
+    static let authTokenDefaultsKey = "auth:token"
+    static let didLoginSuccessUserInfoKey = "didLogin:success"
 }
 
 public extension Foundation.Notification.Name {

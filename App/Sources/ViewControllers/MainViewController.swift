@@ -22,7 +22,7 @@ public class MainViewController: UITabBarController, UITabBarControllerDelegate,
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let notification: NSNotification.Name = viewModel.isLogged ? .didLogin : .didLogout
-        let info = viewModel.isLogged ? ["success": true] : nil
+        let info: [String: Any]? = viewModel.isLogged ? [.didLoginSuccessUserInfoKey: true] : nil
         NotificationCenter.default.post(name: notification, object: self, userInfo: info)
     }
 

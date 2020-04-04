@@ -57,7 +57,7 @@ public class LoginViewController: UIViewController {
 
     @objc
     private func onDidLogin(_ notification: Notification) {
-        guard let success = notification.userInfo?["success"] as? Bool else { return }
+        guard let success = notification.userInfo?[String.didLoginSuccessUserInfoKey] as? Bool else { return }
 
         DispatchQueue.main.async {
             self.loader.stopAnimating()

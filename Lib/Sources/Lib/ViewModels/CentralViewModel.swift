@@ -31,7 +31,7 @@ public class CentralViewModel: NSObject {
 
     @objc
     private func onDidLogin(_ notification: Foundation.Notification) {
-        guard notification.userInfo?["success"] as? Bool ?? false else { return }
+        guard notification.userInfo?[String.didLoginSuccessUserInfoKey] as? Bool ?? false else { return }
         futureUser.onNext(authorRepo.getUser())
     }
 }
