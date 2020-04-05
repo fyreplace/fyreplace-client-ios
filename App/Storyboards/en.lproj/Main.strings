@@ -14,18 +14,14 @@
 "Login-Login-view-view-Buttons-Login.normalTitle" = "Login";
 
 // Home
-"Home-Home-view-Title.text" = "Home";
 "Home-Home-navigationItem-Area.title" = "Area";
 
 // Notifications
-"Notifications-Notifications-view-Title.text" = "Notifications";
 
 // Archive
-"Archive-Archive-view-Title.text" = "Archive";
 "Archive-Archive-navigationItem-Area.title" = "Area";
 
 // Drafts
-"Drafts-Drafts-view-Title.text" = "Drafts";
 "Drafts-Drafts-navigationItem-Area.title" = "Area";
 
 // Settings

@@ -14,18 +14,14 @@
 "Login-Login-view-view-Buttons-Login.normalTitle" = "Connexion";
 
 // Home
-"Home-Home-view-Title.text" = "Accueil";
 "Home-Home-navigationItem-Area.title" = "Zone";
 
 // Notifications
-"Notifications-Notifications-view-Title.text" = "Notifications";
 
 // Archive
-"Archive-Archive-view-Title.text" = "Archive";
 "Archive-Archive-navigationItem-Area.title" = "Zone";
 
 // Drafts
-"Drafts-Drafts-view-Title.text" = "Brouillons";
 "Drafts-Drafts-navigationItem-Area.title" = "Zone";
 
 // Settings

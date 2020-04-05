@@ -273,18 +273,7 @@
                     <view key="view" contentMode="scaleToFill" id="Home-Home-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Home-Home-view-Title" userLabel="Title">
-                                <rect key="frame" x="160.5" y="426.5" width="93.5" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Home-Home-view-Title" secondAttribute="centerX" id="Home-Home-view--C-centerX-Home-Home-view-Title-centerX"/>
-                            <constraint firstAttribute="centerY" secondItem="Home-Home-view-Title" secondAttribute="centerY" id="Home-Home-view--C-centerY-Home-Home-view-Title-centerY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
                     </view>
                     <navigationItem key="navigationItem" id="Home-Home-navigationItem">
@@ -339,19 +328,7 @@
                     <view key="view" contentMode="scaleToFill" id="Notifications-Notifications-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Notifications-Notifications-view-Title" userLabel="Title">
-                                <rect key="frame" x="109.5" y="426.5" width="195" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerX" secondItem="Notifications-Notifications-view" secondAttribute="centerX" id="Notifications-Notifications-view--C-Notifications-Notifications-view-Title-centerX-Notifications-Notifications-view-centerX"/>
-                            <constraint firstItem="Notifications-Notifications-view-Title" firstAttribute="centerY" secondItem="Notifications-Notifications-view" secondAttribute="centerY" id="Notifications-Notifications-view--C-Notifications-Notifications-view-Title-centerY-Notifications-Notifications-view-centerY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
                     <navigationItem key="navigationItem" id="Notifications-Notifications-navigationItem"/>
@@ -386,18 +363,7 @@
                     <view key="view" contentMode="scaleToFill" id="Archive-Archive-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Archive" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Title" userLabel="Title">
-                                <rect key="frame" x="149" y="426.5" width="116" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Archive-Archive-view-Title" secondAttribute="centerX" id="Archive-Archive-view--C-centerX-Archive-Archive-view-Title-centerX"/>
-                            <constraint firstAttribute="centerY" secondItem="Archive-Archive-view-Title" secondAttribute="centerY" id="Archive-Archive-view--C-centerY-Archive-Archive-view-Title-centerY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
                     </view>
                     <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">
@@ -452,19 +418,7 @@
                     <view key="view" contentMode="scaleToFill" id="Drafts-Drafts-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Drafts" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Drafts-Drafts-view-Title" userLabel="Title">
-                                <rect key="frame" x="159.5" y="426.5" width="95" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerX" secondItem="Drafts-Drafts-view" secondAttribute="centerX" id="Drafts-Drafts-view--C-Drafts-Drafts-view-Title-centerX-Drafts-Drafts-view-centerX"/>
-                            <constraint firstItem="Drafts-Drafts-view-Title" firstAttribute="centerY" secondItem="Drafts-Drafts-view" secondAttribute="centerY" id="Drafts-Drafts-view--C-Drafts-Drafts-view-Title-centerY-Drafts-Drafts-view-centerY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
                     <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem">
