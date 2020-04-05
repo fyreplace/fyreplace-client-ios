@@ -540,27 +540,11 @@
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio" userLabel="Bio">
-                                <rect key="frame" x="87" y="342.5" width="240" height="430.5"/>
+                                <rect key="frame" x="52" y="342.5" width="310.5" height="430.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="360" id="Settings-Settings-view-Bio--C-width">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="240"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" secondItem="Settings-Settings-view-Bio" secondAttribute="height" multiplier="3:2" priority="250" id="Settings-Settings-view-Bio--C-width-Settings-Settings-view-Bio-height"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Settings-Settings-view-Bio--C-width-Settings-Settings-view-Bio-height"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Settings-Settings-view-Bio--C-width-Settings-Settings-view-Bio-height"/>
-                                    </mask>
-                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -569,13 +553,15 @@
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Settings-Settings-view-safeArea" secondAttribute="bottom" constant="-20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-bottom-lessThanOrEqual-Settings-Settings-view-safeArea-bottom"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerX" secondItem="Settings-Settings-view" secondAttribute="centerX" id="Settings-Settings-view--C-Settings-Settings-view-Bio-centerX-Settings-Settings-view-centerX"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="centerY" secondItem="Settings-Settings-view-safeArea" secondAttribute="centerY" id="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
-                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="trailing" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="height" secondItem="Settings-Settings-view-safeArea" secondAttribute="height" multiplier="4:5" id="Settings-Settings-view--C-Settings-Settings-view-Bio-height-Settings-Settings-view-safeArea-height"/>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="leading" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="trailing" constant="40" id="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-Settings-Settings-view-Profile-Picture-trailing"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-Username" secondAttribute="trailing" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" secondItem="Settings-Settings-view-Username" secondAttribute="bottom" constant="40" id="Settings-Settings-view--C-Settings-Settings-view-Bio-top-Settings-Settings-view-Username-bottom"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Settings-Settings-view-safeArea" secondAttribute="top" constant="20" id="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                             <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="trailing" secondItem="Settings-Settings-view-safeArea" secondAttribute="trailing" constant="-60" id="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing">
                                 <variation key="widthClass=regular" constant="-80"/>
                             </constraint>
+                            <constraint firstItem="Settings-Settings-view-Bio" firstAttribute="width" secondItem="Settings-Settings-view-safeArea" secondAttribute="width" multiplier="3:4" id="Settings-Settings-view--C-Settings-Settings-view-Bio-width-Settings-Settings-view-safeArea-width"/>
                             <constraint firstItem="Settings-Settings-view-Edit-Profile-Picture" firstAttribute="bottom" secondItem="Settings-Settings-view-Profile-Picture" secondAttribute="bottomMargin">
                                 <string key="id">Settings-Settings-view--C-Settings-Settings-view-Edit-Profile-Picture-bottom-Settings-Settings-view-Profile-Picture-bottomMargin</string>
                             </constraint>
@@ -606,20 +592,22 @@
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-bottom-lessThanOrEqual-Settings-Settings-view-safeArea-bottom"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerX-Settings-Settings-view-centerX"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
-                                <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                                <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-height-Settings-Settings-view-safeArea-height"/>
+                                <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-Settings-Settings-view-Profile-Picture-trailing"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-Settings-Settings-view-Username-bottom"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                                 <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing"/>
+                                <exclude reference="Settings-Settings-view--C-Settings-Settings-view-Bio-width-Settings-Settings-view-safeArea-width"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Profile-Picture-leading-Settings-Settings-view-safeArea-leading"/>
-                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Username-centerX-Settings-Settings-view-Profile-Picture-centerX"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-bottom-lessThanOrEqual-Settings-Settings-view-safeArea-bottom"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerY-Settings-Settings-view-safeArea-centerY"/>
-                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Profile-Picture-trailing"/>
+                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-height-Settings-Settings-view-safeArea-height"/>
+                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-Settings-Settings-view-Profile-Picture-trailing"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-leading-greaterThanOrEqual-Settings-Settings-view-Username-trailing"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-greaterThanOrEqual-Settings-Settings-view-safeArea-top"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-trailing-Settings-Settings-view-safeArea-trailing"/>
@@ -632,6 +620,7 @@
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-bottom-Settings-Settings-view-safeArea-bottom"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-centerX-Settings-Settings-view-centerX"/>
                                 <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-top-Settings-Settings-view-Username-bottom"/>
+                                <include reference="Settings-Settings-view--C-Settings-Settings-view-Bio-width-Settings-Settings-view-safeArea-width"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
