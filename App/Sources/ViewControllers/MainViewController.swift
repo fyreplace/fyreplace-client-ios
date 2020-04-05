@@ -2,7 +2,7 @@ import Lib
 import LibUtils
 import UIKit
 
-public class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
+class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
     @IBOutlet
     public var centralViewModel: CentralViewModel!
     @IBOutlet

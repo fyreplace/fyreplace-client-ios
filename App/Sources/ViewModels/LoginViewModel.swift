@@ -2,7 +2,7 @@ import Foundation
 import Lib
 import LibWildFyre
 
-public class LoginViewModel: NSObject {
+class LoginViewModel: NSObject {
     @IBOutlet
     private var authRepo: AuthRepository!
 

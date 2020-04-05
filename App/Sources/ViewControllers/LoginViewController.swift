@@ -1,7 +1,7 @@
 import Lib
 import UIKit
 
-public class LoginViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet
     private var viewModel: LoginViewModel!
     @IBOutlet

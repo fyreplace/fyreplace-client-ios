@@ -2,7 +2,7 @@ import Lib
 import LibUtils
 import UIKit
 
-public class ProxyViewController: UINavigationController, UINavigationControllerDelegate, CentralDataProvider {
+class ProxyViewController: UINavigationController, UINavigationControllerDelegate, CentralDataProvider {
     public var centralViewModel: CentralViewModel!
 
     public override func viewDidLoad() {

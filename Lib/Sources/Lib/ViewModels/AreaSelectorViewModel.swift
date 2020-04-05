@@ -34,6 +34,8 @@ public class AreaSelectorViewModel: NSObject {
     }
 
     public override func awakeFromNib() {
+        super.awakeFromNib()
+
         if let current = areaRepo.currentArea {
             mCurrentAreaName.onNext(current)
         }
