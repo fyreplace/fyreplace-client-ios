@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/SDWebImage/SDWebImage.git",
-            .upToNextMajor(from: "5.6.1")
+            .upToNextMajor(from: "5.7.0")
         ),
         .package(path: "../LibUtils"),
     ],
