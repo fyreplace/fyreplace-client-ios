@@ -11,6 +11,7 @@ public class CentralViewModel: NSObject {
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
     public lazy var bio = user.map { $0.bio }
+    public var isLogged: Bool { Keychain.authToken.get() != nil }
 
     public override init() {
         super.init()

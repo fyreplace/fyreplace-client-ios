@@ -21,8 +21,8 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, Centra
 
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let notification: NSNotification.Name = viewModel.isLogged ? .didLogin : .didLogout
-        let info: [String: Any]? = viewModel.isLogged ? [.didLoginSuccessUserInfoKey: true] : nil
+        let notification: NSNotification.Name = centralViewModel.isLogged ? .didLogin : .didLogout
+        let info: [String: Any]? = centralViewModel.isLogged ? [.didLoginSuccessUserInfoKey: true] : nil
         NotificationCenter.default.post(name: notification, object: self, userInfo: info)
     }
 
