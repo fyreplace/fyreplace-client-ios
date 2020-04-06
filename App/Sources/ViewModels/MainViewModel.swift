@@ -1,7 +1,6 @@
 import Foundation
+import Lib
 
 class MainViewModel: NSObject {
-    public var isLogged: Bool {
-        UserDefaults.standard.string(forKey: .authTokenDefaultsKey)?.count ?? 0 > 0
-    }
+    public var isLogged: Bool { Keychain.authToken.get() != nil }
 }

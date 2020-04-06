@@ -11,12 +11,13 @@ public class AuthRepository: NSObject {
         provider
             .rawReq(.login(auth: auth), as: AuthToken.self)
             .subscribe { (event) in
-                var success: Bool
+                var success = true
 
                 switch (event) {
                 case let .success(authToken):
-                    success = true
-                    UserDefaults.standard.set(authToken.token, forKey: .authTokenDefaultsKey)
+                    if let data = authToken.token.data(using: .utf8) {
+                        success = Keychain.authToken.set(data)
+                    }
                 case .error:
                     success = false
                 }
@@ -29,13 +30,13 @@ public class AuthRepository: NSObject {
     }
 
     public func logout() {
-        UserDefaults.standard.set("", forKey: .authTokenDefaultsKey)
-        NotificationCenter.default.post(name: .didLogout, object: self)
+        if (Keychain.authToken.delete()) {
+            NotificationCenter.default.post(name: .didLogout, object: self)
+        }
     }
 }
 
 public extension String {
-    static let authTokenDefaultsKey = "auth:token"
     static let didLoginSuccessUserInfoKey = "didLogin:success"
 }
 
