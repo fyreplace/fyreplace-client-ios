@@ -35,6 +35,7 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.dataSource = self
         picker.delegate = self
+        picker.alpha = 0
         view.addSubview(picker)
 
         let pickerBottom = picker.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
@@ -77,9 +78,13 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
         guard let picker = picker else { return }
         guard let bottom = pickerBottom else { return }
         let offset = bottom.constant == 0 ? picker.frame.height : 0
+        let alpha: CGFloat = offset == 0 ? 0 : 1
 
         bottom.constant = offset
-        UIView.animate(withDuration: 0.3) { picker.superview?.layoutIfNeeded() }
+        UIView.animate(withDuration: 0.3) {
+            picker.superview?.layoutIfNeeded()
+            picker.alpha = alpha
+        }
     }
 }
 
