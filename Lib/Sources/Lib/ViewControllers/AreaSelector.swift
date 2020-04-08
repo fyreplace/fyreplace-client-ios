@@ -8,7 +8,7 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
     @IBOutlet
     private var viewModel: AreaSelectorViewModel!
 
-    public var delegate: AreaSelectorDelegate? = nil
+    public weak var delegate: AreaSelectorDelegate? = nil
     private var picker: UIPickerView? = nil
     private var pickerBottom: NSLayoutConstraint? = nil
     private var areas: [Area] = []
