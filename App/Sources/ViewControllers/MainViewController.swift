@@ -4,9 +4,14 @@ import UIKit
 
 class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
     @IBOutlet
-    public var centralViewModel: CentralViewModel!
+    private var centralDataViewModel: CentralViewModel!
     @IBOutlet
     private var viewModel: MainViewModel!
+
+    public var centralViewModel: CentralViewModel! {
+        get { centralDataViewModel }
+        set { centralDataViewModel = newValue }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,7 +13,7 @@ public class AuthRepository: NSObject {
             .subscribe { (event) in
                 var success = true
 
-                switch (event) {
+                switch event {
                 case let .success(authToken):
                     if let data = authToken.token.data(using: .utf8) {
                         success = Keychain.authToken.set(data)
@@ -30,7 +30,7 @@ public class AuthRepository: NSObject {
     }
 
     public func logout() {
-        if (Keychain.authToken.delete()) {
+        if Keychain.authToken.delete() {
             NotificationCenter.default.post(name: .didLogout, object: self)
         }
     }

@@ -1,0 +1,12 @@
+disabled_rules:
+    - identifier_name
+    - line_length
+    - notification_center_detachment
+
+opt_in_rules:
+    - private_action
+    - private_outlet
+    - strong_iboutlet
+
+trailing_comma:
+    mandatory_comma: true

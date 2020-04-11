@@ -20,7 +20,7 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <outlet property="centralViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralViewModel"/>
+                        <outlet property="centralDataViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralDataViewModel"/>
                         <outlet property="viewModel" destination="Main-MainViewModel" id="Main-Main--O-viewModel"/>
                         <segue destination="Login-Navigation-Login-Navigation" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Navigation-Login-Navigation"/>
                         <segue destination="Home-Navigation-Home-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Navigation-Home-Navigation"/>
@@ -30,7 +30,7 @@
                         <segue destination="Settings-Navigation-Settings-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Settings-Navigation-Settings-Navigation"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Main-placeholder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Main-First-Responder" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Main-MainViewModel" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target"/>
                 <customObject id="Main-CentralViewModel" customClass="CentralViewModel" customModule="Lib">
                     <connections>
@@ -287,7 +287,7 @@
                         <outlet property="areaSelector" destination="Home-AreaSelector" id="Home-Home--O-areaSelector"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-placeholder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-First-Responder" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Home-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
                         <outlet property="viewModel" destination="Home-AreaSelectorViewModel" id="Home-AreaSelector--O-viewModel"/>
@@ -377,7 +377,7 @@
                         <outlet property="areaSelector" destination="Archive-AreaSelector" id="Archive-Archive--O-areaSelector"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-placeholder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-First-Responder" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Archive-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
                         <outlet property="viewModel" destination="Archive-AreaSelectorViewModel" id="Archive-AreaSelector--O-viewModel"/>

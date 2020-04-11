@@ -24,7 +24,7 @@ let package = Package(
             name: "LibWildFyre",
             dependencies: [
                 .byName(name: "Moya"),
-                .product(name: "RxMoya", package: "Moya")
+                .product(name: "RxMoya", package: "Moya"),
             ]
         ),
     ]

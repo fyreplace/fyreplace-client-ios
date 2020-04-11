@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
 
     @IBAction
     private func didClickRegister() {
-        let url = Bundle.main.infoDictionary!["WildFyreRegisterUrl"] as! String
+        guard let url = Bundle.main.infoDictionary!["WildFyreRegisterUrl"] as? String else { return }
         UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
     }
 

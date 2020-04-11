@@ -2,7 +2,10 @@ import Foundation
 import Moya
 
 extension TargetType {
-    public var baseURL: URL { URL(string: Bundle.main.infoDictionary!["WildFyreApiUrl"] as! String)! }
+    public var baseURL: URL {
+        let identifier = Bundle.main.infoDictionary!["WildFyreApiUrl"] as? String ?? ""
+        return URL(string: identifier)!
+    }
 
     public var sampleData: Data { Data() }
 

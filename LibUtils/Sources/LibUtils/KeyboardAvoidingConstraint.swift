@@ -1,8 +1,8 @@
 import UIKit
 
 public class KeyboardAvoidingConstraint: NSLayoutConstraint {
-    private var originalConstant: CGFloat? = nil
-    private var lastOrientation: UIDeviceOrientation? = nil
+    private var originalConstant: CGFloat?
+    private var lastOrientation: UIDeviceOrientation?
     private var keyboardHeight: CGFloat = 0
 
     deinit {
@@ -45,7 +45,7 @@ public class KeyboardAvoidingConstraint: NSLayoutConstraint {
         keyboardChanged(height: 0, info: notification.userInfo)
     }
 
-    private func keyboardChanged(height: CGFloat, info: [AnyHashable : Any]?) {
+    private func keyboardChanged(height: CGFloat, info: [AnyHashable: Any]?) {
         keyboardHeight = height
         constant = originalConstant! - keyboardHeight
 

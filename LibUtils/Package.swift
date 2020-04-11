@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "LibUtils",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v11),
     ],
     products: [
         .library(

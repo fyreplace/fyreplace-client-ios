@@ -8,9 +8,9 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
     @IBOutlet
     private var viewModel: AreaSelectorViewModel!
 
-    public weak var delegate: AreaSelectorDelegate? = nil
-    private var picker: UIPickerView? = nil
-    private var pickerBottom: NSLayoutConstraint? = nil
+    public weak var delegate: AreaSelectorDelegate?
+    private var picker: UIPickerView?
+    private var pickerBottom: NSLayoutConstraint?
     private var areas: [Area] = []
     private var disposer = DisposeBag()
 
@@ -88,5 +88,6 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
     }
 }
 
+// swiftlint:disable:next class_delegate_protocol
 public protocol AreaSelectorDelegate: FailureHandler {
 }

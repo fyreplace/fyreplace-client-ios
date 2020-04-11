@@ -4,7 +4,7 @@ import RxSwiftExt
 public extension ObservableType {
     func purify(with handler: FailureHandler) -> Observable<Self.Element> {
         materialize().filterMap { [weak handler] event in
-            switch (event) {
+            switch event {
             case let .next(element):
                 return .map(element)
             case let .error(error):

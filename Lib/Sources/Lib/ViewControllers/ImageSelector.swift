@@ -4,13 +4,15 @@ import UIKit
 public typealias ImageSelectorController = UIViewController & ImageSelectorDelegate
 
 public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    fileprivate static let maxImageArea = 1920 * 1080
+
     public weak var delegate: ImageSelectorController?
 
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         delegate?.dismiss(animated: true)
     }
 
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         defer { delegate?.dismiss(animated: true) }
         guard let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage else { return }
         let url = info[.imageURL] as? NSURL
@@ -32,7 +34,7 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
             let action = UIAlertAction(
                 title: NSLocalizedString("Lib.ImageSelector.chooseSource.action.\(name)", comment: ""),
                 style: source != nil ? .default : .cancel,
-                handler: { action in
+                handler: { _ in
                     guard let source = source else { return }
                     self.selectImage(from: source)
                 }
@@ -84,7 +86,7 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
     }
 }
 
-public protocol ImageSelectorDelegate {
+public protocol ImageSelectorDelegate: AnyObject {
     var maxImageSize: Float { get }
 
     func image(selected imageData: ImageData)
@@ -96,7 +98,7 @@ private extension ImageSelectorDelegate {
 
 private extension UIImage {
     func downscaled() -> UIImage? {
-        let factor = (size.width * size.height * scale) / CGFloat(MAX_IMAGE_AREA)
+        let factor = (size.width * size.height * scale) / CGFloat(ImageSelector.maxImageArea)
 
         if factor <= 1 {
             return self
@@ -111,5 +113,3 @@ private extension UIImage {
         return newImage
     }
 }
-
-private let MAX_IMAGE_AREA = 1920 * 1080

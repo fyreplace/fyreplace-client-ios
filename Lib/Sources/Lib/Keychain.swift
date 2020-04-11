@@ -23,7 +23,7 @@ public struct Keychain {
     }
 
     public func set(_ data: Data) -> Bool {
-        var info: [CFString : Any] = query
+        var info: [CFString: Any] = query
         info[kSecValueData] = data
         let result = SecItemAdd(info as CFDictionary, nil)
         return result == errSecSuccess
