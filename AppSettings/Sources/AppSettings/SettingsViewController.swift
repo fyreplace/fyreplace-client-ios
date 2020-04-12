@@ -6,7 +6,7 @@ import RxSwift
 import SDWebImage
 import UIKit
 
-public class SettingsViewController: UIViewController, ImageSelectorDelegate, CentralDataProvider {
+public class SettingsViewController: UIViewController, CentralDataProvider {
     @IBOutlet
     private var imageSelector: ImageSelector!
     @IBOutlet
@@ -57,10 +57,6 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
         injectData(into: segue.destination)
     }
 
-    public func image(selected imageData: ImageData) {
-        centralViewModel.updateAvatar(image: imageData)
-    }
-
     @IBAction
     private func didClickLogout() {
         viewModel.logout()
@@ -69,5 +65,11 @@ public class SettingsViewController: UIViewController, ImageSelectorDelegate, Ce
     @IBAction
     private func didClickPicture() {
         imageSelector.selectImage()
+    }
+}
+
+extension SettingsViewController: ImageSelectorDelegate {
+    public func image(selected imageData: ImageData) {
+        centralViewModel.updateAvatar(image: imageData)
     }
 }

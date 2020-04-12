@@ -2,7 +2,7 @@ import Lib
 import LibUtils
 import UIKit
 
-class ProxyViewController: UINavigationController, UINavigationControllerDelegate, CentralDataProvider {
+class ProxyViewController: UINavigationController, CentralDataProvider {
     public var centralViewModel: CentralViewModel!
 
     public override func viewDidLoad() {
@@ -29,7 +29,9 @@ class ProxyViewController: UINavigationController, UINavigationControllerDelegat
         injectData(into: viewControllers)
         super.setViewControllers(viewControllers, animated: animated)
     }
+}
 
+extension ProxyViewController: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         injectData(into: viewController)
     }

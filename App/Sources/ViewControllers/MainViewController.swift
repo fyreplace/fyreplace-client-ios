@@ -2,7 +2,7 @@ import Lib
 import LibUtils
 import UIKit
 
-class MainViewController: UITabBarController, UITabBarControllerDelegate, CentralDataProvider {
+class MainViewController: UITabBarController, CentralDataProvider {
     @IBOutlet
     private var centralDataViewModel: CentralViewModel!
     @IBOutlet
@@ -45,13 +45,15 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, Centra
         injectData(into: segue.destination)
     }
 
-    public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        injectData(into: viewController)
-        return true
-    }
-
     @objc
     private func onDidLogout(_ notification: Notification) {
         performSegue(withIdentifier: "login", sender: self)
+    }
+}
+
+extension MainViewController: UITabBarControllerDelegate {
+    public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        injectData(into: viewController)
+        return true
     }
 }

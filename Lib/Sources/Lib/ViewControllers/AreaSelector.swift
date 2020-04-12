@@ -4,7 +4,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+public class AreaSelector: NSObject {
     @IBOutlet
     private var viewModel: AreaSelectorViewModel!
 
@@ -13,22 +13,6 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
     private var pickerBottom: NSLayoutConstraint?
     private var areas: [Area] = []
     private var disposer = DisposeBag()
-
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        areas.count
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        areas[row].displayname
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        viewModel.setCurrentArea(name: areas[row].name)
-    }
 
     public func createAreaPicker(inside view: UIView) {
         let picker = UIPickerView()
@@ -85,6 +69,26 @@ public class AreaSelector: NSObject, UIPickerViewDataSource, UIPickerViewDelegat
             picker.superview?.layoutIfNeeded()
             picker.alpha = alpha
         }
+    }
+}
+
+extension AreaSelector: UIPickerViewDataSource {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        areas.count
+    }
+}
+
+extension AreaSelector: UIPickerViewDelegate {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        areas[row].displayname
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        viewModel.setCurrentArea(name: areas[row].name)
     }
 }
 
