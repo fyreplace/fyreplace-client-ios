@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
           "branch": null,
-          "revision": "712ff5348ece316f5422f8cd371cb4fef4f0f962",
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
           "version": "5.1.1"
         }
       },
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
           "branch": null,
-          "revision": "e2285181a62daf4d1d3caf66d6d776b667092303",
-          "version": "5.7.0"
+          "revision": "39370d1af85734dffe0e3f89b389976da461be3f",
+          "version": "5.7.3"
         }
       }
     ]
