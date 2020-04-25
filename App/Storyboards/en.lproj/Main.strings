@@ -25,7 +25,8 @@
 "Drafts-Drafts-navigationItem-Area.title" = "Area";
 
 // Settings
-"Settings-Settings-view-Username.text" = "Username";
+"Settings-Settings-view-Change-avatar.title" = "Change avatar";
+"Settings-Settings-view-Username.text" = "";
 "Settings-Settings-Profile-Logout.title" = "Logout";
 
 // Profile Bio

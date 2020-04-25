@@ -25,7 +25,8 @@
 "Drafts-Drafts-navigationItem-Area.title" = "Zone";
 
 // Settings
-"Settings-Settings-view-Username.text" = "Nom d'utilisateur";
+"Settings-Settings-view-Change-avatar.title" = "Changer d'avatar";
+"Settings-Settings-view-Username.text" = "";
 "Settings-Settings-Profile-Logout.title" = "Déconnexion";
 
 // Profile Bio

@@ -25,6 +25,7 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     public override func viewDidLoad() {
         super.viewDidLoad()
         imageSelector.delegate = self
+        avatar.sd_imageTransition = .fade
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -39,9 +40,12 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
             .disposed(by: disposer)
 
         centralViewModel.avatar.purify(with: self)
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [unowned self] avatar in
                 if let avatar = avatar {
-                    self.avatar.sd_setImage(with: URL(string: avatar), placeholderImage: UIImage(named: "Avatar"))
+                    self.avatar.sd_setImage(with: URL(string: avatar))
+                } else {
+                    self.avatar.image = #imageLiteral(resourceName: "Avatar")
                 }
             })
             .disposed(by: disposer)
