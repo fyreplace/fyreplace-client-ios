@@ -1,33 +1,54 @@
-// Main
-"Home-Navigation-Home-Navigation-Feed.title" = "Flux";
-"Notifications-Navigation-Notifications-Navigation-Notifications.title" = "Notifications";
-"Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
-"Drafts-Navigation-Drafts-Navigation-Drafts.title" = "Brouillons";
-"Settings-Navigation-Settings-Navigation-Profile.title" = "Profil";
-"Settings-Settings-Profile.title" = "Profil";
 
-// Login
-"Login-Login-Fyreplace.title" = "Fyreplace";
-"Login-Login-view-view-Fields-Username.placeholder" = "Nom d'utilisateur";
-"Login-Login-view-view-Fields-Password.placeholder" = "Mot de passe";
-"Login-Login-view-view-Buttons-Register.normalTitle" = "S'inscrire";
-"Login-Login-view-view-Buttons-Login.normalTitle" = "Connexion";
-
-// Home
-"Home-Home-navigationItem-Area.title" = "Zone";
-
-// Notifications
-
-// Archive
+/* Class = "UIBarButtonItem"; title = "Area"; ObjectID = "Archive-Archive-navigationItem-Area"; */
 "Archive-Archive-navigationItem-Area.title" = "Zone";
 
-// Drafts
+/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Archive-Navigation-Archive-Navigation-Archive"; */
+"Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
+
+/* Class = "UIBarButtonItem"; title = "Area"; ObjectID = "Drafts-Drafts-navigationItem-Area"; */
 "Drafts-Drafts-navigationItem-Area.title" = "Zone";
 
-// Settings
-"Settings-Settings-view-Change-avatar.title" = "Changer d'avatar";
-"Settings-Settings-view-Username.text" = "";
+/* Class = "UITabBarItem"; title = "Drafts"; ObjectID = "Drafts-Navigation-Drafts-Navigation-Drafts"; */
+"Drafts-Navigation-Drafts-Navigation-Drafts.title" = "Brouillons";
+
+/* Class = "UIBarButtonItem"; title = "Area"; ObjectID = "Home-Home-navigationItem-Area"; */
+"Home-Home-navigationItem-Area.title" = "Zone";
+
+/* Class = "UITabBarItem"; title = "Feed"; ObjectID = "Home-Navigation-Home-Navigation-Feed"; */
+"Home-Navigation-Home-Navigation-Feed.title" = "Flux";
+
+/* Class = "UINavigationItem"; title = "Fyreplace"; ObjectID = "Login-Login-Fyreplace"; */
+"Login-Login-Fyreplace.title" = "Fyreplace";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Login-Login-view-view-Buttons-Login"; */
+"Login-Login-view-view-Buttons-Login.normalTitle" = "Connexion";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "Login-Login-view-view-Buttons-Register"; */
+"Login-Login-view-view-Buttons-Register.normalTitle" = "S'inscrire";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Login-Login-view-view-Fields-Password"; */
+"Login-Login-view-view-Fields-Password.placeholder" = "Mot de passe";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Login-Login-view-view-Fields-Username"; */
+"Login-Login-view-view-Fields-Username.placeholder" = "Nom d'utilisateur";
+
+/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "Notifications-Navigation-Notifications-Navigation-Notifications"; */
+"Notifications-Navigation-Notifications-Navigation-Notifications.title" = "Notifications";
+
+/* Class = "UINavigationItem"; title = "Bio"; ObjectID = "Profile-Bio-Profile-Bio-Bio"; */
+"Profile-Bio-Profile-Bio-Bio.title" = "Bio";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "Settings-Navigation-Settings-Navigation-Profile"; */
+"Settings-Navigation-Settings-Navigation-Profile.title" = "Profil";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "Settings-Settings-Profile"; */
+"Settings-Settings-Profile.title" = "Profil";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "Settings-Settings-Profile-Logout"; */
 "Settings-Settings-Profile-Logout.title" = "Déconnexion";
 
-// Profile Bio
-"Profile-Bio-Profile-Bio-Bio.title" = "Bio";
+/* Class = "UIButton"; normalTitle = "Change avatar"; ObjectID = "Settings-Settings-view-Change-avatar"; */
+"Settings-Settings-view-Change-avatar.normalTitle" = "Changer d'avatar";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Username"; */
+"Settings-Settings-view-Username.text" = "";
