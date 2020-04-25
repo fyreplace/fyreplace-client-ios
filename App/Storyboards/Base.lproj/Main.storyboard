@@ -684,9 +684,9 @@
                                 <action selector="didClickCancel" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-cancel--A-Profile-Bio-Profile-Bio-didClickCancel"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Profile-Bio-Profile-Bio-Bio-save">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Profile-Bio-Profile-Bio-Bio-done">
                             <connections>
-                                <action selector="didClickSave" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-save--A-Profile-Bio-Profile-Bio-didClickSave"/>
+                                <action selector="didClickDone" destination="Profile-Bio-Profile-Bio" id="Profile-Bio-Profile-Bio-Bio-done--A-Profile-Bio-Profile-Bio-didClickDone"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -11,7 +11,7 @@ public class AreaSelector: NSObject {
     public weak var delegate: AreaSelectorDelegate?
     private var picker: UIPickerView?
     private var pickerBottom: NSLayoutConstraint?
-    private var areas: [Area] = []
+    private var areas: [Area] = [] { didSet { picker?.reloadAllComponents() } }
     private var disposer = DisposeBag()
 
     public func createAreaPicker(inside view: UIView) {
@@ -35,10 +35,7 @@ public class AreaSelector: NSObject {
         guard let delegate = self.delegate else { return }
         viewModel.areas.purify(with: delegate)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] areas in
-                self.areas = areas
-                picker.reloadAllComponents()
-            })
+            .subscribe(onNext: { self.areas = $0 })
             .disposed(by: disposer)
 
         viewModel.currentAreaIndex.purify(with: delegate)

@@ -41,8 +41,8 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
 
         centralViewModel.avatar.purify(with: self)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] avatar in
-                if let avatar = avatar {
+            .subscribe(onNext: {
+                if let avatar = $0 {
                     self.avatar.sd_setImage(with: URL(string: avatar))
                 } else {
                     self.avatar.image = #imageLiteral(resourceName: "Avatar")

@@ -29,7 +29,7 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
     }
 
     @IBAction
-    private func didClickSave() {
+    private func didClickDone() {
         centralViewModel.updateBio(text: textView.text)
         dismiss(animated: true)
     }
