@@ -80,7 +80,7 @@ extension DraftTarget: TargetType, AccessTokenAuthorizable {
     public var task: Task {
         switch self {
         case let .all(_, offset, limit):
-            return .requestParameters(parameters: pagerParams(limit, offset), encoding: URLEncoding.default)
+            return .requestParameters(parameters: pagerParams(limit: limit, offset: offset), encoding: URLEncoding.default)
 
         case .get,
              .publish,

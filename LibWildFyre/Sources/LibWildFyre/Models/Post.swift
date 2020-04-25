@@ -89,11 +89,11 @@ extension PostTarget: TargetType, AccessTokenAuthorizable {
     public var task: Task {
         switch self {
         case let .stack(_, limit):
-            return .requestParameters(parameters: pagerParams(limit), encoding: URLEncoding.default)
+            return .requestParameters(parameters: pagerParams(limit: limit), encoding: URLEncoding.default)
 
-        case let .archive(_, limit, offset),
+        case let .archive(_, offset, limit),
              let .own(_, offset, limit):
-            return .requestParameters(parameters: pagerParams(limit, offset), encoding: URLEncoding.default)
+            return .requestParameters(parameters: pagerParams(limit: limit, offset: offset), encoding: URLEncoding.default)
 
         case .get,
              .delete:
