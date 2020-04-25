@@ -81,7 +81,7 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
         }
 
         DispatchQueue.main.async {
-            self.delegate?.image(selected: ImageData(name: "image.\(ext)", mime: mime, data: data))
+            self.delegate?.imageSelector(self, didSelectImage: ImageData(name: "image.\(ext)", mime: mime, data: data))
         }
     }
 }
@@ -89,7 +89,7 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 public protocol ImageSelectorDelegate: AnyObject {
     var maxImageSize: Float { get }
 
-    func image(selected imageData: ImageData)
+    func imageSelector(_ imageSelector: ImageSelector, didSelectImage image: ImageData)
 }
 
 private extension ImageSelectorDelegate {

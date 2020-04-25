@@ -69,7 +69,7 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
 }
 
 extension SettingsViewController: ImageSelectorDelegate {
-    public func image(selected imageData: ImageData) {
-        centralViewModel.updateAvatar(image: imageData)
+    public func imageSelector(_ imageSelector: ImageSelector, didSelectImage image: ImageData) {
+        centralViewModel.updateAvatar(image: image)
     }
 }
