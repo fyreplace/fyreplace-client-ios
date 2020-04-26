@@ -2,7 +2,7 @@ import Foundation
 import Moya
 
 public struct Post: Decodable {
-    public let id: UInt64
+    public let id: String
     public let author: Author
     public let text: String
     public let anonym: Bool
