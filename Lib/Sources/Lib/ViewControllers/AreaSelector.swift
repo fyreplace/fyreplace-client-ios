@@ -9,17 +9,20 @@ public class AreaSelector: NSObject {
     private var viewModel: AreaSelectorViewModel!
 
     public weak var delegate: AreaSelectorDelegate?
-    private var picker: UIPickerView?
+    private var picker = UIPickerView()
     private var pickerBottom: NSLayoutConstraint?
-    private var areas: [Area] = [] { didSet { picker?.reloadAllComponents() } }
+    private var areas: [Area] = [] { didSet { picker.reloadAllComponents() } }
     private var disposer = DisposeBag()
 
-    public func createAreaPicker(inside view: UIView) {
-        let picker = UIPickerView()
+    public override init() {
+        super.init()
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.dataSource = self
         picker.delegate = self
         picker.alpha = 0
+    }
+
+    public func createAreaPicker(inside view: UIView) {
         view.addSubview(picker)
 
         let pickerBottom = picker.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
@@ -29,7 +32,6 @@ public class AreaSelector: NSObject {
             pickerBottom,
         ])
 
-        self.picker = picker
         self.pickerBottom = pickerBottom
 
         guard let delegate = self.delegate else { return }
@@ -40,8 +42,8 @@ public class AreaSelector: NSObject {
         viewModel.currentAreaIndex.purify(with: delegate)
             .subscribe(onNext: { index in
                 guard let i = index else { return }
-                guard i != picker.selectedRow(inComponent: 0) else { return }
-                picker.selectRow(i, inComponent: 0, animated: false)
+                guard i != self.picker.selectedRow(inComponent: 0) else { return }
+                self.picker.selectRow(i, inComponent: 0, animated: false)
             })
             .disposed(by: disposer)
 
@@ -49,20 +51,19 @@ public class AreaSelector: NSObject {
     }
 
     public func destroyAreaPicker() {
-        picker?.removeFromSuperview()
+        picker.removeFromSuperview()
         disposer = DisposeBag()
     }
 
     public func toggleAreaPicker() {
-        guard let picker = picker else { return }
         guard let bottom = pickerBottom else { return }
         let offset = bottom.constant == 0 ? picker.frame.height : 0
         let alpha: CGFloat = offset == 0 ? 0 : 1
 
         bottom.constant = offset
         UIView.animate(withDuration: 0.3) {
-            picker.superview?.layoutIfNeeded()
-            picker.alpha = alpha
+            self.picker.superview?.layoutIfNeeded()
+            self.picker.alpha = alpha
         }
     }
 }
