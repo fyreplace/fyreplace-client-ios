@@ -13,6 +13,6 @@ public extension ObservableType {
             case .completed:
                 return .ignore
             }
-        }
+        }.observeOn(MainScheduler.instance)
     }
 }

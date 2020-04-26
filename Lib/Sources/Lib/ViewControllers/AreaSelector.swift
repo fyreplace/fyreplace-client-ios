@@ -34,12 +34,10 @@ public class AreaSelector: NSObject {
 
         guard let delegate = self.delegate else { return }
         viewModel.areas.purify(with: delegate)
-            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { self.areas = $0 })
             .disposed(by: disposer)
 
         viewModel.currentAreaIndex.purify(with: delegate)
-            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { index in
                 guard let i = index else { return }
                 guard i != picker.selectedRow(inComponent: 0) else { return }

@@ -40,7 +40,6 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
             .disposed(by: disposer)
 
         centralViewModel.avatar.purify(with: self)
-            .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 if let avatar = $0 {
                     self.avatar.sd_setImage(with: URL(string: avatar))
