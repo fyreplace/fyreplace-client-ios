@@ -9,6 +9,7 @@ public class AreaSelector: NSObject {
     private var viewModel: AreaSelectorViewModel!
 
     public weak var delegate: AreaSelectorDelegate?
+    private var blur = UIVisualEffectView()
     private var picker = UIPickerView()
     private var pickerBottom: NSLayoutConstraint?
     private var areas: [Area] = [] { didSet { picker.reloadAllComponents() } }
@@ -16,6 +17,7 @@ public class AreaSelector: NSObject {
 
     public override init() {
         super.init()
+        blur.translatesAutoresizingMaskIntoConstraints = false
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.dataSource = self
         picker.delegate = self
@@ -23,9 +25,21 @@ public class AreaSelector: NSObject {
     }
 
     public func createAreaPicker(inside view: UIView) {
+        view.addSubview(blur)
         view.addSubview(picker)
 
+        blur.effect = nil
+        blur.isUserInteractionEnabled = false
+
+        NSLayoutConstraint.activate([
+            blur.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            blur.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            blur.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            blur.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+
         let pickerBottom = picker.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+
         NSLayoutConstraint.activate([
             picker.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             picker.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -35,6 +49,7 @@ public class AreaSelector: NSObject {
         self.pickerBottom = pickerBottom
 
         guard let delegate = self.delegate else { return }
+
         viewModel.areas.purify(with: delegate)
             .subscribe(onNext: { self.areas = $0 })
             .disposed(by: disposer)
@@ -51,6 +66,7 @@ public class AreaSelector: NSObject {
     }
 
     public func destroyAreaPicker() {
+        blur.removeFromSuperview()
         picker.removeFromSuperview()
         disposer = DisposeBag()
     }
@@ -58,10 +74,13 @@ public class AreaSelector: NSObject {
     public func toggleAreaPicker() {
         guard let bottom = pickerBottom else { return }
         let offset = bottom.constant == 0 ? picker.frame.height : 0
-        let alpha: CGFloat = offset == 0 ? 0 : 1
+        let pickerVisible = offset == 0
+        let alpha: CGFloat = pickerVisible ? 0 : 1
+        let blurEffect = pickerVisible ? nil : UIBlurEffect(style: .regular)
 
         bottom.constant = offset
         UIView.animate(withDuration: 0.3) {
+            self.blur.effect = blurEffect
             self.picker.superview?.layoutIfNeeded()
             self.picker.alpha = alpha
         }
