@@ -9,8 +9,8 @@ public class AreaSelectorViewModel: NSObject {
     private var mFutureAreas = ReplaySubject<Observable<[Area]>>.create(bufferSize: 1)
     private var mCurrentAreaName = ReplaySubject<String>.create(bufferSize: 1)
     public lazy var areas = mFutureAreas.merge()
-    public lazy var currentAreaIndex = Observable<Int?>.combineLatest(areas, mCurrentAreaName) { areas, current in
-        areas.firstIndex { $0.name == current }
+    public lazy var currentAreaIndex = Observable<Int>.combineLatest(areas, mCurrentAreaName) { areas, current in
+        (areas.firstIndex { $0.name == current } ?? 0)
     }
     public lazy var currentArea = Observable<Area?>.combineLatest(areas, mCurrentAreaName) { [unowned self] areas, current in
         if current.isEmpty {
@@ -43,8 +43,10 @@ public class AreaSelectorViewModel: NSObject {
         mFutureAreas.onNext(areaRepo.getAreas())
     }
 
-    public func setCurrentArea(name: String) {
-        areaRepo.currentArea = name
+    public func setCurrentArea(name: String, force: Bool = true) {
+        if force || areaRepo.currentArea == nil {
+            areaRepo.currentArea = name
+        }
     }
 
     @objc

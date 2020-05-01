@@ -56,9 +56,8 @@ public class AreaSelector: NSObject {
 
         viewModel.currentAreaIndex.purify(with: delegate)
             .subscribe(onNext: { index in
-                guard let i = index else { return }
-                guard i != self.picker.selectedRow(inComponent: 0) else { return }
-                self.picker.selectRow(i, inComponent: 0, animated: false)
+                guard index != self.picker.selectedRow(inComponent: 0) else { return }
+                self.picker.selectRow(index, inComponent: 0, animated: false)
             })
             .disposed(by: disposer)
 
@@ -94,7 +93,13 @@ extension AreaSelector: UIPickerViewDataSource {
     }
 
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        areas.count
+        let count = areas.count
+
+        if count > 0 {
+            viewModel.setCurrentArea(name: areas[0].name, force: false)
+        }
+
+        return count
     }
 }
 
