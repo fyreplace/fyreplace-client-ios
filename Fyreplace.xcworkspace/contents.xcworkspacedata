@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:.gitignore">
+   </FileRef>
+   <FileRef
+      location = "group:.swiftlint.yml">
+   </FileRef>
+   <FileRef
+      location = "group:COPYING.md">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "container:Fyreplace.xcodeproj">
    </FileRef>
    <FileRef
@@ -27,17 +39,5 @@
    </FileRef>
    <FileRef
       location = "group:LibWildFyre">
-   </FileRef>
-   <FileRef
-      location = "group:COPYING.md">
-   </FileRef>
-   <FileRef
-      location = "group:README.md">
-   </FileRef>
-   <FileRef
-      location = "group:.swiftlint.yml">
-   </FileRef>
-   <FileRef
-      location = "group:.gitignore">
    </FileRef>
 </Workspace>
