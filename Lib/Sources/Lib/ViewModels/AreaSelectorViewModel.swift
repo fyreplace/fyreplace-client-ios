@@ -6,8 +6,6 @@ public class AreaSelectorViewModel: NSObject {
     @IBOutlet
     private var areaRepo: AreaRepository!
 
-    private var mFutureAreas = ReplaySubject<Observable<[Area]>>.create(bufferSize: 1)
-    private var mCurrentAreaName = ReplaySubject<String>.create(bufferSize: 1)
     public lazy var areas = mFutureAreas.merge()
     public lazy var currentAreaIndex = Observable<Int>.combineLatest(areas, mCurrentAreaName) { areas, current in
         (areas.firstIndex { $0.name == current } ?? 0)
@@ -21,6 +19,9 @@ public class AreaSelectorViewModel: NSObject {
             return areas.first { $0.name == current }
         }
     }
+
+    private var mFutureAreas = ReplaySubject<Observable<[Area]>>.create(bufferSize: 1)
+    private var mCurrentAreaName = ReplaySubject<String>.create(bufferSize: 1)
 
     public override init() {
         super.init()

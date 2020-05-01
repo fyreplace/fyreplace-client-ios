@@ -31,15 +31,18 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        centralViewModel.username.purify(with: self)
+        centralViewModel.username
+            .purify(with: self)
             .bind(to: username.rx.text)
             .disposed(by: disposer)
 
-        centralViewModel.bio.purify(with: self)
+        centralViewModel.bio
+            .purify(with: self)
             .bind(to: bio.rx.text)
             .disposed(by: disposer)
 
-        centralViewModel.avatar.purify(with: self)
+        centralViewModel.avatar
+            .purify(with: self)
             .subscribe(onNext: {
                 if let avatar = $0 {
                     self.avatar.sd_setImage(with: URL(string: avatar))

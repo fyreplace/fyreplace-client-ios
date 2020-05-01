@@ -13,7 +13,8 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        centralViewModel.bio.purify(with: self)
+        centralViewModel.bio
+            .purify(with: self)
             .bind(to: textView.rx.text)
             .disposed(by: disposer)
     }
