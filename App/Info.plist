@@ -70,6 +70,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is used to add photos to posts, and to change your profile picture.</string>
 	<key>WildFyreApiUrl</key>
 	<string>$(WILDFYRE_API_URL)</string>
 	<key>WildFyreRegisterUrl</key>

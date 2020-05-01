@@ -11,6 +11,7 @@
 		4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6372393DA49007FC625 /* LibWildFyre */; };
 		4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D135F35239A91FE00B20BFA /* Localizable.strings */; };
 		4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3186D32392F42D0028BC2B /* MainViewController.swift */; };
+		4D3B1E70245C3CC6008870E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1E72245C3CC6008870E1 /* InfoPlist.strings */; };
 		4D569E5923C25DEF0008261E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D569E5823C25DEF0008261E /* LoginViewController.swift */; };
 		4D6FD44023C6689100FE7FDA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
@@ -35,6 +36,8 @@
 		4D17E179241065E1008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4D17E17A24106BBB008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D3186D32392F42D0028BC2B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4D3B1E71245C3CC6008870E1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D3B1E73245C3CD0008870E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D569E5823C25DEF0008261E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
+				4D3B1E72245C3CC6008870E1 /* InfoPlist.strings */,
 				4D308056237A0933004C708D /* Resources */,
 				4D71425E236497850041438B /* Storyboards */,
 				4D7BABFF23649DF4006BD55F /* Sources */,
@@ -225,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC7C3F123F81137009D6CC5 /* identify.py in Resources */,
+				4D3B1E70245C3CC6008870E1 /* InfoPlist.strings in Resources */,
 				4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */,
 				4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */,
 				4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */,
@@ -299,6 +304,15 @@
 				4D17E17A24106BBB008616DF /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4D3B1E72245C3CC6008870E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D3B1E71245C3CC6008870E1 /* fr */,
+				4D3B1E73245C3CD0008870E1 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		4DAA04012353B66A00CB27B6 /* Main.storyboard */ = {
