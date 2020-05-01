@@ -18,11 +18,6 @@ public class ProfileBioViewController: UIViewController, CentralDataConsumer {
             .disposed(by: disposer)
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        textView.becomeFirstResponder()
-    }
-
     @IBAction
     private func didClickCancel() {
         dismiss(animated: true)
