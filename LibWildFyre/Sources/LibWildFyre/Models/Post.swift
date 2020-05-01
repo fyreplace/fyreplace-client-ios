@@ -3,7 +3,7 @@ import Moya
 
 public struct Post: Decodable {
     public let id: String
-    public let author: Author
+    public let author: Author?
     public let text: String
     public let anonym: Bool
     public let subscribed: Bool
