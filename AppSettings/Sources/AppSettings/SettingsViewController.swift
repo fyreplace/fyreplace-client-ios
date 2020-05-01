@@ -43,8 +43,10 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
 
         centralViewModel.avatar
             .purify(with: self)
-            .subscribe(onNext: {
-                if let avatar = $0 {
+            .subscribe(onNext: { avatar in
+                guard self.avatar.sd_imageURL?.absoluteString != avatar else { return }
+
+                if let avatar = avatar {
                     self.avatar.sd_setImage(with: URL(string: avatar))
                 } else {
                     self.avatar.image = #imageLiteral(resourceName: "Avatar")
