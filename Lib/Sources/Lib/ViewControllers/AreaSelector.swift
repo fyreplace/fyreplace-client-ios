@@ -56,15 +56,12 @@ public class AreaSelector: NSObject {
             .purify(with: delegate)
             .subscribe(onNext: { areas in
                 self.areas = areas
-                self.picker.isHidden = areas.count == 0
-            })
-            .disposed(by: disposer)
 
-        viewModel.currentAreaIndex
-            .purify(with: delegate)
-            .subscribe(onNext: { index in
-                guard index != self.picker.selectedRow(inComponent: 0) else { return }
-                self.picker.selectRow(index, inComponent: 0, animated: false)
+                if areas.count > 0 {
+                    let index = areas.firstIndex { $0.name == self.viewModel.currentAreaName }
+                    self.picker.isHidden = false
+                    self.picker.selectRow(index ?? 0, inComponent: 0, animated: false)
+                }
             })
             .disposed(by: disposer)
 
