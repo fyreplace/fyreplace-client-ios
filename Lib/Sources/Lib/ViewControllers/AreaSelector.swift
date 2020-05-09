@@ -22,6 +22,7 @@ public class AreaSelector: NSObject {
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.dataSource = self
         picker.delegate = self
+        picker.isHidden = true
     }
 
     public func createAreaPicker(inside view: UIView) {
@@ -53,7 +54,10 @@ public class AreaSelector: NSObject {
         viewModel.areas
             .retry(.exponentialDelayed(maxCount: .max, initial: 5, multiplier: 0.5))
             .purify(with: delegate)
-            .subscribe(onNext: { self.areas = $0 })
+            .subscribe(onNext: { areas in
+                self.areas = areas
+                self.picker.isHidden = areas.count == 0
+            })
             .disposed(by: disposer)
 
         viewModel.currentAreaIndex
