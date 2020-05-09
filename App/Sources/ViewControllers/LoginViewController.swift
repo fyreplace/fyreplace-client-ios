@@ -13,14 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet
     private var loader: UIActivityIndicatorView!
 
-    public override func viewDidLoad() {
-        if #available(iOS 13.0, *) {
-            loader.style = .large
-        } else {
-            loader.style = .gray
-        }
-    }
-
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidLogin(_:)), name: .didLogin, object: nil)
