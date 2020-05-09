@@ -50,11 +50,14 @@ public class AreaSelector: NSObject {
 
         guard let delegate = self.delegate else { return }
 
-        viewModel.areas.purify(with: delegate)
+        viewModel.areas
+            .retry(.exponentialDelayed(maxCount: .max, initial: 5, multiplier: 0.5))
+            .purify(with: delegate)
             .subscribe(onNext: { self.areas = $0 })
             .disposed(by: disposer)
 
-        viewModel.currentAreaIndex.purify(with: delegate)
+        viewModel.currentAreaIndex
+            .purify(with: delegate)
             .subscribe(onNext: { index in
                 guard index != self.picker.selectedRow(inComponent: 0) else { return }
                 self.picker.selectRow(index, inComponent: 0, animated: false)
