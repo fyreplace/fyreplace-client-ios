@@ -21,7 +21,6 @@
                     </tabBar>
                     <connections>
                         <outlet property="centralDataViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralDataViewModel"/>
-                        <outlet property="viewModel" destination="Main-MainViewModel" id="Main-Main--O-viewModel"/>
                         <segue destination="Login-Navigation-Login-Navigation" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Navigation-Login-Navigation"/>
                         <segue destination="Home-Navigation-Home-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Navigation-Home-Navigation"/>
                         <segue destination="Notifications-Navigation-Notifications-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Navigation-Notifications-Navigation"/>
@@ -31,7 +30,6 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Main-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Main-MainViewModel" customClass="MainViewModel" customModule="Fyreplace" customModuleProvider="target"/>
                 <customObject id="Main-CentralViewModel" customClass="CentralViewModel" customModule="Lib">
                     <connections>
                         <outlet property="authorRepo" destination="Main-AuthorRepository" id="Main-CentralViewModel--O-authorRepo"/>

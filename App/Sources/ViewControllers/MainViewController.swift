@@ -5,8 +5,6 @@ import UIKit
 class MainViewController: UITabBarController, CentralDataProvider {
     @IBOutlet
     private var centralDataViewModel: CentralViewModel!
-    @IBOutlet
-    private var viewModel: MainViewModel!
 
     public var centralViewModel: CentralViewModel! {
         get { centralDataViewModel }
