@@ -5,11 +5,11 @@ import RxSwift
 import UIKit
 
 public class ProfileBioViewController: UIViewController, CentralDataConsumer {
-    @IBOutlet
-    private var textView: UITextView!
-
     public var centralViewModel: CentralViewModel!
     private let disposer = DisposeBag()
+
+    @IBOutlet
+    private var textView: UITextView!
 
     public override func viewDidLoad() {
         super.viewDidLoad()

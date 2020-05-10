@@ -7,6 +7,10 @@ import SDWebImage
 import UIKit
 
 public class SettingsViewController: UIViewController, CentralDataProvider {
+    public var centralViewModel: CentralViewModel!
+    public let maxImageSize: Float = 0.5
+    private var disposer = DisposeBag()
+
     @IBOutlet
     private var imageSelector: ImageSelector!
     @IBOutlet
@@ -17,10 +21,6 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     private var username: UILabel!
     @IBOutlet
     private var bio: UITextView!
-
-    public var centralViewModel: CentralViewModel!
-    public let maxImageSize: Float = 0.5
-    private var disposer = DisposeBag()
 
     public override func viewDidLoad() {
         super.viewDidLoad()

@@ -3,9 +3,6 @@ import LibWildFyre
 import RxSwift
 
 public class CentralViewModel: NSObject {
-    @IBOutlet
-    private var authorRepo: AuthorRepository!
-
     public lazy var user = mFutureUser.merge().share(replay: 1)
     public lazy var username = user.map { $0.name }
     public lazy var avatar = user.map { $0.avatar }
@@ -13,6 +10,9 @@ public class CentralViewModel: NSObject {
     public var isLogged: Bool { Keychain.authToken.get() != nil }
 
     private var mFutureUser = ReplaySubject<Observable<Author>>.create(bufferSize: 1)
+
+    @IBOutlet
+    private var authorRepo: AuthorRepository!
 
     public override init() {
         super.init()

@@ -5,9 +5,6 @@ import RxCocoa
 import UIKit
 
 public class AreaSelector: NSObject {
-    @IBOutlet
-    private var viewModel: AreaSelectorViewModel!
-
     public weak var delegate: AreaSelectorDelegate?
     private var blur = UIVisualEffectView()
     private var picker = UIPickerView()
@@ -15,6 +12,9 @@ public class AreaSelector: NSObject {
     private var pickerTop: NSLayoutConstraint?
     private var areas: [Area] = [] { didSet { picker.reloadAllComponents() } }
     private var disposer = DisposeBag()
+
+    @IBOutlet
+    private var viewModel: AreaSelectorViewModel!
 
     public override init() {
         super.init()
