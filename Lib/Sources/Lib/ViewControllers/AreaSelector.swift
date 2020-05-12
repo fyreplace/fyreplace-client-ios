@@ -44,8 +44,8 @@ public class AreaSelector: NSObject {
         pickerTop = picker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
 
         NSLayoutConstraint.activate([
-            picker.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            picker.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            picker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            picker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             pickerBottom!,
         ])
 
