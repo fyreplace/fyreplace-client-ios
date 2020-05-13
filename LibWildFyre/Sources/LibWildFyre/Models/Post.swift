@@ -31,9 +31,9 @@ public struct Subscription: Codable {
 }
 
 public enum PostTarget {
-    case stack(areaName: String, limit: UInt)
-    case archive(areaName: String, offset: UInt, limit: UInt)
-    case own(areaName: String, offset: UInt, limit: UInt)
+    case stack(areaName: String, limit: Int)
+    case archive(areaName: String, offset: Int, limit: Int)
+    case own(areaName: String, offset: Int, limit: Int)
     case get(areaName: String, postId: UInt64)
     case create(areaName: String, draft: Draft)
     case delete(areaName: String, postId: UInt64)

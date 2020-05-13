@@ -35,7 +35,7 @@ public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegat
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Post", for: indexPath) as! PostCell
-        cell.willAppear(with: viewModel.retrieve(postAt: UInt(indexPath.row)))
+        cell.willAppear(with: viewModel.retrieve(postAt: indexPath.row))
         return cell
     }
 

@@ -11,7 +11,7 @@ extension TargetType {
 
     public var headers: [String: String]? { [:] }
 
-    internal func pagerParams(limit: UInt, offset: UInt? = nil) -> [String: UInt] {
+    internal func pagerParams(limit: Int, offset: Int? = nil) -> [String: Int] {
         var params = ["limit": limit]
 
         if offset != nil {

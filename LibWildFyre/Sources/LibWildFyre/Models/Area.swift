@@ -6,8 +6,8 @@ public struct Area: Decodable {
 }
 
 public struct Reputation: Decodable {
-    public let reputation: UInt
-    public let spread: UInt
+    public let reputation: Int
+    public let spread: Int
 }
 
 public enum AreaTarget {

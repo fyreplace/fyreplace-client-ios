@@ -7,7 +7,7 @@ open class ItemsListViewController: UITableViewController {
     open class var emptyMessageText: String { "LibItemsList.ItemsListViewController.empty" }
 
     public var itemsListViewModel: ItemsListViewModel!
-    private var count: UInt = 0
+    private var count = 0
     private var disposer = DisposeBag()
 
     open override func viewDidLoad() {
@@ -87,14 +87,14 @@ extension ItemsListViewController {
 
 extension ItemsListViewController {
     open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Int(count)
+        count
     }
 }
 
 extension ItemsListViewController: UITableViewDataSourcePrefetching {
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for path in indexPaths {
-            itemsListViewModel.retrieve(itemAt: UInt(path.row))?
+            itemsListViewModel.retrieve(itemAt: path.row)?
                 .subscribe()
                 .disposed(by: disposer)
         }

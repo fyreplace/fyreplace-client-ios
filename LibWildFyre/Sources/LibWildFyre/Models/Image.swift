@@ -2,7 +2,7 @@ import Foundation
 import Moya
 
 public struct Image: Decodable {
-    public let num: UInt
+    public let num: Int
     public let image: String
     public let comment: String?
 }

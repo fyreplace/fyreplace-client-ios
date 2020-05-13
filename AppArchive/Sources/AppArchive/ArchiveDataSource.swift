@@ -10,7 +10,7 @@ public class ArchiveDataSource: NSObject, ItemsListDataSource {
     @IBOutlet
     private var postRepo: PostRepository!
 
-    public func fetch(from position: UInt, size: UInt) -> Observable<ItemBucket> {
+    public func fetch(from position: Int, size: Int) -> Observable<ItemBucket> {
         let fn = ownPosts ? postRepo.getOwnPosts : postRepo.getArchive
         return fn(position, size).map { ItemBucket($0.results, total: $0.count) }
     }

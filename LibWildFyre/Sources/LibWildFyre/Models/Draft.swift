@@ -20,7 +20,7 @@ public struct DraftText: Encodable {
 }
 
 public enum DraftTarget {
-    case all(areaName: String, offset: UInt, limit: UInt)
+    case all(areaName: String, offset: Int, limit: Int)
     case get(areaName: String, postId: UInt64)
     case create(areaName: String, draft: Draft)
     case patch(areaName: String, postId: UInt64, draft: Draft)
@@ -28,8 +28,8 @@ public enum DraftTarget {
     case delete(areaName: String, postId: UInt64)
     case setImage(areaName: String, postId: UInt64, image: ImageData, text: String)
     case clearImage(areaName: String, postId: UInt64, text: DraftText)
-    case addImage(areaName: String, postId: UInt64, slotId: UInt, image: ImageData)
-    case removeImage(areaName: String, postId: UInt64, slotId: UInt)
+    case addImage(areaName: String, postId: UInt64, slotId: Int, image: ImageData)
+    case removeImage(areaName: String, postId: UInt64, slotId: Int)
 }
 
 extension DraftTarget: TargetType, AccessTokenAuthorizable {

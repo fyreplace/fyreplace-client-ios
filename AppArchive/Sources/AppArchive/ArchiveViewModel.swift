@@ -15,7 +15,7 @@ public class ArchiveViewModel: ItemsListViewModel {
         dataSource = archiveDataSource
     }
 
-    public func retrieve(postAt index: UInt) -> Observable<Post>? {
+    public func retrieve(postAt index: Int) -> Observable<Post>? {
         retrieve(itemAt: index)?.map { $0 as! Post }
     }
 }
