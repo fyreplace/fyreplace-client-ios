@@ -1,3 +1,4 @@
+import LibUtils
 import LibWildFyre
 import UIKit
 
@@ -32,7 +33,7 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 
         for (name, source) in actionsData {
             let action = UIAlertAction(
-                title: NSLocalizedString("Lib.ImageSelector.chooseSource.action.\(name)", comment: ""),
+                title: .tr("Lib.ImageSelector.chooseSource.action.\(name)"),
                 style: source != nil ? .default : .cancel,
                 handler: { _ in
                     guard let source = source else { return }
@@ -66,12 +67,12 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 
         guard data.count < maxBytes else {
             let alert = UIAlertController(
-                title: NSLocalizedString("Lib.ImageSelector.sizeError.title", comment: ""),
-                message: NSLocalizedString("Lib.ImageSelector.sizeError.message", comment: ""),
+                title: .tr("Lib.ImageSelector.sizeError.title"),
+                message: .tr("Lib.ImageSelector.sizeError.message"),
                 preferredStyle: .alert
             )
             let ok = UIAlertAction(
-                title: NSLocalizedString("Lib.ImageSelector.sizeError.action.ok", comment: ""),
+                title: .tr("Lib.ImageSelector.sizeError.action.ok"),
                 style: .default
             )
 

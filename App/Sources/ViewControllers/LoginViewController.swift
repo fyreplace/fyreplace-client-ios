@@ -1,4 +1,5 @@
 import Lib
+import LibUtils
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -59,12 +60,12 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true)
             } else {
                 let alert = UIAlertController(
-                    title: NSLocalizedString("App.LoginViewController.loginError.title", comment: ""),
-                    message: NSLocalizedString("App.LoginViewController.loginError.message", comment: ""),
+                    title: .tr("App.LoginViewController.loginError.title"),
+                    message: .tr("App.LoginViewController.loginError.message"),
                     preferredStyle: .alert
                 )
                 let ok = UIAlertAction(
-                    title: NSLocalizedString("App.LoginViewController.loginError.ok", comment: ""),
+                    title: .tr("App.LoginViewController.loginError.ok"),
                     style: .default
                 )
                 alert.addAction(ok)
