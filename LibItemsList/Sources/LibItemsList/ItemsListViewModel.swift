@@ -49,8 +49,8 @@ open class ItemsListViewModel: NSObject {
         let page = pagesToFetch.removeLast()
         let bucket = dataSource.fetch(from: page * .pageSize, size: .pageSize).share()
 
-        mFutureCount.onNext(bucket.map { $0.total })
-        mFutureCachedPages[page]?.onNext(bucket.map { $0.items })
+        mFutureCount.onNext(bucket.map(\.total))
+        mFutureCachedPages[page]?.onNext(bucket.map(\.items))
 
         if mFutureCachedPages.count * .pageSize > ItemsListViewModel.cacheSize {
             let indexes = mFutureCachedPages.keys.sorted { abs($0.distance(to: page)) > abs($1.distance(to: page)) }

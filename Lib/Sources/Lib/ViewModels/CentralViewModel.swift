@@ -4,9 +4,9 @@ import RxSwift
 
 public class CentralViewModel: NSObject {
     public lazy var user = mFutureUser.merge().share(replay: 1)
-    public lazy var username = user.map { $0.name }
-    public lazy var avatar = user.map { $0.avatar }
-    public lazy var bio = user.map { $0.bio }
+    public lazy var username = user.map(\.name)
+    public lazy var avatar = user.map(\.avatar)
+    public lazy var bio = user.map(\.bio)
     public var isLogged: Bool { Keychain.authToken.get() != nil }
 
     private var mFutureUser = ReplaySubject<Observable<Author>>.create(bufferSize: 1)
