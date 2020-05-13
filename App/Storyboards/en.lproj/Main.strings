@@ -2,6 +2,12 @@
 /* Class = "UIBarButtonItem"; title = "Area"; ObjectID = "Archive-Archive-navigationItem-Area"; */
 "Archive-Archive-navigationItem-Area.title" = "Area";
 
+/* Class = "UISegmentedControl"; Archive-Archive-navigationItem-titleView.segmentTitles[0] = "All"; ObjectID = "Archive-Archive-navigationItem-titleView"; */
+"Archive-Archive-navigationItem-titleView.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; Archive-Archive-navigationItem-titleView.segmentTitles[1] = "Mine"; ObjectID = "Archive-Archive-navigationItem-titleView"; */
+"Archive-Archive-navigationItem-titleView.segmentTitles[1]" = "Mine";
+
 /* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Archive-Navigation-Archive-Navigation-Archive"; */
 "Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
 

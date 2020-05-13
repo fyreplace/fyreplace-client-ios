@@ -14,6 +14,7 @@
 		4D3B1E70245C3CC6008870E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1E72245C3CC6008870E1 /* InfoPlist.strings */; };
 		4D569E5923C25DEF0008261E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D569E5823C25DEF0008261E /* LoginViewController.swift */; };
 		4D6FD44023C6689100FE7FDA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */; };
+		4D8D8F2E243D170400E2393D /* LibItemsList in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8D8F2D243D170400E2393D /* LibItemsList */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 				4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */,
 				4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */,
 				4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */,
+				4D8D8F2E243D170400E2393D /* LibItemsList in Frameworks */,
 				4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */,
 				4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */,
 			);
@@ -181,6 +183,7 @@
 				4D01D6332393DA3F007FC625 /* Lib */,
 				4D01D6372393DA49007FC625 /* LibWildFyre */,
 				4DFD4BEE242C1123006A9DE0 /* LibUtils */,
+				4D8D8F2D243D170400E2393D /* LibItemsList */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -529,6 +532,10 @@
 		4D01D6372393DA49007FC625 /* LibWildFyre */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LibWildFyre;
+		};
+		4D8D8F2D243D170400E2393D /* LibItemsList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibItemsList;
 		};
 		4DDE87BE2365DE2900BD4E60 /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;

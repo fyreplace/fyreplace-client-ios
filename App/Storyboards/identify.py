@@ -134,6 +134,7 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
                 return value
 
     label = try_attributes([
+        "reuseIdentifier",
         "userLabel",
         "title",
         "text",

@@ -32,6 +32,9 @@
       location = "group:AppSettings">
    </FileRef>
    <FileRef
+      location = "group:LibItemsList">
+   </FileRef>
+   <FileRef
       location = "group:Lib">
    </FileRef>
    <FileRef

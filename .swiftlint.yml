@@ -1,4 +1,5 @@
 disabled_rules:
+    - force_cast
     - identifier_name
     - line_length
     - notification_center_detachment

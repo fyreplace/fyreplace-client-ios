@@ -3,24 +3,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppArchive",
+    name: "LibItemsList",
     platforms: [
         .iOS(.v11),
     ],
     products: [
         .library(
-            name: "AppArchive",
-            targets: ["AppArchive"]
+            name: "LibItemsList",
+            targets: ["LibItemsList"]
         ),
     ],
     dependencies: [
-        .package(path: "../LibItemsList"),
+        .package(path: "../Lib"),
     ],
     targets: [
         .target(
-            name: "AppArchive",
+            name: "LibItemsList",
             dependencies: [
-                .byName(name: "LibItemsList"),
+                .byName(name: "Lib"),
             ]
         ),
     ]

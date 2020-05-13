@@ -6,6 +6,7 @@ public protocol FailureHandler: AnyObject {
 }
 
 extension UIViewController: FailureHandler {
+    @objc
     open func failure(_ error: Error) {
         print(error.message)
     }

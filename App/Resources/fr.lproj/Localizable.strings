@@ -1,9 +1,11 @@
 "App.LoginViewController.loginError.title" = "Erreur de connexion";
 "App.LoginViewController.loginError.message" = "Les identifiants renseignés ne permettent pas de se connecter";
 "App.LoginViewController.loginError.ok" = "OK";
+"AppArchive.ArchiveViewController.empty" = "Aucun post";
 "Lib.ImageSelector.chooseSource.action.library" = "Sélectionner une image";
 "Lib.ImageSelector.chooseSource.action.camera" = "Prendre une photo";
 "Lib.ImageSelector.chooseSource.action.cancel" = "Annuler";
 "Lib.ImageSelector.sizeError.title" = "Erreur";
 "Lib.ImageSelector.sizeError.message" = "Cette image est trop grande";
 "Lib.ImageSelector.sizeError.action.ok" = "OK";
+"LibItemsList.ItemsListViewController.empty" = "Aucun item";

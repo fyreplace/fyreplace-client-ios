@@ -357,25 +357,192 @@
         <!--Archive-->
         <scene sceneID="Archive">
             <objects>
-                <viewController id="Archive-Archive" userLabel="Archive" customClass="ArchiveViewController" customModule="AppArchive" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Archive-Archive-view">
+                <tableViewController id="Archive-Archive" userLabel="Archive" customClass="ArchiveViewController" customModule="AppArchive" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Archive-Archive-view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Archive-Archive-view-safeArea"/>
-                    </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Archive-Archive-view-Footer" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="196" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post" id="Archive-Archive-view-Post" customClass="PostCell" customModule="AppArchive">
+                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Archive-Archive-view-Post" id="Archive-Archive-view-Post-contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Content">
+                                            <rect key="frame" x="20" y="11" width="207" height="118"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Cover" userLabel="Cover">
+                                            <rect key="frame" x="20" y="11" width="207" height="118"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Date">
+                                            <rect key="frame" x="367.5" y="11" width="26.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Time">
+                                            <rect key="frame" x="366" y="25.5" width="28" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Author">
+                                            <rect key="frame" x="353" y="113" width="41" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Avatar" userLabel="Avatar">
+                                            <rect key="frame" x="362" y="73" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="Archive-Archive-view-Post-contentView-Avatar--C-width"/>
+                                                <constraint firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="height" id="Archive-Archive-view-Post-contentView-Avatar--C-width-Archive-Archive-view-Post-contentView-Avatar-height"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-activityIndicatorView">
+                                            <rect key="frame" x="188.5" y="51.5" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-greaterThanOrEqual-Archive-Archive-view-Default-contentView-Content-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="bottom" constant="8" symbolic="YES">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-top-Archive-Archive-view-Default-contentView-Avatar-bottom</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Avatar" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Author" secondAttribute="trailing">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Avatar-trailing-Archive-Archive-view-Default-contentView-Author-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-leading-lessThanOrEqual-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-top-Archive-Archive-view-Default-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-width-Archive-Archive-view-Default-contentView-width</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-top-Archive-Archive-view-Default-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="bottom">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-top-Archive-Archive-view-Default-contentView-Date-bottom</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="trailing">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-trailing-Archive-Archive-view-Default-contentView-Date-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerX" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerX">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerX-Archive-Archive-view-Default-contentView-centerX</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerY" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerY">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerY-Archive-Archive-view-Default-contentView-centerY</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-bottom-Archive-Archive-view-Post-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-leading-Archive-Archive-view-Post-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-top-Archive-Archive-view-Post-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-width-Archive-Archive-view-Post-contentView-width</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Date-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Time-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
+                                        </constraint>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="Archive-Archive-view-Post-contentView-Author" id="Archive-Archive-view-Post--O-author"/>
+                                    <outlet property="avatar" destination="Archive-Archive-view-Post-contentView-Avatar" id="Archive-Archive-view-Post--O-avatar"/>
+                                    <outlet property="content" destination="Archive-Archive-view-Post-contentView-Content" id="Archive-Archive-view-Post--O-content"/>
+                                    <outlet property="cover" destination="Archive-Archive-view-Post-contentView-Cover" id="Archive-Archive-view-Post--O-cover"/>
+                                    <outlet property="date" destination="Archive-Archive-view-Post-contentView-Date" id="Archive-Archive-view-Post--O-date"/>
+                                    <outlet property="loader" destination="Archive-Archive-view-Post-contentView-activityIndicatorView" id="Archive-Archive-view-Post--O-loader"/>
+                                    <outlet property="time" destination="Archive-Archive-view-Post-contentView-Time" id="Archive-Archive-view-Post--O-time"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Archive-Archive" id="Archive-Archive-view--O-dataSource"/>
+                            <outlet property="delegate" destination="Archive-Archive" id="Archive-Archive-view--O-delegate"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Area" id="Archive-Archive-navigationItem-Area">
                             <connections>
                                 <action selector="didClickArea" destination="Archive-Archive" id="Archive-Archive-navigationItem-Area--A-Archive-Archive-didClickArea"/>
                             </connections>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="Archive-Archive-navigationItem-titleView">
+                            <rect key="frame" x="157.5" y="5.5" width="99" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Mine"/>
+                            </segments>
+                            <connections>
+                                <action selector="didChangeListType" destination="Archive-Archive" eventType="valueChanged" id="Archive-Archive-navigationItem-titleView--A-valueChanged-Archive-Archive-didChangeListType"/>
+                            </connections>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="areaSelector" destination="Archive-AreaSelector" id="Archive-Archive--O-areaSelector"/>
+                        <outlet property="listTypeChooser" destination="Archive-Archive-navigationItem-titleView" id="Archive-Archive--O-listTypeChooser"/>
+                        <outlet property="viewModel" destination="Archive-ArchiveViewModel" id="Archive-Archive--O-viewModel"/>
                     </connections>
-                </viewController>
+                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Archive-ArchiveViewModel" customClass="ArchiveViewModel" customModule="AppArchive">
+                    <connections>
+                        <outlet property="archiveDataSource" destination="Archive-ArchiveDataSource" id="Archive-ArchiveViewModel--O-archiveDataSource"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-ArchiveDataSource" customClass="ArchiveDataSource" customModule="AppArchive">
+                    <connections>
+                        <outlet property="postRepo" destination="Archive-PostRepository" id="Archive-ArchiveDataSource--O-postRepo"/>
+                    </connections>
+                </customObject>
                 <customObject id="Archive-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
                         <outlet property="viewModel" destination="Archive-AreaSelectorViewModel" id="Archive-AreaSelector--O-viewModel"/>
@@ -384,6 +551,11 @@
                 <customObject id="Archive-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="Lib">
                     <connections>
                         <outlet property="areaRepo" destination="Archive-AreaRepository" id="Archive-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-PostRepository" customClass="PostRepository" customModule="Lib">
+                    <connections>
+                        <outlet property="areaRepo" destination="Archive-AreaRepository" id="Archive-PostRepository--O-areaRepo"/>
                     </connections>
                 </customObject>
                 <customObject id="Archive-AreaRepository" customClass="AreaRepository" customModule="Lib"/>
