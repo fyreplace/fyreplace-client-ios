@@ -505,6 +505,7 @@
                         <connections>
                             <outlet property="dataSource" destination="Archive-Archive" id="Archive-Archive-view--O-dataSource"/>
                             <outlet property="delegate" destination="Archive-Archive" id="Archive-Archive-view--O-delegate"/>
+                            <outlet property="prefetchDataSource" destination="Archive-Archive" id="Archive-Archive-view--O-prefetchDataSource"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">

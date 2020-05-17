@@ -12,7 +12,6 @@ open class ItemsListViewController: UITableViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.prefetchDataSource = self
         tableView.refreshControl = UIRefreshControl()
         updateBackground(allowMessage: true)
     }

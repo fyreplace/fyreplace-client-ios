@@ -33,12 +33,6 @@ public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegat
         disposer = DisposeBag()
     }
 
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Post", for: indexPath) as! PostCell
-        cell.willAppear(with: viewModel.retrieve(postAt: indexPath.row))
-        return cell
-    }
-
     @IBAction
     private func didClickArea() {
         areaSelector.toggleAreaPicker()
@@ -48,5 +42,13 @@ public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegat
     private func didChangeListType() {
         viewModel.ownPosts = listTypeChooser.selectedSegmentIndex > 0
         refresh()
+    }
+}
+
+extension ArchiveViewController {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Post", for: indexPath) as! PostCell
+        cell.willAppear(with: viewModel.retrieve(postAt: indexPath.row))
+        return cell
     }
 }
