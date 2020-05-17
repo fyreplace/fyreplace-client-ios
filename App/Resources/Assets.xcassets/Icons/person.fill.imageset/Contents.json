@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "person.pdf"
+      "filename" : "person.fill.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   },
   "properties" : {
     "preserves-vector-representation" : true
