@@ -26,7 +26,9 @@ open class ItemsListViewController: UITableViewController {
             .subscribe(onNext: { self.count = $0 })
             .disposed(by: disposer)
 
-        refresh()
+        if count == 0 {
+            refresh()
+        }
     }
 
     open override func viewWillDisappear(_ animated: Bool) {
