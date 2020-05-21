@@ -371,17 +371,17 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post" id="Archive-Archive-view-Post" customClass="PostCell" customModule="AppArchive">
                                 <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Archive-Archive-view-Post" id="Archive-Archive-view-Post-contentView">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Archive-Archive-view-Post" id="Archive-Archive-view-Post-tableViewCellContentView-0002">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Content">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Content">
                                             <rect key="frame" x="20" y="11" width="207" height="118"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Cover" userLabel="Cover">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" userLabel="Cover">
                                             <rect key="frame" x="20" y="11" width="207" height="118"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -390,29 +390,31 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Date">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Date">
                                             <rect key="frame" x="367.5" y="11" width="26.5" height="14.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Time">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Time">
                                             <rect key="frame" x="366" y="25.5" width="28" height="14"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Author">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Author">
                                             <rect key="frame" x="353" y="113" width="41" height="16"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Avatar" userLabel="Avatar">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar" userLabel="Avatar">
                                             <rect key="frame" x="362" y="73" width="32" height="32"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="32" id="Archive-Archive-view-Post-contentView-Avatar--C-width"/>
-                                                <constraint firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="height" id="Archive-Archive-view-Post-contentView-Avatar--C-width-Archive-Archive-view-Post-contentView-Avatar-height"/>
+                                                <constraint firstAttribute="width" constant="32" id="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar--C-width"/>
+                                                <constraint firstAttribute="width" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar" secondAttribute="height">
+                                                    <string key="id">Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar--C-width-Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar-height</string>
+                                                </constraint>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -421,84 +423,84 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-activityIndicatorView">
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-tableViewCellContentView-0002-activityIndicatorView-000a">
                                             <rect key="frame" x="188.5" y="51.5" width="37" height="37"/>
                                         </activityIndicatorView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="bottomMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="trailingMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" secondAttribute="trailing" priority="250">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-greaterThanOrEqual-Archive-Archive-view-Default-contentView-Content-trailing</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="bottom" constant="8" symbolic="YES">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" firstAttribute="top" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar" secondAttribute="bottom" constant="8" symbolic="YES">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-top-Archive-Archive-view-Default-contentView-Avatar-bottom</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Avatar" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Author" secondAttribute="trailing">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" secondAttribute="trailing">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Avatar-trailing-Archive-Archive-view-Default-contentView-Author-trailing</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="bottomMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" firstAttribute="leading" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="leadingMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-leading-lessThanOrEqual-Archive-Archive-view-Default-contentView-leadingMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" firstAttribute="top" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="topMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-top-Archive-Archive-view-Default-contentView-topMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="width" multiplier="1:2">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-width-Archive-Archive-view-Default-contentView-width</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="trailingMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" firstAttribute="top" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="topMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-top-Archive-Archive-view-Default-contentView-topMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="bottom">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Time" firstAttribute="top" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" secondAttribute="bottom">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-top-Archive-Archive-view-Default-contentView-Date-bottom</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="trailing">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Time" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" secondAttribute="trailing">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-trailing-Archive-Archive-view-Default-contentView-Date-trailing</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerX" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerX">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-activityIndicatorView-000a" firstAttribute="centerX" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="centerX">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerX-Archive-Archive-view-Default-contentView-centerX</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerY" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerY">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-activityIndicatorView-000a" firstAttribute="centerY" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="centerY">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerY-Archive-Archive-view-Default-contentView-centerY</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="bottomMargin">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-bottom-Archive-Archive-view-Post-contentView-bottomMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" firstAttribute="leading" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="leadingMargin">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-leading-Archive-Archive-view-Post-contentView-leadingMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" firstAttribute="top" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="topMargin">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-top-Archive-Archive-view-Post-contentView-topMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" firstAttribute="width" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002" secondAttribute="width" multiplier="1:2">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-width-Archive-Archive-view-Post-contentView-width</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" secondAttribute="trailing" priority="250">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Date-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                        <constraint firstItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" secondAttribute="trailing" priority="250">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Time-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
                                         </constraint>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="author" destination="Archive-Archive-view-Post-contentView-Author" id="Archive-Archive-view-Post--O-author"/>
-                                    <outlet property="avatar" destination="Archive-Archive-view-Post-contentView-Avatar" id="Archive-Archive-view-Post--O-avatar"/>
-                                    <outlet property="content" destination="Archive-Archive-view-Post-contentView-Content" id="Archive-Archive-view-Post--O-content"/>
-                                    <outlet property="cover" destination="Archive-Archive-view-Post-contentView-Cover" id="Archive-Archive-view-Post--O-cover"/>
-                                    <outlet property="date" destination="Archive-Archive-view-Post-contentView-Date" id="Archive-Archive-view-Post--O-date"/>
-                                    <outlet property="loader" destination="Archive-Archive-view-Post-contentView-activityIndicatorView" id="Archive-Archive-view-Post--O-loader"/>
-                                    <outlet property="time" destination="Archive-Archive-view-Post-contentView-Time" id="Archive-Archive-view-Post--O-time"/>
+                                    <outlet property="author" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Author" id="Archive-Archive-view-Post--O-author"/>
+                                    <outlet property="avatar" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar" id="Archive-Archive-view-Post--O-avatar"/>
+                                    <outlet property="content" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Content" id="Archive-Archive-view-Post--O-content"/>
+                                    <outlet property="cover" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Cover" id="Archive-Archive-view-Post--O-cover"/>
+                                    <outlet property="date" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Date" id="Archive-Archive-view-Post--O-date"/>
+                                    <outlet property="loader" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-activityIndicatorView-000a" id="Archive-Archive-view-Post--O-loader"/>
+                                    <outlet property="time" destination="Archive-Archive-view-Post-tableViewCellContentView-0002-Time" id="Archive-Archive-view-Post--O-time"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -648,18 +650,18 @@
                         <sections>
                             <tableViewSection headerTitle="Avatar" id="Settings-Settings-view-Avatar">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Settings-Settings-view-Avatar-tableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Settings-Settings-view-Avatar-tableViewCell-0001">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Avatar-tableViewCell" id="Settings-Settings-view-Avatar-tableViewCell-contentView">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Avatar-tableViewCell-0001" id="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" userLabel="Avatar">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" userLabel="Avatar">
                                                     <rect key="frame" x="20" y="15" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar--C-width"/>
-                                                        <constraint firstAttribute="width" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" secondAttribute="height" multiplier="1:1">
+                                                        <constraint firstAttribute="width" constant="50" id="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar--C-width"/>
+                                                        <constraint firstAttribute="width" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" secondAttribute="height" multiplier="1:1">
                                                             <string key="id">Settings-Settings-view-Name-tableViewCell-contentView-Avatar--C-width-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-height</string>
                                                         </constraint>
                                                     </constraints>
@@ -670,7 +672,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-contentView-Username" userLabel="Username">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username" userLabel="Username">
                                                     <rect key="frame" x="86" y="30" width="78.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
@@ -678,19 +680,19 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Username" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" secondAttribute="centerY">
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" secondAttribute="centerY">
                                                     <string key="id">Settings-Settings-view-Name-AvatarCell-contentView--C-Settings-Settings-view-Name-AvatarCell-contentView-Username-centerY-Settings-Settings-view-Name-AvatarCell-contentView-Avatar-centerY</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView" secondAttribute="centerY">
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002" secondAttribute="centerY">
                                                     <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-centerY-Settings-Settings-view-Name-tableViewCell-contentView-centerY</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView" secondAttribute="leadingMargin">
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002" secondAttribute="leadingMargin">
                                                     <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-leading-Settings-Settings-view-Name-tableViewCell-contentView-leadingMargin</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Username" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" secondAttribute="trailing" constant="16">
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" secondAttribute="trailing" constant="16">
                                                     <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Username-leading-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-trailing</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-contentView-Username" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Settings-Settings-view-Avatar-tableViewCell-contentView" secondAttribute="trailing">
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002" secondAttribute="trailing">
                                                     <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Username-trailing-lessThanOrEqual-Settings-Settings-view-Name-tableViewCell-contentView-trailing</string>
                                                 </constraint>
                                             </constraints>
@@ -701,34 +703,34 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Bio" id="Settings-Settings-view-Bio">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Settings-Settings-view-Bio-tableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Settings-Settings-view-Bio-tableViewCell-0007">
                                         <rect key="frame" x="0.0" y="191" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Bio-tableViewCell" id="Settings-Settings-view-Bio-tableViewCell-contentView">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Bio-tableViewCell-0007" id="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio-tableViewCell-contentView-textView">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="44"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="Settings-Settings" id="Settings-Settings-view-Bio-tableViewCell-contentView-textView--O-delegate"/>
+                                                        <outlet property="delegate" destination="Settings-Settings" id="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009--O-delegate"/>
                                                     </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-contentView-textView" firstAttribute="leading" secondItem="Settings-Settings-view-Bio-tableViewCell-contentView" secondAttribute="leadingMargin">
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009" firstAttribute="leading" secondItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008" secondAttribute="leadingMargin">
                                                     <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-leading-Settings-Settings-view-Bio-EditableTableViewCell-contentView-leadingMargin</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-contentView-textView" firstAttribute="top" secondItem="Settings-Settings-view-Bio-tableViewCell-contentView" secondAttribute="top">
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009" firstAttribute="top" secondItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008" secondAttribute="top">
                                                     <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-top-Settings-Settings-view-Bio-EditableTableViewCell-contentView-top</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-contentView-textView" firstAttribute="trailing" secondItem="Settings-Settings-view-Bio-tableViewCell-contentView" secondAttribute="trailingMargin">
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009" firstAttribute="trailing" secondItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008" secondAttribute="trailingMargin">
                                                     <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-trailing-Settings-Settings-view-Bio-EditableTableViewCell-contentView-trailingMargin</string>
                                                 </constraint>
-                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-contentView-textView" firstAttribute="bottom" secondItem="Settings-Settings-view-Bio-tableViewCell-contentView" secondAttribute="bottom">
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009" firstAttribute="bottom" secondItem="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008" secondAttribute="bottom">
                                                     <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-bottom-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-bottom</string>
                                                 </constraint>
                                             </constraints>
@@ -737,16 +739,16 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Settings-Settings-view-tableViewSection">
+                            <tableViewSection id="Settings-Settings-view-tableViewSection-000b">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-tableViewSection-tableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d-Logout" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c">
                                         <rect key="frame" x="0.0" y="269.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-tableViewSection-tableViewCell" id="Settings-Settings-view-tableViewSection-tableViewCell-contentView">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c" id="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d-Logout">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -767,12 +769,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Profile" id="Settings-Settings-Profile"/>
                     <connections>
-                        <outlet property="avatar" destination="Settings-Settings-view-Avatar-tableViewCell-contentView-Avatar" id="Settings-Settings--O-avatar"/>
-                        <outlet property="avatarCell" destination="Settings-Settings-view-Avatar-tableViewCell" id="Settings-Settings--O-avatarCell"/>
-                        <outlet property="bio" destination="Settings-Settings-view-Bio-tableViewCell-contentView-textView" id="Settings-Settings--O-bio"/>
+                        <outlet property="avatar" destination="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Avatar" id="Settings-Settings--O-avatar"/>
+                        <outlet property="avatarCell" destination="Settings-Settings-view-Avatar-tableViewCell-0001" id="Settings-Settings--O-avatarCell"/>
+                        <outlet property="bio" destination="Settings-Settings-view-Bio-tableViewCell-0007-tableViewCellContentView-0008-textView-0009" id="Settings-Settings--O-bio"/>
                         <outlet property="imageSelector" destination="Settings-ImageSelector" id="Settings-Settings--O-imageSelector"/>
-                        <outlet property="logoutCell" destination="Settings-Settings-view-tableViewSection-tableViewCell" id="Settings-Settings--O-logoutCell"/>
-                        <outlet property="username" destination="Settings-Settings-view-Avatar-tableViewCell-contentView-Username" id="Settings-Settings--O-username"/>
+                        <outlet property="logoutCell" destination="Settings-Settings-view-tableViewSection-000b-tableViewCell-000c" id="Settings-Settings--O-logoutCell"/>
+                        <outlet property="username" destination="Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username" id="Settings-Settings--O-username"/>
                         <outlet property="viewModel" destination="Settings-SettingsViewModel" id="Settings-Settings--O-viewModel"/>
                     </connections>
                 </tableViewController>

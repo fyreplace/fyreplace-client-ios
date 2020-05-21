@@ -9,16 +9,16 @@
 "Archive-Archive-navigationItem-titleView.segmentTitles[1]" = "Les miens";
 
 /* Class = "UILabel"; text = "Author"; ObjectID = "Archive-Archive-view-Post-contentView-Author"; */
-"Archive-Archive-view-Post-contentView-Author.text" = "";
+"Archive-Archive-view-Post-tableViewCellContentView-0002-Author.text" = "";
 
 /* Class = "UILabel"; text = "Content"; ObjectID = "Archive-Archive-view-Post-contentView-Content"; */
-"Archive-Archive-view-Post-contentView-Content.text" = "";
+"Archive-Archive-view-Post-tableViewCellContentView-0002-Content.text" = "";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "Archive-Archive-view-Post-contentView-Date"; */
-"Archive-Archive-view-Post-contentView-Date.text" = "";
+"Archive-Archive-view-Post-tableViewCellContentView-0002-Date.text" = "";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "Archive-Archive-view-Post-contentView-Time"; */
-"Archive-Archive-view-Post-contentView-Time.text" = "";
+"Archive-Archive-view-Post-tableViewCellContentView-0002-Time.text" = "";
 
 /* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Archive-Navigation-Archive-Navigation-Archive"; */
 "Archive-Navigation-Archive-Navigation-Archive.title" = "Archive";
@@ -63,10 +63,10 @@
 "Settings-Settings-view-Avatar.headerTitle" = "Avatar";
 
 /* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Avatar-tableViewCell-contentView-Username"; */
-"Settings-Settings-view-Avatar-tableViewCell-contentView-Username.text" = "";
+"Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username.text" = "";
 
 /* Class = "UITableViewSection"; headerTitle = "Bio"; ObjectID = "Settings-Settings-view-Bio"; */
 "Settings-Settings-view-Bio.headerTitle" = "Bio";
 
 /* Class = "UILabel"; text = "Logout"; ObjectID = "Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout"; */
-"Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout.text" = "Déconnexion";
+"Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d-Logout.text" = "Déconnexion";
