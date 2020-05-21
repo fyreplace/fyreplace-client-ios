@@ -3,6 +3,7 @@ import LibUtils
 import LibWildFyre
 import RxCocoa
 import RxSwift
+import SafariServices
 import SDWebImage
 import UIKit
 
@@ -64,7 +65,9 @@ public class SettingsViewController: UITableViewController, CentralDataConsumer 
 
 extension SettingsViewController {
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch tableView.cellForRow(at: indexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+
+        switch cell {
         case avatarCell:
             imageSelector.selectImage()
 
@@ -72,7 +75,13 @@ extension SettingsViewController {
             viewModel.logout()
 
         default:
-            return
+            if let cell = cell as? LinkCell {
+                let safari = SFSafariViewController(url: URL(string: cell.link)!)
+                safari.preferredControlTintColor = .systemOrange
+                safari.delegate = self
+                present(safari, animated: true)
+                return
+            }
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
@@ -115,5 +124,11 @@ extension SettingsViewController: UITextViewDelegate {
     private func didClickDone() {
         centralViewModel.updateBio(text: bio.text)
         bio.endEditing(false)
+    }
+}
+
+extension SettingsViewController: SFSafariViewControllerDelegate {
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
