@@ -53,20 +53,20 @@
 /* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "Notifications-Navigation-Notifications-Navigation-Notifications"; */
 "Notifications-Navigation-Notifications-Navigation-Notifications.title" = "Notifications";
 
-/* Class = "UINavigationItem"; title = "Bio"; ObjectID = "Profile-Bio-Profile-Bio-Bio"; */
-"Profile-Bio-Profile-Bio-Bio.title" = "Bio";
-
 /* Class = "UITabBarItem"; title = "Profile"; ObjectID = "Settings-Navigation-Settings-Navigation-Profile"; */
 "Settings-Navigation-Settings-Navigation-Profile.title" = "Profil";
 
 /* Class = "UINavigationItem"; title = "Profile"; ObjectID = "Settings-Settings-Profile"; */
 "Settings-Settings-Profile.title" = "Profil";
 
-/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "Settings-Settings-Profile-Logout"; */
-"Settings-Settings-Profile-Logout.title" = "Déconnexion";
+/* Class = "UITableViewSection"; headerTitle = "Avatar"; ObjectID = "Settings-Settings-view-Avatar"; */
+"Settings-Settings-view-Avatar.headerTitle" = "Avatar";
 
-/* Class = "UIButton"; normalTitle = "Change avatar"; ObjectID = "Settings-Settings-view-Change-avatar"; */
-"Settings-Settings-view-Change-avatar.normalTitle" = "Changer d'avatar";
+/* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Avatar-tableViewCell-contentView-Username"; */
+"Settings-Settings-view-Avatar-tableViewCell-contentView-Username.text" = "";
 
-/* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Username"; */
-"Settings-Settings-view-Username.text" = "";
+/* Class = "UITableViewSection"; headerTitle = "Bio"; ObjectID = "Settings-Settings-view-Bio"; */
+"Settings-Settings-view-Bio.headerTitle" = "Bio";
+
+/* Class = "UILabel"; text = "Logout"; ObjectID = "Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout"; */
+"Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout.text" = "Déconnexion";

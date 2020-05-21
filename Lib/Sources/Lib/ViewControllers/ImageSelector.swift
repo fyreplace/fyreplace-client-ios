@@ -88,13 +88,13 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
 }
 
 public protocol ImageSelectorDelegate: AnyObject {
-    var maxImageSize: Float { get }
+    static var maxImageSize: Float { get }
 
     func imageSelector(_ imageSelector: ImageSelector, didSelectImage image: ImageData)
 }
 
 private extension ImageSelectorDelegate {
-    var maxImageBytes: Int { Int(maxImageSize * 1024 * 1024) }
+    var maxImageBytes: Int { Int(Self.maxImageSize * 1024 * 1024) }
 }
 
 private extension UIImage {

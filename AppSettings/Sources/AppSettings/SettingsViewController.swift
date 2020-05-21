@@ -6,9 +6,9 @@ import RxSwift
 import SDWebImage
 import UIKit
 
-public class SettingsViewController: UIViewController, CentralDataProvider {
+public class SettingsViewController: UITableViewController, CentralDataConsumer {
     public var centralViewModel: CentralViewModel!
-    public let maxImageSize: Float = 0.5
+    private var currentBio = ""
     private var disposer = DisposeBag()
 
     @IBOutlet
@@ -21,6 +21,11 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
     private var username: UILabel!
     @IBOutlet
     private var bio: UITextView!
+
+    @IBOutlet
+    private var avatarCell: UITableViewCell!
+    @IBOutlet
+    private var logoutCell: UITableViewCell!
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +43,16 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
 
         centralViewModel.bio
             .purify(with: self)
-            .bind(to: bio.rx.text)
+            .subscribe(onNext: { bio in
+                self.currentBio = bio ?? ""
+                self.bio.text = bio
+                self.tableView.reloadData()
+            })
             .disposed(by: disposer)
 
         centralViewModel.avatar
             .purify(with: self)
-            .subscribe(onNext: { avatar in
-                guard self.avatar.sd_imageURL?.absoluteString != avatar else { return }
-
-                if let avatar = avatar {
-                    self.avatar.sd_setImage(with: URL(string: avatar))
-                } else {
-                    self.avatar.image = #imageLiteral(resourceName: "Avatar")
-                }
-            })
+            .subscribe(onNext: { self.avatar.setAvatar($0) })
             .disposed(by: disposer)
     }
 
@@ -59,25 +60,60 @@ public class SettingsViewController: UIViewController, CentralDataProvider {
         super.viewWillDisappear(animated)
         disposer = DisposeBag()
     }
+}
 
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        injectData(into: segue.destination)
-    }
+extension SettingsViewController {
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch tableView.cellForRow(at: indexPath) {
+        case avatarCell:
+            imageSelector.selectImage()
 
-    @IBAction
-    private func didClickLogout() {
-        viewModel.logout()
-    }
+        case logoutCell:
+            viewModel.logout()
 
-    @IBAction
-    private func didClickPicture() {
-        imageSelector.selectImage()
+        default:
+            return
+        }
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension SettingsViewController: ImageSelectorDelegate {
+    public static let maxImageSize: Float = 0.5
+
     public func imageSelector(_ imageSelector: ImageSelector, didSelectImage image: ImageData) {
         centralViewModel.updateAvatar(image: image)
+    }
+}
+
+extension SettingsViewController: UITextViewDelegate {
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        navigationItem.setLeftBarButton(UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didClickCancel)), animated: true)
+        navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didClickDone)), animated: true)
+        navigationItem.rightBarButtonItem?.style = .done
+    }
+
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        navigationItem.setLeftBarButton(nil, animated: true)
+        navigationItem.setRightBarButton(nil, animated: true)
+    }
+
+    public func textViewDidChange(_ textView: UITextView) {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+        textView.becomeFirstResponder()
+    }
+
+    @objc
+    private func didClickCancel() {
+        bio.text = currentBio
+        bio.endEditing(false)
+    }
+
+    @objc
+    private func didClickDone() {
+        centralViewModel.updateBio(text: bio.text)
+        bio.endEditing(false)
     }
 }
