@@ -99,8 +99,8 @@ extension AreaSelector: UIPickerViewDataSource {
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         let count = areas.count
 
-        if count > 0 {
-            viewModel.setCurrentArea(name: areas[0].name, force: false)
+        if count > 0 && !areas.contains(where: { $0.name == viewModel.currentAreaName }) {
+            viewModel.currentAreaName = areas[0].name
         }
 
         return count
@@ -113,7 +113,7 @@ extension AreaSelector: UIPickerViewDelegate {
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        viewModel.setCurrentArea(name: areas[row].name)
+        viewModel.currentAreaName = areas[row].name
     }
 }
 
