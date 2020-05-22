@@ -38,12 +38,12 @@ public class SettingsViewController: UITableViewController, CentralDataConsumer 
         super.viewWillAppear(animated)
 
         centralViewModel.username
-            .purify(with: self)
+            .fail(with: self)
             .bind(to: username.rx.text)
             .disposed(by: disposer)
 
         centralViewModel.bio
-            .purify(with: self)
+            .fail(with: self)
             .subscribe(onNext: { bio in
                 self.currentBio = bio ?? ""
                 self.bio.text = bio
@@ -52,7 +52,7 @@ public class SettingsViewController: UITableViewController, CentralDataConsumer 
             .disposed(by: disposer)
 
         centralViewModel.avatar
-            .purify(with: self)
+            .fail(with: self)
             .subscribe(onNext: { self.avatar.setAvatar($0) })
             .disposed(by: disposer)
     }

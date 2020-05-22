@@ -53,7 +53,7 @@ public class AreaSelector: NSObject {
 
         viewModel.areas
             .retry(.exponentialDelayed(maxCount: .max, initial: 5, multiplier: 0.5))
-            .purify(with: delegate)
+            .fail(with: delegate)
             .subscribe(onNext: { areas in
                 self.areas = areas
 

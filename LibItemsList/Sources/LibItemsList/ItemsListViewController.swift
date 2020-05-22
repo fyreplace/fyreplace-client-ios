@@ -22,7 +22,7 @@ open class ItemsListViewController: UITableViewController {
         refreshControl?.addTarget(self, action: #selector(onDidRefresh), for: .valueChanged)
 
         itemsListViewModel.count
-            .purify(with: self)
+            .fail(with: self)
             .subscribe(onNext: { self.count = $0 })
             .disposed(by: disposer)
 
@@ -50,7 +50,7 @@ open class ItemsListViewController: UITableViewController {
 
         let disposer = CompositeDisposable()
         itemsListViewModel.start()?
-            .purify(with: self)
+            .fail(with: self)
             .subscribe(onNext: {
                 self.updateBackground(allowMessage: true)
                 self.refreshControl?.endRefreshing()
