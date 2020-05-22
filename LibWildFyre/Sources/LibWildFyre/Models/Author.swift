@@ -1,9 +1,10 @@
+import Foundation
 import Moya
 
 public struct Author: Decodable {
     public let user: UInt64
     public let name: String
-    public let avatar: String?
+    public let avatar: URL?
     public let bio: String?
     public let banned: Bool
 

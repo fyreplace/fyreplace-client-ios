@@ -48,7 +48,7 @@ public class PostCell: ItemCell<Post, PostCell>, ItemCellDelegate {
         loader.stopAnimating()
 
         if let image = item.image {
-            cover.sd_setImage(with: URL(string: image)!)
+            cover.sd_setImage(with: image)
         } else {
             content.text = item.text
         }
@@ -58,7 +58,7 @@ public class PostCell: ItemCell<Post, PostCell>, ItemCellDelegate {
         author.text = item.author?.name
 
         if let image = item.author?.avatar {
-            avatar.sd_setImage(with: URL(string: image)!)
+            avatar.sd_setImage(with: image)
         } else {
             avatar.image = item.author != nil ? #imageLiteral(resourceName: "Avatar") : nil
         }

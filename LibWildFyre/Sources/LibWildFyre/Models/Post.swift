@@ -9,7 +9,7 @@ public struct Post: Decodable {
     public let subscribed: Bool
     public let created: Date
     public let active: Bool
-    public let image: String?
+    public let image: URL?
     public let additionalImages: [Image]
     public let comments: [Comment]
 }

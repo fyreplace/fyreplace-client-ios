@@ -3,7 +3,7 @@ import Moya
 
 public struct Image: Decodable {
     public let num: Int
-    public let image: String
+    public let image: URL
     public let comment: String?
 }
 

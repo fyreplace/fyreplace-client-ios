@@ -3,10 +3,10 @@ import SDWebImage
 import UIKit
 
 public extension UIImageView {
-    func setAvatar(_ avatar: String?) {
+    func setAvatar(_ avatar: URL?) {
         if let avatar = avatar {
-            if avatar != sd_imageURL?.absoluteString {
-                sd_setImage(with: URL(string: avatar))
+            if avatar != sd_imageURL {
+                sd_setImage(with: avatar)
             }
         } else {
             image = #imageLiteral(resourceName: "Avatar")
