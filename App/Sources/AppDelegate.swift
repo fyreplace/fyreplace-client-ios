@@ -1,3 +1,5 @@
+import SDWebImage
+import SDWebImageWebPCoder
 import UIKit
 
 @UIApplicationMain
@@ -7,6 +9,7 @@ class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
         window?.tintColor = .systemOrange
         return true
     }
