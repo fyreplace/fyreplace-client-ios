@@ -34,7 +34,7 @@ Mapping = Dict[Text, Tuple[Id, bool]]
 
 sanitizer = re.compile("[^A-Za-z0-9-]")
 last_comment: Optional[Text] = None
-id_counter: Optional[int] = None
+id_counters: List[int] = []
 
 
 def process(storyboard: Text):
@@ -70,7 +70,7 @@ def process(storyboard: Text):
 
 def walk(node: etree.Element, mapping: Mapping, prefix: Id):
     global last_comment
-    global id_counter
+    global id_counters
 
     if node.tag == etree.Comment:
         last_comment = node.text
@@ -84,23 +84,16 @@ def walk(node: etree.Element, mapping: Mapping, prefix: Id):
         mapping[node.attrib["id"]] = (identifier, keep)
         prefix = identifier
 
-        if id_counter is not None:
-            id_counter += 1
-
-    node_has_cells = node.tag in ["tableView", "collectionView"]
-
-    if node_has_cells:
-        id_counter = 0
+    id_counters.append(0)
 
     for child in node:
         walk(child, mapping, prefix)
 
-    if node_has_cells:
-        id_counter = None
+    id_counters.pop()
 
 
 def get_id(node: etree.Element) -> Tuple[Id, bool]:
-    global id_counter
+    global id_counters
 
     if node.tag == "constraint":
         return (
@@ -165,8 +158,9 @@ def get_id(node: etree.Element) -> Tuple[Id, bool]:
     elif node.tag == "barButtonItem" and label is None:
         label = node.attrib.get("systemItem")
 
-    if label is None and id_counter is not None:
-        label = node.tag + "-{:04x}".format(id_counter)
+    if label is None and node.tag.endswith("Cell") and len(id_counters) > 0:
+        label = node.tag + "-{:02x}".format(id_counters[-1])
+        id_counters[-1] += 1
 
     label = label or try_attributes([
         "customClass",
