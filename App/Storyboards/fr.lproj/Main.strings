@@ -8,16 +8,16 @@
 /* Class = "UISegmentedControl"; Archive-Archive-navigationItem-titleView.segmentTitles[1] = "Mine"; ObjectID = "Archive-Archive-navigationItem-titleView"; */
 "Archive-Archive-navigationItem-titleView.segmentTitles[1]" = "Les miens";
 
-/* Class = "UILabel"; text = "Author"; ObjectID = "Archive-Archive-view-Post-contentView-Author"; */
+/* Class = "UILabel"; text = "Author"; ObjectID = "Archive-Archive-view-Post-tableViewCellContentView-0002-Author"; */
 "Archive-Archive-view-Post-tableViewCellContentView-0002-Author.text" = "";
 
-/* Class = "UILabel"; text = "Content"; ObjectID = "Archive-Archive-view-Post-contentView-Content"; */
+/* Class = "UILabel"; text = "Content"; ObjectID = "Archive-Archive-view-Post-tableViewCellContentView-0002-Content"; */
 "Archive-Archive-view-Post-tableViewCellContentView-0002-Content.text" = "";
 
-/* Class = "UILabel"; text = "Date"; ObjectID = "Archive-Archive-view-Post-contentView-Date"; */
+/* Class = "UILabel"; text = "Date"; ObjectID = "Archive-Archive-view-Post-tableViewCellContentView-0002-Date"; */
 "Archive-Archive-view-Post-tableViewCellContentView-0002-Date.text" = "";
 
-/* Class = "UILabel"; text = "Time"; ObjectID = "Archive-Archive-view-Post-contentView-Time"; */
+/* Class = "UILabel"; text = "Time"; ObjectID = "Archive-Archive-view-Post-tableViewCellContentView-0002-Time"; */
 "Archive-Archive-view-Post-tableViewCellContentView-0002-Time.text" = "";
 
 /* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Archive-Navigation-Archive-Navigation-Archive"; */
@@ -62,11 +62,38 @@
 /* Class = "UITableViewSection"; headerTitle = "Avatar"; ObjectID = "Settings-Settings-view-Avatar"; */
 "Settings-Settings-view-Avatar.headerTitle" = "Avatar";
 
-/* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Avatar-tableViewCell-contentView-Username"; */
+/* Class = "UILabel"; text = "Username"; ObjectID = "Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username"; */
 "Settings-Settings-view-Avatar-tableViewCell-0001-tableViewCellContentView-0002-Username.text" = "";
 
 /* Class = "UITableViewSection"; headerTitle = "Bio"; ObjectID = "Settings-Settings-view-Bio"; */
 "Settings-Settings-view-Bio.headerTitle" = "Bio";
 
-/* Class = "UILabel"; text = "Logout"; ObjectID = "Settings-Settings-view-tableViewSection-tableViewCell-contentView-Logout"; */
+/* Class = "UITableViewSection"; headerTitle = "Fyreplace"; ObjectID = "Settings-Settings-view-Fyreplace"; */
+"Settings-Settings-view-Fyreplace.headerTitle" = "Fyreplace";
+
+/* Class = "UILabel"; text = "Website"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-0010-tableViewCellContentView-0011-Website"; */
+"Settings-Settings-view-Fyreplace-tableViewCell-0010-tableViewCellContentView-0011-Website.text" = "Site web";
+
+/* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-0013-tableViewCellContentView-0014-Open-source"; */
+"Settings-Settings-view-Fyreplace-tableViewCell-0013-tableViewCellContentView-0014-Open-source.text" = "Open source";
+
+/* Class = "UITableViewSection"; headerTitle = "WildFyre"; ObjectID = "Settings-Settings-view-WildFyre"; */
+"Settings-Settings-view-WildFyre.headerTitle" = "WildFyre";
+
+/* Class = "UILabel"; text = "Website"; ObjectID = "Settings-Settings-view-WildFyre-tableViewCell-0017-tableViewCellContentView-0018-Website"; */
+"Settings-Settings-view-WildFyre-tableViewCell-0017-tableViewCellContentView-0018-Website.text" = "Site web";
+
+/* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-WildFyre-tableViewCell-001a-tableViewCellContentView-001b-Open-source"; */
+"Settings-Settings-view-WildFyre-tableViewCell-001a-tableViewCellContentView-001b-Open-source.text" = "Open source";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "Settings-Settings-view-WildFyre-tableViewCell-001d-tableViewCellContentView-001e-FAQ"; */
+"Settings-Settings-view-WildFyre-tableViewCell-001d-tableViewCellContentView-001e-FAQ.text" = "FAQ";
+
+/* Class = "UILabel"; text = "Terms and conditions"; ObjectID = "Settings-Settings-view-WildFyre-tableViewCell-0020-tableViewCellContentView-0021-Terms-and-conditions"; */
+"Settings-Settings-view-WildFyre-tableViewCell-0020-tableViewCellContentView-0021-Terms-and-conditions.text" = "Conditions d'utilisation";
+
+/* Class = "UILabel"; text = "Privacy policy"; ObjectID = "Settings-Settings-view-WildFyre-tableViewCell-0023-tableViewCellContentView-0024-Privacy-policy"; */
+"Settings-Settings-view-WildFyre-tableViewCell-0023-tableViewCellContentView-0024-Privacy-policy.text" = "Politique de confidentialité";
+
+/* Class = "UILabel"; text = "Logout"; ObjectID = "Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d-Logout"; */
 "Settings-Settings-view-tableViewSection-000b-tableViewCell-000c-tableViewCellContentView-000d-Logout.text" = "Déconnexion";
