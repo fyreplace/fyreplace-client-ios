@@ -1,3 +1,4 @@
+import Foundation
 import RxSwift
 import RxSwiftExt
 
@@ -8,7 +9,7 @@ public extension ObservableType {
             case let .next(element):
                 return .map(element)
             case let .error(error):
-                handler?.failure(error)
+                DispatchQueue.main.async { handler?.failure(error) }
                 return .ignore
             case .completed:
                 return .ignore
