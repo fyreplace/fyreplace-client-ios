@@ -1,4 +1,3 @@
 import UIKit
 
-public class NotificationsViewController: UIViewController {
-}
+public class NotificationsViewController: UIViewController {}

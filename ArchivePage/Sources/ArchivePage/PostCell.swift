@@ -52,8 +52,8 @@ public class PostCell: ItemCell<Post, PostCell>, ItemCellDelegate {
             content.text = item.text
         }
 
-        date.text = self.dateFormatter.string(from: item.created)
-        time.text = self.timeFormatter.string(from: item.created)
+        date.text = dateFormatter.string(from: item.created)
+        time.text = timeFormatter.string(from: item.created)
         author.text = item.author?.name
 
         if let image = item.author?.avatar {

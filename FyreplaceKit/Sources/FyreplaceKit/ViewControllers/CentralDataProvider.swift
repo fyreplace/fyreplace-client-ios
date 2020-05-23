@@ -1,7 +1,6 @@
 import UIKit
 
-public protocol CentralDataProvider: CentralDataConsumer {
-}
+public protocol CentralDataProvider: CentralDataConsumer {}
 
 public extension CentralDataProvider {
     func injectData(into viewController: UIViewController?) {

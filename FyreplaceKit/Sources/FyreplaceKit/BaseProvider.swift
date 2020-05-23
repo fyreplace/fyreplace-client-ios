@@ -10,7 +10,7 @@ public class BaseProvider<T: TargetType>: MoyaProvider<T> {
     public init() {
         decoder.dateDecodingStrategy = .formatted(ProperDateFormatter())
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let tokenPlugin = AccessTokenPlugin { _ in (String(data: Keychain.authToken.get() ?? Data(), encoding: .utf8) ?? "" ) }
+        let tokenPlugin = AccessTokenPlugin { _ in String(data: Keychain.authToken.get() ?? Data(), encoding: .utf8) ?? "" }
         super.init(plugins: [tokenPlugin])
     }
 

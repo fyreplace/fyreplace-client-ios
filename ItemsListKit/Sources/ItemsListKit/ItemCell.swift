@@ -20,8 +20,7 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
         timeFormatter.locale = Locale.current
     }
 
-    open func failure(_ error: Error) {
-    }
+    open func failure(_ error: Error) {}
 
     public final func willAppear(with item: Observable<Item>?) {
         delegate?.reset()

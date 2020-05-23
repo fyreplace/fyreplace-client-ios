@@ -9,7 +9,7 @@ public class AuthRepository: NSObject {
         let disposer = CompositeDisposable()
         provider
             .rawReq(.login(auth: auth), as: AuthToken.self)
-            .subscribe { (event) in
+            .subscribe { event in
                 var success = true
 
                 switch event {
