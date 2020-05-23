@@ -5,6 +5,7 @@ import RxCocoa
 import UIKit
 
 public class AreaSelector: NSObject {
+    private var container: UIView?
     private var blur = UIVisualEffectView()
     private var picker = UIPickerView()
     private var pickerBottom: NSLayoutConstraint?
@@ -27,11 +28,12 @@ public class AreaSelector: NSObject {
     }
 
     public func createAreaPicker(inside view: UIView) {
-        view.addSubview(blur)
-        view.addSubview(picker)
-
+        container = view
         blur.effect = nil
         blur.isUserInteractionEnabled = false
+
+        view.addSubview(blur)
+        view.addSubview(picker)
 
         NSLayoutConstraint.activate([
             blur.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -80,6 +82,7 @@ public class AreaSelector: NSObject {
         let alpha: CGFloat = pickerVisible ? 0 : 1
         let blurEffect = pickerVisible ? nil : UIBlurEffect(style: .regular)
 
+        container?.isUserInteractionEnabled = pickerVisible
         blur.isUserInteractionEnabled = !pickerVisible
         pickerBottom?.isActive = pickerVisible
         pickerTop?.isActive = !pickerVisible
