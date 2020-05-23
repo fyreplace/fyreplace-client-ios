@@ -1,6 +1,7 @@
-import UIKit
+import Foundation
+import LibUtils
 
-public class LinkCell: UITableViewCell {
+public class LinkCell: ImageIconCell {
     @objc
     public var link = ""
 }

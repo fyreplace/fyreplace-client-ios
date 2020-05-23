@@ -761,7 +761,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Fyreplace" id="Settings-Settings-view-Fyreplace">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Website" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-00" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Website" imageView="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Icon-Fyreplace" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-00" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="368.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Fyreplace-tableViewCell-00" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView">
@@ -769,12 +769,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Website">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Fyreplace" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Icon-Fyreplace">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -782,7 +786,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="http://fyreplace.app"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-01" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-01" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="412" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Fyreplace-tableViewCell-01" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView">
@@ -790,12 +794,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Open source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Code" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Icon-Code">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -807,7 +815,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="WildFyre" id="Settings-Settings-view-WildFyre">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-00" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website" imageView="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Icon-WildFyre" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-00" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="511" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-00" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView">
@@ -815,12 +823,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.WildFyre" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Icon-WildFyre">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -828,7 +840,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-01" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-01" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="554.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-01" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView">
@@ -836,12 +848,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Open source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Code" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Icon-Code">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -849,7 +865,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://phabricator.wildfyre.net"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-02" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ" imageView="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-Icon-Question" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-02" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="598" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-02" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView">
@@ -857,12 +873,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Question" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-Icon-Question">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -870,7 +890,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net#home-faq"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-03" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions" imageView="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Icon-Document" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-03" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="641.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-03" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView">
@@ -878,12 +898,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Document" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Icon-Document">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -891,7 +915,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net/pages/terms-of-service"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-04" customClass="LinkCell" customModule="AppSettings">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy" imageView="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Icon-Privacy" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-04" customClass="LinkCell" customModule="AppSettings">
                                         <rect key="frame" x="0.0" y="685" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-04" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView">
@@ -899,12 +923,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Privacy" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Icon-Privacy">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -952,6 +980,12 @@
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Fyreplace" width="256" height="256"/>
+        <image name="Icon.Code" width="29" height="29"/>
+        <image name="Icon.Document" width="29" height="29"/>
+        <image name="Icon.Fyreplace" width="29" height="29"/>
+        <image name="Icon.Privacy" width="29" height="29"/>
+        <image name="Icon.Question" width="29" height="29"/>
+        <image name="Icon.WildFyre" width="29" height="29"/>
         <image name="archivebox.fill" catalog="system" width="128" height="106"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
