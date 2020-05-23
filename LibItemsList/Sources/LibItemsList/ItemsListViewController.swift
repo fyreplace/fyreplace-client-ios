@@ -40,7 +40,7 @@ open class ItemsListViewController: UITableViewController {
 
     open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        itemsListViewModel.clear()
+        itemsListViewModel?.clear()
     }
 
     public func refresh() {
