@@ -30,7 +30,6 @@ public class SettingsViewController: UITableViewController, CentralDataConsumer 
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        imageSelector.delegate = self
         avatar.sd_imageTransition = .fade
     }
 

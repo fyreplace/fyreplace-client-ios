@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Comment: Decodable {
+public class Comment: NSObject, Decodable {
     public let id: UInt64
     public let author: Author?
     public let created: Date
@@ -9,7 +9,7 @@ public struct Comment: Decodable {
     public let image: String?
 }
 
-public struct CommentText: Encodable {
+public class CommentText: NSObject, Encodable {
     public let text: String
 
     public init(text: String) {

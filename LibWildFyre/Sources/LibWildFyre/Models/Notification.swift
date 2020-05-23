@@ -1,12 +1,13 @@
+import Foundation
 import Moya
 
-public struct Notification: Decodable {
+public class Notification: NSObject, Decodable {
     public let area: String
     public let post: NotificationPost
     public let comments: [UInt64]
 }
 
-public struct NotificationPost: Decodable {
+public class NotificationPost: NSObject, Decodable {
     public let id: UInt64
     public let author: Author?
     public let text: String

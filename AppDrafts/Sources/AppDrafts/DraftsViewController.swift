@@ -5,11 +5,6 @@ public class DraftsViewController: UIViewController, AreaSelectorDelegate {
     @IBOutlet
     private var areaSelector: AreaSelector!
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        areaSelector.delegate = self
-    }
-
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         areaSelector.createAreaPicker(inside: view)

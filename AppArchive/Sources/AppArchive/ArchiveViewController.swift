@@ -18,7 +18,6 @@ public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegat
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        areaSelector.delegate = self
         itemsListViewModel = viewModel
     }
 

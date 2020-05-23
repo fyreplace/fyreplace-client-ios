@@ -7,11 +7,6 @@ public class HomeViewController: UIViewController, AreaSelectorDelegate, Central
 
     public var centralViewModel: CentralViewModel!
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        areaSelector.delegate = self
-    }
-
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

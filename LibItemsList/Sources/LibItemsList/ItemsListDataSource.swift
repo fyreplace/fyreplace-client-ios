@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-public protocol ItemsListDataSource: NSObjectProtocol {
+public protocol ItemsListDataSource {
     func fetch(from position: Int, size: Int) -> Observable<ItemBucket>
 }
 

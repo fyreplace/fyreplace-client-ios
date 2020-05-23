@@ -1,11 +1,12 @@
+import Foundation
 import Moya
 
-public struct Account: Decodable {
+public class Account: NSObject, Decodable {
     public let id: UInt64
     public let username: String
     public let email: String?
 
-    public struct Patch: Encodable {
+    public class Patch: NSObject, Encodable {
         public let email: String?
         public let password: String?
 

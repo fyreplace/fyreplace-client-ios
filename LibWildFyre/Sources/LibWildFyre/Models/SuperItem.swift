@@ -1,4 +1,6 @@
-public struct SuperItem<I: Decodable>: Decodable {
+import Foundation
+
+public class SuperItem<I: Decodable>: NSObject, Decodable {
     public let count: Int
     public let next: String?
     public let previous: String?

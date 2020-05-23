@@ -5,7 +5,6 @@ import RxCocoa
 import UIKit
 
 public class AreaSelector: NSObject {
-    public weak var delegate: AreaSelectorDelegate?
     private var blur = UIVisualEffectView()
     private var picker = UIPickerView()
     private var pickerBottom: NSLayoutConstraint?
@@ -13,6 +12,8 @@ public class AreaSelector: NSObject {
     private var areas: [Area] = [] { didSet { picker.reloadAllComponents() } }
     private var disposer = DisposeBag()
 
+    @IBOutlet
+    public weak var delegate: AreaSelectorDelegate?
     @IBOutlet
     private var viewModel: AreaSelectorViewModel!
 
@@ -117,6 +118,6 @@ extension AreaSelector: UIPickerViewDelegate {
     }
 }
 
-// swiftlint:disable:next class_delegate_protocol
+@objc
 public protocol AreaSelectorDelegate: FailureHandler {
 }

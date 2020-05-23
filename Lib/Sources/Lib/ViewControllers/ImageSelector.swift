@@ -7,6 +7,7 @@ public typealias ImageSelectorController = UIViewController & ImageSelectorDeleg
 public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     fileprivate static let maxImageArea = 1920 * 1080
 
+    @IBOutlet
     public weak var delegate: ImageSelectorController?
 
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -87,7 +88,8 @@ public class ImageSelector: NSObject, UINavigationControllerDelegate, UIImagePic
     }
 }
 
-public protocol ImageSelectorDelegate: AnyObject {
+@objc
+public protocol ImageSelectorDelegate {
     static var maxImageSize: Float { get }
 
     func imageSelector(_ imageSelector: ImageSelector, didSelectImage image: ImageData)

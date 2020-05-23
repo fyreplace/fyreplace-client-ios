@@ -1,6 +1,7 @@
+import Foundation
 import Moya
 
-public struct PasswordRecoveryStep1: Encodable {
+public class PasswordRecoveryStep1: NSObject, Encodable {
     public let username: String
     public let email: String
     public let captcha: String
@@ -12,7 +13,7 @@ public struct PasswordRecoveryStep1: Encodable {
     }
 }
 
-public struct PasswordRecoveryStep2: Encodable {
+public class PasswordRecoveryStep2: NSObject, Encodable {
     public let newPassword: String
     public let token: String
     public let transaction: String
@@ -26,13 +27,13 @@ public struct PasswordRecoveryStep2: Encodable {
     }
 }
 
-public struct RecoverTransaction: Decodable {
+public class RecoverTransaction: NSObject, Decodable {
     public let transaction: String
 }
 
-public struct Reset: Decodable {}
+public class Reset: NSObject, Decodable {}
 
-public struct UsernameRecovery: Encodable {
+public class UsernameRecovery: NSObject, Encodable {
     public let email: String
     public let captcha: String
 

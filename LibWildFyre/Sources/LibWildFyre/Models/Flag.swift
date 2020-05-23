@@ -1,6 +1,7 @@
+import Foundation
 import Moya
 
-public struct Flag: Encodable {
+public class Flag: NSObject, Encodable {
     public let reason: String
     public let comment: String?
 
@@ -10,7 +11,7 @@ public struct Flag: Encodable {
     }
 }
 
-public struct Choice: Decodable {
+public class Choice: NSObject, Decodable {
     public let key: UInt64
     public let value: String
 }

@@ -1,6 +1,7 @@
+import Foundation
 import Moya
 
-public struct Auth: Encodable {
+public class Auth: NSObject, Encodable {
     public let username: String
     public let password: String
 
@@ -10,11 +11,11 @@ public struct Auth: Encodable {
     }
 }
 
-public struct AuthToken: Decodable {
+public class AuthToken: NSObject, Decodable {
     public let token: String
 }
 
-public struct Registration: Encodable {
+public class Registration: NSObject, Encodable {
     public let username: String
     public let email: String
     public let password: String
@@ -28,7 +29,7 @@ public struct Registration: Encodable {
     }
 }
 
-public struct RegistrationResult: Decodable {}
+public class RegistrationResult: NSObject, Decodable {}
 
 public enum AuthTarget {
     case login(auth: Auth)

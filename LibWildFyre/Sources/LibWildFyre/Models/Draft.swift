@@ -1,6 +1,7 @@
+import Foundation
 import Moya
 
-public struct Draft: Encodable {
+public class Draft: NSObject, Encodable {
     public let text: String
     public let anonym: Bool
 
@@ -10,7 +11,7 @@ public struct Draft: Encodable {
     }
 }
 
-public struct DraftText: Encodable {
+public class DraftText: NSObject, Encodable {
     public let text: String
     public let image: ImageData? = nil
 

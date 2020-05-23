@@ -283,6 +283,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Home-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="Home-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
+                        <outlet property="delegate" destination="Home-Home" id="Home-AreaSelector--O-delegate"/>
                         <outlet property="viewModel" destination="Home-AreaSelectorViewModel" id="Home-AreaSelector--O-viewModel"/>
                     </connections>
                 </customObject>
@@ -543,6 +544,7 @@
                 </customObject>
                 <customObject id="Archive-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
+                        <outlet property="delegate" destination="Archive-Archive" id="Archive-AreaSelector--O-delegate"/>
                         <outlet property="viewModel" destination="Archive-AreaSelectorViewModel" id="Archive-AreaSelector--O-viewModel"/>
                     </connections>
                 </customObject>
@@ -603,6 +605,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="Drafts-AreaSelector" customClass="AreaSelector" customModule="Lib">
                     <connections>
+                        <outlet property="delegate" destination="Drafts-Drafts" id="Drafts-AreaSelector--O-delegate"/>
                         <outlet property="viewModel" destination="Drafts-AreaSelectorViewModel" id="Drafts-AreaSelector--O-viewModel"/>
                     </connections>
                 </customObject>
@@ -931,7 +934,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <barButtonItem systemItem="cancel" id="Settings-cancel"/>
                 <barButtonItem style="done" systemItem="done" id="Settings-done"/>
-                <customObject id="Settings-ImageSelector" customClass="ImageSelector" customModule="Lib"/>
+                <customObject id="Settings-ImageSelector" customClass="ImageSelector" customModule="Lib">
+                    <connections>
+                        <outlet property="delegate" destination="Settings-Settings" id="Settings-ImageSelector--O-delegate"/>
+                    </connections>
+                </customObject>
                 <customObject id="Settings-SettingsViewModel" customClass="SettingsViewModel" customModule="AppSettings">
                     <connections>
                         <outlet property="authRepo" destination="Settings-AuthRepository" id="Settings-SettingsViewModel--O-authRepo"/>

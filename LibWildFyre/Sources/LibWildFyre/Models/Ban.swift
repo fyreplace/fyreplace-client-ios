@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Ban: Decodable {
+public class Ban: NSObject, Decodable {
     public let timestamp: Date
     public let reason: UInt64
     public let comment: String?

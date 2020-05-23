@@ -1,11 +1,12 @@
+import Foundation
 import Moya
 
-public struct Area: Decodable {
+public class Area: NSObject, Decodable {
     public let name: String
     public let displayname: String
 }
 
-public struct Reputation: Decodable {
+public class Reputation: NSObject, Decodable {
     public let reputation: Int
     public let spread: Int
 }

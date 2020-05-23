@@ -1,7 +1,8 @@
 import LibWildFyre
 import UIKit
 
-public protocol FailureHandler: AnyObject {
+@objc
+public protocol FailureHandler {
     func failure(_ error: Error)
 }
 

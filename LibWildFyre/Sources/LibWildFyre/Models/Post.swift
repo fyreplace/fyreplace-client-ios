@@ -1,7 +1,7 @@
 import Foundation
 import Moya
 
-public struct Post: Decodable {
+public class Post: NSObject, Decodable {
     public let id: String
     public let author: Author?
     public let text: String
@@ -14,7 +14,7 @@ public struct Post: Decodable {
     public let comments: [Comment]
 }
 
-public struct Spread: Encodable {
+public class Spread: NSObject, Encodable {
     public let spread: Bool
 
     public init(spread: Bool) {
@@ -22,7 +22,7 @@ public struct Spread: Encodable {
     }
 }
 
-public struct Subscription: Codable {
+public class Subscription: NSObject, Codable {
     public let subscribed: Bool
 
     public init(subscribed: Bool) {
