@@ -1,0 +1,3 @@
+# DraftsPage
+
+The drafts page.

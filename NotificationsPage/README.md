@@ -1,0 +1,3 @@
+# NotificationsPage
+
+The notifications page.

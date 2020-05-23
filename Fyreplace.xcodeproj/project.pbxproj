@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D01D6342393DA3F007FC625 /* Lib in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6332393DA3F007FC625 /* Lib */; };
-		4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6372393DA49007FC625 /* LibWildFyre */; };
+		4D01D6342393DA3F007FC625 /* FyreplaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6332393DA3F007FC625 /* FyreplaceKit */; };
+		4D01D6382393DA49007FC625 /* WildFyreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D01D6372393DA49007FC625 /* WildFyreKit */; };
 		4D135F37239A91FE00B20BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D135F35239A91FE00B20BFA /* Localizable.strings */; };
 		4D3186D42392F42D0028BC2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3186D32392F42D0028BC2B /* MainViewController.swift */; };
 		4D3B1E70245C3CC6008870E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1E72245C3CC6008870E1 /* InfoPlist.strings */; };
 		4D569E5923C25DEF0008261E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D569E5823C25DEF0008261E /* LoginViewController.swift */; };
 		4D6FD44023C6689100FE7FDA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */; };
-		4D8D8F2E243D170400E2393D /* LibItemsList in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8D8F2D243D170400E2393D /* LibItemsList */; };
+		4D8D8F2E243D170400E2393D /* ItemsListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8D8F2D243D170400E2393D /* ItemsListKit */; };
 		4DAA03FA2353B66A00CB27B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */; };
 		4DAA03FC2353B66A00CB27B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */; };
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
@@ -22,12 +22,11 @@
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
 		4DC7C3F123F81137009D6CC5 /* identify.py in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7C3F023F81137009D6CC5 /* identify.py */; };
 		4DD53F2523FC9D5900EEA2BB /* ProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */; };
-		4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* AppHome */; };
-		4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* AppNotifications */; };
-		4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* AppArchive */; };
-		4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C42365DE3700BD4E60 /* AppDrafts */; };
-		4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C62365DE3B00BD4E60 /* AppSettings */; };
-		4DFD4BEF242C1123006A9DE0 /* LibUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFD4BEE242C1123006A9DE0 /* LibUtils */; };
+		4DDE87BF2365DE2900BD4E60 /* HomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* HomePage */; };
+		4DDE87C12365DE2E00BD4E60 /* NotificationsPage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C02365DE2E00BD4E60 /* NotificationsPage */; };
+		4DDE87C32365DE3200BD4E60 /* ArchivePage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C22365DE3200BD4E60 /* ArchivePage */; };
+		4DDE87C52365DE3700BD4E60 /* DraftsPage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C42365DE3700BD4E60 /* DraftsPage */; };
+		4DDE87C72365DE3B00BD4E60 /* SettingsPage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87C62365DE3B00BD4E60 /* SettingsPage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,15 +56,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFD4BEF242C1123006A9DE0 /* LibUtils in Frameworks */,
-				4D01D6342393DA3F007FC625 /* Lib in Frameworks */,
-				4D01D6382393DA49007FC625 /* LibWildFyre in Frameworks */,
-				4DDE87BF2365DE2900BD4E60 /* AppHome in Frameworks */,
-				4DDE87C12365DE2E00BD4E60 /* AppNotifications in Frameworks */,
-				4DDE87C32365DE3200BD4E60 /* AppArchive in Frameworks */,
-				4D8D8F2E243D170400E2393D /* LibItemsList in Frameworks */,
-				4DDE87C52365DE3700BD4E60 /* AppDrafts in Frameworks */,
-				4DDE87C72365DE3B00BD4E60 /* AppSettings in Frameworks */,
+				4D01D6342393DA3F007FC625 /* FyreplaceKit in Frameworks */,
+				4D01D6382393DA49007FC625 /* WildFyreKit in Frameworks */,
+				4DDE87BF2365DE2900BD4E60 /* HomePage in Frameworks */,
+				4DDE87C12365DE2E00BD4E60 /* NotificationsPage in Frameworks */,
+				4DDE87C32365DE3200BD4E60 /* ArchivePage in Frameworks */,
+				4D8D8F2E243D170400E2393D /* ItemsListKit in Frameworks */,
+				4DDE87C52365DE3700BD4E60 /* DraftsPage in Frameworks */,
+				4DDE87C72365DE3B00BD4E60 /* SettingsPage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +105,7 @@
 			children = (
 				4DAA03F72353B66A00CB27B6 /* Products */,
 				4DC72E092365CC9B00C5B974 /* Frameworks */,
-				4DAA03F82353B66A00CB27B6 /* App */,
+				4DAA03F82353B66A00CB27B6 /* Fyreplace */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +117,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DAA03F82353B66A00CB27B6 /* App */ = {
+		4DAA03F82353B66A00CB27B6 /* Fyreplace */ = {
 			isa = PBXGroup;
 			children = (
 				4DAA04092353B66B00CB27B6 /* Info.plist */,
@@ -128,7 +126,7 @@
 				4D71425E236497850041438B /* Storyboards */,
 				4D7BABFF23649DF4006BD55F /* Sources */,
 			);
-			path = App;
+			path = Fyreplace;
 			sourceTree = "<group>";
 		};
 		4DC72E092365CC9B00C5B974 /* Frameworks */ = {
@@ -175,15 +173,14 @@
 			);
 			name = Fyreplace;
 			packageProductDependencies = (
-				4DDE87BE2365DE2900BD4E60 /* AppHome */,
-				4DDE87C02365DE2E00BD4E60 /* AppNotifications */,
-				4DDE87C22365DE3200BD4E60 /* AppArchive */,
-				4DDE87C42365DE3700BD4E60 /* AppDrafts */,
-				4DDE87C62365DE3B00BD4E60 /* AppSettings */,
-				4D01D6332393DA3F007FC625 /* Lib */,
-				4D01D6372393DA49007FC625 /* LibWildFyre */,
-				4DFD4BEE242C1123006A9DE0 /* LibUtils */,
-				4D8D8F2D243D170400E2393D /* LibItemsList */,
+				4DDE87BE2365DE2900BD4E60 /* HomePage */,
+				4DDE87C02365DE2E00BD4E60 /* NotificationsPage */,
+				4DDE87C22365DE3200BD4E60 /* ArchivePage */,
+				4DDE87C42365DE3700BD4E60 /* DraftsPage */,
+				4DDE87C62365DE3B00BD4E60 /* SettingsPage */,
+				4D01D6332393DA3F007FC625 /* FyreplaceKit */,
+				4D01D6372393DA49007FC625 /* WildFyreKit */,
+				4D8D8F2D243D170400E2393D /* ItemsListKit */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -273,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "python3 App/Storyboards/identify.py\n";
+			shellScript = "python3 Fyreplace/Storyboards/identify.py\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -463,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.0;
 				DEVELOPMENT_TEAM = 6V7A4GTVDC;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = Fyreplace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.0;
 				DEVELOPMENT_TEAM = 6V7A4GTVDC;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = Fyreplace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,41 +522,37 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4D01D6332393DA3F007FC625 /* Lib */ = {
+		4D01D6332393DA3F007FC625 /* FyreplaceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Lib;
+			productName = FyreplaceKit;
 		};
-		4D01D6372393DA49007FC625 /* LibWildFyre */ = {
+		4D01D6372393DA49007FC625 /* WildFyreKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = LibWildFyre;
+			productName = WildFyreKit;
 		};
-		4D8D8F2D243D170400E2393D /* LibItemsList */ = {
+		4D8D8F2D243D170400E2393D /* ItemsListKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = LibItemsList;
+			productName = ItemsListKit;
 		};
-		4DDE87BE2365DE2900BD4E60 /* AppHome */ = {
+		4DDE87BE2365DE2900BD4E60 /* HomePage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppHome;
+			productName = HomePage;
 		};
-		4DDE87C02365DE2E00BD4E60 /* AppNotifications */ = {
+		4DDE87C02365DE2E00BD4E60 /* NotificationsPage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppNotifications;
+			productName = NotificationsPage;
 		};
-		4DDE87C22365DE3200BD4E60 /* AppArchive */ = {
+		4DDE87C22365DE3200BD4E60 /* ArchivePage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppArchive;
+			productName = ArchivePage;
 		};
-		4DDE87C42365DE3700BD4E60 /* AppDrafts */ = {
+		4DDE87C42365DE3700BD4E60 /* DraftsPage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppDrafts;
+			productName = DraftsPage;
 		};
-		4DDE87C62365DE3B00BD4E60 /* AppSettings */ = {
+		4DDE87C62365DE3B00BD4E60 /* SettingsPage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppSettings;
-		};
-		4DFD4BEE242C1123006A9DE0 /* LibUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LibUtils;
+			productName = SettingsPage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

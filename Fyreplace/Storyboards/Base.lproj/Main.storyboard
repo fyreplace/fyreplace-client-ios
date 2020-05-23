@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Main-Main">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="Main">
+            <objects>
+                <tabBarController id="Main-Main" userLabel="Main" customClass="MainViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Main-Main-tabBar">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="centralDataViewModel" destination="Main-CentralViewModel" id="Main-Main--O-centralDataViewModel"/>
+                        <segue destination="Login-Navigation-Login-Navigation" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Main-Main--S-Login-Navigation-Login-Navigation"/>
+                        <segue destination="Home-Navigation-Home-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Home-Navigation-Home-Navigation"/>
+                        <segue destination="Notifications-Navigation-Notifications-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Notifications-Navigation-Notifications-Navigation"/>
+                        <segue destination="Archive-Navigation-Archive-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Archive-Navigation-Archive-Navigation"/>
+                        <segue destination="Drafts-Navigation-Drafts-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Drafts-Navigation-Drafts-Navigation"/>
+                        <segue destination="Settings-Navigation-Settings-Navigation" kind="relationship" relationship="viewControllers" id="Main-Main--S-Settings-Navigation-Settings-Navigation"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Main-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Main-CentralViewModel" customClass="CentralViewModel" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="authorRepo" destination="Main-AuthorRepository" id="Main-CentralViewModel--O-authorRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Main-AuthorRepository" customClass="AuthorRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Login Navigation-->
+        <scene sceneID="Login-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="Login-Navigation-Login-Navigation" userLabel="Login Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Login-Navigation-Login-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Login-Login" kind="relationship" relationship="rootViewController" id="Login-Navigation-Login-Navigation--S-Login-Login"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Login-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="0.0"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Login">
+            <objects>
+                <viewController id="Login-Login" userLabel="Login" customClass="LoginViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Login-Login-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Fyreplace" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Logo" userLabel="Logo">
+                                        <rect key="frame" x="167" y="249" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Login-Login-view-view-Logo--C-width">
+                                                <variation key="widthClass=regular" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="Login-Login-view-view-Logo" secondAttribute="height" multiplier="1:1" id="Login-Login-view-view-Logo--C-width-Login-Login-view-view-Logo-height"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields" userLabel="Fields">
+                                        <rect key="frame" x="87" y="349" width="240" height="76"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields-Username">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didSetUsername" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Username--A-editingDidEndOnExit-Login-Login-didSetUsername"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Fields-Password">
+                                                <rect key="frame" x="0.0" y="42" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="editingDidEndOnExit" id="Login-Login-view-view-Fields-Password--A-editingDidEndOnExit-Login-Login-didClickLogin"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Password" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Password" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Password-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Username" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-leading-Login-Login-view-stackView-stackView-leading</string>
+                                            </constraint>
+                                            <constraint firstItem="Login-Login-view-view-Fields-Username" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing">
+                                                <string key="id">Login-Login-view-stackView-stackView--C-Login-Login-view-stackView-stackView-Username-trailing-Login-Login-view-stackView-stackView-trailing</string>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="240" id="Login-Login-view-view-Fields--C-width">
+                                                <variation key="widthClass=regular" constant="360"/>
+                                            </constraint>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons" userLabel="Buttons">
+                                        <rect key="frame" x="95" y="445" width="224" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Register" userLabel="Register">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="Register"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickRegister" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-Buttons-Register--A-touchUpInside-Login-Login-didClickRegister"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Buttons-Login">
+                                                <rect key="frame" x="175" y="0.0" width="49" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="Login"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didClickLogin" destination="Login-Login" eventType="touchUpInside" id="Login-Login-view-view-Buttons-Login--A-touchUpInside-Login-Login-didClickLogin"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact" alignment="top" axis="vertical"/>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Login-Login-view-view-Activity-Indicator" userLabel="Activity Indicator">
+                                        <rect key="frame" x="197" y="453" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="centerX" secondItem="Login-Login-view-view-Buttons" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="centerY" secondItem="Login-Login-view-view-Buttons" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerY-Login-Login-view-view-Buttons-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Activity-Indicator" firstAttribute="leading" secondItem="Login-Login-view-view-Buttons" secondAttribute="leading" id="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Buttons-leading"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" constant="8" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="leading" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="top" secondItem="Login-Login-view-view-Fields" secondAttribute="bottom" constant="20" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="top" relation="lessThanOrEqual" secondItem="Login-Login-view-view-Fields" secondAttribute="top" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
+                                    <constraint firstItem="Login-Login-view-view-Buttons" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="trailing" constant="-8" id="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                    <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerX" secondItem="Login-Login-view-view" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerX-Login-Login-view-view-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Fields" firstAttribute="centerY" secondItem="Login-Login-view-view" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Fields-centerY-Login-Login-view-view-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="bottom" secondItem="Login-Login-view-view-Fields" secondAttribute="top" constant="-20" id="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="centerX" secondItem="Login-Login-view-view-Fields" secondAttribute="centerX" id="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="centerY" secondItem="Login-Login-view-view-Fields" secondAttribute="centerY" id="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
+                                    <constraint firstItem="Login-Login-view-view-Logo" firstAttribute="trailing" secondItem="Login-Login-view-view-Fields" secondAttribute="leading" constant="-20" id="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                        <exclude reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Buttons-leading"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-trailing-Login-Login-view-view-Fields-leading"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-bottom-greaterThanOrEqual-Login-Login-view-view-Fields-bottom"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-centerY-Login-Login-view-view-Fields-centerY"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-trailing"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-lessThanOrEqual-Login-Login-view-view-Fields-top"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-leading-Login-Login-view-view-Buttons-leading"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-bottom-Login-Login-view-view-Fields-top"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Logo-centerX-Login-Login-view-view-Fields-centerX"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-leading-Login-Login-view-view-Fields-leading"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-top-Login-Login-view-view-Fields-bottom"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Buttons-trailing-Login-Login-view-view-Fields-trailing"/>
+                                        <include reference="Login-Login-view-view--C-Login-Login-view-view-Activity-Indicator-centerX-Login-Login-view-view-Buttons-centerX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Login-Login-view-view" firstAttribute="bottom" secondItem="Login-Login-view-safeArea" secondAttribute="bottom" id="Login-Login-view--C-Login-Login-view-view-bottom-Login-Login-view-safeArea-bottom" customClass="KeyboardAvoidingConstraint" customModule="FyreplaceKit"/>
+                            <constraint firstItem="Login-Login-view-view" firstAttribute="leading" secondItem="Login-Login-view-safeArea" secondAttribute="leading" id="Login-Login-view--C-Login-Login-view-view-leading-Login-Login-view-safeArea-leading"/>
+                            <constraint firstItem="Login-Login-view-view" firstAttribute="top" secondItem="Login-Login-view-safeArea" secondAttribute="top" id="Login-Login-view--C-Login-Login-view-view-top-Login-Login-view-safeArea-top"/>
+                            <constraint firstItem="Login-Login-view-view" firstAttribute="trailing" secondItem="Login-Login-view-safeArea" secondAttribute="trailing" id="Login-Login-view--C-Login-Login-view-view-trailing-Login-Login-view-safeArea-trailing"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Login-Login-view-safeArea"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fyreplace" id="Login-Login-Fyreplace"/>
+                    <connections>
+                        <outlet property="buttons" destination="Login-Login-view-view-Buttons" id="Login-Login--O-buttons"/>
+                        <outlet property="loader" destination="Login-Login-view-view-Activity-Indicator" id="Login-Login--O-loader"/>
+                        <outlet property="password" destination="Login-Login-view-view-Fields-Password" id="Login-Login--O-password"/>
+                        <outlet property="username" destination="Login-Login-view-view-Fields-Username" id="Login-Login--O-username"/>
+                        <outlet property="viewModel" destination="Login-LoginViewModel" id="Login-Login--O-viewModel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Login-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Login-LoginViewModel" customClass="LoginViewModel" customModule="Fyreplace" customModuleProvider="target">
+                    <connections>
+                        <outlet property="authRepo" destination="Login-AuthRepository" id="Login-LoginViewModel--O-authRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Login-AuthRepository" customClass="AuthRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="0.0"/>
+        </scene>
+        <!--Home Navigation-->
+        <scene sceneID="Home-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Home-Navigation-Home-Navigation" userLabel="Home Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="doc.richtext" catalog="system" id="Home-Navigation-Home-Navigation-Feed"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Home-Navigation-Home-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Home-Home" kind="relationship" relationship="rootViewController" id="Home-Navigation-Home-Navigation--S-Home-Home"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1500" y="750"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Home">
+            <objects>
+                <viewController id="Home-Home" userLabel="Home" customClass="HomeViewController" customModule="HomePage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Home-Home-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Home-Home-view-safeArea"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Home-Home-navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Home-Home-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Home-Home" id="Home-Home-navigationItem-Area--A-Home-Home-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Home-AreaSelector" id="Home-Home--O-areaSelector"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Home-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Home-AreaSelector" customClass="AreaSelector" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="delegate" destination="Home-Home" id="Home-AreaSelector--O-delegate"/>
+                        <outlet property="viewModel" destination="Home-AreaSelectorViewModel" id="Home-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Home-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="areaRepo" destination="Home-AreaRepository" id="Home-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Home-AreaRepository" customClass="AreaRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="-1500" y="1500"/>
+        </scene>
+        <!--Notifications Navigation-->
+        <scene sceneID="Notifications-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Notifications-Navigation-Notifications-Navigation" userLabel="Notifications Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" catalog="system" id="Notifications-Navigation-Notifications-Navigation-Notifications"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Notifications-Navigation-Notifications-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Notifications-Notifications" kind="relationship" relationship="rootViewController" id="Notifications-Navigation-Notifications-Navigation--S-Notifications-Notifications"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="750"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="Notifications">
+            <objects>
+                <viewController id="Notifications-Notifications" userLabel="Notifications" customClass="NotificationsViewController" customModule="NotificationsPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Notifications-Notifications-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Notifications-Notifications-navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="1500"/>
+        </scene>
+        <!--Archive Navigation-->
+        <scene sceneID="Archive-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Archive-Navigation-Archive-Navigation" userLabel="Archive Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Archive" image="archivebox.fill" catalog="system" id="Archive-Navigation-Archive-Navigation-Archive"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Archive-Navigation-Archive-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Archive-Archive" kind="relationship" relationship="rootViewController" id="Archive-Navigation-Archive-Navigation--S-Archive-Archive"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="750"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="Archive">
+            <objects>
+                <tableViewController id="Archive-Archive" userLabel="Archive" customClass="ArchiveViewController" customModule="ArchivePage" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Archive-Archive-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Archive-Archive-view-Footer" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="196" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post" id="Archive-Archive-view-Post" customClass="PostCell" customModule="ArchivePage">
+                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Archive-Archive-view-Post" id="Archive-Archive-view-Post-contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Content">
+                                            <rect key="frame" x="20" y="11" width="207" height="118"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Cover" userLabel="Cover" customClass="RoundedImageView" customModule="FyreplaceKit">
+                                            <rect key="frame" x="20" y="11" width="207" height="118"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="smallRadius" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Date">
+                                            <rect key="frame" x="367.5" y="11" width="26.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Time">
+                                            <rect key="frame" x="366" y="25.5" width="28" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Author">
+                                            <rect key="frame" x="353" y="113" width="41" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Avatar" userLabel="Avatar" customClass="RoundedImageView" customModule="FyreplaceKit">
+                                            <rect key="frame" x="362" y="73" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="Archive-Archive-view-Post-contentView-Avatar--C-width"/>
+                                                <constraint firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="height">
+                                                    <string key="id">Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar--C-width-Archive-Archive-view-Post-tableViewCellContentView-0002-Avatar-height</string>
+                                                </constraint>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-activityIndicatorView">
+                                            <rect key="frame" x="188.5" y="51.5" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-leading-greaterThanOrEqual-Archive-Archive-view-Default-contentView-Content-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Avatar" secondAttribute="bottom" constant="8" symbolic="YES">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Author-top-Archive-Archive-view-Default-contentView-Avatar-bottom</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Avatar" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Author" secondAttribute="trailing">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Avatar-trailing-Archive-Archive-view-Default-contentView-Author-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-bottom-Archive-Archive-view-Default-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-leading-lessThanOrEqual-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-top-Archive-Archive-view-Default-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-width-Archive-Archive-view-Default-contentView-width</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-top-Archive-Archive-view-Default-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="bottom">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-top-Archive-Archive-view-Default-contentView-Date-bottom</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView-Date" secondAttribute="trailing">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Time-trailing-Archive-Archive-view-Default-contentView-Date-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerX" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerX">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerX-Archive-Archive-view-Default-contentView-centerX</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerY" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerY">
+                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerY-Archive-Archive-view-Default-contentView-centerY</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-bottom-Archive-Archive-view-Post-contentView-bottomMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="leading" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="leadingMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-leading-Archive-Archive-view-Post-contentView-leadingMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-top-Archive-Archive-view-Post-contentView-topMargin</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-width-Archive-Archive-view-Post-contentView-width</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Date-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Time-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
+                                        </constraint>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="Archive-Archive-view-Post-contentView-Author" id="Archive-Archive-view-Post--O-author"/>
+                                    <outlet property="avatar" destination="Archive-Archive-view-Post-contentView-Avatar" id="Archive-Archive-view-Post--O-avatar"/>
+                                    <outlet property="content" destination="Archive-Archive-view-Post-contentView-Content" id="Archive-Archive-view-Post--O-content"/>
+                                    <outlet property="cover" destination="Archive-Archive-view-Post-contentView-Cover" id="Archive-Archive-view-Post--O-cover"/>
+                                    <outlet property="date" destination="Archive-Archive-view-Post-contentView-Date" id="Archive-Archive-view-Post--O-date"/>
+                                    <outlet property="loader" destination="Archive-Archive-view-Post-contentView-activityIndicatorView" id="Archive-Archive-view-Post--O-loader"/>
+                                    <outlet property="time" destination="Archive-Archive-view-Post-contentView-Time" id="Archive-Archive-view-Post--O-time"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Archive-Archive" id="Archive-Archive-view--O-dataSource"/>
+                            <outlet property="delegate" destination="Archive-Archive" id="Archive-Archive-view--O-delegate"/>
+                            <outlet property="prefetchDataSource" destination="Archive-Archive" id="Archive-Archive-view--O-prefetchDataSource"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Archive-Archive-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Archive-Archive" id="Archive-Archive-navigationItem-Area--A-Archive-Archive-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="Archive-Archive-navigationItem-titleView">
+                            <rect key="frame" x="157.5" y="5.5" width="99" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Mine"/>
+                            </segments>
+                            <connections>
+                                <action selector="didChangeListType" destination="Archive-Archive" eventType="valueChanged" id="Archive-Archive-navigationItem-titleView--A-valueChanged-Archive-Archive-didChangeListType"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Archive-AreaSelector" id="Archive-Archive--O-areaSelector"/>
+                        <outlet property="listTypeChooser" destination="Archive-Archive-navigationItem-titleView" id="Archive-Archive--O-listTypeChooser"/>
+                        <outlet property="viewModel" destination="Archive-ArchiveViewModel" id="Archive-Archive--O-viewModel"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Archive-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Archive-ArchiveViewModel" customClass="ArchiveViewModel" customModule="ArchivePage">
+                    <connections>
+                        <outlet property="archiveDataSource" destination="Archive-ArchiveDataSource" id="Archive-ArchiveViewModel--O-archiveDataSource"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-ArchiveDataSource" customClass="ArchiveDataSource" customModule="ArchivePage">
+                    <connections>
+                        <outlet property="postRepo" destination="Archive-PostRepository" id="Archive-ArchiveDataSource--O-postRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-AreaSelector" customClass="AreaSelector" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="delegate" destination="Archive-Archive" id="Archive-AreaSelector--O-delegate"/>
+                        <outlet property="viewModel" destination="Archive-AreaSelectorViewModel" id="Archive-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="areaRepo" destination="Archive-AreaRepository" id="Archive-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-PostRepository" customClass="PostRepository" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="areaRepo" destination="Archive-AreaRepository" id="Archive-PostRepository--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Archive-AreaRepository" customClass="AreaRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="1500"/>
+        </scene>
+        <!--Drafts Navigation-->
+        <scene sceneID="Drafts-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Drafts-Navigation-Drafts-Navigation" userLabel="Drafts Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Drafts" image="doc.plaintext" catalog="system" id="Drafts-Navigation-Drafts-Navigation-Drafts" userLabel="Drafts"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Drafts-Navigation-Drafts-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Drafts-Drafts" kind="relationship" relationship="rootViewController" id="Drafts-Navigation-Drafts-Navigation--S-Drafts-Drafts"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="750"/>
+        </scene>
+        <!--Drafts-->
+        <scene sceneID="Drafts">
+            <objects>
+                <viewController id="Drafts-Drafts" userLabel="Drafts" customClass="DraftsViewController" customModule="DraftsPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Drafts-Drafts-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Drafts-Drafts-navigationItem-Area">
+                            <connections>
+                                <action selector="didClickArea" destination="Drafts-Drafts" id="Drafts-Drafts-navigationItem-Area--A-Drafts-Drafts-didClickArea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="areaSelector" destination="Drafts-AreaSelector" id="Drafts-Drafts--O-areaSelector"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drafts-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Drafts-AreaSelector" customClass="AreaSelector" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="delegate" destination="Drafts-Drafts" id="Drafts-AreaSelector--O-delegate"/>
+                        <outlet property="viewModel" destination="Drafts-AreaSelectorViewModel" id="Drafts-AreaSelector--O-viewModel"/>
+                    </connections>
+                </customObject>
+                <customObject id="Drafts-AreaSelectorViewModel" customClass="AreaSelectorViewModel" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="areaRepo" destination="Drafts-AreaRepository" id="Drafts-AreaSelectorViewModel--O-areaRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Drafts-AreaRepository" customClass="AreaRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1500"/>
+        </scene>
+        <!--Settings Navigation-->
+        <scene sceneID="Settings-Navigation">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Settings-Navigation-Settings-Navigation" userLabel="Settings Navigation" customClass="ProxyViewController" customModule="Fyreplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Settings-Navigation-Settings-Navigation-Profile"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Settings-Navigation-Settings-Navigation-navigationBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Settings-Settings" kind="relationship" relationship="rootViewController" id="Settings-Navigation-Settings-Navigation--S-Settings-Settings"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-Navigation-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="750"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Settings">
+            <objects>
+                <tableViewController id="Settings-Settings" userLabel="Settings" customClass="SettingsViewController" customModule="SettingsPage" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Settings-Settings-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Avatar" id="Settings-Settings-view-Avatar">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Settings-Settings-view-Avatar-tableViewCell-00">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Avatar-tableViewCell-00" id="Settings-Settings-view-Avatar-tableViewCell-00-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" userLabel="Avatar" customClass="RoundedImageView" customModule="FyreplaceKit">
+                                                    <rect key="frame" x="20" y="15" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar--C-width"/>
+                                                        <constraint firstAttribute="width" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" secondAttribute="height" multiplier="1:1">
+                                                            <string key="id">Settings-Settings-view-Name-tableViewCell-contentView-Avatar--C-width-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-height</string>
+                                                        </constraint>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Username" userLabel="Username">
+                                                    <rect key="frame" x="86" y="30" width="78.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Username" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" secondAttribute="centerY">
+                                                    <string key="id">Settings-Settings-view-Name-AvatarCell-contentView--C-Settings-Settings-view-Name-AvatarCell-contentView-Username-centerY-Settings-Settings-view-Name-AvatarCell-contentView-Avatar-centerY</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" firstAttribute="centerY" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView" secondAttribute="centerY">
+                                                    <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-centerY-Settings-Settings-view-Name-tableViewCell-contentView-centerY</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView" secondAttribute="leadingMargin">
+                                                    <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-leading-Settings-Settings-view-Name-tableViewCell-contentView-leadingMargin</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Username" firstAttribute="leading" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" secondAttribute="trailing" constant="16">
+                                                    <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Username-leading-Settings-Settings-view-Name-tableViewCell-contentView-Avatar-trailing</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Username" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Settings-Settings-view-Avatar-tableViewCell-00-contentView" secondAttribute="trailing">
+                                                    <string key="id">Settings-Settings-view-Name-tableViewCell-contentView--C-Settings-Settings-view-Name-tableViewCell-contentView-Username-trailing-lessThanOrEqual-Settings-Settings-view-Name-tableViewCell-contentView-trailing</string>
+                                                </constraint>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Bio" id="Settings-Settings-view-Bio">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Settings-Settings-view-Bio-tableViewCell-00">
+                                        <rect key="frame" x="0.0" y="191" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Bio-tableViewCell-00" id="Settings-Settings-view-Bio-tableViewCell-00-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Settings-Settings" id="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView--O-delegate"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView" firstAttribute="leading" secondItem="Settings-Settings-view-Bio-tableViewCell-00-contentView" secondAttribute="leadingMargin">
+                                                    <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-leading-Settings-Settings-view-Bio-EditableTableViewCell-contentView-leadingMargin</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView" firstAttribute="top" secondItem="Settings-Settings-view-Bio-tableViewCell-00-contentView" secondAttribute="top">
+                                                    <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-top-Settings-Settings-view-Bio-EditableTableViewCell-contentView-top</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView" firstAttribute="trailing" secondItem="Settings-Settings-view-Bio-tableViewCell-00-contentView" secondAttribute="trailingMargin">
+                                                    <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-trailing-Settings-Settings-view-Bio-EditableTableViewCell-contentView-trailingMargin</string>
+                                                </constraint>
+                                                <constraint firstItem="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView" firstAttribute="bottom" secondItem="Settings-Settings-view-Bio-tableViewCell-00-contentView" secondAttribute="bottom">
+                                                    <string key="id">Settings-Settings-view-Bio-EditableTableViewCell-contentView--C-bottom-Settings-Settings-view-Bio-EditableTableViewCell-contentView-textView-bottom</string>
+                                                </constraint>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Settings-Settings-view-tableViewSection">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Settings-Settings-view-tableViewSection-tableViewCell-00-contentView-Logout" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-tableViewSection-tableViewCell-00">
+                                        <rect key="frame" x="0.0" y="269.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-tableViewSection-tableViewCell-00" id="Settings-Settings-view-tableViewSection-tableViewCell-00-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-tableViewSection-tableViewCell-00-contentView-Logout">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Fyreplace" id="Settings-Settings-view-Fyreplace">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Website" imageView="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Icon-Fyreplace" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-00" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="368.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Fyreplace-tableViewCell-00" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Website">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Fyreplace" id="Settings-Settings-view-Fyreplace-tableViewCell-00-contentView-Icon-Fyreplace">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="http://fyreplace.app"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-01" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="412" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Fyreplace-tableViewCell-01" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Open source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Code" id="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Icon-Code">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://github.com/fyreplace/fyreplace-client-ios"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="WildFyre" id="Settings-Settings-view-WildFyre">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website" imageView="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Icon-WildFyre" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-00" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="511" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-00" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.WildFyre" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Icon-WildFyre">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-01" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="554.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-01" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Open source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Code" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Icon-Code">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://phabricator.wildfyre.net"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ" imageView="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-Icon-Question" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-02" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="598" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-02" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Question" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-Icon-Question">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net#home-faq"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions" imageView="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Icon-Document" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-03" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="641.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-03" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Document" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Icon-Document">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net/pages/terms-of-service"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy" imageView="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Icon-Privacy" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-04" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="685" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-04" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Privacy" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Icon-Privacy">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://wildfyre.net/pages/privacy-policy"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Settings-Settings" id="Settings-Settings-view--O-dataSource"/>
+                            <outlet property="delegate" destination="Settings-Settings" id="Settings-Settings-view--O-delegate"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profile" id="Settings-Settings-Profile"/>
+                    <connections>
+                        <outlet property="avatar" destination="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Avatar" id="Settings-Settings--O-avatar"/>
+                        <outlet property="avatarCell" destination="Settings-Settings-view-Avatar-tableViewCell-00" id="Settings-Settings--O-avatarCell"/>
+                        <outlet property="bio" destination="Settings-Settings-view-Bio-tableViewCell-00-contentView-textView" id="Settings-Settings--O-bio"/>
+                        <outlet property="imageSelector" destination="Settings-ImageSelector" id="Settings-Settings--O-imageSelector"/>
+                        <outlet property="logoutCell" destination="Settings-Settings-view-tableViewSection-tableViewCell-00" id="Settings-Settings--O-logoutCell"/>
+                        <outlet property="username" destination="Settings-Settings-view-Avatar-tableViewCell-00-contentView-Username" id="Settings-Settings--O-username"/>
+                        <outlet property="viewModel" destination="Settings-SettingsViewModel" id="Settings-Settings--O-viewModel"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Settings-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <barButtonItem systemItem="cancel" id="Settings-cancel"/>
+                <barButtonItem style="done" systemItem="done" id="Settings-done"/>
+                <customObject id="Settings-ImageSelector" customClass="ImageSelector" customModule="FyreplaceKit">
+                    <connections>
+                        <outlet property="delegate" destination="Settings-Settings" id="Settings-ImageSelector--O-delegate"/>
+                    </connections>
+                </customObject>
+                <customObject id="Settings-SettingsViewModel" customClass="SettingsViewModel" customModule="SettingsPage">
+                    <connections>
+                        <outlet property="authRepo" destination="Settings-AuthRepository" id="Settings-SettingsViewModel--O-authRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Settings-AuthRepository" customClass="AuthRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="1500"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="Fyreplace" width="256" height="256"/>
+        <image name="Icon.Code" width="29" height="29"/>
+        <image name="Icon.Document" width="29" height="29"/>
+        <image name="Icon.Fyreplace" width="29" height="29"/>
+        <image name="Icon.Privacy" width="29" height="29"/>
+        <image name="Icon.Question" width="29" height="29"/>
+        <image name="Icon.WildFyre" width="29" height="29"/>
+        <image name="archivebox.fill" catalog="system" width="128" height="106"/>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="doc.richtext" catalog="system" width="115" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
+</document>

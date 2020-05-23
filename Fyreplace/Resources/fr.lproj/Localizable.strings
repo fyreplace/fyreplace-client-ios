@@ -1,0 +1,11 @@
+"Fyreplace.LoginViewController.loginError.title" = "Erreur de connexion";
+"Fyreplace.LoginViewController.loginError.message" = "Les identifiants renseignés ne permettent pas de se connecter";
+"Fyreplace.LoginViewController.loginError.ok" = "OK";
+"ArchivePage.ArchiveViewController.empty" = "Aucun post";
+"ItemsListKit.ItemsListViewController.empty" = "Aucun item";
+"FyreplaceKit.ImageSelector.chooseSource.action.library" = "Sélectionner une image";
+"FyreplaceKit.ImageSelector.chooseSource.action.camera" = "Prendre une photo";
+"FyreplaceKit.ImageSelector.chooseSource.action.cancel" = "Annuler";
+"FyreplaceKit.ImageSelector.sizeError.title" = "Erreur";
+"FyreplaceKit.ImageSelector.sizeError.message" = "Cette image est trop grande";
+"FyreplaceKit.ImageSelector.sizeError.action.ok" = "OK";

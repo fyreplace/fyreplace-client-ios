@@ -17,30 +17,27 @@
       location = "container:Fyreplace.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AppHome">
+      location = "group:HomePage">
    </FileRef>
    <FileRef
-      location = "group:AppNotifications">
+      location = "group:NotificationsPage">
    </FileRef>
    <FileRef
-      location = "group:AppArchive">
+      location = "group:ArchivePage">
    </FileRef>
    <FileRef
-      location = "group:AppDrafts">
+      location = "group:DraftsPage">
    </FileRef>
    <FileRef
-      location = "group:AppSettings">
+      location = "group:SettingsPage">
    </FileRef>
    <FileRef
-      location = "group:LibItemsList">
+      location = "group:ItemsListKit">
    </FileRef>
    <FileRef
-      location = "group:Lib">
+      location = "group:FyreplaceKit">
    </FileRef>
    <FileRef
-      location = "group:LibUtils">
-   </FileRef>
-   <FileRef
-      location = "group:LibWildFyre">
+      location = "group:WildFyreKit">
    </FileRef>
 </Workspace>

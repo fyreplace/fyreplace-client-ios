@@ -1,3 +1,0 @@
-# Lib
-
-Common package dependencies.

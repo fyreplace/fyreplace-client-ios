@@ -1,3 +1,0 @@
-# AppHome
-
-The home page.

@@ -1,3 +1,0 @@
-# LibWildFyre
-
-WildFyre communication utilities.

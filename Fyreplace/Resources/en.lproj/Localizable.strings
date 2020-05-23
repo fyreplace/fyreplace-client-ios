@@ -1,0 +1,11 @@
+"Fyreplace.LoginViewController.loginError.title" = "Login failed";
+"Fyreplace.LoginViewController.loginError.message" = "Could not login using the provided credentials";
+"Fyreplace.LoginViewController.loginError.ok" = "OK";
+"ArchivePage.ArchiveViewController.empty" = "No posts";
+"ItemsListKit.ItemsListViewController.empty" = "No items";
+"FyreplaceKit.ImageSelector.chooseSource.action.library" = "Select an image";
+"FyreplaceKit.ImageSelector.chooseSource.action.camera" = "Take a picture";
+"FyreplaceKit.ImageSelector.chooseSource.action.cancel" = "Cancel";
+"FyreplaceKit.ImageSelector.sizeError.title" = "Error";
+"FyreplaceKit.ImageSelector.sizeError.message" = "This image is too large";
+"FyreplaceKit.ImageSelector.sizeError.action.ok" = "OK";
