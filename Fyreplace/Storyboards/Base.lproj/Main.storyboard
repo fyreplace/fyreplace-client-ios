@@ -325,7 +325,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Notifications-Notifications-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Notifications-Notifications-navigationItem"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="Notifications-Notifications-Notifications"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Notifications-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -497,14 +497,13 @@
                             <outlet property="prefetchDataSource" destination="Archive-Archive" id="Archive-Archive-view--O-prefetchDataSource"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Archive-Archive-navigationItem">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Area" id="Archive-Archive-navigationItem-Area">
+                    <navigationItem key="navigationItem" title="Archive" id="Archive-Archive-Archive">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Archive-Archive-Archive-Area">
                             <connections>
-                                <action selector="didClickArea" destination="Archive-Archive" id="Archive-Archive-navigationItem-Area--A-Archive-Archive-didClickArea"/>
+                                <action selector="didClickArea" destination="Archive-Archive" id="Archive-Archive-Archive-Area--A-Archive-Archive-didClickArea"/>
                             </connections>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="Archive-Archive-navigationItem-titleView">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="Archive-Archive-Archive-titleView">
                             <rect key="frame" x="157.5" y="5.5" width="99" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -512,13 +511,13 @@
                                 <segment title="Mine"/>
                             </segments>
                             <connections>
-                                <action selector="didChangeListType" destination="Archive-Archive" eventType="valueChanged" id="Archive-Archive-navigationItem-titleView--A-valueChanged-Archive-Archive-didChangeListType"/>
+                                <action selector="didChangeListType" destination="Archive-Archive" eventType="valueChanged" id="Archive-Archive-Archive-titleView--A-valueChanged-Archive-Archive-didChangeListType"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="areaSelector" destination="Archive-AreaSelector" id="Archive-Archive--O-areaSelector"/>
-                        <outlet property="listTypeChooser" destination="Archive-Archive-navigationItem-titleView" id="Archive-Archive--O-listTypeChooser"/>
+                        <outlet property="listTypeChooser" destination="Archive-Archive-Archive-titleView" id="Archive-Archive--O-listTypeChooser"/>
                         <outlet property="viewModel" destination="Archive-ArchiveViewModel" id="Archive-Archive--O-viewModel"/>
                     </connections>
                 </tableViewController>
@@ -582,10 +581,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Drafts-Drafts-view-safeArea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Drafts-Drafts-navigationItem">
-                        <barButtonItem key="leftBarButtonItem" title="Area" id="Drafts-Drafts-navigationItem-Area">
+                    <navigationItem key="navigationItem" title="Drafts" id="Drafts-Drafts-Drafts">
+                        <barButtonItem key="leftBarButtonItem" title="Area" id="Drafts-Drafts-Drafts-Area">
                             <connections>
-                                <action selector="didClickArea" destination="Drafts-Drafts" id="Drafts-Drafts-navigationItem-Area--A-Drafts-Drafts-didClickArea"/>
+                                <action selector="didClickArea" destination="Drafts-Drafts" id="Drafts-Drafts-Drafts-Area--A-Drafts-Drafts-didClickArea"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

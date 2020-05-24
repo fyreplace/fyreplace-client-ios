@@ -32,14 +32,12 @@
 /* Begin PBXFileReference section */
 		4D135F36239A91FE00B20BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D17E175241063DE008616DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4D17E179241065E1008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4D17E17A24106BBB008616DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D3186D32392F42D0028BC2B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4D3B1E71245C3CC6008870E1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D3B1E73245C3CD0008870E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D569E5823C25DEF0008261E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D6FD43F23C6689100FE7FDA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		4D71425C2364943D0041438B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4DAA03F62353B66A00CB27B6 /* Fyreplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fyreplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAA03F92353B66A00CB27B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAA03FB2353B66A00CB27B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		4DAA04042353B66B00CB27B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DAA04072353B66B00CB27B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAA04092353B66B00CB27B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB96F93247B060C00123263 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4DB96F95247B075400123263 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4DC7C3F023F81137009D6CC5 /* identify.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = identify.py; sourceTree = "<group>"; };
 		4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -315,8 +315,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4DAA04022353B66A00CB27B6 /* Base */,
-				4D71425C2364943D0041438B /* fr */,
-				4D17E179241065E1008616DF /* en */,
+				4DB96F93247B060C00123263 /* fr */,
+				4DB96F95247B075400123263 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
