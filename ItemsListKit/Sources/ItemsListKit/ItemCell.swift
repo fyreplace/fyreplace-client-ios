@@ -32,7 +32,7 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
         }
 
         item.fail(with: self)
-            .subscribe(onNext: { self.delegate?.display($0) })
+            .subscribe(onNext: { [unowned self] in self.delegate?.display($0) })
             .disposed(by: disposer)
     }
 }
