@@ -47,7 +47,6 @@ def process(storyboard: Text):
     walk(tree.find("scenes"), mapping, [])
 
     for name in [storyboard] + glob.glob(f"**/{storyboard_name}.strings"):
-        end = '"' if name == storyboard else "."
         old_to_new = mapping_items(mapping)
 
         if len(old_to_new) == 0:
@@ -56,13 +55,25 @@ def process(storyboard: Text):
         with open(name, "r") as f:
             data = f.read()
 
-        for old_id, new_id in old_to_new:
-            if old_id != new_id:
-                data = data.replace('"' + old_id + end, '"=' + new_id + end)
+        def do_replace(data: Text, first_step: bool) -> Text:
+            old_prefix = '"' if first_step else '"='
+            new_prefix = '"=' if first_step else '"'
 
-        for old_id, new_id in old_to_new:
-            if old_id != new_id:
-                data = data.replace('"=' + new_id + end, '"' + new_id + end)
+            for old_id, new_id in old_to_new:
+                if old_id != new_id:
+                    if not first_step:
+                        old_id = new_id
+
+                    for end in ['"', "."]:
+                        data = data.replace(
+                            old_prefix + old_id + end,
+                            new_prefix + new_id + end
+                        )
+            
+            return data
+
+        data = do_replace(data, first_step=True)
+        data = do_replace(data, first_step=False)
 
         with open(name, "w") as f:
             f.write(data)
