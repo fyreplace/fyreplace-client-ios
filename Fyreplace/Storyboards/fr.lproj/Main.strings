@@ -86,6 +86,9 @@
 /* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source"; */
 "Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source.text" = "Open source";
 
+/* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy"; */
+"Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy.text" = "Politique de confidentialité";
+
 /* Class = "UITableViewSection"; headerTitle = "WildFyre"; ObjectID = "Settings-Settings-view-WildFyre"; */
 "Settings-Settings-view-WildFyre.headerTitle" = "WildFyre";
 

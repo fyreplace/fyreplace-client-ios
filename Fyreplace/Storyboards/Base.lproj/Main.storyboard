@@ -767,7 +767,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="http://fyreplace.app"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://fyreplace.app"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-01" customClass="LinkCell" customModule="SettingsPage">
@@ -795,12 +795,37 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://github.com/fyreplace/fyreplace-client-ios"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy" imageView="Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Icon-Privacy" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-Fyreplace-tableViewCell-02" customClass="LinkCell" customModule="SettingsPage">
+                                        <rect key="frame" x="0.0" y="455.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-Fyreplace-tableViewCell-02" id="Settings-Settings-view-Fyreplace-tableViewCell-02-contentView">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy">
+                                                    <rect key="frame" x="64" y="0.0" width="311" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon.Privacy" id="Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Icon-Privacy">
+                                                    <rect key="frame" x="20" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://github.com/fyreplace/fyreplace-client-ios/blob/master/README.md"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="WildFyre" id="Settings-Settings-view-WildFyre">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Website" imageView="Settings-Settings-view-WildFyre-tableViewCell-00-contentView-Icon-WildFyre" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-00" customClass="LinkCell" customModule="SettingsPage">
-                                        <rect key="frame" x="0.0" y="511" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="554.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-00" id="Settings-Settings-view-WildFyre-tableViewCell-00-contentView">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
@@ -825,7 +850,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Open-source" imageView="Settings-Settings-view-WildFyre-tableViewCell-01-contentView-Icon-Code" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-01" customClass="LinkCell" customModule="SettingsPage">
-                                        <rect key="frame" x="0.0" y="554.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="598" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-01" id="Settings-Settings-view-WildFyre-tableViewCell-01-contentView">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
@@ -850,7 +875,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-FAQ" imageView="Settings-Settings-view-WildFyre-tableViewCell-02-contentView-Icon-Question" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-02" customClass="LinkCell" customModule="SettingsPage">
-                                        <rect key="frame" x="0.0" y="598" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="641.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-02" id="Settings-Settings-view-WildFyre-tableViewCell-02-contentView">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
@@ -875,7 +900,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Terms-and-conditions" imageView="Settings-Settings-view-WildFyre-tableViewCell-03-contentView-Icon-Document" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-03" customClass="LinkCell" customModule="SettingsPage">
-                                        <rect key="frame" x="0.0" y="641.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="685" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-03" id="Settings-Settings-view-WildFyre-tableViewCell-03-contentView">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
@@ -900,7 +925,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Privacy-policy" imageView="Settings-Settings-view-WildFyre-tableViewCell-04-contentView-Icon-Privacy" style="IBUITableViewCellStyleDefault" id="Settings-Settings-view-WildFyre-tableViewCell-04" customClass="LinkCell" customModule="SettingsPage">
-                                        <rect key="frame" x="0.0" y="685" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="728.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Settings-Settings-view-WildFyre-tableViewCell-04" id="Settings-Settings-view-WildFyre-tableViewCell-04-contentView">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
