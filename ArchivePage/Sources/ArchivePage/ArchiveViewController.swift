@@ -3,7 +3,7 @@ import ItemsListKit
 import RxSwift
 import UIKit
 
-public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegate {
+public class ArchiveViewController: ItemsListViewController {
     public override class var emptyMessageText: String { "ArchivePage.ArchiveViewController.empty" }
 
     private var disposer = DisposeBag()
@@ -22,7 +22,7 @@ public class ArchiveViewController: ItemsListViewController, AreaSelectorDelegat
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        areaSelector.createAreaPicker(inside: tableView)
+        areaSelector.createAreaPicker(inside: view)
     }
 
     public override func viewWillDisappear(_ animated: Bool) {
@@ -48,5 +48,11 @@ extension ArchiveViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Post", for: indexPath) as! PostCell
         cell.willAppear(with: viewModel.retrieve(postAt: indexPath.row))
         return cell
+    }
+
+    public override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let cell = (tableView.cellForRow(at: indexPath) as? PostCell)
+        let path = super.tableView(tableView, willSelectRowAt: indexPath)
+        return cell?.ready == true ? path : nil
     }
 }

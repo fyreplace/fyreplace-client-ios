@@ -4,7 +4,6 @@ import UIKit
 import WildFyreKit
 
 public class AreaSelector: NSObject {
-    private var container: UIView?
     private var blur = UIVisualEffectView()
     private var picker = UIPickerView()
     private var pickerBottom: NSLayoutConstraint?
@@ -27,7 +26,6 @@ public class AreaSelector: NSObject {
     }
 
     public func createAreaPicker(inside view: UIView) {
-        container = view
         blur.effect = nil
         blur.isUserInteractionEnabled = false
 
@@ -77,14 +75,14 @@ public class AreaSelector: NSObject {
     }
 
     public func toggleAreaPicker() {
-        let pickerVisible = pickerTop?.isActive ?? false
-        let alpha: CGFloat = pickerVisible ? 0 : 1
-        let blurEffect = pickerVisible ? nil : UIBlurEffect(style: .regular)
+        let pickerWasVisible = pickerTop?.isActive ?? false
+        let alpha: CGFloat = pickerWasVisible ? 0 : 1
+        let blurEffect = pickerWasVisible ? nil : UIBlurEffect(style: .regular)
 
-        container?.isUserInteractionEnabled = pickerVisible
-        blur.isUserInteractionEnabled = !pickerVisible
-        pickerBottom?.isActive = pickerVisible
-        pickerTop?.isActive = !pickerVisible
+        blur.isUserInteractionEnabled = !pickerWasVisible
+        pickerBottom?.isActive = pickerWasVisible
+        pickerTop?.isActive = !pickerWasVisible
+        delegate?.areaSelector?(self, pickerIsVisible: !pickerWasVisible)
 
         UIView.animate(withDuration: 0.3) {
             self.blur.effect = blurEffect
@@ -121,4 +119,7 @@ extension AreaSelector: UIPickerViewDelegate {
 }
 
 @objc
-public protocol AreaSelectorDelegate: FailureHandler {}
+public protocol AreaSelectorDelegate: FailureHandler {
+    @objc
+    optional func areaSelector(_ areaSelector: AreaSelector, pickerIsVisible: Bool)
+}

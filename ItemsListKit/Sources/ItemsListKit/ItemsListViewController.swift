@@ -89,6 +89,10 @@ extension ItemsListViewController {
     open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         count
     }
+
+    open override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        tableView.isScrollEnabled ? indexPath : nil
+    }
 }
 
 extension ItemsListViewController: UITableViewDataSourcePrefetching {
@@ -98,5 +102,11 @@ extension ItemsListViewController: UITableViewDataSourcePrefetching {
                 .subscribe()
                 .disposed(by: disposer)
         }
+    }
+}
+
+extension ItemsListViewController: AreaSelectorDelegate {
+    public func areaSelector(_ areaSelector: AreaSelector, pickerIsVisible: Bool) {
+        tableView.isScrollEnabled = !pickerIsVisible
     }
 }
