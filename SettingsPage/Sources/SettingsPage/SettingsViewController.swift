@@ -45,7 +45,8 @@ public class SettingsViewController: UITableViewController, CentralDataConsumer 
             .subscribe(onNext: { bio in
                 self.currentBio = bio ?? ""
                 self.bio.text = bio
-                self.tableView.reloadData()
+                self.tableView.beginUpdates()
+                self.tableView.endUpdates()
             })
             .disposed(by: disposer)
 
