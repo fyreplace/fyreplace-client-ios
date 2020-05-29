@@ -75,15 +75,21 @@ extension SettingsViewController {
 
         default:
             if let cell = cell as? LinkCell {
-                let safari = SFSafariViewController(url: URL(string: cell.link)!)
-                safari.preferredControlTintColor = .systemOrange
-                safari.delegate = self
-                present(safari, animated: true)
+                visit(website: URL(string: cell.link)!)
                 return
             }
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    private func visit(website: URL) {
+        let configuration = SFSafariViewController.Configuration()
+        configuration.entersReaderIfAvailable = true
+        let safari = SFSafariViewController(url: website, configuration: configuration)
+        safari.preferredControlTintColor = .systemOrange
+        safari.delegate = self
+        present(safari, animated: true)
     }
 }
 
