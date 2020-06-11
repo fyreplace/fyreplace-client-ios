@@ -14,10 +14,10 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
         delegate = self as? CellDelegate
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale.current
+        dateFormatter.locale = .current
         timeFormatter.dateStyle = .none
         timeFormatter.timeStyle = .medium
-        timeFormatter.locale = Locale.current
+        timeFormatter.locale = .current
     }
 
     open func failure(_ error: Error) {}
