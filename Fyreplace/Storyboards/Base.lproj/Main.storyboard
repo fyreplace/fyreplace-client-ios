@@ -817,7 +817,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://github.com/fyreplace/fyreplace-client-ios/blob/master/README.md"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="link" value="https://github.com/fyreplace/fyreplace-client-ios/blob/master/README.md#privacy-policy"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
