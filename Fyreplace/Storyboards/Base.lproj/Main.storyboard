@@ -378,7 +378,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Archive-Archive-view-Post-contentView-Cover" userLabel="Cover" customClass="RoundedImageView" customModule="FyreplaceKit">
-                                            <rect key="frame" x="20" y="11" width="207" height="118"/>
+                                            <rect key="frame" x="20" y="11" width="210" height="118"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView-Cover" secondAttribute="height" multiplier="16:9" priority="750" id="Archive-Archive-view-Post-contentView-Cover--C-width-Archive-Archive-view-Post-contentView-Cover-height"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="smallRadius" value="YES"/>
                                             </userDefinedRuntimeAttributes>
@@ -439,9 +442,6 @@
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-top-Archive-Archive-view-Default-contentView-topMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
-                                            <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Content-width-Archive-Archive-view-Default-contentView-width</string>
-                                        </constraint>
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="trailing" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="trailingMargin">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-Date-leading-Archive-Archive-view-Default-contentView-leadingMargin</string>
                                         </constraint>
@@ -460,6 +460,12 @@
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-activityIndicatorView" firstAttribute="centerY" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="centerY">
                                             <string key="id">Archive-Archive-view-Default-contentView--C-Archive-Archive-view-Default-contentView-activityIndicatorView-centerY-Archive-Archive-view-Default-contentView-centerY</string>
                                         </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Author" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Cover" secondAttribute="trailing" constant="8" symbolic="YES">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Author-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Cover-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Content" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Content-width-Archive-Archive-view-Post-contentView-width</string>
+                                        </constraint>
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="bottom" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="bottomMargin">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-bottom-Archive-Archive-view-Post-contentView-bottomMargin</string>
                                         </constraint>
@@ -469,14 +475,17 @@
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="top" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="topMargin">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-top-Archive-Archive-view-Post-contentView-topMargin</string>
                                         </constraint>
-                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Cover" firstAttribute="width" secondItem="Archive-Archive-view-Post-contentView" secondAttribute="width" multiplier="1:2">
-                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Cover-width-Archive-Archive-view-Post-contentView-width</string>
-                                        </constraint>
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Date-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
                                         </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Date" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Cover" secondAttribute="trailing" constant="8" symbolic="YES">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Date-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Cover-trailing</string>
+                                        </constraint>
                                         <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Content" secondAttribute="trailing" priority="250">
                                             <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Time-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Content-trailing</string>
+                                        </constraint>
+                                        <constraint firstItem="Archive-Archive-view-Post-contentView-Time" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Archive-Archive-view-Post-contentView-Cover" secondAttribute="trailing" constant="8" symbolic="YES">
+                                            <string key="id">Archive-Archive-view-Post-contentView--C-Archive-Archive-view-Post-contentView-Time-leading-greaterThanOrEqual-Archive-Archive-view-Post-contentView-Cover-trailing</string>
                                         </constraint>
                                     </constraints>
                                 </tableViewCellContentView>
