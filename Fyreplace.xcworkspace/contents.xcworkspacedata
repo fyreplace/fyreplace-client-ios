@@ -32,6 +32,9 @@
       location = "group:SettingsPage">
    </FileRef>
    <FileRef
+      location = "group:PostPage">
+   </FileRef>
+   <FileRef
       location = "group:ItemsListKit">
    </FileRef>
    <FileRef
@@ -39,5 +42,8 @@
    </FileRef>
    <FileRef
       location = "group:WildFyreKit">
+   </FileRef>
+   <FileRef
+      location = "group:MarkdownKit">
    </FileRef>
 </Workspace>

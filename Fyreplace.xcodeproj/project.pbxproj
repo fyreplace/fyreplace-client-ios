@@ -20,6 +20,8 @@
 		4DAA04032353B66A00CB27B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04012353B66A00CB27B6 /* Main.storyboard */; };
 		4DAA04052353B66B00CB27B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04042353B66B00CB27B6 /* Assets.xcassets */; };
 		4DAA04082353B66B00CB27B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA04062353B66B00CB27B6 /* LaunchScreen.storyboard */; };
+		4DB96F8F247ADBD500123263 /* PostPage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB96F8E247ADBD500123263 /* PostPage */; };
+		4DB96F99247B112400123263 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB96F98247B112400123263 /* MarkdownKit */; };
 		4DC7C3F123F81137009D6CC5 /* identify.py in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7C3F023F81137009D6CC5 /* identify.py */; };
 		4DD53F2523FC9D5900EEA2BB /* ProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD53F2423FC9D5900EEA2BB /* ProxyViewController.swift */; };
 		4DDE87BF2365DE2900BD4E60 /* HomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DDE87BE2365DE2900BD4E60 /* HomePage */; };
@@ -58,9 +60,11 @@
 			files = (
 				4D01D6342393DA3F007FC625 /* FyreplaceKit in Frameworks */,
 				4D01D6382393DA49007FC625 /* WildFyreKit in Frameworks */,
+				4DB96F8F247ADBD500123263 /* PostPage in Frameworks */,
 				4DDE87BF2365DE2900BD4E60 /* HomePage in Frameworks */,
 				4DDE87C12365DE2E00BD4E60 /* NotificationsPage in Frameworks */,
 				4DDE87C32365DE3200BD4E60 /* ArchivePage in Frameworks */,
+				4DB96F99247B112400123263 /* MarkdownKit in Frameworks */,
 				4D8D8F2E243D170400E2393D /* ItemsListKit in Frameworks */,
 				4DDE87C52365DE3700BD4E60 /* DraftsPage in Frameworks */,
 				4DDE87C72365DE3B00BD4E60 /* SettingsPage in Frameworks */,
@@ -181,6 +185,8 @@
 				4D01D6332393DA3F007FC625 /* FyreplaceKit */,
 				4D01D6372393DA49007FC625 /* WildFyreKit */,
 				4D8D8F2D243D170400E2393D /* ItemsListKit */,
+				4DB96F8E247ADBD500123263 /* PostPage */,
+				4DB96F98247B112400123263 /* MarkdownKit */,
 			);
 			productName = Fyreplace;
 			productReference = 4DAA03F62353B66A00CB27B6 /* Fyreplace.app */;
@@ -535,6 +541,14 @@
 		4D8D8F2D243D170400E2393D /* ItemsListKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ItemsListKit;
+		};
+		4DB96F8E247ADBD500123263 /* PostPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostPage;
+		};
+		4DB96F98247B112400123263 /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MarkdownKit;
 		};
 		4DDE87BE2365DE2900BD4E60 /* HomePage */ = {
 			isa = XCSwiftPackageProductDependency;

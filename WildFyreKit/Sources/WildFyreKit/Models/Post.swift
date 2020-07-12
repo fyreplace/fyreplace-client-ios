@@ -34,11 +34,11 @@ public enum PostTarget {
     case stack(areaName: String, limit: Int)
     case archive(areaName: String, offset: Int, limit: Int)
     case own(areaName: String, offset: Int, limit: Int)
-    case get(areaName: String, postId: UInt64)
+    case get(areaName: String, postId: String)
     case create(areaName: String, draft: Draft)
-    case delete(areaName: String, postId: UInt64)
-    case spread(areaName: String, postId: UInt64, spread: Spread)
-    case subscribe(areaName: String, postId: UInt64, subscription: Subscription)
+    case delete(areaName: String, postId: String)
+    case spread(areaName: String, postId: String, spread: Spread)
+    case subscribe(areaName: String, postId: String, subscription: Subscription)
 }
 
 extension PostTarget: TargetType, AccessTokenAuthorizable {

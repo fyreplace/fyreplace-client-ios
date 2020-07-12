@@ -14,12 +14,14 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(path: "../PostPage"),
         .package(path: "../ItemsListKit"),
     ],
     targets: [
         .target(
             name: "ArchivePage",
             dependencies: [
+                .byName(name: "PostPage"),
                 .byName(name: "ItemsListKit"),
             ]
         ),

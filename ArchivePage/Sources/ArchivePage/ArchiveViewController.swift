@@ -1,5 +1,6 @@
 import FyreplaceKit
 import ItemsListKit
+import PostPage
 import RxSwift
 import UIKit
 
@@ -29,6 +30,15 @@ public class ArchiveViewController: ItemsListViewController {
         super.viewWillDisappear(animated)
         areaSelector.destroyAreaPicker()
         disposer = DisposeBag()
+    }
+
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if let controller = segue.destination as? PostViewController {
+            let cell = sender as! PostCell
+            controller.post = cell.item
+        }
     }
 
     @IBAction

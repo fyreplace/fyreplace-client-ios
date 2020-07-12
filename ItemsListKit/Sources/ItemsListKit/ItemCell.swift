@@ -7,6 +7,9 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
     public weak var delegate: CellDelegate?
     public let dateFormatter = DateFormatter()
     public let timeFormatter = DateFormatter()
+
+    private(set) public var item: Item?
+    private(set) public var ready = false
     private var disposer = DisposeBag()
 
     open override func awakeFromNib() {
@@ -20,9 +23,12 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
         timeFormatter.locale = .current
     }
 
-    open func failure(_ error: Error) {}
+    open func failure(_ error: Error) {
+        ready = false
+    }
 
     public final func willAppear(with item: Observable<Item>?) {
+        ready = false
         delegate?.reset()
         disposer = DisposeBag()
 
@@ -32,7 +38,11 @@ where CellDelegate: ItemCellDelegate, Item == CellDelegate.Item {
         }
 
         item.fail(with: self)
-            .subscribe(onNext: { [unowned self] in self.delegate?.display($0) })
+            .subscribe(onNext: { [unowned self] item in
+                self.delegate?.display(item)
+                self.item = item
+                self.ready = true
+            })
             .disposed(by: disposer)
     }
 }

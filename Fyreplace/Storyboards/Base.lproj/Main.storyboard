@@ -497,6 +497,7 @@
                                     <outlet property="date" destination="Archive-Archive-view-Post-contentView-Date" id="Archive-Archive-view-Post--O-date"/>
                                     <outlet property="loader" destination="Archive-Archive-view-Post-contentView-activityIndicatorView" id="Archive-Archive-view-Post--O-loader"/>
                                     <outlet property="time" destination="Archive-Archive-view-Post-contentView-Time" id="Archive-Archive-view-Post--O-time"/>
+                                    <segue destination="Post-Post" kind="show" identifier="post" id="Archive-Archive-view-Post--S-Post-Post"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -994,6 +995,80 @@
             </objects>
             <point key="canvasLocation" x="1500" y="1500"/>
         </scene>
+        <!--Post-->
+        <scene sceneID="Post">
+            <objects>
+                <viewController id="Post-Post" userLabel="Post" customClass="PostViewController" customModule="PostPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Post-Post-view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Post-Post-view-safeArea"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Post-Post-navigationItem">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Post-Post-navigationItem-titleView">
+                            <rect key="frame" x="50" y="0.0" width="238" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Post-Post-navigationItem-titleView-stackView">
+                                    <rect key="frame" x="90" y="3" width="58" height="38.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Post-Post-navigationItem-titleView-stackView-RoundedImageView" customClass="RoundedImageView" customModule="FyreplaceKit">
+                                            <rect key="frame" x="17" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Post-Post-navigationItem-titleView-stackView-RoundedImageView--C-width"/>
+                                                <constraint firstAttribute="width" secondItem="Post-Post-navigationItem-titleView-stackView-RoundedImageView" secondAttribute="height">
+                                                    <string key="id">Post-Post-navigationItem-titleView-stackView-RoundedImageView--C-width-Post-Post-navigationItem-titleView-stackView-RoundedImageView-height</string>
+                                                </constraint>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Post-Post-navigationItem-titleView-stackView-Username">
+                                            <rect key="frame" x="0.0" y="24" width="58" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <variation key="heightClass=compact" axis="horizontal" spacingType="standard"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Post-Post-navigationItem-titleView-stackView" firstAttribute="centerX" secondItem="Post-Post-navigationItem-titleView" secondAttribute="centerX">
+                                    <string key="id">Post-Post-navigationItem-titleView--C-Post-Post-navigationItem-titleView-stackView-centerX-Post-Post-navigationItem-titleView-centerX</string>
+                                </constraint>
+                                <constraint firstItem="Post-Post-navigationItem-titleView-stackView" firstAttribute="centerY" secondItem="Post-Post-navigationItem-titleView" secondAttribute="centerY">
+                                    <string key="id">Post-Post-navigationItem-titleView--C-Post-Post-navigationItem-titleView-stackView-centerY-Post-Post-navigationItem-titleView-centerY</string>
+                                </constraint>
+                                <constraint firstItem="Post-Post-navigationItem-titleView-stackView" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Post-Post-navigationItem-titleView" secondAttribute="leadingMargin" priority="250">
+                                    <string key="id">Post-Post-navigationItem-titleView--C-Post-Post-navigationItem-titleView-stackView-leading-Post-Post-navigationItem-titleView-leadingMargin</string>
+                                </constraint>
+                                <constraint firstItem="Post-Post-navigationItem-titleView-stackView" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Post-Post-navigationItem-titleView" secondAttribute="trailingMargin" priority="250">
+                                    <string key="id">Post-Post-navigationItem-titleView--C-Post-Post-navigationItem-titleView-stackView-trailing-Post-Post-navigationItem-titleView-trailingMargin</string>
+                                </constraint>
+                            </constraints>
+                        </view>
+                        <rightBarButtonItems>
+                            <barButtonItem title="More" image="ellipsis.circle" catalog="system" id="Post-Post-navigationItem-More"/>
+                            <barButtonItem title="Comments" image="bubble.left.and.bubble.right" catalog="system" id="Post-Post-navigationItem-Comments"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="avatar" destination="Post-Post-navigationItem-titleView-stackView-RoundedImageView" id="Post-Post--O-avatar"/>
+                        <outlet property="username" destination="Post-Post-navigationItem-titleView-stackView-Username" id="Post-Post--O-username"/>
+                        <outlet property="viewModel" destination="Post-PostViewModel" id="Post-Post--O-viewModel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Post-First-Responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Post-PostViewModel" customClass="PostViewModel" customModule="PostPage">
+                    <connections>
+                        <outlet property="postRepo" destination="Post-PostRepository" id="Post-PostViewModel--O-postRepo"/>
+                    </connections>
+                </customObject>
+                <customObject id="Post-PostRepository" customClass="PostRepository" customModule="FyreplaceKit"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="2250"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
@@ -1006,8 +1081,10 @@
         <image name="Icon.WildFyre" width="29" height="29"/>
         <image name="archivebox.fill" catalog="system" width="128" height="106"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="bubble.left.and.bubble.right" catalog="system" width="128" height="96"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

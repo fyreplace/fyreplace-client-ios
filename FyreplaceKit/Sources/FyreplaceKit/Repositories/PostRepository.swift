@@ -15,4 +15,8 @@ public class PostRepository: NSObject {
     public func getOwnPosts(from position: Int, size: Int) -> Observable<SuperPost> {
         provider.req(.own(areaName: areaRepo.currentArea ?? "", offset: position, limit: size), as: SuperPost.self)
     }
+
+    public func getPost(id: String) -> Observable<Post> {
+        provider.req(.get(areaName: areaRepo.currentArea ?? "", postId: id), as: Post.self)
+    }
 }

@@ -62,6 +62,15 @@
 /* Class = "UINavigationItem"; title = "Notifications"; ObjectID = "Notifications-Notifications-Notifications"; */
 "Notifications-Notifications-Notifications.title" = "Notifications";
 
+/* Class = "UIBarButtonItem"; title = "Comments"; ObjectID = "Post-Post-navigationItem-Comments"; */
+"Post-Post-navigationItem-Comments.title" = "Comments";
+
+/* Class = "UIBarButtonItem"; title = "More"; ObjectID = "Post-Post-navigationItem-More"; */
+"Post-Post-navigationItem-More.title" = "More";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "Post-Post-navigationItem-titleView-stackView-Username"; */
+"Post-Post-navigationItem-titleView-stackView-Username.text" = "";
+
 /* Class = "UITabBarItem"; title = "Profile"; ObjectID = "Settings-Navigation-Settings-Navigation-Profile"; */
 "Settings-Navigation-Settings-Navigation-Profile.title" = "Profile";
 
@@ -86,7 +95,7 @@
 /* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source"; */
 "Settings-Settings-view-Fyreplace-tableViewCell-01-contentView-Open-source.text" = "Open source";
 
-/* Class = "UILabel"; text = "Open source"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy"; */
+/* Class = "UILabel"; text = "Privacy policy"; ObjectID = "Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy"; */
 "Settings-Settings-view-Fyreplace-tableViewCell-02-contentView-Privacy-policy.text" = "Privacy policy";
 
 /* Class = "UITableViewSection"; headerTitle = "WildFyre"; ObjectID = "Settings-Settings-view-WildFyre"; */
